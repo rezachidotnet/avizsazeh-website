@@ -9,7 +9,8 @@ export type RfqDraft = {
   deadline: string;
   technicalRequirements: string;
   contactName: string;
-  contact: string;
+  company: string;
+  phone: string;
 };
 
 const empty: RfqDraft = {
@@ -21,7 +22,8 @@ const empty: RfqDraft = {
   deadline: '',
   technicalRequirements: '',
   contactName: '',
-  contact: '',
+  company: '',
+  phone: '',
 };
 
 type RfqState = {

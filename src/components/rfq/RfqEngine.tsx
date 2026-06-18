@@ -2,20 +2,13 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { useRfqStore, type RfqDraft } from './store';
+import { useRfqStore } from './store';
 import { Button } from '@/components/ui/Button';
 import { SystemIcon } from '@/components/icons/SystemIcon';
 import { cn } from '@/lib/utils';
 import type { RfqResult } from '@/lib/rfq';
 
 type SystemOption = { slug: string; name: string };
-
-const STEP_FIELDS: (keyof RfqDraft)[][] = [
-  ['projectType', 'buildingType', 'location'],
-  ['systemPreference', 'area_m2'],
-  ['deadline', 'technicalRequirements'],
-  ['contactName', 'contact'],
-];
 
 export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) {
   const t = useTranslations('rfq');
@@ -60,7 +53,8 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
           technicalRequirements: draft.technicalRequirements,
           deadline: draft.deadline,
           contactName: draft.contactName,
-          contact: draft.contact,
+          company: draft.company,
+          phone: draft.phone,
         }),
       });
       if (!res.ok) throw new Error('submit failed');
@@ -227,14 +221,27 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
                 value={draft.contactName}
                 onChange={(e) => setField('contactName', e.target.value)}
                 placeholder={t('fields.namePlaceholder')}
+                autoComplete="name"
               />
             </Field>
-            <Field label={t('fields.contact')}>
+            <Field label={t('fields.company')}>
               <input
                 className="aecs-input"
-                value={draft.contact}
-                onChange={(e) => setField('contact', e.target.value)}
-                placeholder={t('fields.contactPlaceholder')}
+                value={draft.company}
+                onChange={(e) => setField('company', e.target.value)}
+                placeholder={t('fields.companyPlaceholder')}
+                autoComplete="organization"
+              />
+            </Field>
+            <Field label={t('fields.phone')} className="sm:col-span-2">
+              <input
+                type="tel"
+                className="aecs-input"
+                value={draft.phone}
+                onChange={(e) => setField('phone', e.target.value)}
+                placeholder={t('fields.phonePlaceholder')}
+                autoComplete="tel"
+                dir="ltr"
               />
             </Field>
             {serverError && (

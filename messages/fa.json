@@ -174,10 +174,12 @@
       "deadlinePlaceholder": "مثال: سه‌ماهه سوم ۱۴۰۴",
       "requirements": "الزامات فنی",
       "requirementsPlaceholder": "ارتفاع، آکوستیک، الزامات MEP، شرایط محیطی…",
-      "name": "نام و سازمان",
-      "namePlaceholder": "نام شما / شرکت",
-      "contact": "راه ارتباطی",
-      "contactPlaceholder": "تلفن یا ایمیل"
+      "name": "نام و نام خانوادگی",
+      "namePlaceholder": "نام شما",
+      "company": "شرکت / سازمان",
+      "companyPlaceholder": "نام شرکت",
+      "phone": "شماره تماس",
+      "phonePlaceholder": "مثال: 09120656528"
     },
     "next": "گام بعد",
     "back": "گام قبل",

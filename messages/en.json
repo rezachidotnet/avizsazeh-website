@@ -174,10 +174,12 @@
       "deadlinePlaceholder": "e.g. Q3 2026",
       "requirements": "Technical requirements",
       "requirementsPlaceholder": "Height, acoustics, MEP requirements, environment…",
-      "name": "Name & organisation",
-      "namePlaceholder": "Your name / company",
-      "contact": "Contact",
-      "contactPlaceholder": "Phone or email"
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "company": "Company / organisation",
+      "companyPlaceholder": "Company name",
+      "phone": "Phone",
+      "phonePlaceholder": "e.g. +98 912 065 6528"
     },
     "next": "Next step",
     "back": "Back",

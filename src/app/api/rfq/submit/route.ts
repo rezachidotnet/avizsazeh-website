@@ -7,14 +7,26 @@ import {
   type RfqInput,
   type RfqResult,
 } from '@/lib/rfq';
+import { getSystem } from '@/lib/content/systems';
+import { isOdooConfigured, sendLeadToOdoo, type OdooLeadPayload } from '@/lib/odoo/client';
 
 export const runtime = 'nodejs';
 
+/** Derive a best-effort country from a "city / country" location string. */
+function deriveCountry(location?: string): string {
+  if (!location) return 'unknown';
+  const tail = location.split(/[,/|-]/).pop()?.trim();
+  return tail || location.trim() || 'unknown';
+}
+
 /**
- * RFQ Engine — structured engineering project definition system.
- * Pipeline: validate → classify system → score complexity → generate ID → route.
- * In log-only mode (no notify transport configured) the submission is logged
- * and acknowledged; wiring an email/CRM transport is an env-driven add-on.
+ * RFQ Engine — structured engineering project definition + CRM lead.
+ * Pipeline: validate → classify system → score complexity → generate ID →
+ * push lead to Odoo CRM (best-effort) → return engineering result.
+ *
+ * CRM delivery is non-blocking: a transient Odoo failure must not discard the
+ * user's submission or break the success screen. The outcome is reported in
+ * `result.lead` and logged for follow-up.
  */
 export async function POST(request: Request) {
   let body: Partial<RfqInput>;
@@ -35,7 +47,8 @@ export async function POST(request: Request) {
       : undefined,
     deadline: body.deadline ? String(body.deadline).trim() : undefined,
     contactName: body.contactName ? String(body.contactName).trim() : undefined,
-    contact: body.contact ? String(body.contact).trim() : undefined,
+    company: body.company ? String(body.company).trim() : undefined,
+    phone: body.phone ? String(body.phone).trim() : undefined,
   };
 
   const { ok, errors } = validateRfq(input);
@@ -57,12 +70,46 @@ export async function POST(request: Request) {
     nextStep: 'Engineering Review',
   };
 
-  // Routing to engineering workflow. Replace with email/CRM transport when configured.
-  const notify = process.env.RFQ_NOTIFY_EMAIL;
+  // ── Push lead to Odoo CRM (best-effort) ──────────────────────────────────
+  const systemName = getSystem(assignedSystem)?.name.en ?? assignedSystem;
+  const message = [
+    input.buildingType && `Building: ${input.buildingType}`,
+    `Assigned system: ${systemName}`,
+    `Complexity: ${complexity} (score ${engineeringScore})`,
+    input.location && `Location: ${input.location}`,
+    input.deadline && `Timeline: ${input.deadline}`,
+    input.technicalRequirements && `Requirements: ${input.technicalRequirements}`,
+    `Project ID: ${projectId}`,
+  ]
+    .filter(Boolean)
+    .join('\n');
+
+  const odooPayload: OdooLeadPayload = {
+    name: input.contactName || `RFQ ${projectId}`,
+    phone: input.phone,
+    company: input.company,
+    project_type: input.projectType,
+    area: input.area_m2,
+    message,
+    country: deriveCountry(input.location),
+  };
+
+  if (isOdooConfigured()) {
+    try {
+      await sendLeadToOdoo(odooPayload);
+      result.lead = { delivered: true };
+      console.info(`[RFQ] ${projectId} · lead delivered to Odoo`);
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : 'unknown';
+      result.lead = { delivered: false, error: msg };
+      console.error(`[RFQ] ${projectId} · Odoo lead failed: ${msg}`, { odooPayload });
+    }
+  } else {
+    console.info(`[RFQ] ${projectId} · Odoo not configured (log-only)`, { odooPayload });
+  }
+
   console.info(
-    `[RFQ] ${projectId} · system=${assignedSystem} · complexity=${complexity} · score=${engineeringScore}` +
-      (notify ? ` · notify=${notify}` : ' · log-only'),
-    { input },
+    `[RFQ] ${projectId} · system=${assignedSystem} · complexity=${complexity} · score=${engineeringScore}`,
   );
 
   return NextResponse.json(result, { status: 200 });

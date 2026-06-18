@@ -11,7 +11,8 @@ export type RfqInput = {
   technicalRequirements?: string;
   deadline?: string;
   contactName?: string;
-  contact?: string;
+  company?: string;
+  phone?: string;
 };
 
 export type RfqResult = {
@@ -21,6 +22,8 @@ export type RfqResult = {
   complexity: ComplexityLevel;
   engineeringScore: number; // 0–100
   nextStep: 'Engineering Review';
+  /** CRM delivery status (Odoo). Absent when no transport is configured. */
+  lead?: { delivered: boolean; error?: string };
 };
 
 const KEYWORD_MAP: { match: RegExp; slug: string }[] = [
