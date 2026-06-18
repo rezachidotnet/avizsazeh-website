@@ -14,6 +14,9 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   async headers() {
+    const immutable = [
+      { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+    ];
     return [
       {
         source: '/(.*)',
@@ -24,6 +27,11 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
+      // Long-term immutable caching for static public assets.
+      { source: '/brand/:path*', headers: immutable },
+      { source: '/systems/:path*', headers: immutable },
+      { source: '/clients/:path*', headers: immutable },
+      { source: '/icon.png', headers: immutable },
     ];
   },
 };
