@@ -8,7 +8,7 @@ import {
   type RfqResult,
 } from '@/lib/rfq';
 import { getSystem } from '@/lib/content/systems';
-import { isOdooConfigured, sendLeadToOdoo, type OdooLeadPayload } from '@/lib/odoo/client';
+import { isOdooConfigured, sendLeadToOdoo, type OdooLeadInput } from '@/lib/odoo/client';
 
 export const runtime = 'nodejs';
 
@@ -72,40 +72,33 @@ export async function POST(request: Request) {
 
   // ── Push lead to Odoo CRM (best-effort) ──────────────────────────────────
   const systemName = getSystem(assignedSystem)?.name.en ?? assignedSystem;
-  const message = [
-    input.buildingType && `Building: ${input.buildingType}`,
-    `Assigned system: ${systemName}`,
-    `Complexity: ${complexity} (score ${engineeringScore})`,
-    input.location && `Location: ${input.location}`,
-    input.deadline && `Timeline: ${input.deadline}`,
-    input.technicalRequirements && `Requirements: ${input.technicalRequirements}`,
-    `Project ID: ${projectId}`,
-  ]
-    .filter(Boolean)
-    .join('\n');
-
-  const odooPayload: OdooLeadPayload = {
+  const leadInput: OdooLeadInput = {
     name: input.contactName || `RFQ ${projectId}`,
     phone: input.phone,
     company: input.company,
-    project_type: input.projectType,
+    projectType: input.projectType,
     area: input.area_m2,
-    message,
+    systemName,
+    complexity: `${complexity} (score ${engineeringScore})`,
+    location: input.location,
     country: deriveCountry(input.location),
+    deadline: input.deadline,
+    requirements: input.technicalRequirements,
+    projectId,
   };
 
   if (isOdooConfigured()) {
     try {
-      await sendLeadToOdoo(odooPayload);
-      result.lead = { delivered: true };
-      console.info(`[RFQ] ${projectId} · lead delivered to Odoo`);
+      const lead = await sendLeadToOdoo(leadInput);
+      result.lead = { delivered: true, leadId: lead.leadId };
+      console.info(`[RFQ] ${projectId} · lead delivered to Odoo (id ${lead.leadId})`);
     } catch (error) {
       const msg = error instanceof Error ? error.message : 'unknown';
       result.lead = { delivered: false, error: msg };
-      console.error(`[RFQ] ${projectId} · Odoo lead failed: ${msg}`, { odooPayload });
+      console.error(`[RFQ] ${projectId} · Odoo lead failed: ${msg}`);
     }
   } else {
-    console.info(`[RFQ] ${projectId} · Odoo not configured (log-only)`, { odooPayload });
+    console.info(`[RFQ] ${projectId} · Odoo not configured (log-only)`);
   }
 
   console.info(

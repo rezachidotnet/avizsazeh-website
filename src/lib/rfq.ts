@@ -23,7 +23,7 @@ export type RfqResult = {
   engineeringScore: number; // 0–100
   nextStep: 'Engineering Review';
   /** CRM delivery status (Odoo). Absent when no transport is configured. */
-  lead?: { delivered: boolean; error?: string };
+  lead?: { delivered: boolean; leadId?: number; error?: string };
 };
 
 const KEYWORD_MAP: { match: RegExp; slug: string }[] = [
