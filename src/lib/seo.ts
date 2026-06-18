@@ -75,7 +75,7 @@ export function organizationJsonLd(locale: Locale) {
     name: company.legalName[locale],
     alternateName: company.legalName[locale === 'fa' ? 'en' : 'fa'],
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/brand/standard-logo.png`,
     image: `${SITE_URL}${OG_IMAGE}`,
     foundingDate: String(company.founded),
     description:

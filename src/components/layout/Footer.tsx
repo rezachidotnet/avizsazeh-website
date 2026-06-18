@@ -21,7 +21,7 @@ export async function Footer() {
       <div className="container-grid py-16">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <Logo variant="dark" />
+            <Logo plate />
             <p className="mt-5 max-w-xs text-body-s text-ink-400">
               {t('footer.tagline')}
             </p>
