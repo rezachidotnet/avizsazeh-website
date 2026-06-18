@@ -1,41 +1,38 @@
 import Image from 'next/image';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
-import { cn, displayFont } from '@/lib/utils';
 
 /** Home hero — full-bleed engineering imagery with the system thesis card. */
 export function Hero() {
   const t = useTranslations('home.hero');
   const tc = useTranslations('cta');
-  const locale = useLocale();
-  const display = displayFont(locale);
 
   return (
     <section className="relative isolate overflow-hidden bg-ink-950 text-white">
-      {/* background imagery — design-system hero */}
+      {/* background imagery — design-system hero (rendered crisp, no blur) */}
       <Image
         src="/design-system/hero-home.png"
         alt=""
         fill
         priority
+        quality={95}
         sizes="100vw"
         className="object-cover object-center"
       />
-      {/* legibility overlays (image is already dark — keep it visible) */}
-      <div className="absolute inset-0 bg-ink-950/35" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/55 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-950/85 to-transparent" />
+      {/* legibility scrims — directional only, so the ceiling stays clear */}
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/40 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-950/65 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
       <div className="container-grid relative grid min-h-[620px] items-center gap-12 py-24 lg:min-h-[760px] lg:grid-cols-12 lg:py-28">
         {/* left — system thesis */}
         <div className="lg:col-span-7 lg:self-end lg:pb-6">
           <span className="eyebrow text-gold">{t('eyebrow')}</span>
-          <h1 className={cn(display, 'mt-6 max-w-2xl text-h1 font-semibold leading-[1.06] text-white')}>
+          <h1 className="mt-6 max-w-2xl font-display text-h1 font-semibold leading-[1.06] text-white">
             {t('headline')}
           </h1>
-          <p className={cn(display, 'mt-6 text-body-l italic text-gold-300')}>
+          <p className="mt-6 font-display text-body-l italic text-gold-300">
             {t('subheadline')}
           </p>
           <p className="mt-5 max-w-xl text-body-l text-ink-300">
@@ -67,7 +64,7 @@ export function Hero() {
               AECS
             </p>
             <span className="mt-6 block h-px w-12 bg-gold" />
-            <h2 className={cn(display, 'mt-6 text-h3 font-medium leading-snug text-white')}>
+            <h2 className="mt-6 font-display text-h3 font-medium leading-snug text-white">
               {t('cardTitle')}
             </h2>
             <p className="mt-4 text-body-s leading-relaxed text-ink-400">

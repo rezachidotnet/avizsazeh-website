@@ -2,7 +2,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import { SystemCard } from '@/components/system/SystemCard';
 import { Reveal } from '@/components/ui/Reveal';
 import { systems } from '@/lib/content/systems';
-import { cn, displayFont } from '@/lib/utils';
 import type { Locale } from '@/i18n/routing';
 
 export function SystemsOverview() {
@@ -14,7 +13,7 @@ export function SystemsOverview() {
       <div className="container-grid">
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow-center">{t('eyebrow')}</span>
-          <h2 className={cn(displayFont(locale), 'mt-5 text-h2 font-semibold text-white')}>
+          <h2 className="mt-5 font-display text-h2 font-semibold text-white">
             {t('title')}
           </h2>
           <p className="mt-4 text-body-l text-ink-300">{t('description')}</p>

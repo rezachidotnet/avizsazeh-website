@@ -44,7 +44,7 @@ export const company = {
     en: 'Sat–Wed 08:00–16:00 · Thu 08:00–12:00',
   },
   geo: { lat: 32.6125, lng: 51.6675 }, // Isfahan (city-level)
-  regions: ['IR', 'IQ', 'OM', 'GCC'],
+  regions: ['IR', 'IQ', 'OM'],
 } as const;
 
 export function localized<T extends Record<Locale, string>>(

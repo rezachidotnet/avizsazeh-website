@@ -1,5 +1,4 @@
-import { useLocale, useTranslations } from 'next-intl';
-import { cn, displayFont } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
 
 type Metric = { value: string; label: string };
 
@@ -38,7 +37,6 @@ const ICONS = [
 export function TrustMetrics() {
   const t = useTranslations('home.trust');
   const metrics = t.raw('metrics') as Metric[];
-  const display = displayFont(useLocale());
 
   return (
     <section aria-label={t('title')} className="bg-ink-950">
@@ -60,7 +58,7 @@ export function TrustMetrics() {
                 {ICONS[i]}
               </svg>
               <div className="flex flex-col gap-1">
-                <dd className={cn(display, 'text-[1.3rem] font-semibold leading-none text-white')}>
+                <dd className="font-display text-[1.3rem] font-semibold leading-none text-white">
                   {m.value}
                 </dd>
                 <dt className="text-caption uppercase tracking-[0.12em] text-gold/80">
