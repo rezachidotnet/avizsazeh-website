@@ -60,7 +60,7 @@ export const systems: CeilingSystem[] = [
       { label: { fa: 'پوشش رنگ', en: 'Finish' }, value: { fa: 'رنگ پلی‌استر الکترواستاتیک', en: 'Electrostatic polyester coat' } },
       { label: { fa: 'الگو', en: 'Pattern' }, value: { fa: 'خطی / مورب / شعاعی', en: 'Linear / diagonal / radial' } },
     ],
-    cover: '/systems/linear-1.webp',
+    cover: '/design-system/linear-ceiling.png',
     gallery: ['/systems/linear-1.webp', '/systems/linear-2.jpg'],
   },
   {
@@ -99,7 +99,7 @@ export const systems: CeilingSystem[] = [
       { label: { fa: 'ابعاد', en: 'Dimensions' }, value: { fa: '۶۰۰×۶۰۰ میلی‌متر', en: '600×600 mm' } },
       { label: { fa: 'الگو', en: 'Pattern' }, value: { fa: 'ساده / مشبک', en: 'Plain / patterned' } },
     ],
-    cover: '/systems/opencell-1.jpg',
+    cover: '/design-system/open-cell.png',
     gallery: ['/systems/opencell-1.jpg', '/systems/opencell-2.jpg', '/systems/opencell-3.jpg', '/systems/opencell-4.jpg'],
   },
   {
@@ -138,7 +138,7 @@ export const systems: CeilingSystem[] = [
       { label: { fa: 'ابعاد', en: 'Dimensions' }, value: { fa: '۶۰۰×۶۰۰ / ۶۰۰×۱۲۰ میلی‌متر', en: '600×600 / 600×120 mm' } },
       { label: { fa: 'الگو', en: 'Pattern' }, value: { fa: 'ساده / مشبک', en: 'Plain / patterned' } },
     ],
-    cover: '/systems/tile-3.webp',
+    cover: '/design-system/metal-tile.png',
     gallery: ['/systems/tile-1.jpg', '/systems/tile-2.jpg', '/systems/tile-3.webp', '/systems/tile-4.webp'],
   },
   {
@@ -176,7 +176,7 @@ export const systems: CeilingSystem[] = [
       { label: { fa: 'عرض / طول', en: 'Width / length' }, value: { fa: 'عرض ۲۰–۵۰ میلی‌متر، طول تا ۳۰۰۰ میلی‌متر', en: 'Width 20–50 mm, length up to 3000 mm' } },
       { label: { fa: 'پوشش رنگ', en: 'Finish' }, value: { fa: 'پودری الکترواستاتیک، ۲۵ میکرون', en: 'Electrostatic powder coat, 25 µm' } },
     ],
-    cover: '/systems/baffle-2.webp',
+    cover: '/design-system/baffle.png',
     gallery: ['/systems/baffle-1.jpg', '/systems/baffle-2.webp'],
   },
 ];

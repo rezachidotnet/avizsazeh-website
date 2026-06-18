@@ -10,19 +10,19 @@ export function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-ink-950 text-white">
-      {/* background imagery — authentic AvizSazeh linear-ceiling installation */}
+      {/* background imagery — design-system hero */}
       <Image
-        src="/systems/linear-1.webp"
+        src="/design-system/hero-home.png"
         alt=""
         fill
         priority
         sizes="100vw"
         className="object-cover object-center"
       />
-      {/* legibility overlays */}
-      <div className="absolute inset-0 bg-ink-950/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/80 to-ink-950/40" />
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink-950 via-ink-950/70 to-transparent" />
+      {/* legibility overlays (image is already dark — keep it visible) */}
+      <div className="absolute inset-0 bg-ink-950/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/55 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-950/85 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
       <div className="container-grid relative grid min-h-[620px] items-center gap-12 py-24 lg:min-h-[760px] lg:grid-cols-12 lg:py-28">
