@@ -68,7 +68,11 @@ export async function generateMetadata({
       },
     },
     icons: {
-      icon: [{ url: '/icon.png', type: 'image/png' }],
+      icon: [
+        { url: '/favicon.avif', type: 'image/avif', sizes: '143x142' },
+        { url: '/favicon.webp', type: 'image/webp', sizes: '143x142' },
+        { url: '/icon.png', type: 'image/png', sizes: '146x144' },
+      ],
       apple: [{ url: '/icon.png' }],
     },
     robots: {
