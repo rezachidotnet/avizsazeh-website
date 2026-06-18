@@ -1,4 +1,5 @@
-import { cn } from '@/lib/utils';
+import { useLocale } from 'next-intl';
+import { cn, displayFont } from '@/lib/utils';
 
 type SectionProps = {
   id?: string;
@@ -52,6 +53,7 @@ export function SectionHeader({
   dark,
   className,
 }: SectionHeaderProps) {
+  const locale = useLocale();
   return (
     <div
       className={cn(
@@ -61,7 +63,7 @@ export function SectionHeader({
       )}
     >
       {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
-      <h2 className="mt-4 font-display text-h2 font-semibold text-white">
+      <h2 className={cn(displayFont(locale), 'mt-4 text-h2 font-semibold text-white')}>
         {title}
       </h2>
       {description ? (
