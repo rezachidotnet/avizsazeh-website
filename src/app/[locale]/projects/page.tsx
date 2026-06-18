@@ -49,8 +49,8 @@ export default async function ProjectsPage({
       <Section>
         <ClientWall locale={locale} />
 
-        <div className="mt-10 flex items-center gap-3 rounded border border-dashed border-ink-300 bg-ivory px-5 py-4 text-body-s text-ink-500">
-          <SystemIcon name="control" className="h-5 w-5 shrink-0 text-ink-400" />
+        <div className="mt-10 flex items-center gap-3 rounded-sm border border-dashed border-white/15 bg-white/[0.02] px-5 py-4 text-body-s text-ink-500">
+          <SystemIcon name="control" className="h-5 w-5 shrink-0 text-gold/70" />
           <p>{t('note')}</p>
         </div>
       </Section>

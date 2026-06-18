@@ -5,38 +5,36 @@ import { usePathname, useRouter } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 
-const labels: Record<Locale, string> = { fa: 'فا', en: 'EN' };
+const labels: Record<Locale, string> = { fa: 'FA', en: 'EN' };
 
+/** Compact locale control — shows the active locale; toggles to the other. */
 export function LocaleSwitcher({ className }: { className?: string }) {
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
-
-  function switchTo(next: Locale) {
-    if (next === locale) return;
-    router.replace(pathname, { locale: next });
-  }
+  const next: Locale = locale === 'en' ? 'fa' : 'en';
 
   return (
-    <div
-      className={cn('inline-flex items-center rounded border border-ink-200', className)}
-      role="group"
-      aria-label="Language"
+    <button
+      type="button"
+      onClick={() => router.replace(pathname, { locale: next })}
+      aria-label={`Switch language to ${labels[next]}`}
+      className={cn(
+        'inline-flex items-center gap-1.5 rounded-sm px-2 py-1.5 text-[0.78rem] font-medium tracking-wide text-ink-300 transition-colors duration-fast hover:text-white',
+        className,
+      )}
     >
-      {(['fa', 'en'] as Locale[]).map((l) => (
-        <button
-          key={l}
-          type="button"
-          onClick={() => switchTo(l)}
-          aria-current={l === locale}
-          className={cn(
-            'px-3 py-1.5 text-caption font-medium transition-colors duration-fast first:rounded-s last:rounded-e',
-            l === locale ? 'bg-ink text-white' : 'text-ink-500 hover:text-ink',
-          )}
-        >
-          {labels[l]}
-        </button>
-      ))}
-    </div>
+      {labels[locale]}
+      <svg
+        viewBox="0 0 12 12"
+        className="h-3 w-3 text-ink-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.5}
+        aria-hidden="true"
+      >
+        <path d="M3 4.5 6 7.5 9 4.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </button>
   );
 }

@@ -98,7 +98,7 @@ export default async function SystemDetailPage({
               {useCases.map((u) => (
                 <li
                   key={u}
-                  className="rounded border border-ink-200 bg-white px-4 py-2 text-body-s text-ink-700"
+                  className="rounded-sm border border-white/10 bg-white/[0.04] px-4 py-2 text-body-s text-ink-700"
                 >
                   {u}
                 </li>
@@ -108,11 +108,11 @@ export default async function SystemDetailPage({
 
           {/* right: spec sheet */}
           <aside className="lg:col-span-5">
-            <div className="overflow-hidden rounded-lg border border-ink-200 bg-white">
-              <div className="border-b border-ink-200 bg-ivory px-6 py-4">
+            <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
+              <div className="border-b border-white/10 bg-white/[0.03] px-6 py-4">
                 <span className="eyebrow">{t('specs')}</span>
               </div>
-              <dl className="divide-y divide-ink-200">
+              <dl className="divide-y divide-white/10">
                 {system.specs.map((row) => (
                   <div
                     key={row.label.en}

@@ -53,7 +53,7 @@ export default async function AboutPage({
       <Section>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <p className="text-body-l font-medium text-ink">{t('lead')}</p>
+            <p className="text-body-l font-medium text-white">{t('lead')}</p>
             <div className="mt-8 space-y-5">
               {story.map((p) => (
                 <p key={p} className="text-body-l text-ink-600">
@@ -80,9 +80,9 @@ export default async function AboutPage({
       {/* principles */}
       <Section ivory>
         <SectionHeader eyebrow={t('eyebrow')} title={t('principlesTitle')} />
-        <ul className="mt-10 grid gap-px overflow-hidden rounded-lg border border-ink-200 bg-ink-200 sm:grid-cols-2">
+        <ul className="mt-10 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
           {principles.map((p, i) => (
-            <li key={p} className="flex items-start gap-4 bg-white px-6 py-7">
+            <li key={p} className="flex items-start gap-4 bg-ink-900 px-6 py-7">
               <span className="font-display text-h4 font-bold tabular-nums text-gold">
                 0{i + 1}
               </span>
@@ -99,7 +99,7 @@ export default async function AboutPage({
           {values.map((v) => (
             <li
               key={v}
-              className="inline-flex items-center gap-2 rounded border border-ink-200 bg-white px-4 py-3 text-body-s font-medium text-ink-700"
+              className="inline-flex items-center gap-2 rounded-sm border border-white/10 bg-white/[0.04] px-4 py-3 text-body-s font-medium text-ink-700"
             >
               <SystemIcon name="system" className="h-4 w-4 text-gold" />
               {v}

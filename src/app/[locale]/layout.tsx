@@ -6,7 +6,7 @@ import {
   getTranslations,
   setRequestLocale,
 } from 'next-intl/server';
-import { Vazirmatn, Inter, Montserrat } from 'next/font/google';
+import { Vazirmatn, Inter, Source_Serif_4 } from 'next/font/google';
 import { routing, localeDirection, type Locale } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -25,9 +25,10 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 });
-const montserrat = Montserrat({
+const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
-  weight: ['600', '700'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 });
@@ -37,8 +38,8 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0F1113',
-  colorScheme: 'light',
+  themeColor: '#0B0F14',
+  colorScheme: 'dark',
 };
 
 export async function generateMetadata({
@@ -98,13 +99,13 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${vazir.variable} ${inter.variable} ${montserrat.variable}`}
+      className={`${vazir.variable} ${inter.variable} ${sourceSerif.variable}`}
     >
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main"
-            className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-ink focus:px-4 focus:py-2 focus:text-white"
+            className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-gold focus:px-4 focus:py-2 focus:font-medium focus:text-ink-950"
           >
             {t('skipToContent')}
           </a>

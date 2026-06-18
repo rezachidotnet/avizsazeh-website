@@ -19,11 +19,11 @@ export function ExecutionCapabilities() {
         {items.map((c, i) => (
           <Reveal key={c.title} delay={i * 70}>
             <div className="flex gap-5">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-ink-200 bg-white text-ink">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-white/10 bg-white/[0.04] text-gold">
                 <SystemIcon name={ICONS[i]} className="h-6 w-6" />
               </span>
               <div>
-                <h3 className="text-h4 font-semibold text-ink">{c.title}</h3>
+                <h3 className="text-h4 font-semibold text-white">{c.title}</h3>
                 <p className="mt-2 max-w-sm text-body-s text-ink-600">{c.text}</p>
               </div>
             </div>

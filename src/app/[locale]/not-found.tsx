@@ -14,7 +14,7 @@ export default function LocaleNotFound() {
         <Button href="/">{t('home')}</Button>
         <Link
           href="/systems"
-          className="inline-flex h-11 items-center rounded border border-ink-300 px-5 text-body-s font-medium text-ink hover:border-ink"
+          className="inline-flex h-11 items-center rounded-sm border border-white/20 px-5 text-body-s font-medium text-white transition-colors hover:border-white/50"
         >
           {t('systems')}
         </Link>

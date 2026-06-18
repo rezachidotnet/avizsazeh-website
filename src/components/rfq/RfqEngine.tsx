@@ -72,16 +72,16 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
       systemOptions.find((s) => s.slug === result.assignedSystem)?.name ??
       result.assignedSystem;
     return (
-      <div className="rounded-lg border border-ink-200 bg-white p-8 lg:p-12">
+      <div className="rounded-lg border border-white/10 bg-white/[0.03] p-8 lg:p-12">
         <div className="flex items-center gap-3">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-success/10 text-success">
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-success/15 text-success">
             <SystemIcon name="quality" className="h-6 w-6 text-success" />
           </span>
-          <h2 className="text-h3 font-semibold text-ink">{t('successTitle')}</h2>
+          <h2 className="font-display text-h3 font-semibold text-white">{t('successTitle')}</h2>
         </div>
         <p className="mt-4 max-w-prose text-body text-ink-600">{t('successText')}</p>
 
-        <dl className="mt-8 grid gap-px overflow-hidden rounded border border-ink-200 bg-ink-200 sm:grid-cols-2">
+        <dl className="mt-8 grid gap-px overflow-hidden rounded border border-white/10 bg-white/10 sm:grid-cols-2">
           <ResultRow label={t('projectId')} value={result.projectId} mono />
           <ResultRow label={t('assignedSystem')} value={systemName} />
           <ResultRow
@@ -108,7 +108,7 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
   }
 
   return (
-    <div className="rounded-lg border border-ink-200 bg-white p-6 sm:p-8 lg:p-10">
+    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:p-10">
       {/* progress */}
       <ol className="flex items-center gap-2" aria-label="progress">
         {steps.map((label, i) => (
@@ -116,7 +116,7 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
             <span
               className={cn(
                 'h-1 rounded-full transition-colors duration-medium',
-                i <= step ? 'bg-gold' : 'bg-ink-200',
+                i <= step ? 'bg-gold' : 'bg-white/10',
               )}
             />
             <span
@@ -302,7 +302,7 @@ function ResultRow({
   mono?: boolean;
 }) {
   return (
-    <div className="bg-white px-5 py-4">
+    <div className="bg-ink-900 px-5 py-4">
       <dt className="text-caption uppercase tracking-wide text-ink-500">{label}</dt>
       <dd className={cn('mt-1 text-body font-medium text-ink', mono && 'font-latin nums')}>
         {value}

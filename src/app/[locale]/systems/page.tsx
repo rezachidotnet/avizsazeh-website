@@ -59,17 +59,17 @@ export default async function SystemsPage({
       </Section>
 
       <Section ivory className="!pt-0 lg:!pt-0">
-        <div className="grid gap-10 rounded-lg border border-ink-200 bg-white p-8 lg:grid-cols-12 lg:p-12">
+        <div className="grid gap-10 rounded-lg border border-white/10 bg-white/[0.03] p-8 lg:grid-cols-12 lg:p-12">
           <div className="lg:col-span-5">
             <span className="eyebrow">{t('selectionTitle')}</span>
-            <p className="mt-6 border-s-2 border-gold ps-6 font-display text-h3 font-semibold leading-snug text-ink">
+            <p className="mt-6 border-s-2 border-gold ps-6 font-display text-h3 font-semibold leading-snug text-white">
               {t('principle')}
             </p>
           </div>
-          <ul className="grid gap-px self-start overflow-hidden rounded border border-ink-200 bg-ink-200 sm:grid-cols-2 lg:col-span-7">
+          <ul className="grid gap-px self-start overflow-hidden rounded border border-white/10 bg-white/10 sm:grid-cols-2 lg:col-span-7">
             {factors.map((f) => (
-              <li key={f} className="flex items-center gap-3 bg-white px-5 py-5">
-                <SystemIcon name="engineering" className="h-5 w-5 text-ink-500" />
+              <li key={f} className="flex items-center gap-3 bg-ink-900 px-5 py-5">
+                <SystemIcon name="engineering" className="h-5 w-5 text-gold" />
                 <span className="text-body-s font-medium text-ink-700">{f}</span>
               </li>
             ))}

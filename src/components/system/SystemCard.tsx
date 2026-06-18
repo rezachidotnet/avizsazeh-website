@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { SystemIcon } from '@/components/icons/SystemIcon';
 import type { CeilingSystem } from '@/lib/content/systems';
 import { localized } from '@/lib/site';
 import type { Locale } from '@/i18n/routing';
 
 /**
- * SystemCard — represents a ceiling system as an engineering module.
- * Hover reveals system logic; the whole card links to the system detail.
+ * SystemCard — a ceiling system as a full-bleed engineering tile with a
+ * bordered label plate (gold node + name + directional arrow). Matches the
+ * "Engineered Metal Ceiling Systems" reference.
  */
 export function SystemCard({
   system,
@@ -18,41 +18,52 @@ export function SystemCard({
   locale: Locale;
   index?: number;
 }) {
+  const name = localized(system.name, locale);
+
   return (
     <Link
       href={`/systems/${system.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-lg border border-ink-200 bg-white transition-all duration-medium ease-aecs hover:-translate-y-1 hover:border-ink-300 hover:shadow-lg"
+      className="group relative block aspect-[4/5] overflow-hidden rounded-lg border border-white/10 transition-colors duration-medium ease-aecs hover:border-gold/40"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-ink-100">
-        <Image
-          src={system.cover}
-          alt={localized(system.name, locale)}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
-          className="object-cover transition-transform duration-slow ease-aecs group-hover:scale-105"
-          loading={index < 2 ? undefined : 'lazy'}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/55 via-ink-950/10 to-transparent" />
-        <span className="absolute start-4 top-4 flex h-10 w-10 items-center justify-center rounded border border-white/25 bg-ink-950/40 text-white backdrop-blur-sm">
-          <SystemIcon name={system.iconKey} className="h-5 w-5" />
-        </span>
-        <span className="absolute bottom-3 end-4 font-latin text-caption tabular-nums text-white/70">
-          {String(system.order).padStart(2, '0')}
-        </span>
-      </div>
+      <Image
+        src={system.cover}
+        alt={name}
+        fill
+        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+        className="object-cover transition-transform duration-slow ease-aecs group-hover:scale-[1.04]"
+        loading={index < 2 ? undefined : 'lazy'}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-ink-950/5" />
 
-      <div className="flex flex-1 flex-col p-6">
-        <p className="eyebrow">{localized(system.category, locale)}</p>
-        <h3 className="mt-3 text-h4 font-semibold text-ink">
-          {localized(system.name, locale)}
-        </h3>
-        <p className="mt-2 line-clamp-3 text-body-s text-ink-600">
-          {localized(system.definition, locale)}
-        </p>
-        <span className="mt-5 inline-flex items-center gap-2 text-body-s font-medium text-ink-500 transition-colors duration-fast group-hover:text-ink">
-          <span className="h-px w-5 bg-gold transition-all duration-medium group-hover:w-8" />
-          {localized(system.name, locale)}
-        </span>
+      <div className="absolute inset-x-3 bottom-3">
+        <div className="flex items-center justify-between gap-3 rounded-sm border border-white/15 bg-ink-950/55 px-4 py-3 backdrop-blur-sm transition-colors duration-fast group-hover:border-gold/45 group-hover:bg-ink-950/70">
+          <span className="flex items-center gap-3">
+            <svg
+              viewBox="0 0 16 16"
+              className="h-3.5 w-3.5 shrink-0 text-gold"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.4}
+              aria-hidden="true"
+            >
+              <path d="M8 1.5 14.5 8 8 14.5 1.5 8 8 1.5Z" />
+              <circle cx="8" cy="8" r="1.6" fill="currentColor" stroke="none" />
+            </svg>
+            <span className="text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-white">
+              {name}
+            </span>
+          </span>
+          <svg
+            viewBox="0 0 24 24"
+            className="h-4 w-4 shrink-0 text-gold transition-transform duration-fast group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1.6}
+            aria-hidden="true"
+          >
+            <path d="M4 12h15M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
       </div>
     </Link>
   );

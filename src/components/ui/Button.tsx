@@ -6,21 +6,22 @@ type Variant = 'primary' | 'gold' | 'outline' | 'ghost';
 type Size = 'sm' | 'md' | 'lg';
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded font-medium leading-none transition-all duration-fast ease-aecs disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-gold';
+  'group inline-flex items-center justify-center gap-2.5 rounded-sm font-semibold uppercase leading-none tracking-[0.08em] transition-all duration-fast ease-aecs disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-gold';
 
 const variants: Record<Variant, string> = {
-  // Engineering layer — default system action
-  primary: 'bg-ink text-white hover:bg-ink-700 hover:shadow-md',
-  // Authority accent — reserved for conversion / transformation actions only
-  gold: 'bg-gold text-ink hover:bg-gold-600 hover:shadow-md',
-  outline: 'border border-ink-300 text-ink hover:border-ink hover:bg-ink/[0.03]',
-  ghost: 'text-ink hover:bg-ink/[0.05]',
+  // Engineering layer — default system action (solid, high contrast)
+  primary: 'bg-white text-ink-950 hover:bg-ink-300',
+  // Authority accent — conversion / transformation actions
+  gold: 'bg-gold text-ink-950 hover:bg-gold-400 hover:shadow-gold',
+  // Gold hairline outline (header CTA, secondary conversions)
+  outline: 'border border-gold/55 text-gold hover:border-gold hover:bg-gold/10',
+  ghost: 'text-white hover:bg-white/[0.08]',
 };
 
 const sizes: Record<Size, string> = {
-  sm: 'h-9 px-4 text-body-s',
-  md: 'h-11 px-5 text-body-s',
-  lg: 'h-12 px-7 text-body',
+  sm: 'h-9 px-4 text-[0.7rem]',
+  md: 'h-11 px-5 text-[0.72rem]',
+  lg: 'h-12 px-7 text-[0.8rem]',
 };
 
 type CommonProps = {

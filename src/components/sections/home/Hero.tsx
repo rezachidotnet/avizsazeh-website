@@ -1,68 +1,77 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
-import { SystemIcon, type IconKey } from '@/components/icons/SystemIcon';
 
-const FLOW_ICONS: IconKey[] = ['architecture', 'engineering', 'system', 'execution'];
-
-/** Hero — system entry point. Structural geometry only, no lifestyle imagery. */
+/** Home hero — full-bleed engineering imagery with the system thesis card. */
 export function Hero() {
   const t = useTranslations('home.hero');
   const tc = useTranslations('cta');
-  const flow = t.raw('flow') as string[];
 
   return (
-    <section className="relative overflow-hidden bg-ink-950 text-white">
-      {/* structural grid backdrop */}
-      <div className="pointer-events-none absolute inset-0 bg-grid-lines [background-size:40px_40px] opacity-60" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+    <section className="relative isolate overflow-hidden bg-ink-950 text-white">
+      {/* background imagery — authentic AvizSazeh linear-ceiling installation */}
+      <Image
+        src="/systems/linear-1.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      {/* legibility overlays */}
+      <div className="absolute inset-0 bg-ink-950/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/80 to-ink-950/40" />
+      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink-950 via-ink-950/70 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-      <div className="container-grid relative py-24 lg:py-36">
-        <div className="max-w-3xl">
-          <span className="eyebrow text-ink-300">{t('eyebrow')}</span>
-          <h1 className="mt-6 font-display text-h1 font-bold leading-[1.05] text-white">
+      <div className="container-grid relative grid min-h-[620px] items-center gap-12 py-24 lg:min-h-[760px] lg:grid-cols-12 lg:py-28">
+        {/* left — system thesis */}
+        <div className="lg:col-span-7 lg:self-end lg:pb-6">
+          <span className="eyebrow text-gold">{t('eyebrow')}</span>
+          <h1 className="mt-6 max-w-2xl font-display text-h1 font-semibold leading-[1.06] text-white">
             {t('headline')}
           </h1>
-          <p className="mt-6 text-body-l text-gold-300">{t('subheadline')}</p>
-          <p className="mt-5 max-w-xl text-body-l text-ink-300">{t('description')}</p>
+          <p className="mt-6 font-display text-body-l italic text-gold-300">
+            {t('subheadline')}
+          </p>
+          <p className="mt-5 max-w-xl text-body-l text-ink-300">
+            {t('description')}
+          </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="/rfq" variant="gold" size="lg">
               {tc('requestAnalysis')}
             </Button>
-            <Button
-              href="/systems"
-              size="lg"
-              className="border border-white/25 bg-transparent text-white hover:bg-white/10"
+            <Link
+              href="/engineering"
+              className="group inline-flex items-center gap-3 text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white transition-colors hover:text-gold"
             >
-              {tc('exploreSystems')}
-            </Button>
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 transition-colors group-hover:border-gold">
+                <svg viewBox="0 0 24 24" className="h-4 w-4 ps-0.5" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+              {tc('watchIntro')}
+            </Link>
           </div>
         </div>
 
-        {/* engineering flow rail */}
-        <ol className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] sm:grid-cols-4">
-          {flow.map((label, i) => (
-            <li
-              key={label}
-              className="relative flex items-center gap-3 bg-ink-950/40 px-5 py-5"
-            >
-              <SystemIcon
-                name={FLOW_ICONS[i]}
-                node={i === flow.length - 1}
-                className="h-6 w-6 shrink-0 text-ink-300"
-              />
-              <span className="flex flex-col">
-                <span className="font-latin text-caption tabular-nums text-ink-500">
-                  0{i + 1}
-                </span>
-                <span className="text-body-s font-medium text-white">{label}</span>
-              </span>
-              {i < flow.length - 1 ? (
-                <span className="absolute end-0 top-1/2 hidden h-4 w-px -translate-y-1/2 bg-white/15 sm:block" />
-              ) : null}
-            </li>
-          ))}
-        </ol>
+        {/* right — AECS definition card */}
+        <aside className="lg:col-span-5 lg:self-center lg:ps-6">
+          <div className="rounded-lg border border-white/10 bg-white/[0.04] p-8 backdrop-blur-md lg:p-10">
+            <p className="font-display text-[2.75rem] font-semibold leading-none tracking-tight text-white">
+              AECS
+            </p>
+            <span className="mt-6 block h-px w-12 bg-gold" />
+            <h2 className="mt-6 font-display text-h3 font-medium leading-snug text-white">
+              {t('cardTitle')}
+            </h2>
+            <p className="mt-4 text-body-s leading-relaxed text-ink-400">
+              {t('cardText')}
+            </p>
+          </div>
+        </aside>
       </div>
     </section>
   );

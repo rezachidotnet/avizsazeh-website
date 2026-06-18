@@ -86,11 +86,11 @@ export default async function EngineeringPage({
         <ol className="mt-12 grid gap-6 md:grid-cols-3">
           {process.map((step, i) => (
             <Reveal as="li" key={step.title} delay={i * 80}>
-              <div className="h-full rounded-lg border border-ink-200 bg-white p-7">
+              <div className="h-full rounded-lg border border-white/10 bg-white/[0.03] p-7">
                 <span className="font-display text-h2 font-bold text-gold">
                   0{i + 1}
                 </span>
-                <h3 className="mt-4 text-h4 font-semibold text-ink">{step.title}</h3>
+                <h3 className="mt-4 text-h4 font-semibold text-white">{step.title}</h3>
                 <p className="mt-3 text-body-s text-ink-600">{step.text}</p>
               </div>
             </Reveal>
@@ -105,11 +105,11 @@ export default async function EngineeringPage({
           {capabilities.map((c, i) => (
             <Reveal key={c.title} delay={i * 60}>
               <div className="flex gap-5">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-ink-200 bg-white text-ink">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-white/10 bg-white/[0.04] text-gold">
                   <SystemIcon name={CAP_ICONS[i]} className="h-6 w-6" />
                 </span>
                 <div>
-                  <h3 className="text-h4 font-semibold text-ink">{c.title}</h3>
+                  <h3 className="text-h4 font-semibold text-white">{c.title}</h3>
                   <p className="mt-2 max-w-sm text-body-s text-ink-600">{c.text}</p>
                 </div>
               </div>

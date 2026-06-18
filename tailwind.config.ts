@@ -1,10 +1,17 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * AECS Design System — Tailwind token mapping.
- * Palette governed by brand-guid logo/icon/homepage rules:
- *   Engineering Charcoal (#1F2328) · Architectural Ivory (#ECE9E3) · Architectural Gold (#B89A63)
- * Gold appears ONLY at transformation / decision points (never as base structure).
+ * AECS Design System — Tailwind token mapping (DARK luxury industrial theme).
+ * Ground truth: /design-system/*.png.
+ *   Base #0B0F14 · Surface rgba(255,255,255,0.04) · Hairline rgba(255,255,255,0.08)
+ *   Gold #C8A24A · Text #FFFFFF · Text-muted rgba(255,255,255,0.7)
+ *
+ * The `ink` scale is a DARK-THEME remap, assigned by usage rather than a single
+ * monotonic ramp:
+ *   100/200 .............. dark surfaces, hairline borders & grid dividers
+ *   300/400/500/600/700 .. foreground text (lighter = more prominent)
+ *   800/900/950 .......... lifted panels → page base
+ * Gold remains reserved for transformation / decision points.
  */
 const config: Config = {
   content: [
@@ -34,35 +41,39 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Engineering layer (primary)
+        // Neutral scale — assigned by usage (see header note)
         ink: {
-          DEFAULT: '#1F2328',
-          950: '#0F1113',
-          900: '#16191D',
-          800: '#1A1D21',
-          700: '#2A2F36',
-          600: '#3B424C',
-          500: '#555D68',
-          400: '#7A8491',
-          300: '#AAB2BD',
-          200: '#D4DAE2',
-          100: '#EEF1F5',
+          DEFAULT: '#FFFFFF', // primary text / solid marks
+          950: '#0B0F14', // page base
+          900: '#10151C', // lifted dark panel
+          800: '#222B34', // strong divider
+          700: '#C7CED8', // strong body text
+          600: '#AEB6C1', // body / secondary text
+          500: '#8A93A0', // labels · eyebrows · captions
+          400: '#79828F', // muted / auxiliary text
+          300: '#C7CED8', // bright secondary text (on imagery / dark)
+          200: '#1B232C', // hairline border · grid divider
+          100: '#12181F', // darkest surface (image placeholders)
         },
-        // Architectural layer (surface / neutrals)
-        ivory: '#ECE9E3',
-        surface: '#F5F3EF',
+        // Alt surfaces
+        ivory: '#0E141A', // subtle lifted surface (was light ivory)
+        surface: '#0B0F14', // page background
+        base: '#0B0F14', // explicit page base alias
+        panel: 'rgba(255,255,255,0.04)', // glass surface (spec)
+        hair: 'rgba(255,255,255,0.08)', // hairline (spec)
         // Authority accent — transformation point only
         gold: {
-          DEFAULT: '#B89A63',
+          DEFAULT: '#C8A24A',
+          950: '#211806',
           900: '#3A2A12',
           800: '#5A421A',
-          700: '#7A5A22',
-          600: '#9A7A38',
-          500: '#B89A63',
-          400: '#CBB07E',
-          300: '#DCC79B',
-          200: '#EBDCBC',
-          100: '#F7EFD9',
+          700: '#876427',
+          600: '#A98438',
+          500: '#C8A24A',
+          400: '#D8B86E',
+          300: '#E5CB93',
+          200: '#EFDDB8',
+          100: '#F8EFD9',
         },
         // Functional system colors
         success: '#2A8A74',
@@ -73,7 +84,8 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-vazir)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
         latin: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-display)', 'var(--font-vazir)', 'sans-serif'],
+        // Editorial serif for display headings (matches design references)
+        display: ['var(--font-display)', 'var(--font-vazir)', 'Georgia', 'serif'],
       },
       fontSize: {
         // type scale (clamped) — structural, not decorative
@@ -101,10 +113,11 @@ const config: Config = {
         lg: '12px',
       },
       boxShadow: {
-        sm: '0 2px 6px rgba(15,17,19,0.06)',
-        md: '0 6px 18px rgba(15,17,19,0.10)',
-        lg: '0 12px 32px rgba(15,17,19,0.14)',
-        xl: '0 24px 64px rgba(15,17,19,0.20)',
+        sm: '0 2px 6px rgba(0,0,0,0.4)',
+        md: '0 8px 24px rgba(0,0,0,0.45)',
+        lg: '0 18px 48px rgba(0,0,0,0.55)',
+        xl: '0 28px 80px rgba(0,0,0,0.6)',
+        gold: '0 10px 30px rgba(200,162,74,0.25)',
       },
       transitionDuration: {
         fast: '180ms',
@@ -117,7 +130,7 @@ const config: Config = {
       },
       backgroundImage: {
         'grid-lines':
-          'linear-gradient(to right, rgba(122,132,145,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(122,132,145,0.08) 1px, transparent 1px)',
+          'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
       },
       keyframes: {
         'reveal-up': {

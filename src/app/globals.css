@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    color-scheme: light;
+    color-scheme: dark;
   }
 
   * {
@@ -36,7 +36,7 @@
   }
 
   ::selection {
-    @apply bg-gold/30 text-ink;
+    @apply bg-gold/30 text-white;
   }
 
   :focus-visible {
@@ -64,6 +64,17 @@
     @apply inline-block h-px w-6 bg-gold;
   }
 
+  /* Centred eyebrow — flanked by hairlines (systems section reference) */
+  .eyebrow-center {
+    @apply inline-flex items-center gap-3 text-caption font-medium uppercase tracking-[0.22em] text-gold;
+  }
+
+  .eyebrow-center::before,
+  .eyebrow-center::after {
+    content: '';
+    @apply inline-block h-px w-8 bg-gold/50;
+  }
+
   /* Hairline structural divider */
   .rule {
     @apply h-px w-full bg-ink-200;
@@ -73,9 +84,13 @@
     @apply mx-auto w-full max-w-grid px-5 md:px-10 lg:px-20;
   }
 
-  /* Form control — engineering input field */
+  /* Form control — engineering input field (dark) */
   .aecs-input {
-    @apply w-full rounded border border-ink-300 bg-white px-4 py-3 text-body text-ink transition-colors duration-fast placeholder:text-ink-400 hover:border-ink-400 focus:border-ink focus:outline-none focus:ring-2 focus:ring-gold/40;
+    @apply w-full rounded border border-white/10 bg-white/[0.03] px-4 py-3 text-body text-white transition-colors duration-fast placeholder:text-ink-400 hover:border-white/20 focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/30;
+  }
+
+  .aecs-input option {
+    @apply bg-ink-900 text-white;
   }
 }
 

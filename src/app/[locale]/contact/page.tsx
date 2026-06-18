@@ -61,31 +61,31 @@ export default async function ContactPage({
       <Section>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
-            <ul className="grid gap-px overflow-hidden rounded-lg border border-ink-200 bg-ink-200 sm:grid-cols-2">
+            <ul className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
               {rows.map((row) => {
                 const content = (
                   <>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-ink-200 bg-ivory text-ink">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-white/10 bg-white/[0.04] text-gold">
                       <SystemIcon name={row.icon} className="h-5 w-5" />
                     </span>
                     <span className="flex flex-col">
                       <span className="text-caption uppercase tracking-wide text-ink-500">
                         {row.label}
                       </span>
-                      <span className={row.mono ? 'nums mt-1 text-body font-medium text-ink' : 'mt-1 text-body font-medium text-ink'}>
+                      <span className={row.mono ? 'nums mt-1 text-body font-medium text-white' : 'mt-1 text-body font-medium text-white'}>
                         {row.value}
                       </span>
                     </span>
                   </>
                 );
                 return (
-                  <li key={row.label} className="bg-white">
+                  <li key={row.label} className="bg-ink-900">
                     {row.href ? (
                       <a
                         href={row.href}
                         target={row.href.startsWith('http') ? '_blank' : undefined}
                         rel={row.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-ivory"
+                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-white/[0.03]"
                       >
                         {content}
                       </a>
