@@ -48,7 +48,7 @@ export function Header() {
       )}
     >
       <div className="container-grid flex h-20 items-center justify-between gap-6 md:h-24">
-        <Logo priority />
+        <Logo priority imgClassName="h-[3.6rem] md:h-[4.2rem]" />
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
           {NAV.map((item) => (
