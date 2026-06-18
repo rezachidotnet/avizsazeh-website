@@ -1,0 +1,46 @@
+{
+  "id": 5,
+  "title": "Brand Enemy Definition",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "primary_enemy": {
+    "name": "Unengineered Material Procurement",
+    "definition": "The practice of selecting and purchasing architectural materials based only on price, appearance, or catalog specifications without engineering validation or system-level design integration.",
+    "impact": "Leads to execution failure, design distortion, installation inefficiency, and increased project risk."
+  },
+
+  "secondary_enemies": [
+    {
+      "name": "Decoration-Driven Decision Making",
+      "definition": "Choosing ceiling systems based on visual appeal rather than architectural or engineering requirements.",
+      "risk": "Transforms architectural projects into decorative outputs with reduced structural integrity."
+    },
+    {
+      "name": "Product-Based Thinking",
+      "definition": "Treating ceiling systems as isolated products instead of integrated architectural systems.",
+      "risk": "Breaks system logic and leads to incompatibility in execution."
+    },
+    {
+      "name": "Low-Engineering Contractors",
+      "definition": "Execution entities that lack technical understanding of architectural system design and rely on manual or non-standard installation methods.",
+      "risk": "Causes deviations from design intent and reduces project quality."
+    }
+  ],
+
+  "system_conflict": {
+    "core_conflict": "System Engineering vs Material Purchase Thinking",
+    "description": "AvizSazeh operates as a system engineering brand, while the enemy represents fragmented, non-engineered decision making in construction projects."
+  },
+
+  "brand_stance": {
+    "position": "Strictly against non-engineered selection of architectural ceiling systems",
+    "approach": "Promote system-based thinking instead of product-based purchasing behavior",
+    "communication_rule": "Educate, not attack; reframe, not insult"
+  },
+
+  "strategic_importance": {
+    "function": "Defines market contrast and strengthens brand positioning",
+    "role": "Creates cognitive separation between engineered systems and commodity construction materials"
+  }
+}

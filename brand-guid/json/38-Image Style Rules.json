@@ -1,0 +1,153 @@
+{
+  "id": 38,
+  "title": "Image Style Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Image Style System v1.0",
+
+  "core_principle": {
+    "statement": "Images are engineering documentation outputs, not aesthetic or marketing visuals.",
+    "interpretation": "Every image must represent architectural systems, execution logic, or industrial reality."
+  },
+
+  "visual_identity_philosophy": {
+    "concept": "Engineering Realism",
+    "goal": "Communicate architectural systems as real, buildable, and measurable structures",
+    "anti_style": "Reject lifestyle, luxury, and decorative visual language"
+  },
+
+  "primary_image_style": {
+    "style_name": "Industrial Architectural Documentation",
+    "characteristics": [
+      "Real-world architectural environments",
+      "Structural clarity and system visibility",
+      "Engineering-focused framing",
+      "Neutral industrial tone"
+    ],
+    "purpose": "Show real execution of architectural ceiling systems"
+  },
+
+  "composition_rules": {
+    "framing": [
+      "Wide architectural perspective (primary)",
+      "Orthographic/technical viewpoints (secondary)",
+      "Controlled isometric system views (supportive)"
+    ],
+    "focus": "Structural system clarity, not aesthetic composition",
+    "alignment": "Strong preference for grid-based and modular composition",
+    "depth": "Functional depth only (no cinematic blur effects)"
+  },
+
+  "lighting_rules": {
+    "allowed": [
+      "Natural daylight in architectural spaces",
+      "Neutral industrial lighting",
+      "Soft diffused technical lighting"
+    ],
+    "forbidden": [
+      "Luxury cinematic lighting",
+      "Colored mood lighting",
+      "High contrast artistic lighting",
+      "Stage-style spotlighting"
+    ]
+  },
+
+  "color_grading_rules": {
+    "style": "Neutral engineering realism",
+    "allowed_palette": [
+      "Concrete gray",
+      "Steel tones",
+      "Neutral whites",
+      "Architectural beige"
+    ],
+    "forbidden_palette": [
+      "Teal-orange cinematic grading",
+      "Luxury warm golden grading",
+      "Oversaturated artistic filters",
+      "Instagram-style enhancement"
+    ]
+  },
+
+  "material_realism_rules": {
+    "required": [
+      "Visible structural elements",
+      "Authentic construction materials",
+      "Real installation environments",
+      "Unpolished engineering surfaces"
+    ],
+    "forbidden": [
+      "Artificial glossy materials",
+      "Fake perfect renders",
+      "Non-existent architectural environments"
+    ]
+  },
+
+  "subject_rules": {
+    "human_presence": "Only functional roles allowed (engineers, installers, technicians)",
+    "behavior": "Task-oriented, natural, non-posed",
+    "forbidden": [
+      "Lifestyle posing",
+      "Fashion editorial style",
+      "Emotional storytelling portraits"
+    ]
+  },
+
+  "environment_rules": {
+    "allowed": [
+      "Construction sites",
+      "Industrial facilities",
+      "Manufacturing plants",
+      "Real architectural interiors"
+    ],
+    "forbidden": [
+      "Luxury interior staging",
+      "Decorative showroom setups",
+      "Lifestyle home environments"
+    ]
+  },
+
+  "visual_language_rules": {
+    "geometry": "Strong linear and modular structure must dominate",
+    "symmetry": "Engineering symmetry preferred over artistic composition",
+    "repetition": "System patterns encouraged to show modular architecture"
+  },
+
+  "post_processing_rules": {
+    "allowed": [
+      "Minimal contrast correction",
+      "Basic exposure correction",
+      "Clarity enhancement for engineering visibility"
+    ],
+    "forbidden": [
+      "Stylized filters",
+      "HDR exaggeration",
+      "vignette effects",
+      "artistic color grading"
+    ]
+  },
+
+  "forbidden_image_styles": [
+    "Luxury architectural photography",
+    "Lifestyle branding photography",
+    "Cinematic storytelling imagery",
+    "Fashion editorial style",
+    "Abstract artistic renders",
+    "AI-generated fantasy architecture"
+  ],
+
+  "psychological_effect": {
+    "primary_impression": "Engineering precision and system reliability",
+    "secondary_impression": "Industrial architectural intelligence",
+    "viewer_perception": [
+      "This is a real engineering company",
+      "This system is buildable and functional",
+      "This is not decoration, it is execution"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure all visual outputs represent real architectural engineering systems",
+    "outcome": "Strong perception of AvizSazeh as a technical execution-focused engineering brand"
+  }
+}

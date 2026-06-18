@@ -1,0 +1,69 @@
+
+Homepage_UI_Final.fig
+AECS — AvizSazeh Engineering UX System
+
+NOTE: This is a structured Figma specification (not native binary .fig format)
+
+=========================================================
+1. PAGE STRUCTURE
+=========================================================
+
+[1] HERO SYSTEM SECTION
+- Full screen dark engineering background
+- Title: Architectural Engineering System
+- Subtitle: From Design → Engineering → Execution
+- CTA: Request Engineering Analysis
+
+[2] TRUST ENGINE BAR
+- Projects: 300+
+- Regions: IR / IQ / OM / GCC
+- Systems: 4 Core Systems
+
+[3] SYSTEM DEFINITION BLOCK
+- Left: What is AECS
+- Right: Engineering Philosophy
+
+[4] SYSTEM MODULE GRID
+- Linear Ceiling System
+- Grid Ceiling System
+- Custom Engineering System
+- Hybrid System
+
+[5] ENGINEERING FLOW VISUAL
+- Design → Engineering → Manufacturing → Execution
+
+[6] PROJECT PROOF SECTION
+- 3 featured case studies
+- engineering breakdown preview
+
+[7] EXECUTION SYSTEM PREVIEW
+- site imagery + control overlay
+
+[8] RFQ CTA ENGINE
+- "Define your project as a system"
+
+=========================================================
+2. UI RULES
+=========================================================
+
+- 12 column grid system
+- 8px spacing system
+- industrial / engineering aesthetic
+- no decorative UI
+- motion = structural only
+
+=========================================================
+3. COMPONENT MAPPING
+=========================================================
+
+HeroSection
+TrustBar
+SystemDefinitionBlock
+SystemModuleGrid
+EngineeringFlow
+ProjectShowcase
+ExecutionPreview
+RFQCTA
+
+=========================================================
+END OF FILE

@@ -1,0 +1,126 @@
+{
+  "id": 39,
+  "title": "UI Design System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS UI System v1.0",
+
+  "core_principle": {
+    "statement": "UI is an engineering interface, not a marketing design surface.",
+    "interpretation": "Every interface element must behave like part of an architectural engineering system."
+  },
+
+  "ui_philosophy": {
+    "concept": "Engineering Interface Design",
+    "goal": "Translate architectural system logic into digital interaction layers",
+    "anti_style": "Reject decorative UI, lifestyle aesthetics, and marketing-driven design"
+  },
+
+  "design_fundamentals": {
+    "grid_system": {
+      "base": "12-column layout system",
+      "subdivision": "8px modular spacing unit",
+      "rule": "All UI elements must align strictly to grid logic"
+    },
+    "layout_logic": "Architecture → System → Component → Interaction",
+    "visual_hierarchy": "Engineering layer defines structure, architectural layer defines space, accent defines action"
+  },
+
+  "color_in_ui": {
+    "engineering_layer": {
+      "role": "Primary structural UI elements",
+      "colors": ["#1F2328", "#3D3D3D", "#4B5563"]
+    },
+    "architectural_layer": {
+      "role": "Background and spatial UI context",
+      "colors": ["#ECE9E3", "#B7B0A5", "#FFFFFF"]
+    },
+    "accent_layer": {
+      "role": "Interactive actions and system highlights",
+      "colors": ["#B89A63"],
+      "rule": "Used only for interactive or transformation elements"
+    }
+  },
+
+  "typography_in_ui": {
+    "rule": "Typography is part of system structure, not decoration",
+    "fonts": {
+      "persian": ["Vazirmatn", "IRANSansX"],
+      "latin": ["Inter", "IBM Plex Sans"]
+    },
+    "behavior": "Strict hierarchy alignment (H1–H2–H3–Body–Caption)"
+  },
+
+  "component_system": {
+    "buttons": {
+      "style": "Flat, geometric, grid-aligned",
+      "states": ["default", "hover", "active", "disabled"],
+      "accent_usage": "Only primary CTA uses gold accent"
+    },
+    "cards": {
+      "style": "Structural containers representing system modules",
+      "rule": "Must reflect engineering segmentation logic"
+    },
+    "navigation": {
+      "style": "System-based navigation (not decorative)",
+      "behavior": "Linear, hierarchical, predictable flow"
+    },
+    "forms": {
+      "style": "Engineering input systems",
+      "rule": "Minimal decoration, maximum clarity"
+    }
+  },
+
+  "interaction_design": {
+    "principle": "Every interaction must reflect system transformation logic",
+    "flow": "Input → Validation → System Processing → Output",
+    "animation": {
+      "style": "Minimal, linear, functional transitions only",
+      "forbidden": ["elastic animations", "bouncy motion", "decorative effects"]
+    }
+  },
+
+  "layout_system": {
+    "structure": "Modular system blocks",
+    "alignment": "Strict grid-based positioning",
+    "spacing": "8px system multiples only",
+    "visual_rhythm": "Consistent vertical engineering rhythm"
+  },
+
+  "icon_integration": {
+    "style": "Line-based engineering abstraction",
+    "rule": "Icons must behave like system diagrams",
+    "forbidden": ["emoji style", "3D icons", "illustrative icons"]
+  },
+
+  "responsive_behavior": {
+    "principle": "System scalability across devices",
+    "rule": "No loss of hierarchy or grid structure on any screen size",
+    "adaptation": "Reflow must preserve engineering logic"
+  },
+
+  "forbidden_ui_patterns": [
+    "Gradient-heavy interfaces",
+    "Decorative UI elements",
+    "Lifestyle imagery integration",
+    "Non-grid layouts",
+    "Over-animated interfaces",
+    "Marketing-style visual clutter"
+  ],
+
+  "psychological_effect": {
+    "primary_impression": "Engineering-grade system interface",
+    "secondary_impression": "Architectural intelligence and precision",
+    "user_perception": [
+      "This is a technical system, not a marketing website",
+      "Everything is structured and logical",
+      "This company operates like an engineering platform"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Create a digital interface that behaves like an architectural engineering system",
+    "outcome": "Users perceive AvizSazeh as a structured, reliable engineering authority"
+  }
+}

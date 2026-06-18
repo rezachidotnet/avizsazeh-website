@@ -1,0 +1,116 @@
+{
+  "id": 12,
+  "title": "Competitive Analysis",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "competitive_landscape": {
+    "global_system_leaders": [
+      {
+        "name": "Siemens",
+        "positioning": "Engineering authority and system integrator",
+        "strengths": [
+          "Industrial engineering credibility",
+          "System-level thinking",
+          "Global EPC trust"
+        ],
+        "weaknesses": [
+          "Not architecture-specialized in ceiling systems",
+          "Low architectural design integration"
+        ]
+      },
+      {
+        "name": "Autodesk",
+        "positioning": "Design and BIM software ecosystem",
+        "strengths": [
+          "Architectural design intelligence",
+          "Digital system integration",
+          "Industry standard software"
+        ],
+        "weaknesses": [
+          "No physical execution capability",
+          "No manufacturing or installation layer"
+        ]
+      },
+      {
+        "name": "Hunter Douglas Architectural",
+        "positioning": "Premium architectural ceiling systems provider",
+        "strengths": [
+          "Strong architectural identity",
+          "High-quality ceiling systems",
+          "Global design recognition"
+        ],
+        "weaknesses": [
+          "Less engineering-heavy perception",
+          "More product-oriented than system integrator"
+        ]
+      },
+      {
+        "name": "SAS International",
+        "positioning": "Ceiling systems manufacturer with architectural focus",
+        "strengths": [
+          "Strong product engineering",
+          "Global presence in ceiling systems",
+          "Technical documentation"
+        ],
+        "weaknesses": [
+          "Limited architectural intelligence positioning",
+          "Still product-centered perception"
+        ]
+      }
+    ],
+
+    "regional_competitors": [
+      {
+        "type": "Local Contractors",
+        "positioning": "Execution-based construction providers",
+        "strengths": [
+          "Local market knowledge",
+          "Cost competitiveness",
+          "Fast execution capability"
+        ],
+        "weaknesses": [
+          "Low engineering integration",
+          "No system-level design thinking",
+          "Inconsistent quality"
+        ]
+      },
+      {
+        "type": "Material Suppliers",
+        "positioning": "Commodity ceiling material providers",
+        "strengths": [
+          "Low cost",
+          "Simple supply chain",
+          "Availability"
+        ],
+        "weaknesses": [
+          "No engineering design",
+          "No system integration",
+          "High execution risk"
+        ]
+      }
+    ],
+
+    "market_gap": {
+      "core_gap": "Architectural Engineering System Integration",
+      "description": "A missing category between architectural design intelligence and execution-driven manufacturing systems.",
+      "opportunity": "Provide fully engineered, architecturally-aware ceiling systems with execution reliability"
+    }
+  },
+
+  "avizsazeh_position": {
+    "category": "Architectural Engineering System Integrator",
+    "unique_position": "Bridging architecture, engineering, manufacturing, and execution into a single system",
+    "differentiation": [
+      "System-based thinking instead of product selling",
+      "Engineering validation before execution",
+      "Architectural intent preservation",
+      "Project-specific customization"
+    ]
+  },
+
+  "strategic_insight": {
+    "key_insight": "Competitors are either design-focused OR product-focused; AvizSazeh occupies the system integration layer.",
+    "critical_advantage": "Ability to translate architectural intent into buildable ceiling systems without loss of design integrity"
+  }
+}

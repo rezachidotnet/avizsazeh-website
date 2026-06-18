@@ -1,0 +1,78 @@
+{
+  "id": 21,
+  "title": "Authority Accent System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "layer_definition": {
+    "name": "Authority Accent Layer",
+    "role": "Value signaling and decision-point highlight system",
+    "purpose": "Represents transformation, engineering authority, and critical emphasis moments within the system",
+    "perception_goal": "Signal importance, control attention, and mark system-level transitions"
+  },
+
+  "core_color": {
+    "name": "Architectural Gold Accent",
+    "hex": "#B89A63",
+    "rgb": "184, 154, 99",
+    "role": "Primary authority and transformation indicator",
+    "usage": [
+      "Call-to-action (CTA) elements",
+      "Logo transformation point",
+      "Key highlights in UI",
+      "Critical system markers",
+      "Important architectural milestones"
+    ],
+    "psychology": "Value, transformation, precision luxury (controlled), engineering authority"
+  },
+
+  "usage_rules": {
+    "max_usage_ratio": "10%",
+    "dominance_rule": "Must never dominate visual system; always secondary to engineering layer",
+    "placement_rule": "Only used at decision points or transformation nodes"
+  },
+
+  "functional_roles": {
+    "transformation_marker": "Indicates shift from architecture → engineering → execution",
+    "attention_control": "Directs user focus to key actions or critical information",
+    "value_signal": "Represents high-value engineering decisions or outputs",
+    "hierarchy_separator": "Differentiates standard content from strategic content"
+  },
+
+  "system_behavior": {
+    "logo": "Appears only at transformation endpoint of system logic",
+    "ui": "Used sparingly for CTA buttons and key highlights",
+    "layout": "Never used as background or structural base color",
+    "data_visualization": "Marks critical nodes or final outputs"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Controlled authority and engineering value",
+    "secondary_impression": "Premium system intelligence",
+    "user_feeling": [
+      "This is a high-value engineering system",
+      "This brand controls precision and execution",
+      "This action or element is important"
+    ]
+  },
+
+  "strict_rules": {
+    "allowed": [
+      "Flat usage only",
+      "Small surface areas",
+      "Controlled highlights"
+    ],
+    "forbidden": [
+      "Gold backgrounds",
+      "Gradient gold",
+      "Heavy decorative use",
+      "Luxury branding dominance",
+      "Continuous UI use"
+    ]
+  },
+
+  "strategic_role": {
+    "function": "Defines moments of importance and transformation in the brand system",
+    "impact": "Ensures gold is perceived as engineering value signal, not decoration"
+  }
+}

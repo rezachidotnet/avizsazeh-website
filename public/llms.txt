@@ -1,0 +1,41 @@
+# AvizSazeh Naghsh Jahan
+
+> Architectural Engineering System (AECS) for suspended metal ceilings.
+> AvizSazeh transforms architectural intent into buildable, engineered ceiling
+> systems through engineering, customisation, and controlled execution.
+> It is not a decoration brand or commodity manufacturer — it is a system
+> integrator between architecture and execution.
+
+Languages: Persian (fa, default) and English (en).
+Regions served: Iran, Iraq, Oman, GCC.
+Site: https://avizsazeh.ir
+
+## Engineering systems
+- Linear Ceiling System (/systems/linear-ceiling): directional aluminium strip system for airports, corridors, transport terminals.
+- Open Cell System / Grilliom (/systems/open-cell): two-dimensional metal grid for malls, transport hubs, high-traffic public spaces.
+- Metal Tile System (/systems/metal-tile): panelised galvanised-steel or aluminium tiles for halls, hospitals, sterile spaces; acoustic option with rock wool.
+- Baffle System (/systems/baffle): vertical-fin / acoustic system for schools, libraries, acoustically sensitive spaces.
+
+## Engineering flow
+Design → Engineering → Manufacturing → Execution.
+Every design is validated structurally before fabrication. Material selection without engineering is treated as project risk.
+
+## Pages
+- / : System entry point (homepage)
+- /systems : System architecture overview
+- /engineering : Engineering logic and execution process
+- /projects : Executed projects and clients (proof layer)
+- /about : Company, principles, and values
+- /contact : Contact and location (Isfahan, Iran)
+- /rfq : Engineering request engine — structured project definition (not a contact form)
+
+## Capabilities
+- Technical & engineering office producing custom shop, production, and installation drawings.
+- Field installation across Iran and neighbouring countries; any climate; up to 50 m height.
+- Project control with daily progress reporting from contract start.
+- Authenticity and quality warranty on every product.
+- Integrates with CBI Europe radiant systems.
+
+## Contact
+Phone: 031-35134 · Mobile: 0912-065-6528 · Email: info@avizsazeh.ir · Instagram: @Avizsazeh
+Address: Isfahan, Hezar Jarib St., beginning of Khosropour St., Kooy-e Azadegan, No. 6

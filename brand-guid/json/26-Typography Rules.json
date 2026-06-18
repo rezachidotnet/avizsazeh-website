@@ -1,0 +1,131 @@
+{
+  "id": 26,
+  "title": "Typography Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Typography Governance Rules v1.0",
+
+  "core_principle": {
+    "statement": "Typography is an engineering system, not a visual decoration tool.",
+    "interpretation": "Every typographic decision must follow hierarchy, structure, and system logic."
+  },
+
+  "global_typography_rules": [
+    {
+      "rule": "Hierarchy must always be visible",
+      "description": "No text can exist without a clear structural level (H1–H2–H3–Body–Caption)."
+    },
+    {
+      "rule": "One purpose per text style",
+      "description": "Each typographic style must serve only one functional role in the system."
+    },
+    {
+      "rule": "Engineering clarity over aesthetics",
+      "description": "Readability and system logic are more important than visual styling."
+    },
+    {
+      "rule": "Grid alignment is mandatory",
+      "description": "All typography must align with the 12-column architectural grid system."
+    },
+    {
+      "rule": "Consistency across all platforms",
+      "description": "Web, PDF, UI, and marketing must use identical typographic logic."
+    }
+  ],
+
+  "hierarchy_enforcement_rules": {
+    "H1": {
+      "rule": "Only one H1 per page/system section",
+      "restriction": "No competing large titles allowed",
+      "purpose": "Defines system identity"
+    },
+    "H2": {
+      "rule": "Used only for system segmentation",
+      "restriction": "Cannot be used as decorative headings",
+      "purpose": "Defines subsystem structure"
+    },
+    "H3": {
+      "rule": "Must represent functional components",
+      "restriction": "No duplication of H2 meaning",
+      "purpose": "Defines operational modules"
+    },
+    "BODY": {
+      "rule": "Default content layer",
+      "restriction": "No emphasis overload or multiple font families",
+      "purpose": "Information delivery layer"
+    },
+    "CAPTION": {
+      "rule": "Must remain secondary and non-dominant",
+      "restriction": "Cannot compete with body text visibility",
+      "purpose": "Metadata and technical notes"
+    }
+  },
+
+  "visual_conduct_rules": [
+    {
+      "rule": "No decorative typography",
+      "description": "Avoid script, handwritten, or stylized fonts."
+    },
+    {
+      "rule": "No random scaling",
+      "description": "Font sizes must follow defined hierarchy ratios only."
+    },
+    {
+      "rule": "No excessive font variety",
+      "description": "Maximum two font families per system (Persian + Latin)."
+    },
+    {
+      "rule": "No gradient or styled text effects",
+      "description": "Typography must remain flat and engineering-oriented."
+    },
+    {
+      "rule": "No emotional emphasis styling",
+      "description": "Avoid unnecessary bolding or color emphasis outside system rules."
+    }
+  ],
+
+  "color-typography_integration": {
+    "engineering_layer": "Primary text color (Charcoal/Graphite)",
+    "architectural_layer": "Background contrast support only",
+    "accent_layer": "Only for minimal keyword emphasis, never full text blocks"
+  },
+
+  "spacing_rules": {
+    "line_height": {
+      "H1": "1.1 - 1.2",
+      "H2": "1.2 - 1.3",
+      "H3": "1.3 - 1.4",
+      "BODY": "1.5 - 1.7",
+      "CAPTION": "1.4 - 1.5"
+    },
+    "letter_spacing": {
+      "H1": "-1% to -2%",
+      "H2": "-0.5%",
+      "H3": "0%",
+      "BODY": "0%",
+      "CAPTION": "0.5%"
+    }
+  },
+
+  "system_alignment_rules": {
+    "grid_dependency": "Typography must align with architectural grid system",
+    "component_dependency": "Text styles must match UI component hierarchy",
+    "layout_dependency": "Typography must reinforce spatial architecture"
+  },
+
+  "risk_control": {
+    "common_mistakes": [
+      "Using multiple font styles for emphasis",
+      "Breaking hierarchy consistency",
+      "Ignoring grid alignment",
+      "Overusing bold or accent colors in text"
+    ],
+    "impact": "Breaks engineering perception and reduces system clarity"
+  },
+
+  "strategic_goal": {
+    "objective": "Maintain strict structural clarity across all textual communication",
+    "outcome": "Typography behaves like an engineering framework supporting architectural system thinking"
+  }
+}

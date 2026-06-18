@@ -1,0 +1,33 @@
+System Pages Wireframe (AECS)
+
+Pages:
+1. Systems Overview
+2. Linear Ceiling System
+3. Grid Ceiling System
+4. Custom Engineering System
+5. Hybrid System
+
+Structure per page:
+
+[Hero Section]
+- System Name
+- Engineering Definition
+
+[Logic Section]
+- How system works
+- Engineering constraints
+
+[Application Section]
+- Use cases
+- Industry fit
+
+[Technical Section]
+- Material logic
+- Structural behavior
+
+[Execution Section]
+- Installation overview
+- QA/QC notes
+
+[CTA Section]
+- Request Engineering Analysis

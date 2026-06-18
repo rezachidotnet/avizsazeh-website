@@ -1,0 +1,70 @@
+{
+  "id": 11,
+  "title": "Market Position Map",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "market_landscape": {
+    "axis_1": {
+      "name": "Product vs System",
+      "description": "Degree of integration between isolated products and fully engineered systems"
+    },
+    "axis_2": {
+      "name": "Decoration vs Engineering",
+      "description": "Level of technical depth versus aesthetic-only positioning"
+    }
+  },
+
+  "positioning_coordinates": {
+    "AvizSazeh": {
+      "x_product_to_system": 0.9,
+      "y_decoration_to_engineering": 0.95,
+      "interpretation": "Highly engineered system provider with minimal product-based positioning"
+    },
+
+    "commodity_ceiling_suppliers": {
+      "x_product_to_system": 0.2,
+      "y_decoration_to_engineering": 0.3,
+      "interpretation": "Low engineering, product-focused, price-driven suppliers"
+    },
+
+    "interior_decor_brands": {
+      "x_product_to_system": 0.3,
+      "y_decoration_to_engineering": 0.2,
+      "interpretation": "Aesthetic-driven, low technical integration, design-only focus"
+    },
+
+    "traditional_contractors": {
+      "x_product_to_system": 0.5,
+      "y_decoration_to_engineering": 0.5,
+      "interpretation": "Execution-focused but lacking system-level engineering integration"
+    },
+
+    "global_engineering_brands": {
+      "x_product_to_system": 0.95,
+      "y_decoration_to_engineering": 0.9,
+      "interpretation": "High-end system integrators (e.g., Siemens, Autodesk, Hunter Douglas)"
+    }
+  },
+
+  "strategic_position": {
+    "current_position": "High-end Architectural Engineering System Provider",
+    "target_position": "Regional authority in engineered architectural ceiling systems",
+    "movement_direction": "From execution supplier → to system engineering authority"
+  },
+
+  "differentiation_zone": {
+    "unique_space": "Intersection of architectural intelligence and execution reliability",
+    "what_makes_unique": [
+      "System-based thinking instead of product-based selling",
+      "Engineering-driven architectural interpretation",
+      "Execution reliability embedded in design phase"
+    ]
+  },
+
+  "market_perception_goal": {
+    "primary_goal": "Be perceived as an engineering system company, not a material supplier",
+    "secondary_goal": "Be trusted by architects and EPC firms as a technical partner",
+    "final_goal": "Become default choice for complex architectural ceiling systems in region"
+  }
+}

@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-ink-200;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-ink antialiased;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+
+  /* English content uses the technical Latin face */
+  html[lang='en'] body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  /* Numbers and engineering units always read LTR */
+  .nums,
+  [dir='rtl'] .nums {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.gold.DEFAULT');
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* Engineering eyebrow label — structural, monospaced spacing */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-caption font-medium uppercase tracking-[0.18em] text-ink-500;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply inline-block h-px w-6 bg-gold;
+  }
+
+  /* Hairline structural divider */
+  .rule {
+    @apply h-px w-full bg-ink-200;
+  }
+
+  .container-grid {
+    @apply mx-auto w-full max-w-grid px-5 md:px-10 lg:px-20;
+  }
+
+  /* Form control — engineering input field */
+  .aecs-input {
+    @apply w-full rounded border border-ink-300 bg-white px-4 py-3 text-body text-ink transition-colors duration-fast placeholder:text-ink-400 hover:border-ink-400 focus:border-ink focus:outline-none focus:ring-2 focus:ring-gold/40;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

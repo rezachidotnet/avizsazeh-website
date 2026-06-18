@@ -1,0 +1,112 @@
+{
+  "system": "AECS UX System",
+  "journey_name": "User_Journey_Map",
+  "version": "1.0",
+  "persona": {
+    "primary_users": [
+      "Architect",
+      "EPC Contractor",
+      "Industrial Client",
+      "Project Manager",
+      "Investor in Construction"
+    ]
+  },
+  "journey_stages": [
+    {
+      "stage": "Awareness",
+      "user_goal": "Understand if system is relevant",
+      "touchpoints": [
+        "Homepage",
+        "SEO Landing",
+        "Project showcase"
+      ],
+      "questions": [
+        "What is AvizSazeh?",
+        "Is this relevant to my project?"
+      ],
+      "emotions": [
+        "curious",
+        "uncertain"
+      ],
+      "ux_output": "Clear engineering positioning, no marketing language"
+    },
+    {
+      "stage": "Understanding",
+      "user_goal": "Understand system capability",
+      "touchpoints": [
+        "Systems page",
+        "Architecture diagrams"
+      ],
+      "questions": [
+        "What systems do they offer?",
+        "How does it work technically?"
+      ],
+      "emotions": [
+        "analytical"
+      ],
+      "ux_output": "Structured system breakdown (engineering logic)"
+    },
+    {
+      "stage": "Validation",
+      "user_goal": "Verify credibility",
+      "touchpoints": [
+        "Projects page",
+        "Case studies",
+        "Technical docs"
+      ],
+      "questions": [
+        "Have they done similar projects?",
+        "Can they deliver at scale?"
+      ],
+      "emotions": [
+        "skeptical",
+        "evaluating"
+      ],
+      "ux_output": "Proof-based architecture (projects, metrics, execution data)"
+    },
+    {
+      "stage": "Trust",
+      "user_goal": "Build confidence in execution",
+      "touchpoints": [
+        "Engineering section",
+        "Process explanation",
+        "Team credibility"
+      ],
+      "questions": [
+        "Who is behind this system?",
+        "Can they execute reliably?"
+      ],
+      "emotions": [
+        "confident building",
+        "risk reduction"
+      ],
+      "ux_output": "Engineering transparency + process clarity"
+    },
+    {
+      "stage": "RFQ",
+      "user_goal": "Submit project inquiry",
+      "touchpoints": [
+        "RFQ form",
+        "Contact page",
+        "WhatsApp integration"
+      ],
+      "questions": [
+        "How do I request a proposal?",
+        "What info is required?"
+      ],
+      "emotions": [
+        "ready to act"
+      ],
+      "ux_output": "Minimal friction conversion system"
+    }
+  ],
+  "conversion_flow": [
+    "Awareness → Understanding → Validation → Trust → RFQ"
+  ],
+  "design_principles": [
+    "Engineering-first communication",
+    "No emotional marketing",
+    "System transparency",
+    "Decision-driven UX"
+  ]
+}

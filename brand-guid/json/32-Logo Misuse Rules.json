@@ -1,0 +1,117 @@
+{
+  "id": 32,
+  "title": "Logo Misuse Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Logo Misuse Governance v1.0",
+
+  "core_principle": {
+    "statement": "Any misuse of the logo directly breaks the architectural engineering system perception of the brand.",
+    "interpretation": "The logo is a structured system artifact, not a decorative or flexible visual element."
+  },
+
+  "critical_misuse_categories": [
+    {
+      "category": "Geometric Distortion",
+      "definition": "Altering proportions, grid alignment, or structural geometry of the logo.",
+      "violations": [
+        "Stretching horizontally or vertically",
+        "Rotating outside 0°, 90° increments",
+        "Breaking grid alignment"
+      ],
+      "impact": "Destroys engineering system integrity perception"
+    },
+    {
+      "category": "Color Misapplication",
+      "definition": "Using non-AECS colors or incorrect hierarchy in logo rendering.",
+      "violations": [
+        "Using gradients",
+        "Replacing engineering colors with decorative palettes",
+        "Using gold as primary structure color"
+      ],
+      "impact": "Shifts brand perception from engineering system to decorative brand"
+    },
+    {
+      "category": "Structural Modification",
+      "definition": "Changing internal logic of logo construction system.",
+      "violations": [
+        "Removing segmentation logic",
+        "Altering transformation flow (Line → System → Point)",
+        "Adding non-system elements"
+      ],
+      "impact": "Breaks architectural transformation meaning"
+    },
+    {
+      "category": "Decorative Enhancement",
+      "definition": "Adding visual effects to improve aesthetic appearance.",
+      "violations": [
+        "Shadows",
+        "Glow effects",
+        "3D extrusion",
+        "Textures or metallic effects"
+      ],
+      "impact": "Converts engineering identity into decorative branding"
+    },
+    {
+      "category": "Symbolic Replacement",
+      "definition": "Replacing system-based geometry with pictorial or illustrative symbols.",
+      "violations": [
+        "Using building icons",
+        "Ceiling or roof symbols",
+        "Generic architectural imagery"
+      ],
+      "impact": "Destroys system-based identity structure"
+    }
+  ],
+
+  "gold_accent_rules": {
+    "strict_rule": "Architectural Gold (#B89A63) must only appear at transformation point",
+    "forbidden_usage": [
+      "Background fills",
+      "Primary structural lines",
+      "Multiple nodes usage",
+      "Gradient or glow application"
+    ],
+    "risk": "Overuse of gold repositions brand as luxury decoration rather than engineering system"
+  },
+
+  "grid_violation_rules": {
+    "definition": "Any deviation from 10x10 modular grid system",
+    "violations": [
+      "Freeform placement of elements",
+      "Asymmetrical alignment without system logic",
+      "Manual adjustment outside grid coordinates"
+    ],
+    "impact": "Breaks perception of structured engineering system"
+  },
+
+  "variant_misuse_rules": {
+    "variant_A": "Must remain primary identity; not replaceable with decorative versions",
+    "variant_B": "Cannot be used as decorative logo alternative",
+    "variant_C": "Restricted to EPC and execution contexts only"
+  },
+
+  "context_misuse": {
+    "definition": "Using logo in environments that contradict engineering system positioning",
+    "examples": [
+      "Lifestyle branding contexts",
+      "Fashion or luxury decoration ads",
+      "Non-technical marketing campaigns"
+    ],
+    "impact": "Dilutes architectural engineering perception"
+  },
+
+  "strict_prohibitions": [
+    "Any visual redesign outside AECS system",
+    "Use of AI-generated decorative variants",
+    "Informal reinterpretation of logo structure",
+    "Use of non-standard colors or effects",
+    "Ignoring grid-based construction logic"
+  ],
+
+  "strategic_goal": {
+    "objective": "Preserve strict engineering identity of logo across all applications",
+    "outcome": "Maintain consistent perception of AvizSazeh as an Architectural Engineering System Brand"
+  }
+}

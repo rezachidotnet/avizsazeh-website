@@ -1,0 +1,69 @@
+
+System_Page_UI.fig
+AECS — AvizSazeh Engineering UX System
+
+NOTE: Structured Figma specification (non-binary)
+
+=========================================================
+1. PAGE STRUCTURE
+=========================================================
+
+[1] SYSTEM HERO SECTION
+- Title: Ceiling Systems as Engineering Models
+- Subtitle: Not products — engineered systems
+- Visual: dark industrial background grid
+- CTA: Explore Engineering Logic
+
+[2] SYSTEM OVERVIEW BLOCK
+- What is a Ceiling System (AECS definition)
+- Engineering interpretation vs product view
+
+[3] SYSTEM MODULE LIST
+- Linear Ceiling System
+- Grid Ceiling System
+- Custom Engineering System
+- Hybrid System
+
+[4] ENGINEERING BREAKDOWN SECTION
+- load behavior
+- material logic
+- installation constraints
+- architectural alignment
+
+[5] SYSTEM COMPARISON MATRIX
+- complexity level
+- use cases
+- structural capacity
+
+[6] APPLICATION SCENARIOS
+- industrial spaces
+- commercial buildings
+- architectural interiors
+
+[7] SYSTEM CTA BLOCK
+- Request System Engineering Analysis
+
+=========================================================
+2. UI RULES
+=========================================================
+
+- 12 column grid layout
+- 8px spacing system
+- engineering-first visual hierarchy
+- no marketing language
+- diagram-based UI preferred
+
+=========================================================
+3. COMPONENTS
+=========================================================
+
+SystemHero
+SystemOverviewBlock
+SystemModuleList
+EngineeringBreakdown
+SystemComparisonMatrix
+ApplicationScenarios
+SystemCTA
+
+=========================================================
+END OF FILE

@@ -1,0 +1,92 @@
+{
+  "id": 20,
+  "title": "Architectural Layer Colors",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "layer_definition": {
+    "name": "Architectural Layer",
+    "role": "Spatial, environmental, and experiential foundation of the brand system",
+    "purpose": "Represents architecture, space, material neutrality, and visual breathing room",
+    "perception_goal": "Create architectural intelligence, spatial clarity, and calm structural environment"
+  },
+
+  "core_colors": [
+    {
+      "name": "Architectural Ivory",
+      "hex": "#ECE9E3",
+      "rgb": "236, 233, 227",
+      "role": "Primary spatial background color",
+      "usage": [
+        "Main website background",
+        "Section backgrounds",
+        "Catalog pages",
+        "Architectural presentation surfaces"
+      ],
+      "psychology": "Clarity, openness, architectural neutrality, spatial calm"
+    },
+    {
+      "name": "Warm Architectural Gray",
+      "hex": "#B7B0A5",
+      "rgb": "183, 176, 165",
+      "role": "Secondary architectural surface color",
+      "usage": [
+        "Soft UI panels",
+        "Background layering",
+        "Content separation zones",
+        "Architectural context blocks"
+      ],
+      "psychology": "Material realism, architectural warmth, grounded structure"
+    },
+    {
+      "name": "Pure Spatial White",
+      "hex": "#FFFFFF",
+      "rgb": "255, 255, 255",
+      "role": "Maximum clarity and negative space color",
+      "usage": [
+        "Whitespace dominance",
+        "High-clarity sections",
+        "Text readability zones",
+        "Architectural breathing space"
+      ],
+      "psychology": "Minimalism, clarity, spatial expansion, precision"
+    }
+  ],
+
+  "usage_principles": {
+    "dominance_rule": "Architectural layer defines spatial experience, not structural hierarchy",
+    "space_rule": "Whitespace is considered architectural space, not empty design area",
+    "balance_rule": "Must always support engineering layer without competing with it"
+  },
+
+  "system_behavior": {
+    "ui": "Defines background surfaces and spatial composition",
+    "layout": "Creates breathing room and architectural structure perception",
+    "content": "Ensures readability and spatial hierarchy",
+    "visual_identity": "Provides architectural calmness behind engineering authority"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Architectural intelligence and spatial clarity",
+    "secondary_impression": "High-end architectural design environment",
+    "user_feeling": [
+      "This feels like an architectural system, not a product catalog",
+      "This space is designed with intention and structure",
+      "This brand understands architecture deeply"
+    ]
+  },
+
+  "strict_rules": {
+    "allowed": [
+      "Flat neutral tones only",
+      "High whitespace usage",
+      "Subtle layering between tones"
+    ],
+    "forbidden": [
+      "Vibrant colors",
+      "Decorative gradients",
+      "High saturation palettes",
+      "Noise-heavy textures"
+    ]
+  }
+}

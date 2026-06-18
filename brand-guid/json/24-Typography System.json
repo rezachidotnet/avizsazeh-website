@@ -1,0 +1,129 @@
+{
+  "id": 24,
+  "title": "Typography System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Typography System v1.0",
+
+  "core_principle": {
+    "statement": "Typography is an engineering structure, not a decorative element.",
+    "interpretation": "Type must reflect system logic, hierarchy, and architectural clarity."
+  },
+
+  "typeface_stack": {
+    "persian_primary": [
+      {
+        "name": "Vazirmatn",
+        "role": "Primary Persian UI and branding font",
+        "reason": "High readability, modern structure, engineering-friendly geometry"
+      },
+      {
+        "name": "IRANSansX",
+        "role": "Alternative Persian corporate font",
+        "reason": "Strong corporate tone and structured readability"
+      }
+    ],
+    "latin_primary": [
+      {
+        "name": "Inter",
+        "role": "Primary English UI and digital font",
+        "reason": "Clean, neutral, system-oriented sans-serif"
+      },
+      {
+        "name": "IBM Plex Sans",
+        "role": "Technical documentation font",
+        "reason": "Engineering-grade readability and structured tone"
+      }
+    ]
+  },
+
+  "typographic_hierarchy": {
+    "h1": {
+      "size_rule": "Largest structural text element",
+      "weight": "Bold / 700",
+      "color": "Engineering Charcoal (#1F2328)",
+      "purpose": "Defines system-level sections and architectural authority"
+    },
+    "h2": {
+      "size_rule": "Secondary structural heading",
+      "weight": "SemiBold / 600",
+      "color": "Graphite (#3D3D3D)",
+      "purpose": "Defines subsystem layers and structured content blocks"
+    },
+    "h3": {
+      "size_rule": "Tertiary structural heading",
+      "weight": "Medium / 500",
+      "color": "Steel Gray (#4B5563)",
+      "purpose": "Defines supporting system elements"
+    },
+    "body": {
+      "size_rule": "Standard reading text",
+      "weight": "Regular / 400",
+      "color": "Engineering Charcoal or Graphite",
+      "purpose": "Main content readability layer"
+    },
+    "caption": {
+      "size_rule": "Smallest informational text",
+      "weight": "Regular / 400",
+      "color": "Steel Gray",
+      "purpose": "Metadata, annotations, technical notes"
+    }
+  },
+
+  "typographic_principles": [
+    {
+      "name": "Hierarchy First",
+      "description": "Typography must clearly express system hierarchy and structure."
+    },
+    {
+      "name": "Engineering Readability",
+      "description": "All text must be optimized for technical clarity, not decorative aesthetics."
+    },
+    {
+      "name": "Minimal Variation",
+      "description": "Limited font families and weights to maintain system discipline."
+    },
+    {
+      "name": "Grid Alignment",
+      "description": "All typography must align with architectural grid system."
+    }
+  ],
+
+  "spacing_system": {
+    "base_unit": "8px",
+    "scale": [
+      "4px (micro spacing)",
+      "8px (base unit)",
+      "16px (standard spacing)",
+      "24px (section spacing)",
+      "32px (layout spacing)",
+      "64px (architectural separation)"
+    ],
+    "rule": "Typography spacing must follow engineering grid logic"
+  },
+
+  "color_dependency": {
+    "rule": "Typography is primarily Engineering Layer driven",
+    "allowed_colors": [
+      "Engineering Charcoal (#1F2328)",
+      "Graphite (#3D3D3D)",
+      "Steel Gray (#4B5563)"
+    ],
+    "accent_usage": "Gold (#B89A63) only for minimal emphasis, never full text blocks"
+  },
+
+  "forbidden_typography_behaviors": [
+    "Use of decorative fonts",
+    "Script or handwritten styles",
+    "Overuse of font families",
+    "Gradient text effects",
+    "Excessive weight variation",
+    "Non-grid-aligned text layout"
+  ],
+
+  "strategic_goal": {
+    "objective": "Ensure typography reinforces engineering system identity",
+    "outcome": "Readable, structured, and system-oriented communication across all brand surfaces"
+  }
+}

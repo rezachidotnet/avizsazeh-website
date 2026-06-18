@@ -1,0 +1,94 @@
+{
+  "id": 16,
+  "title": "Communication Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "communication_principles": {
+    "core_rule": "Communicate as an engineering system provider, not a product seller.",
+    "essence": "All communication must reflect architecture → engineering → execution logic"
+  },
+
+  "mandatory_rules": [
+    {
+      "rule": "System-first communication",
+      "description": "Always describe systems, processes, and integration rather than isolated products."
+    },
+    {
+      "rule": "Engineering clarity",
+      "description": "Every statement must be technically clear, structured, and logically explainable."
+    },
+    {
+      "rule": "No marketing exaggeration",
+      "description": "Avoid superlative claims such as best, fastest, cheapest, or most advanced."
+    },
+    {
+      "rule": "Evidence-based language",
+      "description": "Claims must be based on engineering logic, process, or system capability."
+    },
+    {
+      "rule": "Architectural respect",
+      "description": "Maintain sensitivity to architectural intent and design integrity."
+    }
+  ],
+
+  "prohibited_language": {
+    "words_to_avoid": [
+      "best",
+      "perfect",
+      "luxury (as main claim)",
+      "cheap",
+      "unbeatable",
+      "unique (without technical proof)",
+      "magic solution"
+    ],
+    "phrases_to_avoid": [
+      "we are number one",
+      "the best choice",
+      "unmatched quality",
+      "world class without proof"
+    ]
+  },
+
+  "approved_language_style": {
+    "structure": "Technical + System-based + Clear",
+    "preferred_terms": [
+      "engineering system",
+      "architectural integration",
+      "execution reliability",
+      "custom-designed system",
+      "buildable solution"
+    ]
+  },
+
+  "message_structure": {
+    "format": "Problem → Engineering Logic → System Solution → Execution Outcome",
+    "rule": "Every communication must follow a structured reasoning flow"
+  },
+
+  "channel_specific_rules": {
+    "technical_documents": {
+      "tone": "Highly structured, engineering-focused",
+      "priority": "accuracy over readability"
+    },
+    "marketing_materials": {
+      "tone": "Controlled, minimal, system-focused",
+      "priority": "clarity over persuasion"
+    },
+    "website_content": {
+      "tone": "Balanced engineering + architectural clarity",
+      "priority": "user understanding of system value"
+    }
+  },
+
+  "interaction_rules": {
+    "clarity": "No ambiguous statements allowed",
+    "consistency": "All messages must align with AECS system",
+    "focus": "Always reinforce system thinking over product thinking"
+  },
+
+  "strategic_goal": {
+    "objective": "Build trust through engineering clarity, not persuasion",
+    "outcome": "Position AvizSazeh as a technical authority in architectural systems"
+  }
+}

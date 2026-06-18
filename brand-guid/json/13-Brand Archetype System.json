@@ -1,0 +1,78 @@
+{
+  "id": 13,
+  "title": "Brand Archetype System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "primary_archetype": {
+    "name": "The Engineer",
+    "definition": "A rational builder of systems who transforms abstract concepts into structured, functional, and executable realities.",
+    "core_traits": [
+      "Logical",
+      "Precise",
+      "System-oriented",
+      "Analytical",
+      "Solution-driven"
+    ],
+    "brand_expression": "We design systems that make architecture buildable.",
+    "psychological_role": "Eliminates uncertainty between design and execution"
+  },
+
+  "secondary_archetype": {
+    "name": "The Creator",
+    "definition": "An entity that transforms ideas into tangible, structured, and meaningful forms.",
+    "core_traits": [
+      "Innovative",
+      "Design-sensitive",
+      "Transformational",
+      "Imaginative within structure"
+    ],
+    "brand_expression": "We turn architectural intent into engineered reality.",
+    "psychological_role": "Preserves architectural creativity within engineering constraints"
+  },
+
+  "supporting_archetypes": [
+    {
+      "name": "The Architect (Functional Archetype)",
+      "role": "Ensures spatial and structural logic in design translation",
+      "focus": "Balance between aesthetics and feasibility"
+    },
+    {
+      "name": "The Builder (Execution Archetype)",
+      "role": "Ensures real-world constructability and installation reliability",
+      "focus": "Execution accuracy and system implementation"
+    }
+  ],
+
+  "archetype_hierarchy": {
+    "dominance_order": [
+      "Engineer",
+      "Creator",
+      "Architect (Functional Layer)",
+      "Builder (Execution Layer)"
+    ]
+  },
+
+  "psychological_positioning": {
+    "core_identity": "Engineering authority in architectural systems",
+    "user_perception_goal": "This is a company that makes architecture buildable",
+    "emotional_effect": [
+      "Trust in execution",
+      "Reduction of project risk",
+      "Confidence in technical capability"
+    ]
+  },
+
+  "communication_alignment": {
+    "tone_mapping": {
+      "Engineer": "Technical, precise, structured",
+      "Creator": "Innovative, design-aware, solution-focused"
+    },
+    "language_rule": "No emotional exaggeration; only system-based communication"
+  },
+
+  "strategic_function": {
+    "role": "Defines behavioral DNA of the brand",
+    "impact": "Ensures all visual, verbal, and system outputs remain aligned with engineering architecture identity"
+  }
+}

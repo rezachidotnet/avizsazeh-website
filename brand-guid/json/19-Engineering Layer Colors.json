@@ -1,0 +1,94 @@
+{
+  "id": 19,
+  "title": "Engineering Layer Colors",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "layer_definition": {
+    "name": "Engineering Layer",
+    "role": "Structural backbone of the brand identity system",
+    "purpose": "Represents engineering authority, system logic, technical precision, and execution reliability",
+    "perception_goal": "Make the brand feel like a structured engineering system, not a decorative brand"
+  },
+
+  "core_colors": [
+    {
+      "name": "Engineering Charcoal",
+      "hex": "#1F2328",
+      "rgb": "31, 35, 40",
+      "role": "Primary structural identity color",
+      "usage": [
+        "Logo primary shape",
+        "Typography main color",
+        "UI headers",
+        "Engineering diagrams",
+        "System backbone elements"
+      ],
+      "psychology": "Authority, stability, engineering discipline, seriousness"
+    },
+    {
+      "name": "System Graphite",
+      "hex": "#3D3D3D",
+      "rgb": "61, 61, 61",
+      "role": "Secondary structural depth color",
+      "usage": [
+        "UI layers",
+        "Secondary text",
+        "Component borders",
+        "Structural hierarchy separation"
+      ],
+      "psychology": "Technical depth, neutrality, system structure"
+    },
+    {
+      "name": "Steel Engineering Gray",
+      "hex": "#4B5563",
+      "rgb": "75, 86, 99",
+      "role": "Support engineering structure color",
+      "usage": [
+        "Icons",
+        "UI support elements",
+        "Technical annotations",
+        "Grid overlays"
+      ],
+      "psychology": "Technical clarity, industrial precision, functional stability"
+    }
+  ],
+
+  "usage_principles": {
+    "dominance_rule": "Engineering layer must always define the structural identity of the brand",
+    "hierarchy_rule": "Charcoal > Graphite > Steel Gray",
+    "visibility_rule": "These colors must always be visually dominant over architectural and accent layers in structural elements"
+  },
+
+  "system_behavior": {
+    "logo": "Engineering Charcoal as base structure",
+    "ui": "Engineering layer defines all structural components",
+    "typography": "Primary text always in Engineering Charcoal",
+    "layout": "Engineering layer defines hierarchy and grid logic"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Engineering authority and system reliability",
+    "secondary_impression": "Technical precision and structured intelligence",
+    "user_feeling": [
+      "This is a serious engineering company",
+      "This system is reliable and structured",
+      "This brand reduces execution risk"
+    ]
+  },
+
+  "strict_rules": {
+    "allowed": [
+      "Flat colors only",
+      "High contrast with architectural layer",
+      "Grid-based usage"
+    ],
+    "forbidden": [
+      "Gradients",
+      "Glow effects",
+      "Metallic rendering",
+      "Decorative shading",
+      "Luxury styling"
+    ]
+  }
+}

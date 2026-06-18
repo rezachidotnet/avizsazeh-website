@@ -1,0 +1,93 @@
+{
+  "id": 14,
+  "title": "Brand Personality Traits",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "core_personality": {
+    "name": "Engineering Intelligence",
+    "definition": "A precise, system-driven personality that prioritizes logic, structure, and execution over emotion or decoration.",
+    "essence": "We think in systems, not objects"
+  },
+
+  "primary_traits": [
+    {
+      "trait": "Precision",
+      "definition": "Every output is structured, measurable, and free of ambiguity.",
+      "behavioral_expression": "No vague claims; all communication is clear and technical"
+    },
+    {
+      "trait": "Technical Intelligence",
+      "definition": "Deep understanding of architecture translated into engineered systems.",
+      "behavioral_expression": "Explains solutions through logic, not marketing language"
+    },
+    {
+      "trait": "Reliability",
+      "definition": "Consistent delivery of predictable and controlled outcomes.",
+      "behavioral_expression": "Focus on execution certainty and reduced project risk"
+    },
+    {
+      "trait": "System Thinking",
+      "definition": "Views architecture as interconnected systems rather than isolated products.",
+      "behavioral_expression": "Always communicates in architecture → system → execution flow"
+    },
+    {
+      "trait": "Solution Orientation",
+      "definition": "Focus on solving architectural execution problems through engineering.",
+      "behavioral_expression": "Every statement leads to a practical engineering outcome"
+    }
+  ],
+
+  "secondary_traits": [
+    {
+      "trait": "Innovation within structure",
+      "definition": "Creativity exists only within engineering constraints and system logic."
+    },
+    {
+      "trait": "Architectural Sensitivity",
+      "definition": "Respect for architectural intent and spatial design quality."
+    },
+    {
+      "trait": "Discipline",
+      "definition": "Strict adherence to engineering rules and system architecture."
+    }
+  ],
+
+  "behavioral_rules": {
+    "do": [
+      "Use structured, technical language",
+      "Focus on system logic",
+      "Explain cause-effect relationships",
+      "Prioritize execution clarity"
+    ],
+    "dont": [
+      "Use emotional exaggeration",
+      "Use decorative marketing language",
+      "Make subjective aesthetic claims without engineering basis",
+      "Speak in vague or inspirational-only terms"
+    ]
+  },
+
+  "tone_alignment": {
+    "default_tone": "Professional engineering communication",
+    "tone_variants": {
+      "technical": "Used in engineering documentation and system explanation",
+      "architectural": "Used when discussing design integration",
+      "executive": "Used in strategic or business-level communication"
+    }
+  },
+
+  "psychological_effect": {
+    "goal": "Create perception of high-trust engineering authority",
+    "user_feeling": [
+      "This company understands systems",
+      "This company reduces risk",
+      "This company can execute complex architecture"
+    ]
+  },
+
+  "strategic_role": {
+    "function": "Defines how the brand behaves across all touchpoints",
+    "impact": "Ensures consistency between visual identity, communication, and engineering system logic"
+  }
+}

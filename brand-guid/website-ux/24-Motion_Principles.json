@@ -1,0 +1,62 @@
+{
+  "motion_principles": {
+    "core_philosophy": "Motion is not decoration; it is the visual representation of system state transitions.",
+    "rules": [
+      "Every motion must represent a system state change",
+      "No decorative or non-functional animation",
+      "Motion must follow engineering logic, not aesthetics",
+      "User cognition must be guided through transitions"
+    ],
+    "timing_system": {
+      "fast_feedback_ms": "100-200",
+      "standard_transition_ms": "300-600",
+      "system_transition_ms": "600-800",
+      "max_allowed_ms": "800"
+    },
+    "motion_types": {
+      "structural_motion": {
+        "definition": "Represents layout and structural changes in the interface",
+        "examples": [
+          "section reveal",
+          "page transition",
+          "system expansion"
+        ]
+      },
+      "engineering_motion": {
+        "definition": "Represents system logic flow visualization",
+        "examples": [
+          "design to execution flow",
+          "system diagram animation"
+        ]
+      },
+      "cognitive_motion": {
+        "definition": "Guides user understanding and decision-making",
+        "examples": [
+          "progressive disclosure",
+          "step-by-step RFQ flow"
+        ]
+      }
+    },
+    "interaction_principle": "Motion must answer: what changed in the system state?",
+    "prohibited_motion": [
+      "bouncing animations",
+      "random decorative effects",
+      "non-functional transitions",
+      "looping visual noise"
+    ],
+    "scroll_behavior": {
+      "concept": "Scroll is a narrative engine",
+      "stages": [
+        "introduction",
+        "system explanation",
+        "proof layer",
+        "engineering logic",
+        "conversion trigger"
+      ]
+    },
+    "page_transition": {
+      "rule": "No hard reload perception",
+      "method": "soft system transition with preserved context"
+    }
+  }
+}

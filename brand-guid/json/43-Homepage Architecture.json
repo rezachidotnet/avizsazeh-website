@@ -1,0 +1,136 @@
+{
+  "id": 43,
+  "title": "Homepage Architecture",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Homepage Architecture v1.0",
+
+  "core_principle": {
+    "statement": "The homepage is a system entry point, not a marketing landing page.",
+    "interpretation": "It must function as an architectural engineering interface that guides users through system understanding."
+  },
+
+  "information_architecture": {
+    "flow_logic": "System Introduction → Trust → Proof → Systems → Engineering Logic → Execution → Action",
+    "structure_type": "Engineering-driven modular homepage system"
+  },
+
+  "page_structure": [
+    {
+      "section": "Hero System",
+      "purpose": "Define core identity instantly",
+      "content": [
+        "Brand statement: Architectural Engineering System Provider",
+        "Core message: Architecture → Engineering → Execution",
+        "Visual: system-based logo + structural geometry"
+      ],
+      "rule": "No marketing slogans allowed"
+    },
+    {
+      "section": "Trust System",
+      "purpose": "Establish engineering credibility",
+      "content": [
+        "Key metrics (projects, scale, regions)",
+        "Engineering capability indicators",
+        "System reliability proof"
+      ],
+      "rule": "Must be factual and system-based"
+    },
+    {
+      "section": "Proof System",
+      "purpose": "Show real execution capability",
+      "content": [
+        "Selected completed projects",
+        "Execution documentation",
+        "Before/after system logic"
+      ],
+      "rule": "Only real engineering outputs allowed"
+    },
+    {
+      "section": "Systems Overview",
+      "purpose": "Explain product/system architecture",
+      "content": [
+        "Ceiling system categories",
+        "Engineering breakdown of systems",
+        "Modular system logic"
+      ],
+      "rule": "Must be structured, not catalog-based"
+    },
+    {
+      "section": "Engineering Logic System",
+      "purpose": "Explain transformation process",
+      "content": [
+        "Design → Engineering → Manufacturing → Execution",
+        "System validation process",
+        "Risk reduction logic"
+      ],
+      "rule": "Must emphasize system thinking"
+    },
+    {
+      "section": "Execution System",
+      "purpose": "Show real-world implementation capability",
+      "content": [
+        "Installation methodology",
+        "Project workflow",
+        "Engineering control system"
+      ],
+      "rule": "Must reflect controlled execution process"
+    },
+    {
+      "section": "CTA System",
+      "purpose": "Trigger engineering engagement",
+      "content": [
+        "Request engineering consultation",
+        "Project analysis request",
+        "System design inquiry"
+      ],
+      "rule": "No marketing CTA language, only engineering actions"
+    }
+  ],
+
+  "visual_architecture_rules": {
+    "grid_system": "12-column AECS grid mandatory",
+    "spacing": "8px engineering modular system",
+    "color_logic": {
+      "primary": "Engineering Layer (#1F2328)",
+      "background": "Architectural Layer (#ECE9E3 / #FFFFFF)",
+      "accent": "Gold only for system transitions"
+    },
+    "hierarchy": "Engineering structure must dominate all visual decisions"
+  },
+
+  "interaction_flow": {
+    "user_journey": [
+      "Understand system identity",
+      "Verify engineering credibility",
+      "See real execution proof",
+      "Understand system architecture",
+      "Engage with engineering process"
+    ],
+    "behavior_rule": "No emotional persuasion, only system logic progression"
+  },
+
+  "content_rules": [
+    "No marketing language",
+    "No decorative storytelling",
+    "No lifestyle imagery",
+    "Only engineering system communication",
+    "All content must map to system logic"
+  ],
+
+  "psychological_effect": {
+    "primary_impression": "Engineering system authority",
+    "secondary_impression": "Architectural execution intelligence",
+    "user_perception": [
+      "This is not a website, it is a system interface",
+      "This company operates like an engineering platform",
+      "Everything here is structured and logical"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Transform homepage into an engineering system interface",
+    "outcome": "Instant perception of AvizSazeh as a structured architectural engineering authority"
+  }
+}

@@ -1,0 +1,74 @@
+
+Project_Page_UI.fig
+AECS — AvizSazeh Engineering UX System
+
+NOTE: Structured Figma specification (non-binary format)
+
+=========================================================
+1. PAGE STRUCTURE
+=========================================================
+
+[1] PROJECT HERO SECTION
+- Title: Engineering Case Studies
+- Subtitle: From architectural problem → system execution
+- Visual: industrial documentation background
+- CTA: View Engineering Breakdown
+
+[2] PROJECT FILTER SYSTEM
+- system type filter
+- complexity filter
+- industry filter
+
+[3] CASE STUDY GRID
+- 3 column layout
+- each card shows:
+  - problem summary
+  - system type
+  - execution preview
+
+[4] FEATURED PROJECT DEEP DIVE
+- Problem Definition
+- Engineering Challenge
+- System Design
+- Manufacturing Process
+- Execution Process
+- Final Result
+
+[5] ENGINEERING BREAKDOWN LAYER
+- structural logic
+- material system
+- installation constraints
+
+[6] EXECUTION DOCUMENTATION
+- site photos
+- control checkpoints
+- QA/QC notes
+
+[7] PROJECT CTA ENGINE
+- "Request Similar Engineering System"
+
+=========================================================
+2. UI RULES
+=========================================================
+
+- 12 column grid system
+- 8px spacing system
+- documentary engineering style
+- no marketing language
+- emphasis on proof over presentation
+
+=========================================================
+3. COMPONENTS
+=========================================================
+
+ProjectHero
+ProjectFilterSystem
+CaseStudyGrid
+CaseStudyCard
+ProjectDeepDive
+EngineeringBreakdown
+ExecutionDocumentation
+ProjectCTA
+
+=========================================================
+END OF FILE

@@ -1,0 +1,117 @@
+{
+  "id": 44,
+  "title": "Product Architecture System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Product Architecture System v1.0",
+
+  "core_principle": {
+    "statement": "Products are not standalone items; they are engineered components of an architectural system.",
+    "interpretation": "Every ceiling solution must be defined as part of a modular architectural engineering system."
+  },
+
+  "product_system_philosophy": {
+    "concept": "Systemized Product Architecture",
+    "logic": "Product → Module → System → Architectural Application → Execution",
+    "anti_concept": "Reject standalone product thinking without engineering context"
+  },
+
+  "product_definition_model": {
+    "rule": "No product exists without system classification",
+    "structure": {
+      "system_family": "Architectural Ceiling Systems",
+      "sub_systems": [
+        "Metal Ceiling Systems",
+        "Suspended Ceiling Structures",
+        "Modular Ceiling Grids",
+        "Custom Architectural Ceiling Solutions"
+      ]
+    }
+  },
+
+  "system_classification": [
+    {
+      "name": "Linear Ceiling Systems",
+      "definition": "Continuous engineered ceiling solutions based on linear modules",
+      "characteristics": [
+        "Directional structure",
+        "High modular repeatability",
+        "Engineering precision alignment"
+      ]
+    },
+    {
+      "name": "Grid Ceiling Systems",
+      "definition": "Modular grid-based architectural ceiling systems",
+      "characteristics": [
+        "Full 10x10 alignment logic",
+        "Highly structured modular pattern",
+        "Architectural consistency"
+      ]
+    },
+    {
+      "name": "Custom Engineered Systems",
+      "definition": "Project-specific engineered ceiling systems",
+      "characteristics": [
+        "Fully customized geometry",
+        "Engineering-driven design process",
+        "Architecture-specific adaptation"
+      ]
+    },
+    {
+      "name": "Hybrid Architectural Systems",
+      "definition": "Combination of multiple ceiling system types",
+      "characteristics": [
+        "Multi-system integration",
+        "Complex architectural execution",
+        "High engineering coordination"
+      ]
+    }
+  ],
+
+  "architecture_logic": {
+    "system_flow": "Architecture → Engineering Design → System Definition → Product Modules → Execution",
+    "rule": "Product cannot exist without system definition",
+    "dependency": "Every product must be traceable to an engineering system structure"
+  },
+
+  "engineering_constraints": {
+    "modularity": "All products must be modular system components",
+    "scalability": "Must support architectural scaling without redesign",
+    "integration": "Must integrate with other ceiling system modules",
+    "precision": "Must follow AECS grid and geometry rules"
+  },
+
+  "product_identity_rules": {
+    "naming_system": "System-based naming only (no standalone product naming)",
+    "example_format": "System + Type + Application",
+    "rule": "Avoid consumer-style product naming"
+  },
+
+  "value_structure": {
+    "core_value": "Engineering reliability of architectural ceiling systems",
+    "secondary_value": "Customization for architectural requirements",
+    "supporting_value": "Execution control and system integration"
+  },
+
+  "market_positioning": {
+    "perception_goal": "System provider, not product seller",
+    "category_shift": "From ceiling manufacturer → Architectural Engineering System Provider",
+    "differentiation": "We design systems, not sell products"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Highly engineered architectural system provider",
+    "secondary_impression": "Technical execution authority",
+    "user_perception": [
+      "This is not a product catalog, this is a system portfolio",
+      "Everything is engineered and structured",
+      "This company thinks in systems, not items"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Eliminate product-level thinking and enforce system-level perception",
+    "outcome": "AvizSazeh is perceived as an architectural engineering system authority, not a manufacturer"
+  }
+}

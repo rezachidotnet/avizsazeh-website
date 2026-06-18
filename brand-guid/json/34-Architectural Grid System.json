@@ -1,0 +1,101 @@
+{
+  "id": 34,
+  "title": "Architectural Grid System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Grid System v1.0",
+
+  "core_principle": {
+    "statement": "The grid is the structural skeleton of all visual, spatial, and digital representations of the brand.",
+    "interpretation": "Every design output must follow a predefined engineering grid logic to ensure system consistency and architectural discipline."
+  },
+
+  "grid_foundation": {
+    "base_system": "10x10 modular engineering grid",
+    "unit_definition": "Each cell represents a structural unit of architectural logic",
+    "scalability": "Grid must scale proportionally across all formats (UI, print, logo, motion)"
+  },
+
+  "grid_structure_layers": [
+    {
+      "layer": "Primary Grid",
+      "description": "Main structural framework defining composition and layout",
+      "characteristics": [
+        "10x10 base structure",
+        "Equal spacing",
+        "Fixed alignment rules"
+      ]
+    },
+    {
+      "layer": "Secondary Grid",
+      "description": "Subdivision system for detailed architectural refinement",
+      "characteristics": [
+        "1/2 and 1/4 subdivisions allowed",
+        "Used for micro-alignment",
+        "Supports typography and UI precision"
+      ]
+    },
+    {
+      "layer": "Tertiary Grid",
+      "description": "Hidden alignment system for advanced system consistency",
+      "characteristics": [
+        "Invisible to user perception",
+        "Used for engineering precision",
+        "Supports complex layouts and diagrams"
+      ]
+    }
+  ],
+
+  "grid_behavior_rules": {
+    "alignment_rule": "All elements must snap to grid intersections",
+    "consistency_rule": "No freeform positioning allowed outside grid logic",
+    "spacing_rule": "All spacing must be derived from grid unit multiples",
+    "hierarchy_rule": "Visual hierarchy must follow grid-based positioning"
+  },
+
+  "layout_system_logic": {
+    "structure_flow": "Grid → Modules → Systems → Composition",
+    "organization_principle": "Information is structured like an architectural blueprint",
+    "balance_rule": "Negative space is treated as architectural space, not empty area"
+  },
+
+  "typography_integration": {
+    "rule": "Typography must align strictly to grid lines",
+    "baseline_system": "Baseline grid aligned with 8px spacing unit",
+    "alignment_modes": [
+      "Left grid alignment",
+      "Center modular alignment",
+      "System-based vertical rhythm"
+    ]
+  },
+
+  "visual_application": {
+    "logo_system": "All logo elements must align to grid geometry",
+    "ui_system": "UI components must be built on grid modules",
+    "print_system": "Catalog and documentation layouts must follow grid hierarchy",
+    "motion_system": "Animation paths must respect grid structure logic"
+  },
+
+  "forbidden_behaviors": [
+    "Free positioning without grid reference",
+    "Asymmetrical randomness without system logic",
+    "Breaking alignment rules for aesthetic purposes",
+    "Ignoring spacing ratios derived from grid units"
+  ],
+
+  "psychological_effect": {
+    "primary_impression": "Engineering precision and structural discipline",
+    "secondary_impression": "Architectural intelligence and system thinking",
+    "user_feeling": [
+      "This brand is highly structured",
+      "Everything follows a system",
+      "This is an engineering-level design language"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure all visual outputs behave like architectural blueprints",
+    "outcome": "Consistent perception of AvizSazeh as a structured engineering system brand"
+  }
+}

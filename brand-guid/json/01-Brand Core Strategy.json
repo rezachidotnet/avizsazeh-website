@@ -1,0 +1,71 @@
+{
+  "id": 1,
+  "title": "Brand Core Strategy",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+  "core_idea": "Engineering Architecture Into Reality",
+  "definition": "AvizSazeh is an Architectural Engineering System Brand that transforms architectural intent into buildable ceiling systems through engineering, customization, and controlled execution.",
+  
+  "brand_positioning": {
+    "statement": "Architectural Engineering System Provider for ceiling systems",
+    "role": "System integrator between architecture and execution",
+    "market": ["Iran", "GCC", "CIS"],
+    "industry_focus": "Metal ceiling systems and architectural interior systems"
+  },
+
+  "strategic_purpose": {
+    "primary_purpose": "Bridge the gap between architectural design and real-world execution",
+    "secondary_purpose": "Reduce project risk through engineering-driven ceiling systems"
+  },
+
+  "core_principles": [
+    "Architecture must be buildable",
+    "Every design must translate into an executable system",
+    "Material selection without engineering is a risk",
+    "Systems are more important than products"
+  ],
+
+  "value_proposition": {
+    "main_value": "Transform architectural designs into engineered ceiling systems",
+    "supporting_values": [
+      "Custom engineering design",
+      "Controlled manufacturing",
+      "Reliable execution",
+      "Architectural integration",
+      "Reduced project risk"
+    ]
+  },
+
+  "differentiation": {
+    "core_advantage": "Conversion of architectural intent into executable systems",
+    "competitive_edge": [
+      "Engineering + Architecture integration",
+      "Project-specific customization",
+      "Execution reliability system",
+      "Technical design support"
+    ]
+  },
+
+  "brand_logic": {
+    "flow": "Architecture → Engineering → System → Execution → Reality",
+    "interpretation": "Design is meaningless unless it becomes buildable reality"
+  },
+
+  "anti_positioning": {
+    "not_a": [
+      "Decoration brand",
+      "Furniture supplier",
+      "Simple construction contractor",
+      "Commodity ceiling manufacturer"
+    ]
+  },
+
+  "success_definition": {
+    "perception_goal": "Engineering Architecture System Provider",
+    "user_takeaway": [
+      "This company understands architecture",
+      "This company understands execution",
+      "This company reduces project risk"
+    ]
+  }
+}

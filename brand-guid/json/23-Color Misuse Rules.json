@@ -1,0 +1,97 @@
+{
+  "id": 23,
+  "title": "Color Misuse Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS v1.0 Color Misuse Governance",
+
+  "core_principle": {
+    "statement": "Color misuse directly destroys system perception and shifts the brand away from engineering authority.",
+    "interpretation": "Every incorrect use of color weakens the architectural engineering identity and increases misclassification risk."
+  },
+
+  "critical_misuse_patterns": [
+    {
+      "name": "Gold Overuse",
+      "definition": "Using the authority accent (#B89A63) beyond its 10% rule or as a dominant color.",
+      "risk": "Shifts perception from engineering system → luxury decoration brand",
+      "examples": [
+        "Gold backgrounds",
+        "Gold text blocks",
+        "Gold-heavy UI themes"
+      ]
+    },
+    {
+      "name": "Decorative Gradient Usage",
+      "definition": "Applying gradients or blended colors for aesthetic effect.",
+      "risk": "Breaks engineering logic and introduces decorative branding perception",
+      "examples": [
+        "Gold gradients",
+        "Multicolor UI gradients",
+        "Soft luxury glow effects"
+      ]
+    },
+    {
+      "name": "Over-Saturation of Architectural Layer",
+      "definition": "Using architectural colors as attention-driven elements instead of spatial support.",
+      "risk": "Destroys spatial hierarchy and architectural neutrality",
+      "examples": [
+        "Strong contrast backgrounds",
+        "Colored sections competing with engineering layer"
+      ]
+    },
+    {
+      "name": "Engineering Layer Weakening",
+      "definition": "Reducing dominance of engineering colors in structural UI or typography.",
+      "risk": "Loss of engineering authority perception",
+      "examples": [
+        "Using light neutral colors for main text",
+        "Replacing charcoal with decorative tones"
+      ]
+    },
+    {
+      "name": "Mixed Layer Confusion",
+      "definition": "Using engineering, architectural, and accent colors without role separation.",
+      "risk": "Breaks system logic and creates visual inconsistency",
+      "examples": [
+        "Random color assignments",
+        "No clear hierarchy between layers"
+      ]
+    }
+  ],
+
+  "system_breaking_behaviors": {
+    "highest_risk": [
+      "Luxury-style branding overlays",
+      "Gradient-heavy design systems",
+      "Non-systematic color selection",
+      "Emotion-driven color usage"
+    ],
+    "impact": "Breaks perception of engineering system and reduces EPC-level trust"
+  },
+
+  "corrective_rules": {
+    "rule_1": "Always enforce 50/40/10 distribution model",
+    "rule_2": "Engineering layer must define structure",
+    "rule_3": "Architectural layer must define space, not attention",
+    "rule_4": "Accent layer must only signal transformation points",
+    "rule_5": "If unsure, default to engineering layer dominance"
+  },
+
+  "validation_checklist": {
+    "before_use": [
+      "Is engineering layer dominant?",
+      "Is architectural layer only providing space?",
+      "Is gold under 10% usage?",
+      "Is there any gradient usage? (must be NO)",
+      "Does this preserve system hierarchy?"
+    ]
+  },
+
+  "strategic_risk_summary": {
+    "main_risk": "Brand perception shift from Engineering System → Decorative Brand",
+    "secondary_risk": "Loss of trust in EPC and architectural markets",
+    "prevention": "Strict enforcement of AECS system logic in all design outputs"
+  }
+}

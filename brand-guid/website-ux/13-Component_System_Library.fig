@@ -1,0 +1,73 @@
+
+Component_System_Library.fig
+AECS — AvizSazeh Engineering UX System
+
+This is a structured Figma-style specification file (not binary Figma format).
+
+========================
+1. CORE COMPONENTS
+========================
+
+SystemHero:
+- type: hero
+- props: title, subtitle, CTA, backgroundType
+- behavior: fade-in + system reveal
+
+SystemModuleCard:
+- type: card
+- props: title, logic, diagramPreview, systemType
+- behavior: hover expand engineering logic
+
+ProjectCaseCard:
+- type: case-study
+- props: problem, solution, executionImage, engineeringSteps
+- behavior: progressive reveal on scroll
+
+EngineeringFlow:
+- type: diagram
+- props: steps [Design, Engineering, Manufacturing, Execution]
+- behavior: sequential activation
+
+RFQEngine:
+- type: form-system
+- props: projectType, area, systemType, files, constraints
+- behavior: step-based system input
+
+TrustBar:
+- type: metrics
+- props: projectsCount, regions, systemsCount
+- behavior: static with subtle highlight
+
+========================
+2. LAYOUT COMPONENTS
+========================
+
+GridSystem:
+- columns: 12 desktop / 8 tablet / 4 mobile
+- spacing: 8px base system
+
+SectionBlock:
+- full-width system container
+- behavior: vertical stack
+
+SplitBlock:
+- 50/50 layout
+- used for text + diagram
+
+CardGrid:
+- 3-column system layout
+
+StackFlow:
+- vertical step system (RFQ / engineering flow)
+
+========================
+3. DESIGN RULES
+========================
+
+- no decorative UI
+- all components must map to engineering logic
+- spacing must follow 8px grid
+- motion = structural only
+
+========================
+END OF FILE

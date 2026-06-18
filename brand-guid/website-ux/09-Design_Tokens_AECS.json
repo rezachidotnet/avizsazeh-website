@@ -1,0 +1,60 @@
+{
+  "system": "AECS Design System",
+  "version": "1.0",
+  "color": {
+    "engineering": "#111318",
+    "architecture": "#E6E2D6",
+    "surface": "#F5F3EF",
+    "accent_gold": "#C8A45D",
+    "blue": "#2F6FED",
+    "green": "#2E7D32",
+    "red": "#E53935"
+  },
+  "spacing": {
+    "xs": 4,
+    "sm": 8,
+    "md": 16,
+    "lg": 24,
+    "xl": 32,
+    "xxl": 48
+  },
+  "radius": {
+    "sm": 4,
+    "md": 8,
+    "lg": 12
+  },
+  "typography": {
+    "font_primary": "Vazirmatn",
+    "font_secondary": "IBM Plex Sans",
+    "h1": {
+      "size": 48,
+      "weight": 700
+    },
+    "h2": {
+      "size": 32,
+      "weight": 600
+    },
+    "h3": {
+      "size": 24,
+      "weight": 600
+    },
+    "body": {
+      "size": 16,
+      "weight": 400
+    },
+    "caption": {
+      "size": 12,
+      "weight": 400
+    }
+  },
+  "grid": {
+    "columns": 12,
+    "gutter": 24,
+    "baseline": 8
+  },
+  "motion": {
+    "fast": 200,
+    "medium": 400,
+    "slow": 800
+  }
+}

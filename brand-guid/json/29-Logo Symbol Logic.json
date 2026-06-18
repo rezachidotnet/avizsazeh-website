@@ -1,0 +1,113 @@
+{
+  "id": 29,
+  "title": "Logo Symbol Logic",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Logo Symbol Logic v1.0",
+
+  "core_principle": {
+    "statement": "The logo symbol is a representation of architectural transformation logic, not a decorative mark.",
+    "interpretation": "Every stroke must represent a system action: input, segmentation, structure, or transformation."
+  },
+
+  "symbol_foundation_logic": {
+    "concept": "Architectural Transformation System",
+    "logic_flow": "Input (Architecture) → Processing (Engineering) → Structuring (System) → Output (Execution Reality)",
+    "symbol_meaning": "A visual abstraction of how architectural intent becomes a buildable system"
+  },
+
+  "symbol_structure_layers": [
+    {
+      "layer": "Layer 1 - Input Line",
+      "meaning": "Pure architectural intent entering the system",
+      "visual_form": "single straight line",
+      "rule": "must be minimal and unbroken"
+    },
+    {
+      "layer": "Layer 2 - Segmentation Nodes",
+      "meaning": "Engineering breakdown of architectural idea",
+      "visual_form": "controlled divisions on line",
+      "rule": "must follow grid intersections only"
+    },
+    {
+      "layer": "Layer 3 - System Formation",
+      "meaning": "Organized engineering structure",
+      "visual_form": "modular alignment of segments",
+      "rule": "must create geometric order"
+    },
+    {
+      "layer": "Layer 4 - Structural Convergence",
+      "meaning": "System integration into unified logic",
+      "visual_form": "converging geometry or alignment point",
+      "rule": "must represent system unification"
+    },
+    {
+      "layer": "Layer 5 - Transformation Point",
+      "meaning": "Final execution reality marker",
+      "visual_form": "single node highlighted in gold",
+      "rule": "only one allowed per symbol"
+    }
+  ],
+
+  "symbol_geometry_rules": {
+    "allowed_geometry": [
+      "horizontal lines",
+      "vertical lines",
+      "45-degree diagonals"
+    ],
+    "forbidden_geometry": [
+      "curves",
+      "organic shapes",
+      "decorative flourishes",
+      "illustrative icons"
+    ],
+    "grid_dependency": "All symbol elements must align to 10x10 engineering grid"
+  },
+
+  "symbol_semantics": {
+    "line": "Architectural intent",
+    "segment": "Engineering decomposition",
+    "module": "System structure",
+    "node": "Integration point",
+    "gold_point": "Execution transformation"
+  },
+
+  "visual_dynamics": {
+    "progression": "From simplicity to structured complexity",
+    "reading_direction": "Left to right or bottom to top depending on layout system",
+    "focus_behavior": "Eye is guided toward transformation point"
+  },
+
+  "color_logic": {
+    "base": "Engineering Charcoal (#1F2328)",
+    "structure": "Graphite (#3D3D3D)",
+    "support": "Steel Gray (#4B5563)",
+    "final_accent": "Architectural Gold (#B89A63)",
+    "rule": "Gold appears only once as final transformation node"
+  },
+
+  "scalability_rules": {
+    "icon_size": "Must remain readable at 16px favicon scale",
+    "medium_scale": "Must clearly show segmentation logic",
+    "large_scale": "Must reveal full transformation system structure"
+  },
+
+  "cognitive_effect": {
+    "primary_perception": "Engineering system diagram",
+    "secondary_perception": "Architectural intelligence structure",
+    "final_understanding": "This brand transforms architecture into executable systems"
+  },
+
+  "validation_rules": {
+    "clarity_test": "Symbol must be understood without explanation",
+    "system_test": "Must represent a process, not a shape",
+    "engineering_test": "Must resemble a structured technical diagram",
+    "brand_test": "Must not resemble any decorative or industrial logo cliché"
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure logo symbol functions as a system diagram of architectural transformation",
+    "outcome": "Instant recognition of AvizSazeh as an architectural engineering system brand"
+  }
+}

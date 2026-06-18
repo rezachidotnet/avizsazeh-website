@@ -1,0 +1,83 @@
+{
+  "api": {
+    "name": "AECS RFQ Engine API",
+    "version": "1.0",
+    "base_endpoint": "/api/rfq",
+    "principle": "RFQ is not a contact form. It is a structured engineering project definition system."
+  },
+  "endpoint": {
+    "submit": {
+      "method": "POST",
+      "path": "/submit",
+      "description": "Submit an architectural project for engineering evaluation"
+    }
+  },
+  "request_schema": {
+    "projectType": "string",
+    "buildingType": "string",
+    "area_m2": "number",
+    "systemPreference": "string",
+    "location": "string",
+    "technicalRequirements": "string",
+    "attachments": [
+      "file"
+    ],
+    "deadline": "string"
+  },
+  "validation_rules": {
+    "required_fields": [
+      "projectType",
+      "area_m2",
+      "systemPreference"
+    ],
+    "constraints": {
+      "area_m2": "must be > 0",
+      "attachments": "optional but recommended for engineering validation"
+    }
+  },
+  "classification_engine": {
+    "purpose": "Convert user input into engineering system category",
+    "outputs": [
+      "Linear Ceiling System",
+      "Grid Ceiling System",
+      "Custom Engineering System",
+      "Hybrid System"
+    ],
+    "logic": "Based on geometry, load, complexity, and architectural constraints"
+  },
+  "processing_pipeline": [
+    "Input Validation",
+    "System Classification",
+    "Complexity Scoring",
+    "Engineering Feasibility Check",
+    "Project ID Generation",
+    "Routing to Engineering Team"
+  ],
+  "complexity_model": {
+    "levels": [
+      "Low",
+      "Medium",
+      "High",
+      "Critical"
+    ],
+    "factors": [
+      "area",
+      "geometry complexity",
+      "system type",
+      "execution constraints"
+    ]
+  },
+  "output": {
+    "projectId": "string",
+    "status": "received",
+    "engineeringScore": "number",
+    "assignedSystem": "string",
+    "nextStep": "Engineering Review"
+  },
+  "principles": [
+    "RFQ must behave like a system input engine",
+    "No marketing language",
+    "Every submission becomes a structured engineering object",
+    "User input is transformed into engineering classification"
+  ]
+}

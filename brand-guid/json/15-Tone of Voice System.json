@@ -1,0 +1,105 @@
+{
+  "id": 15,
+  "title": "Tone of Voice System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "core_tone": {
+    "name": "Engineering Authority Voice",
+    "definition": "A precise, structured, and technically grounded communication style that prioritizes clarity, logic, and system thinking over emotional persuasion.",
+    "essence": "We communicate like engineers, not advertisers"
+  },
+
+  "tone_principles": [
+    {
+      "principle": "Clarity over persuasion",
+      "description": "Messages must be immediately understandable and technically unambiguous."
+    },
+    {
+      "principle": "System over product",
+      "description": "Communication must focus on systems, not isolated products."
+    },
+    {
+      "principle": "Logic over emotion",
+      "description": "Arguments are based on engineering reasoning, not emotional appeal."
+    },
+    {
+      "principle": "Precision over exaggeration",
+      "description": "No superlatives or vague marketing claims are allowed."
+    }
+  ],
+
+  "tone_dimensions": {
+    "formality": {
+      "level": "High",
+      "description": "Professional and structured communication suitable for engineers and EPC stakeholders"
+    },
+    "technical_depth": {
+      "level": "High",
+      "description": "Uses engineering logic and system-based explanations"
+    },
+    "emotionality": {
+      "level": "Low",
+      "description": "Minimal emotional language; controlled and neutral tone"
+    },
+    "authority": {
+      "level": "High",
+      "description": "Confident, decisive, and system-validated statements"
+    }
+  },
+
+  "voice_behavior": {
+    "do": [
+      "Use structured sentences",
+      "Explain cause-effect relationships",
+      "Reference systems and processes",
+      "Use technical clarity",
+      "Maintain neutral confidence"
+    ],
+    "dont": [
+      "Use hype language",
+      "Use emotional exaggeration",
+      "Use vague marketing phrases like 'best', 'amazing', 'unique'",
+      "Use decorative storytelling without engineering logic"
+    ]
+  },
+
+  "language_style": {
+    "preferred_style": "Engineering documentation tone",
+    "sentence_structure": "Short to medium, logically connected",
+    "vocabulary": [
+      "system",
+      "engineering",
+      "execution",
+      "architecture",
+      "validation",
+      "integration"
+    ]
+  },
+
+  "tone_variants": {
+    "technical": {
+      "use_case": "Engineering documentation and system explanations",
+      "style": "Highly structured, data-driven, precise"
+    },
+    "architectural": {
+      "use_case": "Design and spatial integration discussions",
+      "style": "Balanced between design clarity and engineering logic"
+    },
+    "executive": {
+      "use_case": "Business communication with EPCs and stakeholders",
+      "style": "Concise, authoritative, decision-oriented"
+    }
+  },
+
+  "brand_voice_identity": {
+    "identity": "Architectural Engineering Authority",
+    "communication_role": "Translator between architecture and execution systems",
+    "core_message_style": "We explain systems, not sell products"
+  },
+
+  "strategic_goal": {
+    "objective": "Establish AvizSazeh as a trusted engineering voice in architectural systems",
+    "impact": "Ensure all communications reinforce system credibility and execution reliability"
+  }
+}

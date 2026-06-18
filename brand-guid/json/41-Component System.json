@@ -1,0 +1,154 @@
+{
+  "id": 41,
+  "title": "Component System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Component System v1.0",
+
+  "core_principle": {
+    "statement": "UI components are modular engineering units, not visual design elements.",
+    "interpretation": "Every component must behave like a functional part of an architectural engineering system."
+  },
+
+  "system_architecture": {
+    "structure_logic": "Design System → Components → Modules → Pages → System Output",
+    "principle": "All UI elements must be built from reusable engineering components"
+  },
+
+  "component_fundamentals": {
+    "modularity": "Each component is a standalone engineering unit",
+    "consistency": "All components follow shared grid, color, and typography systems",
+    "predictability": "Components must behave identically across all contexts",
+    "scalability": "Components must work across web, mobile, and documentation systems"
+  },
+
+  "core_components": [
+    {
+      "name": "Button System",
+      "type": "interaction component",
+      "structure": "Primary / Secondary / Tertiary / Disabled",
+      "rules": [
+        "Primary uses Accent token only (#B89A63)",
+        "No decorative styling allowed",
+        "Must follow 8px grid spacing"
+      ],
+      "behavior": "Represents system action and transformation trigger"
+    },
+    {
+      "name": "Card System",
+      "type": "layout component",
+      "structure": "Header / Body / Footer (optional)",
+      "rules": [
+        "Must align to 12-column grid",
+        "Must use engineering layer borders",
+        "Must reflect system segmentation logic"
+      ],
+      "behavior": "Represents modular architectural system blocks"
+    },
+    {
+      "name": "Navigation System",
+      "type": "structural component",
+      "structure": "Hierarchical system navigation",
+      "rules": [
+        "Linear or tree-based structure only",
+        "No decorative menus",
+        "Must reflect system hierarchy"
+      ],
+      "behavior": "Represents architectural system flow"
+    },
+    {
+      "name": "Form System",
+      "type": "data input component",
+      "structure": "Input / Validation / Feedback",
+      "rules": [
+        "Minimal styling",
+        "Engineering clarity over aesthetics",
+        "Strict alignment with grid system"
+      ],
+      "behavior": "Represents system input layer"
+    },
+    {
+      "name": "Table System",
+      "type": "data structure component",
+      "structure": "Row / Column / Header hierarchy",
+      "rules": [
+        "Must be fully grid-aligned",
+        "No decorative borders",
+        "Engineering hierarchy only"
+      ],
+      "behavior": "Represents structured engineering data"
+    }
+  ],
+
+  "layout_components": {
+    "container": {
+      "rule": "Defines structural boundaries of system content",
+      "alignment": "12-column grid mandatory"
+    },
+    "section": {
+      "rule": "Represents system modules",
+      "spacing": "Based on 8px system scale"
+    },
+    "divider": {
+      "rule": "Engineering separation line, not decorative element",
+      "style": "Flat, minimal, charcoal-based"
+    }
+  },
+
+  "state_system": {
+    "interaction_states": [
+      "default",
+      "hover",
+      "active",
+      "disabled",
+      "loading"
+    ],
+    "rule": "States must remain functional, not decorative"
+  },
+
+  "design_constraints": {
+    "allowed": [
+      "Flat geometry",
+      "Grid-aligned layouts",
+      "Engineering color tokens",
+      "Minimal transitions"
+    ],
+    "forbidden": [
+      "3D components",
+      "Gradient UI elements",
+      "Decorative animations",
+      "Freeform layouts",
+      "Non-system components"
+    ]
+  },
+
+  "animation_rules": {
+    "principle": "Motion must reflect system logic, not aesthetics",
+    "allowed": [
+      "Linear transitions",
+      "Opacity changes",
+      "Grid-based movement"
+    ],
+    "forbidden": [
+      "Bounce effects",
+      "Elastic animations",
+      "Cinematic transitions"
+    ]
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Structured engineering interface system",
+    "secondary_impression": "Predictable and reliable system behavior",
+    "user_perception": [
+      "This is a controlled engineering system",
+      "Everything is modular and logical",
+      "This behaves like an architectural framework"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure UI is perceived as an engineering system, not a visual design",
+    "outcome": "Consistent modular architecture across all digital interfaces"
+  }
+}

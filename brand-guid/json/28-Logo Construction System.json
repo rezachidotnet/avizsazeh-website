@@ -1,0 +1,119 @@
+{
+  "id": 28,
+  "title": "Logo Construction System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Logo Construction System v1.0",
+
+  "core_principle": {
+    "statement": "Logo construction follows engineering system logic, not artistic illustration rules.",
+    "interpretation": "The logo is built like an architectural structure: grid → module → system → transformation point."
+  },
+
+  "construction_framework": {
+    "grid_system": {
+      "type": "modular engineering grid",
+      "dimension": "10x10 base grid",
+      "subdivision": "1/2 and 1/4 precision subdivisions allowed",
+      "rule": "All geometry must align strictly to grid intersections"
+    },
+
+    "base_geometry_rules": {
+      "allowed_angles": ["0°", "45°", "90°"],
+      "forbidden": [
+        "freeform curves",
+        "organic shapes",
+        "irregular geometry"
+      ]
+    },
+
+    "primary_building_unit": {
+      "name": "Engineering Line Unit",
+      "definition": "The smallest structural element of the logo system",
+      "properties": [
+        "flat stroke",
+        "constant thickness",
+        "grid-aligned endpoints"
+      ]
+    }
+  },
+
+  "construction_stages": [
+    {
+      "stage": 1,
+      "name": "Input Line (Engineering Origin)",
+      "description": "A single structured line represents architectural intent entering the system"
+    },
+    {
+      "stage": 2,
+      "name": "Segmentation (Module Formation)",
+      "description": "Line is divided into controlled segments representing architectural breakdown"
+    },
+    {
+      "stage": 3,
+      "name": "System Structuring",
+      "description": "Segments align into a modular grid forming a structured engineering system"
+    },
+    {
+      "stage": 4,
+      "name": "Integration Node",
+      "description": "System converges into a defined structural identity point"
+    },
+    {
+      "stage": 5,
+      "name": "Transformation Point",
+      "description": "Final node highlighted with Architectural Gold (#B89A63) indicating execution reality"
+    }
+  ],
+
+  "construction_rules": {
+    "alignment_rule": "Every element must snap to grid",
+    "consistency_rule": "Stroke thickness must remain constant across system",
+    "hierarchy_rule": "Visual hierarchy must follow engineering logic, not aesthetics",
+    "simplicity_rule": "Minimum elements, maximum structural meaning"
+  },
+
+  "color_construction_logic": {
+    "base_structure": "Engineering Charcoal (#1F2328)",
+    "system_structure": "Graphite (#3D3D3D)",
+    "support_structure": "Steel Gray (#4B5563)",
+    "transformation_point": "Architectural Gold (#B89A63)",
+    "rule": "Gold only applied at final transformation node"
+  },
+
+  "logo_variants_construction": {
+    "variant_a": {
+      "method": "linear transformation construction",
+      "structure_flow": "line → segment → system → point"
+    },
+    "variant_b": {
+      "method": "grid aggregation construction",
+      "structure_flow": "grid cells → modules → system block"
+    },
+    "variant_c": {
+      "method": "convergent vector construction",
+      "structure_flow": "multiple lines → convergence → system node"
+    }
+  },
+
+  "validation_rules": {
+    "engineering_check": "Must be interpretable as a system diagram",
+    "scalability_check": "Must remain clear at favicon size",
+    "clarity_check": "Must be readable without explanation",
+    "system_check": "Must represent transformation logic visually"
+  },
+
+  "forbidden_construction_methods": [
+    "freehand drawing",
+    "decorative ornamentation",
+    "3D modeling effects",
+    "gradient-based construction",
+    "illustrative symbolism"
+  ],
+
+  "strategic_goal": {
+    "objective": "Ensure logo is built like an engineering system diagram",
+    "outcome": "A scalable, structured, system-based identity mark representing architectural transformation"
+  }
+}

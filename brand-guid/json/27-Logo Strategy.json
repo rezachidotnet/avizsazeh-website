@@ -1,0 +1,110 @@
+{
+  "id": 27,
+  "title": "Logo Strategy",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Logo Strategy v1.0",
+
+  "core_principle": {
+    "statement": "The logo is not a symbol of decoration, but a visual representation of architectural transformation into engineered systems.",
+    "interpretation": "Logo must behave like a system diagram, not an artistic emblem."
+  },
+
+  "logo_identity_concept": {
+    "core_idea": "Architectural Transformation System",
+    "logic_flow": "Line → Module → System → Transformation Point → Execution Reality",
+    "meaning": "The logo visualizes the process of converting architectural intent into engineered, buildable systems."
+  },
+
+  "logo_positioning": {
+    "role": "Engineering identity marker for architectural systems",
+    "function": "Represents system intelligence, not product identity",
+    "perception_goal": "High-end architectural engineering authority"
+  },
+
+  "design_principles": [
+    {
+      "principle": "System over symbol",
+      "description": "Logo must reflect structured system logic, not illustrative shapes."
+    },
+    {
+      "principle": "Engineering geometry only",
+      "description": "Only 90° and 45° geometry allowed."
+    },
+    {
+      "principle": "Modular construction",
+      "description": "Logo must be constructed using grid-based system logic."
+    },
+    {
+      "principle": "Transformation-based design",
+      "description": "Logo must show progression from simple structure to system completion."
+    }
+  ],
+
+  "construction_system": {
+    "grid": "10x10 modular grid",
+    "base_element": "Single line / structural stroke",
+    "progression_stages": [
+      "Stage 1: Line (pure engineering input)",
+      "Stage 2: Module (segmentation)",
+      "Stage 3: System (structured grid)",
+      "Stage 4: Transformation Point (Gold accent node)"
+    ]
+  },
+
+  "logo_variants": {
+    "variant_a": {
+      "name": "Linear Transformation System",
+      "description": "A single line evolves into structured system ending in transformation point",
+      "strength": "Strongest alignment with engineering narrative"
+    },
+    "variant_b": {
+      "name": "Modular Grid System",
+      "description": "Grid-based composition showing architectural system order",
+      "strength": "Strong architectural intelligence perception"
+    },
+    "variant_c": {
+      "name": "Convergence System",
+      "description": "Multiple lines converge into a single engineered point",
+      "strength": "Strong execution and integration metaphor"
+    }
+  },
+
+  "color_logic": {
+    "base_color": "Engineering Charcoal (#1F2328)",
+    "system_color": "Graphite (#3D3D3D)",
+    "accent_color": "Architectural Gold (#B89A63)",
+    "rule": "Gold only appears at transformation point, never as structure"
+  },
+
+  "logo_behavior_rules": [
+    {
+      "rule": "No decorative shapes",
+      "description": "Logo must avoid ornamental or illustrative forms."
+    },
+    {
+      "rule": "No 3D or gradients",
+      "description": "Flat system design only."
+    },
+    {
+      "rule": "No architectural clichés",
+      "description": "No building icons, roofs, or ceiling metaphors."
+    },
+    {
+      "rule": "Maintain grid integrity",
+      "description": "Every element must align with system grid logic."
+    }
+  ],
+
+  "psychological_target": {
+    "primary_impression": "Engineering authority",
+    "secondary_impression": "Architectural system intelligence",
+    "final_perception": "Execution-ready architectural engineering company"
+  },
+
+  "strategic_goal": {
+    "objective": "Create a logo that behaves like a system diagram of architectural transformation",
+    "outcome": "Instant recognition of AvizSazeh as a structured engineering system brand"
+  }
+}

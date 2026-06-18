@@ -1,0 +1,75 @@
+
+Contact_RFQ_UI.fig
+AECS — AvizSazeh Engineering UX System
+
+NOTE: Structured Figma specification (non-binary format)
+
+=========================================================
+1. PAGE STRUCTURE
+=========================================================
+
+[1] RFQ HERO SECTION
+- Title: Define Your Engineering Project
+- Subtitle: Submit architectural data for system-level analysis
+- Visual: industrial blueprint background
+- CTA: Start Project Definition
+
+[2] RFQ INTRO SYSTEM
+- explanation: not a contact form
+- definition: project engineering intake system
+
+[3] PROJECT TYPE SELECTION
+- ceiling system type
+- building category
+- project scale
+
+[4] SYSTEM CLASSIFICATION ENGINE
+- linear system
+- grid system
+- custom system
+- hybrid system
+
+[5] TECHNICAL INPUT SYSTEM
+- area (m²)
+- architectural constraints
+- structural notes
+- environment conditions
+
+[6] FILE UPLOAD ENGINE
+- DWG upload
+- PDF plans
+- reference images
+
+[7] ENGINEERING REVIEW REQUEST
+- notes section
+- complexity declaration
+- priority level
+
+[8] SUBMISSION ENGINE
+- "Submit for Engineering Analysis"
+
+=========================================================
+2. UI RULES
+=========================================================
+
+- 12 column grid system
+- 8px spacing system
+- no marketing language
+- system-based interaction
+- step-by-step wizard interface
+
+=========================================================
+3. COMPONENTS
+=========================================================
+
+RFQHero
+RFQIntro
+ProjectTypeSelector
+SystemClassifier
+TechnicalInputForm
+FileUploadEngine
+EngineeringReview
+SubmissionEngine
+
+=========================================================
+END OF FILE

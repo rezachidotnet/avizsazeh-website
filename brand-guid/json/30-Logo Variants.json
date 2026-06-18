@@ -1,0 +1,115 @@
+{
+  "id": 30,
+  "title": "Logo Variants",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Logo Variant System v1.0",
+
+  "core_principle": {
+    "statement": "Each logo variant represents a different mode of architectural transformation into engineering systems.",
+    "interpretation": "Variants are not stylistic options, but different structural interpretations of the same system logic."
+  },
+
+  "base_identity_logic": {
+    "core_concept": "Architectural Transformation System",
+    "logic_flow": "Architecture → Engineering → System → Integration → Execution Reality",
+    "shared_foundation": "All variants must preserve grid-based engineering structure and transformation logic"
+  },
+
+  "variants": [
+    {
+      "id": "A",
+      "name": "Linear Transformation System",
+      "concept": "Single-line evolution into structured system",
+      "structure": "Line → Segmentation → Modular alignment → Transformation point",
+      "visual_character": "Minimal, directional, process-driven",
+      "strength": "Highest clarity of architectural transformation logic",
+      "use_case": [
+        "Primary brand logo",
+        "Corporate identity",
+        "Website header",
+        "Investor presentations"
+      ],
+      "perception_goal": "Engineering system clarity and authority"
+    },
+    {
+      "id": "B",
+      "name": "Modular Grid System",
+      "concept": "System built from architectural grid intelligence",
+      "structure": "Grid cells → Module grouping → Structural hierarchy → Integrated system",
+      "visual_character": "Structured, analytical, architectural intelligence",
+      "strength": "Strong architectural design perception",
+      "use_case": [
+        "Technical documentation",
+        "Architectural proposals",
+        "Engineering reports"
+      ],
+      "perception_goal": "Architectural intelligence and system organization"
+    },
+    {
+      "id": "C",
+      "name": "Convergence Engineering System",
+      "concept": "Multiple architectural inputs converge into unified system",
+      "structure": "Multiple lines → Convergence nodes → System integration → Final transformation point",
+      "visual_character": "Dynamic, integrative, execution-focused",
+      "strength": "Strong EPC and execution perception",
+      "use_case": [
+        "Large-scale EPC projects",
+        "Industrial presentations",
+        "Execution partnerships"
+      ],
+      "perception_goal": "System integration and execution reliability"
+    }
+  ],
+
+  "variant_comparison_matrix": {
+    "clarity": {
+      "A": 10,
+      "B": 8,
+      "C": 9
+    },
+    "architectural_intelligence": {
+      "A": 8,
+      "B": 10,
+      "C": 9
+    },
+    "execution_perception": {
+      "A": 9,
+      "B": 8,
+      "C": 10
+    },
+    "system_logic_strength": {
+      "A": 10,
+      "B": 9,
+      "C": 10
+    }
+  },
+
+  "selection_logic": {
+    "primary_variant": "A",
+    "reason": "Highest clarity of transformation narrative and strongest alignment with core brand philosophy",
+    "secondary_variants": ["B", "C"],
+    "usage_strategy": "Variant A for primary identity, B for architectural depth contexts, C for EPC and execution contexts"
+  },
+
+  "design_constraints": {
+    "mandatory": [
+      "10x10 grid system",
+      "flat geometry only",
+      "no curves or decorative elements",
+      "single transformation point (gold)"
+    ],
+    "forbidden": [
+      "3D effects",
+      "gradients",
+      "illustrative symbols",
+      "building icons"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Provide multiple structural interpretations of the same architectural engineering identity",
+    "outcome": "Flexible yet consistent brand system adaptable to architecture, engineering, and execution contexts"
+  }
+}

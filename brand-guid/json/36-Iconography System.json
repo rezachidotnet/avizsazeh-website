@@ -1,0 +1,126 @@
+{
+  "id": 36,
+  "title": "Iconography System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Iconography System v1.0",
+
+  "core_principle": {
+    "statement": "Icons are simplified engineering system diagrams, not decorative illustrations.",
+    "interpretation": "Each icon must represent a functional system component within architectural engineering logic."
+  },
+
+  "icon_system_foundation": {
+    "design_logic": "Architectural Engineering abstraction",
+    "visual_language": "Linear, geometric, grid-based system symbols",
+    "purpose": "Communicate system functions clearly and structurally"
+  },
+
+  "icon_style_rules": {
+    "stroke_style": {
+      "type": "Monoline",
+      "thickness": "consistent across all icons",
+      "rule": "No variation in stroke thickness within icon set"
+    },
+    "geometry": {
+      "allowed": [
+        "90-degree angles",
+        "45-degree angles",
+        "straight lines",
+        "modular grid alignment"
+      ],
+      "forbidden": [
+        "curves",
+        "organic shapes",
+        "illustrative detailing",
+        "hand-drawn style"
+      ]
+    },
+    "grid_system": {
+      "base": "10x10 AECS Grid",
+      "alignment": "All icons must snap to grid nodes",
+      "scaling": "Maintain proportional consistency across sizes"
+    }
+  },
+
+  "icon_semantic_system": [
+    {
+      "concept": "Architecture",
+      "icon_logic": "Abstract structural grid or foundation line system",
+      "meaning": "Input layer of architectural intent"
+    },
+    {
+      "concept": "Engineering",
+      "icon_logic": "Interconnected nodes and structural joints",
+      "meaning": "System validation and structural logic"
+    },
+    {
+      "concept": "System",
+      "icon_logic": "Modular grid assembly or connected blocks",
+      "meaning": "Integrated architectural system"
+    },
+    {
+      "concept": "Execution",
+      "icon_logic": "Directional flow or completion node",
+      "meaning": "Real-world buildable outcome"
+    },
+    {
+      "concept": "Transformation Point",
+      "icon_logic": "Single highlighted node (Gold accent #B89A63)",
+      "meaning": "Final system activation or decision point"
+    }
+  ],
+
+  "icon_hierarchy_rules": {
+    "level_1": "Core system icons (architecture, engineering, system)",
+    "level_2": "Functional process icons (design, analysis, execution)",
+    "level_3": "Support icons (documentation, measurement, compliance)",
+    "rule": "No icon may exceed its functional semantic level"
+  },
+
+  "color_system": {
+    "primary": "Engineering Charcoal (#1F2328)",
+    "secondary": "Graphite (#3D3D3D)",
+    "support": "Steel Gray (#4B5563)",
+    "accent": "Architectural Gold (#B89A63)",
+    "accent_rule": "Gold only used for transformation or key system nodes"
+  },
+
+  "icon_behavior_rules": {
+    "consistency": "All icons must belong to a single unified system style",
+    "scalability": "Must remain legible at 16px and scalable to large formats",
+    "simplicity": "Icons must be reduced to minimum structural elements",
+    "clarity": "Each icon must be immediately understandable as a system function"
+  },
+
+  "forbidden_icon_styles": [
+    "3D icons",
+    "Illustrative or pictorial icons",
+    "Gradient-based icons",
+    "Colorful decorative icon sets",
+    "Real-world object representations",
+    "Emoji-style icons"
+  ],
+
+  "system_integration_rules": {
+    "ui_usage": "Icons must align with typography and grid system",
+    "documentation_usage": "Icons must behave like engineering diagrams",
+    "branding_usage": "Icons must reinforce system-based identity, not decoration"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Structured engineering intelligence",
+    "secondary_impression": "Architectural system clarity",
+    "user_feeling": [
+      "This is a technical engineering system",
+      "Everything is structured and logical",
+      "This brand communicates like an architectural model"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Create a unified icon language that behaves like an engineering system diagram set",
+    "outcome": "Consistent recognition of AvizSazeh as an architectural engineering system brand"
+  }
+}

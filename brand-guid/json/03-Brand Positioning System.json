@@ -1,0 +1,73 @@
+{
+  "id": 3,
+  "title": "Brand Positioning System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "positioning_statement": "Architectural Engineering System Provider for metal ceiling systems that transforms architectural intent into buildable and executable reality.",
+
+  "market_position": {
+    "primary_position": "System Integrator between Architecture and Execution",
+    "secondary_position": "Engineering-driven manufacturer of architectural ceiling systems",
+    "tertiary_position": "Technical partner for EPC and architectural firms"
+  },
+
+  "target_markets": {
+    "geography": ["Iran", "GCC", "Iraq", "CIS"],
+    "industries": ["Architecture", "Construction", "EPC", "Industrial Projects", "Commercial Buildings"],
+    "client_types": ["Architects", "Consulting Engineers", "General Contractors", "Developers", "Project Owners"]
+  },
+
+  "positioning_axis": {
+    "axis_1": {
+      "name": "Design vs Execution",
+      "position": "Balanced toward execution reliability"
+    },
+    "axis_2": {
+      "name": "Product vs System",
+      "position": "Strongly system-oriented"
+    },
+    "axis_3": {
+      "name": "Decoration vs Engineering",
+      "position": "Strongly engineering-dominant"
+    },
+    "axis_4": {
+      "name": "Commodity vs Customization",
+      "position": "Fully customized project-based systems"
+    }
+  },
+
+  "differentiation_strategy": {
+    "core_differentiator": "Transformation of architectural concepts into engineered ceiling systems",
+    "supporting_differentiators": [
+      "Engineering-first design approach",
+      "Project-specific customization",
+      "Integrated manufacturing and execution",
+      "Risk reduction in architectural implementation"
+    ]
+  },
+
+  "perceptual_positioning": {
+    "desired_perception": "High-end Architectural Engineering System Provider",
+    "avoid_perception": [
+      "Ceiling product seller",
+      "Interior decoration brand",
+      "Generic construction contractor"
+    ]
+  },
+
+  "competitive_landscape": {
+    "benchmark_brands": [
+      "Siemens (engineering authority)",
+      "Autodesk (system thinking)",
+      "Hunter Douglas (architectural systems)",
+      "SAS International (ceiling systems)"
+    ],
+    "relative_position": "Between architectural design intelligence and industrial execution systems"
+  },
+
+  "positioning_formula": {
+    "structure": "Architecture + Engineering + System + Execution Reliability",
+    "simplified_message": "We turn architectural design into buildable ceiling systems"
+  }
+}

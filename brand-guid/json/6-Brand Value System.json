@@ -1,0 +1,60 @@
+{
+  "id": 6,
+  "title": "Brand Value System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "core_values": [
+    {
+      "name": "Precision",
+      "definition": "Every design, component, and execution step must follow exact engineering logic and measurable accuracy.",
+      "behavioral_expression": "No ambiguity in design or execution; all outputs are structured and calculable."
+    },
+    {
+      "name": "Engineering Integrity",
+      "definition": "Commitment to ensuring that all architectural designs are validated through engineering principles before execution.",
+      "behavioral_expression": "Rejects non-engineered decisions and ensures system-level validation in all projects."
+    },
+    {
+      "name": "Reliability",
+      "definition": "Ability to consistently deliver predictable, stable, and buildable architectural systems.",
+      "behavioral_expression": "Projects are executed with controlled outcomes and reduced uncertainty."
+    },
+    {
+      "name": "Architectural Intelligence",
+      "definition": "Deep understanding of architectural intent and its translation into functional systems.",
+      "behavioral_expression": "Interprets design not as image, but as an executable system."
+    },
+    {
+      "name": "Customization",
+      "definition": "Every project is treated as a unique system requiring tailored engineering solutions.",
+      "behavioral_expression": "No generic product mindset; all systems are project-specific."
+    },
+    {
+      "name": "Responsibility",
+      "definition": "Ownership of both design interpretation and execution outcome.",
+      "behavioral_expression": "Ensures accountability across design-to-installation lifecycle."
+    },
+    {
+      "name": "Quality",
+      "definition": "Commitment to structural, visual, and functional excellence in all architectural systems.",
+      "behavioral_expression": "Quality is defined as successful execution of architectural intent."
+    }
+  ],
+
+  "value_hierarchy": {
+    "primary_values": ["Engineering Integrity", "Precision", "Reliability"],
+    "secondary_values": ["Architectural Intelligence", "Customization"],
+    "supporting_values": ["Responsibility", "Quality"]
+  },
+
+  "value_logic": {
+    "principle": "Value is defined by execution reliability, not visual appearance alone",
+    "system_statement": "A system is valuable only if it can be built without loss of architectural intent"
+  },
+
+  "strategic_role": {
+    "function": "Defines internal behavior standards and external brand perception",
+    "impact": "Ensures consistency across engineering, manufacturing, and communication layers"
+  }
+}

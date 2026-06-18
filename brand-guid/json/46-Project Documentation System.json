@@ -1,0 +1,143 @@
+{
+  "id": 46,
+  "title": "Project Documentation System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Project Documentation System v1.0",
+
+  "core_principle": {
+    "statement": "Project documentation is the formal memory of the engineering system.",
+    "interpretation": "Every architectural project must be fully traceable from design intent to final execution through structured documentation."
+  },
+
+  "documentation_philosophy": {
+    "concept": "Engineering Traceability System",
+    "goal": "Ensure every decision, change, and execution step is recorded as part of a controlled system",
+    "anti_concept": "Reject informal, unstructured, or non-engineered documentation"
+  },
+
+  "documentation_structure": {
+    "system_flow": "Concept → Design → Engineering → System Definition → Manufacturing → Execution → Verification → Closure",
+    "rule": "Each stage must produce structured documentation artifacts"
+  },
+
+  "core_document_types": [
+    {
+      "name": "Project Brief Document",
+      "purpose": "Capture architectural intent and client requirements",
+      "content": [
+        "Project scope",
+        "Architectural goals",
+        "Constraints and requirements",
+        "Initial system expectations"
+      ]
+    },
+    {
+      "name": "Engineering Analysis Report",
+      "purpose": "Validate feasibility and structural logic",
+      "content": [
+        "Load analysis",
+        "Geometry validation",
+        "Material considerations",
+        "Risk assessment"
+      ]
+    },
+    {
+      "name": "System Definition Document",
+      "purpose": "Convert design into modular engineering system",
+      "content": [
+        "System architecture",
+        "Modular breakdown",
+        "Grid alignment mapping",
+        "Component definitions"
+      ]
+    },
+    {
+      "name": "Manufacturing Documentation",
+      "purpose": "Define production-ready system components",
+      "content": [
+        "Fabrication drawings",
+        "Material specifications",
+        "Assembly instructions",
+        "Tolerance definitions"
+      ]
+    },
+    {
+      "name": "Installation Guide",
+      "purpose": "Control on-site execution process",
+      "content": [
+        "Step-by-step installation flow",
+        "System assembly sequence",
+        "Site constraints",
+        "Safety and engineering rules"
+      ]
+    },
+    {
+      "name": "Execution Report",
+      "purpose": "Document actual installation results",
+      "content": [
+        "Installed system verification",
+        "Deviation report",
+        "Quality control results",
+        "Final system approval"
+      ]
+    },
+    {
+      "name": "Project Closure Report",
+      "purpose": "Finalize project lifecycle documentation",
+      "content": [
+        "Final system confirmation",
+        "Client approval",
+        "Performance evaluation",
+        "Project archive entry"
+      ]
+    }
+  ],
+
+  "engineering_traceability_rules": {
+    "rule_1": "Every decision must be documented",
+    "rule_2": "No undocumented field changes allowed",
+    "rule_3": "All changes must reference system version",
+    "rule_4": "Execution must match documented engineering model",
+    "rule_5": "Final output must be fully traceable"
+  },
+
+  "system_integration": {
+    "product_system_link": "All products must map to system definitions",
+    "execution_system_link": "All installation steps must follow documentation",
+    "design_system_link": "All designs must originate from structured documentation"
+  },
+
+  "format_standards": {
+    "structure": "Engineering-first structured documents",
+    "style": "Technical, precise, non-marketing language",
+    "format": "Modular documentation blocks with clear hierarchy",
+    "visual_logic": "Grid-aligned diagrams and structured tables preferred"
+  },
+
+  "quality_control": {
+    "validation_points": [
+      "Engineering accuracy check",
+      "System consistency check",
+      "Execution alignment check",
+      "Documentation completeness check"
+    ],
+    "rule": "No project can be closed without full validation pass"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Highly controlled engineering documentation system",
+    "secondary_impression": "Enterprise-grade architectural traceability",
+    "user_perception": [
+      "Everything is documented and controlled",
+      "This is a structured engineering organization",
+      "Nothing is left to improvisation"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Create full traceability of architectural engineering projects",
+    "outcome": "Position AvizSazeh as a system-driven engineering authority with full documentation control"
+  }
+}

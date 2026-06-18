@@ -1,0 +1,140 @@
+{
+  "id": 42,
+  "title": "Layout System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Layout System v1.0",
+
+  "core_principle": {
+    "statement": "Layout is an architectural engineering structure for organizing information, not a visual composition technique.",
+    "interpretation": "Every layout must behave like a structured architectural blueprint."
+  },
+
+  "layout_foundation": {
+    "grid_system": "12-column architectural engineering grid",
+    "base_unit": "8px modular spacing system",
+    "structure_logic": "System → Modules → Sections → Components → Content"
+  },
+
+  "layout_hierarchy": [
+    {
+      "level": "System Frame",
+      "definition": "Top-level structure defining overall page architecture",
+      "role": "Defines global boundaries and system alignment",
+      "rules": [
+        "Must use full-width grid logic",
+        "No freeform positioning allowed",
+        "Defines entire page structure"
+      ]
+    },
+    {
+      "level": "Module Section",
+      "definition": "Logical grouping of related system components",
+      "role": "Represents architectural subsystems",
+      "rules": [
+        "Must align to grid columns",
+        "Must maintain consistent vertical rhythm",
+        "Must reflect engineering segmentation"
+      ]
+    },
+    {
+      "level": "Component Block",
+      "definition": "Reusable UI engineering unit",
+      "role": "Functional system elements (cards, forms, tables)",
+      "rules": [
+        "Must be modular and reusable",
+        "Must follow component system rules",
+        "Must align strictly to grid"
+      ]
+    },
+    {
+      "level": "Content Layer",
+      "definition": "Information display layer",
+      "role": "Typography and data presentation",
+      "rules": [
+        "Must follow typography hierarchy system",
+        "Must avoid decorative formatting",
+        "Must maintain readability and structure"
+      ]
+    }
+  ],
+
+  "layout_principles": [
+    {
+      "name": "Structural Hierarchy",
+      "description": "Every layout must clearly express system hierarchy from top to bottom."
+    },
+    {
+      "name": "Grid Discipline",
+      "description": "All elements must strictly align to the 12-column grid system."
+    },
+    {
+      "name": "Modular Construction",
+      "description": "Layouts must be composed of reusable system modules."
+    },
+    {
+      "name": "Spatial Engineering",
+      "description": "Whitespace is treated as architectural space, not empty design."
+    },
+    {
+      "name": "Predictable Flow",
+      "description": "User navigation must follow logical engineering structure."
+    }
+  ],
+
+  "spacing_system": {
+    "base_unit": "8px",
+    "scale": [
+      "4px micro spacing",
+      "8px base unit",
+      "16px small separation",
+      "24px medium separation",
+      "32px section spacing",
+      "64px architectural separation"
+    ],
+    "rule": "All spacing must be derived from base unit multiples"
+  },
+
+  "alignment_rules": {
+    "horizontal": "Strict 12-column alignment required",
+    "vertical": "Consistent baseline rhythm mandatory",
+    "module_alignment": "All modules must snap to grid intersections",
+    "content_alignment": "Typography must follow grid baseline system"
+  },
+
+  "responsive_behavior": {
+    "principle": "Structural consistency across all breakpoints",
+    "rule": "Layout hierarchy must remain intact on all screen sizes",
+    "adaptation": "Columns collapse but system logic remains unchanged"
+  },
+
+  "visual_behavior": {
+    "density": "Engineering-balanced spacing, not decorative density",
+    "flow": "Top-down system logic flow",
+    "focus": "Guided toward system structure, not visual attraction"
+  },
+
+  "forbidden_layout_patterns": [
+    "Freeform positioning",
+    "Non-grid alignment",
+    "Decorative spacing",
+    "Asymmetrical randomness without system logic",
+    "Overlapping elements without engineering purpose"
+  ],
+
+  "psychological_effect": {
+    "primary_impression": "Highly structured engineering system",
+    "secondary_impression": "Architectural blueprint logic",
+    "user_perception": [
+      "This system is predictable and structured",
+      "Everything follows engineering logic",
+      "This feels like a technical blueprint, not a design"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure all layouts behave like architectural engineering blueprints",
+    "outcome": "Consistent perception of AvizSazeh as a structured system-based engineering brand"
+  }
+}

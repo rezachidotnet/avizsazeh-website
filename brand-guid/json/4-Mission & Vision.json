@@ -1,0 +1,40 @@
+{
+  "id": 4,
+  "title": "Mission & Vision",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "mission": {
+    "statement": "Design, engineer, manufacture, and execute architectural ceiling systems that fully integrate aesthetic requirements, technical constraints, and buildability into a unified engineered solution.",
+    "core_actions": [
+      "Architectural system design",
+      "Engineering validation of designs",
+      "Custom manufacturing of ceiling systems",
+      "Controlled execution and installation support",
+      "Technical coordination with EPC and architectural teams"
+    ],
+    "mission_focus": "Transform architectural concepts into reliable, buildable ceiling systems without loss of design intent"
+  },
+
+  "vision": {
+    "statement": "To become the most trusted Architectural Engineering System brand in Iran and a recognized regional authority in architectural ceiling systems across the Middle East and CIS markets.",
+    "long_term_goal": "Establish AvizSazeh as a global benchmark for engineered architectural ceiling systems",
+    "vision_expansion": [
+      "Regional leadership in GCC architectural EPC projects",
+      "Recognition as a system-based engineering brand",
+      "Expansion into advanced architectural envelope systems"
+    ]
+  },
+
+  "strategic_alignment": {
+    "mission_alignment": "Execution-focused engineering delivery system",
+    "vision_alignment": "Regional and global architectural engineering authority",
+    "brand_direction": "From product manufacturer → to system engineering partner"
+  },
+
+  "success_definition": {
+    "short_term": "Trusted supplier for architectural ceiling systems in EPC projects",
+    "mid_term": "Preferred engineering partner for architects and consultants",
+    "long_term": "Regional leader in architectural system engineering solutions"
+  }
+}

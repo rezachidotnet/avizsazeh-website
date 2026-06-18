@@ -1,0 +1,145 @@
+{
+  "id": 37,
+  "title": "Photography Direction",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Photography Direction System v1.0",
+
+  "core_principle": {
+    "statement": "Photography is a documentation of architectural engineering systems, not a lifestyle or decorative visual tool.",
+    "interpretation": "Every image must communicate structure, execution, and system logic."
+  },
+
+  "photography_philosophy": {
+    "concept": "Engineering Reality Documentation",
+    "goal": "Show how architectural systems are designed, manufactured, and executed in real environments",
+    "anti_style": "Reject lifestyle, luxury, or decorative photography aesthetics"
+  },
+
+  "visual_subject_priorities": [
+    {
+      "priority": 1,
+      "subject": "Installed ceiling systems",
+      "description": "Final executed architectural ceiling systems in real buildings",
+      "purpose": "Show system outcome and engineering precision"
+    },
+    {
+      "priority": 2,
+      "subject": "Installation process",
+      "description": "On-site execution and assembly process",
+      "purpose": "Show system reliability and engineering control"
+    },
+    {
+      "priority": 3,
+      "subject": "Technical drawings in real context",
+      "description": "Blueprints, CAD references, and system documentation",
+      "purpose": "Show engineering intelligence behind execution"
+    },
+    {
+      "priority": 4,
+      "subject": "Manufacturing environment",
+      "description": "Factories, production lines, and system fabrication",
+      "purpose": "Show industrial engineering capability"
+    }
+  ],
+
+  "composition_rules": {
+    "perspective": [
+      "Architectural wide-angle (primary)",
+      "Orthographic engineering views (secondary)",
+      "Controlled isometric system views"
+    ],
+    "framing": "Grid-aligned composition preferred",
+    "focus": "Structural clarity over aesthetic dramatization",
+    "depth": "Shallow decorative depth is forbidden; structural depth is required"
+  },
+
+  "lighting_rules": {
+    "style": "Neutral industrial lighting",
+    "allowed": [
+      "Natural daylight in architectural spaces",
+      "Controlled industrial lighting",
+      "Soft neutral diffusion for clarity"
+    ],
+    "forbidden": [
+      "Cinematic luxury lighting",
+      "Colored artistic lighting",
+      "High contrast dramatic studio lighting"
+    ]
+  },
+
+  "color_grading_rules": {
+    "style": "Neutral engineering realism",
+    "allowed_tones": [
+      "Concrete gray",
+      "Steel tones",
+      "Neutral whites",
+      "Architectural beige"
+    ],
+    "forbidden": [
+      "Warm luxury grading",
+      "Teal-orange cinematic grading",
+      "Oversaturated aesthetic filters"
+    ]
+  },
+
+  "subject_behavior_rules": {
+    "human_elements": "Must appear only as functional workers or engineers in context",
+    "pose_style": "Natural, task-oriented, non-posed lifestyle behavior",
+    "prohibition": [
+      "Lifestyle posing",
+      "Fashion-style portraits",
+      "Emotional storytelling imagery"
+    ]
+  },
+
+  "environment_rules": {
+    "allowed_environments": [
+      "Construction sites",
+      "Industrial facilities",
+      "Architectural interiors",
+      "Manufacturing plants"
+    ],
+    "forbidden_environments": [
+      "Luxury interior staging",
+      "Lifestyle home setups",
+      "Decorative showroom scenes"
+    ]
+  },
+
+  "visual_narrative_logic": {
+    "sequence": "Design → Engineering → Manufacturing → Installation → Finished System",
+    "story_rule": "Each image must represent one stage of system transformation",
+    "consistency_rule": "All images must feel like parts of a single engineering documentation system"
+  },
+
+  "composition_geometry_rules": {
+    "alignment": "Grid-based architectural alignment preferred",
+    "geometry": "Strong linear and modular structure must dominate framing",
+    "repetition": "System patterns and modular repetition encouraged"
+  },
+
+  "forbidden_photography_styles": [
+    "Stock lifestyle photography",
+    "Luxury branding imagery",
+    "Fashion editorial style",
+    "Emotional storytelling portraits",
+    "Abstract artistic photography"
+  ],
+
+  "psychological_effect": {
+    "primary_impression": "Engineering precision and system reliability",
+    "secondary_impression": "Architectural industrial intelligence",
+    "viewer_feeling": [
+      "This is a real engineering system",
+      "This brand executes real projects",
+      "This is not decoration, this is infrastructure"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Position AvizSazeh as an engineering execution authority through real-world documentation",
+    "outcome": "Visual identity based on truth of execution, not aesthetic simulation"
+  }
+}

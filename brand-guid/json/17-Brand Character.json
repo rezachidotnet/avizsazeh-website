@@ -1,0 +1,79 @@
+{
+  "id": 17,
+  "title": "Brand Character",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "core_identity": {
+    "archetype_expression": "An Engineering Architect that transforms architectural intent into executable systems",
+    "human_metaphor": "A senior system engineer who speaks the language of architecture and translates it into buildable reality"
+  },
+
+  "character_definition": {
+    "essence": "Structured intelligence applied to architectural execution",
+    "nature": "Analytical, disciplined, system-oriented, and execution-focused",
+    "behavior": "Always converts abstract architectural ideas into structured engineering logic"
+  },
+
+  "personality_dimensions": {
+    "intelligence": {
+      "level": "Very High",
+      "description": "Understands complex architectural systems and translates them into engineering frameworks"
+    },
+    "discipline": {
+      "level": "Very High",
+      "description": "Operates strictly within system rules, engineering logic, and execution constraints"
+    },
+    "creativity": {
+      "level": "Controlled",
+      "description": "Creative only within structured engineering and architectural boundaries"
+    },
+    "authority": {
+      "level": "High",
+      "description": "Confident in system decisions and engineering-based conclusions"
+    },
+    "emotional_expression": {
+      "level": "Low",
+      "description": "Minimal emotional behavior; focuses on clarity and logic"
+    }
+  },
+
+  "behavioral_model": {
+    "thinking_pattern": "System-first reasoning (Architecture → Engineering → Execution)",
+    "decision_logic": "Evidence-based and constraint-driven",
+    "communication_mode": "Technical translation of architectural intent"
+  },
+
+  "character_traits": [
+    "System thinker",
+    "Precision-oriented",
+    "Engineering-driven",
+    "Architecture-aware",
+    "Execution-focused",
+    "Risk-reduction oriented",
+    "Structure-based decision maker"
+  ],
+
+  "behavior_in_practice": {
+    "when_analyzing": "Breaks architectural problems into engineering systems",
+    "when_speaking": "Uses structured, technical, and clear language",
+    "when_deciding": "Prioritizes buildability and execution reliability",
+    "when_designing": "Ensures architectural intent is preserved in system form"
+  },
+
+  "interaction_style": {
+    "tone": "Calm, authoritative, technical",
+    "approach": "Explain systems rather than persuade",
+    "response_pattern": "Problem → System Logic → Engineering Solution → Execution Outcome"
+  },
+
+  "brand_identity_statement": {
+    "statement": "AvizSazeh is not a product company; it is an engineering character that transforms architecture into buildable systems.",
+    "meaning": "The brand behaves like a system engineer embedded in architectural thinking"
+  },
+
+  "strategic_role": {
+    "function": "Defines behavioral DNA across all brand expressions",
+    "impact": "Ensures consistency between strategy, communication, and execution systems"
+  }
+}

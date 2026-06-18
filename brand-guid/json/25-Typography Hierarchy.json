@@ -1,0 +1,141 @@
+{
+  "id": 25,
+  "title": "Typography Hierarchy",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Typography Hierarchy v1.0",
+
+  "core_principle": {
+    "statement": "Typography hierarchy is a structural engineering system for information, not a visual styling choice.",
+    "interpretation": "Every text level must represent a clear position in the architectural and engineering information system."
+  },
+
+  "hierarchy_structure": [
+    {
+      "level": "H1",
+      "name": "System Title Level",
+      "role": "Primary architectural identity and system definition",
+      "typography_specs": {
+        "weight": "700 (Bold)",
+        "size_relation": "2.5x base body size",
+        "color": "Engineering Charcoal (#1F2328)",
+        "line_height": "1.1 - 1.2",
+        "letter_spacing": "-1% to -2%"
+      },
+      "usage": [
+        "Page titles",
+        "System headers",
+        "Brand statements",
+        "Hero section titles"
+      ],
+      "meaning": "Defines the core system identity"
+    },
+    {
+      "level": "H2",
+      "name": "Subsystem Level",
+      "role": "Secondary structural organization of content",
+      "typography_specs": {
+        "weight": "600 (SemiBold)",
+        "size_relation": "1.75x base body size",
+        "color": "Graphite (#3D3D3D)",
+        "line_height": "1.2 - 1.3",
+        "letter_spacing": "-0.5%"
+      },
+      "usage": [
+        "Section headers",
+        "System modules",
+        "Content grouping titles"
+      ],
+      "meaning": "Defines subsystem boundaries"
+    },
+    {
+      "level": "H3",
+      "name": "Component Level",
+      "role": "Functional breakdown of systems",
+      "typography_specs": {
+        "weight": "500 (Medium)",
+        "size_relation": "1.25x base body size",
+        "color": "Steel Gray (#4B5563)",
+        "line_height": "1.3 - 1.4",
+        "letter_spacing": "0%"
+      },
+      "usage": [
+        "Component titles",
+        "Feature labels",
+        "Technical sections"
+      ],
+      "meaning": "Defines functional components within systems"
+    },
+    {
+      "level": "BODY",
+      "name": "Content Level",
+      "role": "Primary information delivery layer",
+      "typography_specs": {
+        "weight": "400 (Regular)",
+        "size_relation": "1x base size",
+        "color": "Engineering Charcoal / Graphite",
+        "line_height": "1.5 - 1.7",
+        "letter_spacing": "0%"
+      },
+      "usage": [
+        "Paragraph text",
+        "Descriptions",
+        "Explanations",
+        "Technical content"
+      ],
+      "meaning": "Delivers system information clearly and efficiently"
+    },
+    {
+      "level": "CAPTION",
+      "name": "Metadata Level",
+      "role": "Supporting and contextual information",
+      "typography_specs": {
+        "weight": "400 (Regular)",
+        "size_relation": "0.85x base size",
+        "color": "Steel Gray (#4B5563)",
+        "line_height": "1.4 - 1.5",
+        "letter_spacing": "0.5%"
+      },
+      "usage": [
+        "Annotations",
+        "Technical notes",
+        "Labels",
+        "Metadata"
+      ],
+      "meaning": "Provides supporting system context"
+    }
+  ],
+
+  "hierarchy_rules": {
+    "rule_1": "H1 must always dominate visual structure",
+    "rule_2": "H2 defines system segmentation",
+    "rule_3": "H3 defines functional breakdown",
+    "rule_4": "Body is the neutral communication layer",
+    "rule_5": "Caption must never compete with primary content"
+  },
+
+  "visual_system_alignment": {
+    "grid_dependency": "All typography levels must align with 12-column grid system",
+    "spacing_dependency": "Spacing increases proportionally with hierarchy level",
+    "color_dependency": "Higher hierarchy = darker engineering tones"
+  },
+
+  "engineering_principle": {
+    "statement": "Typography hierarchy behaves like an engineering structure",
+    "interpretation": "H1 is the structural beam, H2 is the subsystem frame, H3 is the component module, Body is the functional material, Caption is metadata annotation"
+  },
+
+  "forbidden_patterns": [
+    "Random font sizing without hierarchy logic",
+    "Mixing hierarchy levels in same semantic role",
+    "Using decorative emphasis instead of structural hierarchy",
+    "Ignoring grid alignment",
+    "Using accent color (gold) for large text blocks"
+  ],
+
+  "strategic_goal": {
+    "objective": "Create a readable engineering information system",
+    "outcome": "Instant comprehension of architectural system structure through typography alone"
+  }
+}

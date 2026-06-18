@@ -1,0 +1,111 @@
+{
+  "id": 40,
+  "title": "Color Tokens System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Color Tokens System v1.0",
+
+  "core_principle": {
+    "statement": "Color tokens are a machine-readable representation of the architectural engineering color system.",
+    "interpretation": "All visual systems (UI, web, print, motion) must consume colors through structured tokens, not raw hex values."
+  },
+
+  "token_architecture": {
+    "format_standard": "semantic + layer-based token system",
+    "structure_logic": "Engineering Layer → Architectural Layer → Accent Layer",
+    "usage_rule": "No direct hex usage in production systems"
+  },
+
+  "engineering_layer_tokens": {
+    "engineering-900": "#1F2328",
+    "engineering-700": "#3D3D3D",
+    "engineering-500": "#4B5563",
+    "description": "Structural backbone tokens used for typography, UI structure, and system hierarchy"
+  },
+
+  "architectural_layer_tokens": {
+    "architectural-100": "#ECE9E3",
+    "architectural-300": "#B7B0A5",
+    "architectural-0": "#FFFFFF",
+    "description": "Spatial system tokens used for backgrounds, layout structure, and architectural surfaces"
+  },
+
+  "accent_layer_tokens": {
+    "accent-500": "#B89A63",
+    "description": "Authority and transformation token used for CTA, highlights, and system transition points"
+  },
+
+  "semantic_tokens": {
+    "text-primary": "engineering-900",
+    "text-secondary": "engineering-700",
+    "text-tertiary": "engineering-500",
+    "background-primary": "architectural-0",
+    "background-secondary": "architectural-100",
+    "surface": "architectural-300",
+    "border": "engineering-500",
+    "cta-primary": "accent-500",
+    "highlight": "accent-500"
+  },
+
+  "ui_token_mapping": {
+    "buttons": {
+      "primary": "accent-500 + engineering-900 text",
+      "secondary": "engineering-700 outline style",
+      "disabled": "engineering-500 with reduced opacity"
+    },
+    "cards": {
+      "background": "architectural-100",
+      "border": "engineering-500",
+      "text": "engineering-900"
+    },
+    "typography": {
+      "heading": "engineering-900",
+      "body": "engineering-700",
+      "caption": "engineering-500"
+    }
+  },
+
+  "usage_rules": {
+    "rule_1": "No raw hex usage in UI or codebase",
+    "rule_2": "All colors must be referenced via semantic tokens",
+    "rule_3": "Accent tokens must remain under 10% visual dominance",
+    "rule_4": "Engineering tokens define structure hierarchy",
+    "rule_5": "Architectural tokens define spatial context"
+  },
+
+  "system_behavior": {
+    "engineering_layer_role": "Defines structure and hierarchy",
+    "architectural_layer_role": "Defines space and layout environment",
+    "accent_layer_role": "Defines interaction and transformation points"
+  },
+
+  "scalability_rules": {
+    "theme_support": "Supports light and dark system extension",
+    "platform_support": "Web, mobile, print, motion systems",
+    "consistency_rule": "Same token mapping must be used across all platforms"
+  },
+
+  "anti_patterns": [
+    "Direct hex usage in components",
+    "Unstructured color naming",
+    "Multiple conflicting accent colors",
+    "Decorative color overrides",
+    "Ignoring token hierarchy"
+  ],
+
+  "psychological_effect": {
+    "primary_impression": "Highly structured engineering design system",
+    "secondary_impression": "Enterprise-grade architectural system thinking",
+    "user_perception": [
+      "This is a system-driven engineering brand",
+      "Everything is controlled and structured",
+      "There is no decorative randomness here"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure all digital and visual systems are driven by structured color logic",
+    "outcome": "Unified, scalable, engineering-grade brand identity system"
+  }
+}

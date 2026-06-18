@@ -1,0 +1,212 @@
+{
+  "brand": {
+    "name": "AvizSazeh",
+    "fullName": "AvizSazeh Naghsh Jahan",
+    "tagline": "Architectural Engineering System for suspended metal ceilings"
+  },
+  "nav": {
+    "home": "Home",
+    "systems": "Systems",
+    "engineering": "Engineering",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "rfq": "Request Analysis",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "cta": {
+    "requestAnalysis": "Request Engineering Analysis",
+    "exploreSystems": "Explore System Architecture",
+    "understandLogic": "Understand System Logic",
+    "compareSystems": "Compare Engineering Systems",
+    "viewProof": "View Engineering Proof",
+    "startRequest": "Start Engineering Request",
+    "submitProject": "Submit Project for Engineering Evaluation",
+    "viewSystem": "View System"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Architectural Engineering System Provider",
+      "headline": "Architectural Engineering System for Suspended Ceilings",
+      "subheadline": "From Design Intelligence → Engineering Logic → Execution Reality",
+      "description": "We engineer ceiling systems, not products — translating architectural intent into buildable systems.",
+      "flow": ["Architecture", "Engineering", "System", "Execution"]
+    },
+    "trust": {
+      "title": "Engineering Credibility",
+      "metrics": [
+        { "value": "300+", "label": "Executed projects" },
+        { "value": "Three decades", "label": "Specialist experience" },
+        { "value": "Up to 50 m", "label": "Installation height" },
+        { "value": "IR · IQ · OM · GCC", "label": "Operating regions" }
+      ]
+    },
+    "definition": {
+      "eyebrow": "What is AECS?",
+      "title": "A ceiling is an engineered system — not a product",
+      "text": "The AvizSazeh Architectural Engineering System (AECS) transforms ceiling design into structured execution logic. Every system is defined by structural logic, architectural constraints, and execution feasibility."
+    },
+    "systems": {
+      "eyebrow": "System Architecture",
+      "title": "Four ceiling engineering systems",
+      "description": "Each system is an engineering module with defined structural logic, load behaviour, and application."
+    },
+    "engineering": {
+      "eyebrow": "Engineering Logic",
+      "title": "From design to buildable reality",
+      "description": "Translating architectural intent into controlled execution across four structured stages.",
+      "steps": [
+        { "title": "Design", "text": "Define architectural intent, spatial geometry, and functional requirements." },
+        { "title": "Engineering", "text": "Structural validation, material selection, and shop / production drawings." },
+        { "title": "Manufacturing", "text": "Controlled fabrication from approved drawings, with quality control." },
+        { "title": "Execution", "text": "Precise installation by the field team and contract-based delivery." }
+      ]
+    },
+    "execution": {
+      "eyebrow": "Execution System",
+      "title": "Controlled execution — at any height and climate",
+      "capabilities": [
+        { "title": "Technical & engineering office", "text": "Experienced engineers producing custom shop, production, and installation drawings." },
+        { "title": "Field team", "text": "Installation crews across Iran and neighbouring countries; any climate, up to 50 m height." },
+        { "title": "Project control", "text": "Minimised delivery time with daily progress reporting from contract start." },
+        { "title": "Quality guarantee", "text": "Authenticity and quality warranty on every product." }
+      ]
+    },
+    "proof": {
+      "eyebrow": "Execution Proof",
+      "title": "Clients & projects",
+      "description": "A selection of organisations and projects where AvizSazeh systems have been executed."
+    },
+    "rfqCta": {
+      "title": "Define your project as a system",
+      "description": "Submit your architectural specifications for engineering evaluation. The output is a structured project definition — not a contact form.",
+      "button": "Start Engineering Request"
+    }
+  },
+  "systemsPage": {
+    "eyebrow": "System Architecture",
+    "title": "Ceiling Engineering Systems",
+    "intro": "AvizSazeh defines ceiling solutions as architectural engineering systems rather than products. System selection is based on architectural geometry, load requirements, functional zoning, and execution constraints.",
+    "selectionTitle": "System selection logic",
+    "selectionFactors": ["Architectural geometry", "Load requirements", "Functional zoning", "Execution constraints"],
+    "principle": "Architecture defines the problem. Engineering defines the solution. Execution defines reality."
+  },
+  "systemDetail": {
+    "definition": "System definition",
+    "logic": "Engineering logic",
+    "useCases": "Applications",
+    "specs": "Technical specifications",
+    "gallery": "Execution gallery",
+    "related": "Other systems",
+    "ctaTitle": "Is this the right system for your project?",
+    "ctaText": "Submit your project specifications for engineering evaluation and system selection."
+  },
+  "engineeringPage": {
+    "eyebrow": "Logic & Execution",
+    "title": "Engineering & Execution System",
+    "intro": "Design is meaningless until it becomes a buildable system. AvizSazeh bridges architectural design and real-world execution, reducing project risk through engineering-driven ceiling systems.",
+    "flowTitle": "Engineering flow",
+    "processTitle": "Three steps to a professional ceiling",
+    "process": [
+      { "title": "Inquiry & consultation", "text": "Receive project information, assess needs, and provide a technical and financial proposal." },
+      { "title": "Contract & production", "text": "Finalise design, scheduling, and transparent pricing; sign the contract and manufacture." },
+      { "title": "Installation & delivery", "text": "Precise fabrication and installation per contract, delivered on time." }
+    ],
+    "capabilitiesTitle": "Execution capabilities"
+  },
+  "projectsPage": {
+    "eyebrow": "Execution Proof",
+    "title": "Projects & Clients",
+    "intro": "AvizSazeh's engineering credibility comes from real project output. Below is a selection of organisations and projects where our systems have been executed.",
+    "note": "Detailed project case studies will be published with real technical data."
+  },
+  "aboutPage": {
+    "eyebrow": "About AvizSazeh",
+    "title": "The translator between architecture and execution",
+    "lead": "AvizSazeh Naghsh Jahan is an architectural engineering system brand that transforms architectural intent into buildable ceiling systems through engineering, customisation, and controlled execution.",
+    "story": [
+      "The core AvizSazeh team has worked in suspended metal ceilings since the 1990s, specialising in equipping assembly and industrial halls in close collaboration with architects and contractors.",
+      "With a technical office of experienced engineers, the company produces custom execution, production, and installation drawings for every project, and minimises delivery time through a dedicated project-control team.",
+      "AvizSazeh holds cooperation agreements with Italian and Turkish companies, and its systems integrate with CBI Europe radiant systems."
+    ],
+    "principlesTitle": "Core principles",
+    "principles": [
+      "Architecture must be buildable.",
+      "Every design must translate into an executable system.",
+      "Material selection without engineering is a risk.",
+      "Systems matter more than products."
+    ],
+    "valuesTitle": "Values",
+    "values": ["Custom engineering design", "Controlled manufacturing", "Reliable execution", "Architectural integration", "Reduced project risk"]
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Connect with the engineering team",
+    "intro": "Contact us for technical consultation, inquiry, or to define a project.",
+    "phone": "Consultation line",
+    "mobile": "Mobile",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Working hours",
+    "instagram": "Instagram",
+    "mapAlt": "AvizSazeh office location in Isfahan"
+  },
+  "rfq": {
+    "eyebrow": "Engineering Request Engine",
+    "title": "Define your project as a system",
+    "intro": "This is not a contact form — it is a structured project definition system. Your input is transformed into a classified engineering object.",
+    "steps": ["Project type", "System selection", "Technical parameters", "Submission"],
+    "stepLabel": "Step",
+    "of": "of",
+    "fields": {
+      "projectType": "Project type",
+      "projectTypePlaceholder": "e.g. airport, mall, industrial hall, hospital",
+      "buildingType": "Building use",
+      "buildingTypePlaceholder": "commercial, industrial, office, public",
+      "area": "Approximate area (m²)",
+      "areaPlaceholder": "e.g. 2500",
+      "systemPreference": "Preferred system",
+      "systemAuto": "Engineering recommendation (auto-select)",
+      "location": "Project location",
+      "locationPlaceholder": "City / country",
+      "deadline": "Target timeline",
+      "deadlinePlaceholder": "e.g. Q3 2026",
+      "requirements": "Technical requirements",
+      "requirementsPlaceholder": "Height, acoustics, MEP requirements, environment…",
+      "name": "Name & organisation",
+      "namePlaceholder": "Your name / company",
+      "contact": "Contact",
+      "contactPlaceholder": "Phone or email"
+    },
+    "next": "Next step",
+    "back": "Back",
+    "submit": "Submit Project for Engineering Evaluation",
+    "submitting": "Submitting…",
+    "successTitle": "Engineering request received",
+    "successText": "Your project has been classified as an engineering object and routed to the engineering team.",
+    "projectId": "Project ID",
+    "assignedSystem": "Assigned system",
+    "complexity": "Complexity level",
+    "nextStep": "Next step",
+    "nextStepValue": "Engineering review",
+    "newRequest": "Submit another request",
+    "errorRequired": "This field is required.",
+    "errorArea": "Area must be greater than zero.",
+    "errorGeneric": "Submission failed. Please try again."
+  },
+  "footer": {
+    "tagline": "Architectural Engineering System for suspended metal ceilings",
+    "systemsTitle": "Systems",
+    "companyTitle": "Company",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved — AvizSazeh Naghsh Jahan Co.",
+    "parentNote": "Sister company: Fazasazeh Naghsh Jahan"
+  },
+  "common": {
+    "complexity": { "Low": "Low", "Medium": "Medium", "High": "High", "Critical": "Critical" },
+    "skipToContent": "Skip to content",
+    "backToSystems": "Back to systems",
+    "loading": "Loading…"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "id": 33,
+  "title": "Visual Language Principles",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Visual Language System v1.0",
+
+  "core_principle": {
+    "statement": "Visual language is a structured engineering communication system, not an aesthetic style.",
+    "interpretation": "Every visual element must represent architecture, engineering logic, or system behavior."
+  },
+
+  "visual_identity_foundation": {
+    "concept": "Architectural Engineering System Expression",
+    "translation_logic": "Architecture → Engineering → System → Execution → Reality",
+    "visual_goal": "Make engineering systems visible through structured visual rules"
+  },
+
+  "core_visual_pillars": [
+    {
+      "name": "Engineering Structure",
+      "definition": "Represents logic, precision, and system stability",
+      "visual_expression": [
+        "Straight lines",
+        "Grid structures",
+        "Rigid geometry",
+        "Monochrome dominance"
+      ],
+      "color_dependency": "Engineering Layer (#1F2328, #3D3D3D, #4B5563)"
+    },
+    {
+      "name": "Architectural Space",
+      "definition": "Represents spatial thinking and environmental clarity",
+      "visual_expression": [
+        "Whitespace dominance",
+        "Layer separation",
+        "Soft neutral backgrounds",
+        "Spatial hierarchy"
+      ],
+      "color_dependency": "Architectural Layer (#ECE9E3, #B7B0A5, #FFFFFF)"
+    },
+    {
+      "name": "System Transformation",
+      "definition": "Represents conversion from design to execution",
+      "visual_expression": [
+        "Progression sequences",
+        "Modular transitions",
+        "Directional flow",
+        "Structured evolution"
+      ],
+      "color_dependency": "Controlled use of Accent Gold (#B89A63)"
+    }
+  ],
+
+  "geometry_rules": {
+    "allowed_geometry": [
+      "90-degree angles",
+      "45-degree angles",
+      "Linear structures",
+      "Modular repetition"
+    ],
+    "forbidden_geometry": [
+      "Organic shapes",
+      "Freeform curves",
+      "Decorative flourishes",
+      "Illustrative symbols"
+    ],
+    "grid_dependency": "All visual elements must align to 10x10 engineering grid system"
+  },
+
+  "composition_principles": {
+    "hierarchy": "Clear vertical and horizontal system hierarchy must always exist",
+    "alignment": "All elements must be grid-aligned without exception",
+    "balance": "Engineering layer defines structure, architectural layer defines space",
+    "focus": "Visual attention must always move toward system logic, not decoration"
+  },
+
+  "visual_flow_logic": {
+    "sequence": "Input → Structure → System → Transformation → Execution",
+    "reading_direction": "Left-to-right or top-to-bottom depending on layout context",
+    "focus_mechanism": "Attention guided toward transformation point (gold node)"
+  },
+
+  "texture_rules": {
+    "allowed": [
+      "Flat surfaces",
+      "Minimal contrast layers",
+      "Subtle shading for hierarchy only"
+    ],
+    "forbidden": [
+      "Gradients",
+      "Noise textures",
+      "Metallic effects",
+      "Photorealistic overlays"
+    ]
+  },
+
+  "iconography_rules": {
+    "style": "Engineering abstraction only",
+    "allowed": [
+      "Line-based icons",
+      "Geometric abstraction",
+      "System diagrams"
+    ],
+    "forbidden": [
+      "Real-world objects",
+      "Decorative illustrations",
+      "Furniture or ceiling icons",
+      "Lifestyle imagery"
+    ]
+  },
+
+  "typography_integration": {
+    "rule": "Typography must behave as part of visual system, not separate layer",
+    "alignment": "Must follow grid and structural logic",
+    "color_mapping": "Engineering layer dominates text structure"
+  },
+
+  "strategic_goal": {
+    "objective": "Create a unified visual system that behaves like an engineering architecture model",
+    "outcome": "Instant recognition of AvizSazeh as a structured architectural engineering system brand"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": 47,
+  "title": "Brand Experience System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Brand Experience System v1.0",
+
+  "core_principle": {
+    "statement": "Brand experience is the perception of an engineering system in every interaction, not emotional marketing engagement.",
+    "interpretation": "Every touchpoint must reinforce the feeling of structured architectural engineering intelligence."
+  },
+
+  "experience_architecture": {
+    "system_flow": "Awareness → Understanding → Trust → Validation → Engagement → Execution → Loyalty",
+    "rule": "Each stage must be driven by system clarity, not emotional persuasion"
+  },
+
+  "experience_layers": [
+    {
+      "layer": "Perception Layer",
+      "purpose": "First impression of the brand as an engineering system",
+      "elements": [
+        "Logo system",
+        "Color system",
+        "Typography system",
+        "Visual structure"
+      ],
+      "goal": "Immediate recognition of engineering authority"
+    },
+    {
+      "layer": "Understanding Layer",
+      "purpose": "User comprehension of system logic",
+      "elements": [
+        "Homepage architecture",
+        "System explanation pages",
+        "Engineering diagrams",
+        "Product system structure"
+      ],
+      "goal": "User understands AvizSazeh as a system, not a product brand"
+    },
+    {
+      "layer": "Trust Layer",
+      "purpose": "Validation of engineering capability",
+      "elements": [
+        "Project documentation",
+        "Execution reports",
+        "Engineering proof",
+        "Technical transparency"
+      ],
+      "goal": "Reduce perceived risk through system evidence"
+    },
+    {
+      "layer": "Engagement Layer",
+      "purpose": "Interaction with engineering system",
+      "elements": [
+        "Consultation requests",
+        "Project analysis",
+        "System inquiries",
+        "Technical communication"
+      ],
+      "goal": "Shift interaction from marketing to engineering dialogue"
+    },
+    {
+      "layer": "Execution Layer",
+      "purpose": "Real-world system delivery",
+      "elements": [
+        "Engineering execution process",
+        "Installation system",
+        "Manufacturing system",
+        "Project delivery"
+      ],
+      "goal": "Deliver controlled architectural engineering systems"
+    }
+  ],
+
+  "touchpoint_rules": {
+    "website": "Must behave like engineering system interface",
+    "documents": "Must follow structured technical logic",
+    "visuals": "Must reflect architectural engineering reality",
+    "communication": "Must be system-based, not promotional"
+  },
+
+  "interaction_principles": [
+    {
+      "name": "System First Interaction",
+      "description": "Every interaction must introduce system logic before product detail"
+    },
+    {
+      "name": "Engineering Clarity",
+      "description": "No ambiguity or emotional persuasion in communication"
+    },
+    {
+      "name": "Progressive System Disclosure",
+      "description": "User understanding must evolve step-by-step through system layers"
+    }
+  ],
+
+  "user_journey_model": {
+    "step_1": "User sees structured engineering identity",
+    "step_2": "User understands system-based architecture",
+    "step_3": "User validates technical capability",
+    "step_4": "User engages with engineering process",
+    "step_5": "User enters execution phase collaboration"
+  },
+
+  "experience_design_rules": {
+    "consistency": "All channels must reflect same engineering system logic",
+    "clarity": "No decorative or emotional inconsistency allowed",
+    "structure": "All experiences must be modular and system-based",
+    "predictability": "User journey must follow defined system flow"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Structured engineering authority",
+    "secondary_impression": "Highly reliable architectural system provider",
+    "user_perception": [
+      "This is not a brand, it is an engineering system",
+      "Everything is structured and controlled",
+      "This company operates like a technical platform"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Transform all brand interactions into engineering system experiences",
+    "outcome": "Consistent perception of AvizSazeh as an architectural engineering system authority"
+  }
+}

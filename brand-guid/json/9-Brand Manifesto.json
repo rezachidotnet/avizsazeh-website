@@ -1,0 +1,58 @@
+{
+  "id": 9,
+  "title": "Brand Manifesto",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "manifesto": {
+    "statement": "We believe architecture is not complete until it is built exactly as it was designed.",
+    "core_belief": "Design without engineering is an illusion. Execution without system is chaos.",
+    "position": "We are not a manufacturer of ceilings. We are engineers of architectural reality."
+  },
+
+  "principles": [
+    {
+      "title": "Architecture must be buildable",
+      "description": "Every architectural idea must pass through engineering validation before becoming reality."
+    },
+    {
+      "title": "Systems are more important than products",
+      "description": "We do not sell materials; we design and deliver integrated architectural systems."
+    },
+    {
+      "title": "Execution defines value",
+      "description": "The value of design is measured by how precisely it can be executed."
+    },
+    {
+      "title": "Engineering is responsibility",
+      "description": "We take responsibility for translating design intent into physical reality without distortion."
+    }
+  ],
+
+  "rejection_statements": [
+    "We reject decoration without engineering.",
+    "We reject material selection without system thinking.",
+    "We reject architectural compromise in execution.",
+    "We reject fragmented construction without integration."
+  ],
+
+  "identity_statement": {
+    "core_identity": "Architectural Engineering System Provider",
+    "meaning": "A brand that connects architecture, engineering, manufacturing, and execution into one unified system."
+  },
+
+  "voice": {
+    "tone": "Direct, technical, precise, non-promotional",
+    "style": "Engineering logic over emotional persuasion",
+    "language_rule": "We explain systems, not sell products"
+  },
+
+  "vision_alignment": {
+    "future": "A world where every architectural ceiling system is engineered, not improvised.",
+    "goal": "To make architectural execution predictable, precise, and system-driven across regions."
+  },
+
+  "closing_statement": {
+    "line": "We do not decorate space. We engineer architecture into reality."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "homepage": {
+    "hero": {
+      "headline": "Architectural Engineering System for Suspended Ceilings",
+      "subheadline": "From Design Intelligence → Engineering Logic → Execution Reality",
+      "description": "We design engineered ceiling systems, not products.",
+      "cta_primary": "Request Engineering Analysis",
+      "cta_secondary": "Explore System Architecture"
+    },
+    "trust": {
+      "metrics": [
+        {
+          "label": "Projects",
+          "value": "300+"
+        },
+        {
+          "label": "Regions",
+          "value": "IR / GCC / IQ / OM"
+        },
+        {
+          "label": "Systems",
+          "value": "4 Core Systems"
+        }
+      ]
+    },
+    "system_definition": {
+      "title": "What is AECS?",
+      "text": "AECS is an Architectural Engineering System that transforms ceiling design into structured execution logic.",
+      "key_statement": "Ceilings are engineered systems, not products."
+    },
+    "system_modules": [
+      {
+        "name": "Linear Ceiling System",
+        "type": "engineering-module"
+      },
+      {
+        "name": "Grid Ceiling System",
+        "type": "engineering-module"
+      },
+      {
+        "name": "Custom Engineering System",
+        "type": "engineering-module"
+      },
+      {
+        "name": "Hybrid System",
+        "type": "engineering-module"
+      }
+    ],
+    "engineering_flow": [
+      "Design",
+      "Engineering",
+      "Manufacturing",
+      "Execution"
+    ],
+    "projects_preview": {
+      "title": "Engineering Proof",
+      "description": "Selected executed projects demonstrating system reliability."
+    },
+    "rfq_cta": {
+      "title": "Define Your Project as a System",
+      "description": "Submit architectural data for engineering evaluation.",
+      "button": "Start Engineering Request"
+    }
+  }
+}

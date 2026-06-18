@@ -1,0 +1,63 @@
+{
+  "id": 7,
+  "title": "Messaging Framework",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "core_message": {
+    "statement": "Architectural ceiling systems engineered for execution.",
+    "meaning": "AvizSazeh transforms architectural intent into buildable, reliable, and customized ceiling systems through engineering-driven processes."
+  },
+
+  "supporting_messages": [
+    {
+      "message": "From architectural idea to engineered system.",
+      "purpose": "Explains transformation logic in simple form"
+    },
+    {
+      "message": "Design, engineering, and execution in one integrated system.",
+      "purpose": "Highlights system integration capability"
+    },
+    {
+      "message": "Buildable solutions for complex architectural requirements.",
+      "purpose": "Emphasizes engineering reliability"
+    },
+    {
+      "message": "Every project is a custom-engineered ceiling system.",
+      "purpose": "Communicates customization principle"
+    }
+  ],
+
+  "message_hierarchy": {
+    "primary": "Engineering architectural intent into reality",
+    "secondary": "Integrated design-to-execution ceiling systems",
+    "tertiary": "Custom solutions for architectural projects"
+  },
+
+  "communication_strategy": {
+    "approach": "Technical clarity over marketing persuasion",
+    "tone_alignment": "Professional, evidence-based, engineering-focused",
+    "avoidance_rules": [
+      "No exaggerated marketing claims",
+      "No emotional luxury language",
+      "No generic construction slogans"
+    ]
+  },
+
+  "audience_mapping": {
+    "architects": "Preserve design intent through engineering systems",
+    "consulting_engineers": "Ensure technical compliance and buildability",
+    "contractors": "Reduce execution risk and installation uncertainty",
+    "developers": "Improve reliability and reduce project failure cost"
+  },
+
+  "brand_narrative_flow": {
+    "sequence": "Problem → Engineering Solution → System Integration → Execution Reliability → Architectural Outcome",
+    "interpretation": "Every message must reinforce system thinking, not product selling"
+  },
+
+  "strategic_goal": {
+    "objective": "Position AvizSazeh as an engineering system partner, not a material supplier",
+    "perception_target": "Architectural Engineering Authority"
+  }
+}

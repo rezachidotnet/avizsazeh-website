@@ -1,0 +1,96 @@
+{
+  "id": 31,
+  "title": "Logo Usage Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Logo Usage Governance v1.0",
+
+  "core_principle": {
+    "statement": "The logo is a structured engineering system mark, not a decorative identity symbol.",
+    "interpretation": "All usage must preserve structural integrity, grid logic, and transformation meaning."
+  },
+
+  "primary_usage_rules": [
+    {
+      "rule": "Maintain grid integrity",
+      "description": "Logo must always be aligned to its original 10x10 engineering grid system without distortion."
+    },
+    {
+      "rule": "Preserve transformation logic",
+      "description": "The internal structure (line → module → system → gold point) must remain visually readable."
+    },
+    {
+      "rule": "Respect clear space",
+      "description": "Minimum clear space must equal the height of the primary structural unit around the logo."
+    },
+    {
+      "rule": "Use approved color system only",
+      "description": "Only AECS colors are allowed: Engineering layer, Architectural layer, and Gold accent."
+    }
+  ],
+
+  "scaling_rules": {
+    "minimum_size": {
+      "digital": "16px favicon equivalent",
+      "print": "10mm height"
+    },
+    "guideline": "Below minimum size, use simplified variant without segmentation loss"
+  },
+
+  "color_usage_rules": {
+    "primary_color": "Engineering Charcoal (#1F2328)",
+    "secondary_color": "Graphite (#3D3D3D)",
+    "support_color": "Steel Gray (#4B5563)",
+    "accent_color": "Architectural Gold (#B89A63)",
+    "accent_rule": "Gold must only appear at transformation point, never as base structure"
+  },
+
+  "background_rules": {
+    "allowed_backgrounds": [
+      "White (#FFFFFF)",
+      "Architectural Ivory (#ECE9E3)",
+      "Dark Engineering Charcoal (#1F2328)"
+    ],
+    "forbidden_backgrounds": [
+      "High saturation colors",
+      "Gradients",
+      "Pattern-heavy backgrounds"
+    ]
+  },
+
+  "placement_rules": {
+    "alignment": "Always aligned to architectural grid system",
+    "positioning": "Must respect visual hierarchy of layout system",
+    "orientation": "No arbitrary rotation allowed; only 0°, 90° increments"
+  },
+
+  "misuse_restrictions": {
+    "strictly_forbidden": [
+      "Stretching or distorting proportions",
+      "Adding shadows, glow, or 3D effects",
+      "Applying gradients or textures",
+      "Embedding decorative elements",
+      "Recoloring outside AECS palette",
+      "Reconstructing logo outside grid logic"
+    ],
+    "risk": "Any violation reduces engineering perception and converts brand into decorative identity"
+  },
+
+  "variant_usage_rules": {
+    "variant_A": "Primary brand identity usage (default)",
+    "variant_B": "Technical documentation and architectural contexts",
+    "variant_C": "EPC, execution, and industrial project presentations"
+  },
+
+  "background_interaction_rules": {
+    "light_background": "Use full engineering contrast structure",
+    "dark_background": "Use inverted architectural clarity mode",
+    "neutral_background": "Preferred for all official use cases"
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure consistent and disciplined use of logo across all platforms",
+    "outcome": "Maintain perception of AvizSazeh as an architectural engineering system brand"
+  }
+}

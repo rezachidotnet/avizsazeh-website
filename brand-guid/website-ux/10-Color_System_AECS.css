@@ -1,0 +1,141 @@
+/* =========================================================
+   AECS COLOR SYSTEM — AVIZSAZEH ENGINEERING UX SYSTEM
+   Version: 1.0
+   Purpose: Engineering-grade color architecture
+========================================================= */
+
+:root {
+
+/* =========================
+   1. ENGINEERING CORE (PRIMARY SYSTEM)
+========================= */
+
+--aecs-engineering-900: #0B1F1C;
+--aecs-engineering-800: #0F2A26;
+--aecs-engineering-700: #133530;
+--aecs-engineering-600: #165A4E;
+--aecs-engineering-500: #1F6F60;
+--aecs-engineering-400: #2A8A74;
+--aecs-engineering-300: #3AA88C;
+--aecs-engineering-200: #7FD6C2;
+--aecs-engineering-100: #D6F3EA;
+
+/* =========================
+   2. ARCHITECTURAL NEUTRALS
+========================= */
+
+--aecs-arch-900: #0F1113;
+--aecs-arch-800: #1A1D21;
+--aecs-arch-700: #2A2F36;
+--aecs-arch-600: #3B424C;
+--aecs-arch-500: #555D68;
+--aecs-arch-400: #7A8491;
+--aecs-arch-300: #AAB2BD;
+--aecs-arch-200: #D4DAE2;
+--aecs-arch-100: #EEF1F5;
+--aecs-white: #FFFFFF;
+
+/* =========================
+   3. INDUSTRIAL GOLD (AUTHORITY ACCENT)
+========================= */
+
+--aecs-gold-900: #3A2A12;
+--aecs-gold-800: #5A421A;
+--aecs-gold-700: #7A5A22;
+--aecs-gold-600: #A37A2E;
+--aecs-gold-500: #C89A3A;
+--aecs-gold-400: #E0B85A;
+--aecs-gold-300: #F0D07A;
+--aecs-gold-200: #F6E2A3;
+--aecs-gold-100: #FBF1D1;
+
+/* =========================
+   4. FUNCTIONAL SYSTEM COLORS
+========================= */
+
+--aecs-success: #2A8A74;
+--aecs-warning: #C89A3A;
+--aecs-error: #B23A3A;
+--aecs-info: #3A6EA8;
+
+/* =========================
+   5. SEMANTIC UI COLORS
+========================= */
+
+--aecs-bg-primary: var(--aecs-arch-100);
+--aecs-bg-secondary: var(--aecs-white);
+--aecs-bg-dark: var(--aecs-arch-900);
+
+--aecs-text-primary: var(--aecs-arch-900);
+--aecs-text-secondary: var(--aecs-arch-600);
+--aecs-text-muted: var(--aecs-arch-400);
+--aecs-text-inverse: var(--aecs-white);
+
+--aecs-border-light: var(--aecs-arch-200);
+--aecs-border-medium: var(--aecs-arch-300);
+--aecs-border-strong: var(--aecs-arch-500);
+
+/* =========================
+   6. SHADOW SYSTEM (ENGINEERING DEPTH)
+========================= */
+
+--aecs-shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
+--aecs-shadow-md: 0 6px 18px rgba(0,0,0,0.12);
+--aecs-shadow-lg: 0 12px 32px rgba(0,0,0,0.18);
+--aecs-shadow-xl: 0 24px 64px rgba(0,0,0,0.25);
+
+}
+
+/* =========================
+   7. UTILITY CLASSES
+========================= */
+
+.bg-engineering {
+  background: var(--aecs-engineering-600);
+}
+
+.bg-architecture {
+  background: var(--aecs-arch-100);
+}
+
+.bg-gold {
+  background: var(--aecs-gold-500);
+}
+
+.text-engineering {
+  color: var(--aecs-engineering-600);
+}
+
+.text-architecture {
+  color: var(--aecs-arch-900);
+}
+
+.text-muted {
+  color: var(--aecs-text-muted);
+}
+
+/* =========================
+   8. INTERACTION COLORS
+========================= */
+
+.btn-engineering {
+  background: var(--aecs-engineering-600);
+  color: var(--aecs-white);
+  padding: 12px 18px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-engineering:hover {
+  background: var(--aecs-engineering-700);
+  box-shadow: var(--aecs-shadow-md);
+}
+
+.btn-gold {
+  background: var(--aecs-gold-500);
+  color: var(--aecs-arch-900);
+}
+
+.btn-gold:hover {
+  background: var(--aecs-gold-600);
+}

@@ -1,0 +1,93 @@
+{
+  "id": 10,
+  "title": "Target Audience System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "primary_audience": [
+    {
+      "segment": "Architects",
+      "definition": "Design professionals responsible for conceptualizing architectural spaces and ceiling systems.",
+      "needs": [
+        "Preservation of design intent",
+        "Freedom of architectural expression",
+        "Reliable execution of complex geometries"
+      ],
+      "pain_points": [
+        "Design distortion during execution",
+        "Lack of engineering feedback",
+        "Material limitations in construction phase"
+      ],
+      "brand_value": "Ensures architectural vision is translated into buildable systems without compromise"
+    },
+    {
+      "segment": "Consulting Engineers",
+      "definition": "Technical authorities responsible for validating design compliance and structural feasibility.",
+      "needs": [
+        "Engineering validation",
+        "System reliability",
+        "Code compliance and technical accuracy"
+      ],
+      "pain_points": [
+        "Non-standard material systems",
+        "Lack of technical documentation",
+        "Execution inconsistencies"
+      ],
+      "brand_value": "Provides engineered systems with predictable and verifiable performance"
+    },
+    {
+      "segment": "General Contractors",
+      "definition": "Execution teams responsible for construction and installation of architectural systems.",
+      "needs": [
+        "Ease of installation",
+        "Reduced execution risk",
+        "Clear technical guidance"
+      ],
+      "pain_points": [
+        "Complex installation without system support",
+        "Rework due to design mismatch",
+        "Unclear technical specifications"
+      ],
+      "brand_value": "Reduces execution risk through structured, engineered systems"
+    },
+    {
+      "segment": "Project Developers",
+      "definition": "Investors and decision-makers responsible for project feasibility and ROI.",
+      "needs": [
+        "Cost efficiency",
+        "Risk reduction",
+        "Project reliability"
+      ],
+      "pain_points": [
+        "Execution delays",
+        "Budget overruns",
+        "Quality inconsistency"
+      ],
+      "brand_value": "Improves project predictability through system-based engineering solutions"
+    }
+  ],
+
+  "secondary_audience": [
+    {
+      "segment": "Interior Designers",
+      "role": "Space aesthetics and finishing coordination",
+      "value": "Ensures architectural aesthetics remain intact in execution"
+    },
+    {
+      "segment": "EPC Firms",
+      "role": "End-to-end engineering, procurement, and construction delivery",
+      "value": "Provides system-level integration for large-scale projects"
+    }
+  ],
+
+  "audience_strategy": {
+    "core_insight": "All audiences are connected by one need: reducing uncertainty between design and execution",
+    "unifying_value": "Architectural Engineering System Reliability",
+    "communication_focus": "System thinking over product thinking"
+  },
+
+  "positioning_logic": {
+    "message_to_all": "We convert architectural design into engineered, buildable ceiling systems",
+    "key_differentiator": "We serve all stakeholders through a unified engineering system, not fragmented products"
+  }
+}

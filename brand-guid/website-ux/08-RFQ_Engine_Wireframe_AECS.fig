@@ -1,0 +1,44 @@
+RFQ Engine Wireframe (AECS)
+
+Purpose:
+Convert visitor into engineered project definition (not contact form)
+
+--------------------------------
+
+[1. PROJECT TYPE]
+- Ceiling system category
+- Linear / Grid / Custom / Hybrid
+
+[2. PROJECT SCALE]
+- Area (m²)
+- Building type (industrial / commercial / infrastructure)
+
+[3. ARCHITECTURAL INPUT]
+- Upload drawings (PDF / DWG)
+- Notes from architect
+
+[4. ENGINEERING PARAMETERS]
+- Span requirements
+- Load conditions
+- Environmental constraints
+
+[5. SYSTEM SELECTION ENGINE]
+- Auto suggest system type
+- Engineering compatibility check
+
+[6. COMPLEXITY CLASSIFICATION]
+- Low / Medium / High / Critical
+
+[7. PROJECT VALIDATION]
+- Feasibility check
+- Engineering review trigger
+
+[8. SUBMISSION ENGINE]
+- Generate Project ID
+- Send to engineering team
+
+--------------------------------
+
+UX RULE:
+This is NOT a contact form.
+This is a Project Definition System.

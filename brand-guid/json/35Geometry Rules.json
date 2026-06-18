@@ -1,0 +1,113 @@
+{
+  "id": 35,
+  "title": "Geometry Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Geometry System v1.0",
+
+  "core_principle": {
+    "statement": "Geometry is the structural language of the architectural engineering system.",
+    "interpretation": "Every shape must represent system logic, not visual decoration."
+  },
+
+  "geometry_foundation": {
+    "base_logic": "Architectural Engineering System Geometry",
+    "design_philosophy": "Structure over aesthetics, system over illustration, logic over form"
+  },
+
+  "allowed_geometry_rules": [
+    {
+      "rule": "Orthogonal structure (90°)",
+      "description": "All primary structural elements must follow vertical and horizontal engineering alignment."
+    },
+    {
+      "rule": "Angular system (45°)",
+      "description": "Diagonal elements allowed only for controlled system transformation and directionality."
+    },
+    {
+      "rule": "Modular repetition",
+      "description": "Shapes must be constructed from repeatable grid-based modules."
+    },
+    {
+      "rule": "Linear dominance",
+      "description": "Lines are the primary geometric building blocks of all visual systems."
+    }
+  ],
+
+  "forbidden_geometry": [
+    {
+      "type": "Organic curves",
+      "reason": "Breaks engineering system logic and introduces decorative interpretation"
+    },
+    {
+      "type": "Freeform shapes",
+      "reason": "Destroys grid-based structural discipline"
+    },
+    {
+      "type": "Illustrative icons",
+      "reason": "Shifts perception from system brand to product illustration brand"
+    },
+    {
+      "type": "Decorative geometry",
+      "reason": "Conflicts with engineering-first visual identity"
+    }
+  ],
+
+  "grid_dependency": {
+    "system": "10x10 Architectural Engineering Grid",
+    "rule": "All geometric elements must align strictly to grid intersections",
+    "subdivision": "Allowed: 1/2 and 1/4 precision only",
+    "violation_effect": "Loss of system coherence and engineering perception"
+  },
+
+  "shape_hierarchy": {
+    "level_1": "Line (primary engineering intent)",
+    "level_2": "Segment (controlled division)",
+    "level_3": "Module (grid-aligned unit)",
+    "level_4": "System (structured composition)",
+    "level_5": "Transformation Point (gold accent node)"
+  },
+
+  "composition_rules": {
+    "alignment": "All geometry must follow strict grid alignment",
+    "spacing": "All spacing derived from modular grid units",
+    "balance": "Engineering structure must dominate composition",
+    "focus": "Visual flow must lead toward transformation point"
+  },
+
+  "visual_behavior": {
+    "directionality": "Left-to-right or top-to-bottom system flow",
+    "motion_logic": "Geometry must imply transformation process",
+    "focus_control": "Eye movement must converge toward system node"
+  },
+
+  "material_expression_rules": {
+    "allowed": [
+      "Flat vector geometry",
+      "Monochrome structural forms",
+      "Minimal contrast layering"
+    ],
+    "forbidden": [
+      "3D geometry",
+      "Photorealistic shapes",
+      "Gradient-based forms",
+      "Textured surfaces"
+    ]
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Engineering precision and structural logic",
+    "secondary_impression": "Architectural system intelligence",
+    "user_feeling": [
+      "This is a structured engineering system",
+      "Everything is logically constructed",
+      "Nothing is decorative or random"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Ensure all visual geometry behaves like an architectural engineering diagram",
+    "outcome": "Consistent perception of AvizSazeh as a system-based engineering brand"
+  }
+}

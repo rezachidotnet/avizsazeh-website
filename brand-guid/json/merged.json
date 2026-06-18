@@ -1,0 +1,4944 @@
+[
+  {
+    "id": 1,
+    "title": "Brand Core Strategy",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "core_idea": "Engineering Architecture Into Reality",
+    "definition": "AvizSazeh is an Architectural Engineering System Brand that transforms architectural intent into buildable ceiling systems through engineering, customization, and controlled execution.",
+    "brand_positioning": {
+      "statement": "Architectural Engineering System Provider for ceiling systems",
+      "role": "System integrator between architecture and execution",
+      "market": [
+        "Iran",
+        "GCC",
+        "CIS"
+      ],
+      "industry_focus": "Metal ceiling systems and architectural interior systems"
+    },
+    "strategic_purpose": {
+      "primary_purpose": "Bridge the gap between architectural design and real-world execution",
+      "secondary_purpose": "Reduce project risk through engineering-driven ceiling systems"
+    },
+    "core_principles": [
+      "Architecture must be buildable",
+      "Every design must translate into an executable system",
+      "Material selection without engineering is a risk",
+      "Systems are more important than products"
+    ],
+    "value_proposition": {
+      "main_value": "Transform architectural designs into engineered ceiling systems",
+      "supporting_values": [
+        "Custom engineering design",
+        "Controlled manufacturing",
+        "Reliable execution",
+        "Architectural integration",
+        "Reduced project risk"
+      ]
+    },
+    "differentiation": {
+      "core_advantage": "Conversion of architectural intent into executable systems",
+      "competitive_edge": [
+        "Engineering + Architecture integration",
+        "Project-specific customization",
+        "Execution reliability system",
+        "Technical design support"
+      ]
+    },
+    "brand_logic": {
+      "flow": "Architecture → Engineering → System → Execution → Reality",
+      "interpretation": "Design is meaningless unless it becomes buildable reality"
+    },
+    "anti_positioning": {
+      "not_a": [
+        "Decoration brand",
+        "Furniture supplier",
+        "Simple construction contractor",
+        "Commodity ceiling manufacturer"
+      ]
+    },
+    "success_definition": {
+      "perception_goal": "Engineering Architecture System Provider",
+      "user_takeaway": [
+        "This company understands architecture",
+        "This company understands execution",
+        "This company reduces project risk"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Brand Essence & Purpose",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "brand_essence": {
+      "core_statement": "Engineering Architecture Into Reality",
+      "meaning": "Transforming architectural intent into buildable, executable ceiling systems through engineering logic and controlled manufacturing.",
+      "essence_type": "System Transformation Identity"
+    },
+    "brand_purpose": {
+      "primary_purpose": "Bridge the gap between architectural design and real-world execution",
+      "secondary_purpose": "Enable architects and EPC contractors to execute complex ceiling systems without design-loss",
+      "functional_purpose": "Convert design concepts into engineered, manufacturable and installable systems"
+    },
+    "core_problem_solved": {
+      "problem": "Architectural designs often fail in execution due to lack of engineering translation",
+      "solution": "Provide engineered ceiling systems that preserve design intent while ensuring buildability"
+    },
+    "strategic_role": {
+      "position": "Architectural Engineering System Provider",
+      "role_in_ecosystem": "System integrator between architecture, engineering, manufacturing, and execution",
+      "value_in_chain": "Upstream design enablement + downstream execution reliability"
+    },
+    "transformation_logic": {
+      "flow": "Architecture → Engineering → System → Manufacturing → Execution → Reality",
+      "interpretation": "Every architectural idea must pass through engineering validation before becoming physical reality"
+    },
+    "impact_goals": {
+      "architects": "Preserve design integrity in real execution",
+      "contractors": "Reduce execution risk and uncertainty",
+      "developers": "Increase project reliability and reduce cost of failure",
+      "consultants": "Ensure technical compliance and system efficiency"
+    },
+    "brand_philosophy": {
+      "statement": "A design has no value until it becomes buildable.",
+      "principle": "Engineering is the language that translates architecture into reality."
+    }
+  },
+  {
+    "id": 3,
+    "title": "Brand Positioning System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "positioning_statement": "Architectural Engineering System Provider for metal ceiling systems that transforms architectural intent into buildable and executable reality.",
+    "market_position": {
+      "primary_position": "System Integrator between Architecture and Execution",
+      "secondary_position": "Engineering-driven manufacturer of architectural ceiling systems",
+      "tertiary_position": "Technical partner for EPC and architectural firms"
+    },
+    "target_markets": {
+      "geography": [
+        "Iran",
+        "GCC",
+        "Iraq",
+        "CIS"
+      ],
+      "industries": [
+        "Architecture",
+        "Construction",
+        "EPC",
+        "Industrial Projects",
+        "Commercial Buildings"
+      ],
+      "client_types": [
+        "Architects",
+        "Consulting Engineers",
+        "General Contractors",
+        "Developers",
+        "Project Owners"
+      ]
+    },
+    "positioning_axis": {
+      "axis_1": {
+        "name": "Design vs Execution",
+        "position": "Balanced toward execution reliability"
+      },
+      "axis_2": {
+        "name": "Product vs System",
+        "position": "Strongly system-oriented"
+      },
+      "axis_3": {
+        "name": "Decoration vs Engineering",
+        "position": "Strongly engineering-dominant"
+      },
+      "axis_4": {
+        "name": "Commodity vs Customization",
+        "position": "Fully customized project-based systems"
+      }
+    },
+    "differentiation_strategy": {
+      "core_differentiator": "Transformation of architectural concepts into engineered ceiling systems",
+      "supporting_differentiators": [
+        "Engineering-first design approach",
+        "Project-specific customization",
+        "Integrated manufacturing and execution",
+        "Risk reduction in architectural implementation"
+      ]
+    },
+    "perceptual_positioning": {
+      "desired_perception": "High-end Architectural Engineering System Provider",
+      "avoid_perception": [
+        "Ceiling product seller",
+        "Interior decoration brand",
+        "Generic construction contractor"
+      ]
+    },
+    "competitive_landscape": {
+      "benchmark_brands": [
+        "Siemens (engineering authority)",
+        "Autodesk (system thinking)",
+        "Hunter Douglas (architectural systems)",
+        "SAS International (ceiling systems)"
+      ],
+      "relative_position": "Between architectural design intelligence and industrial execution systems"
+    },
+    "positioning_formula": {
+      "structure": "Architecture + Engineering + System + Execution Reliability",
+      "simplified_message": "We turn architectural design into buildable ceiling systems"
+    }
+  },
+  {
+    "id": 10,
+    "title": "Target Audience System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "primary_audience": [
+      {
+        "segment": "Architects",
+        "definition": "Design professionals responsible for conceptualizing architectural spaces and ceiling systems.",
+        "needs": [
+          "Preservation of design intent",
+          "Freedom of architectural expression",
+          "Reliable execution of complex geometries"
+        ],
+        "pain_points": [
+          "Design distortion during execution",
+          "Lack of engineering feedback",
+          "Material limitations in construction phase"
+        ],
+        "brand_value": "Ensures architectural vision is translated into buildable systems without compromise"
+      },
+      {
+        "segment": "Consulting Engineers",
+        "definition": "Technical authorities responsible for validating design compliance and structural feasibility.",
+        "needs": [
+          "Engineering validation",
+          "System reliability",
+          "Code compliance and technical accuracy"
+        ],
+        "pain_points": [
+          "Non-standard material systems",
+          "Lack of technical documentation",
+          "Execution inconsistencies"
+        ],
+        "brand_value": "Provides engineered systems with predictable and verifiable performance"
+      },
+      {
+        "segment": "General Contractors",
+        "definition": "Execution teams responsible for construction and installation of architectural systems.",
+        "needs": [
+          "Ease of installation",
+          "Reduced execution risk",
+          "Clear technical guidance"
+        ],
+        "pain_points": [
+          "Complex installation without system support",
+          "Rework due to design mismatch",
+          "Unclear technical specifications"
+        ],
+        "brand_value": "Reduces execution risk through structured, engineered systems"
+      },
+      {
+        "segment": "Project Developers",
+        "definition": "Investors and decision-makers responsible for project feasibility and ROI.",
+        "needs": [
+          "Cost efficiency",
+          "Risk reduction",
+          "Project reliability"
+        ],
+        "pain_points": [
+          "Execution delays",
+          "Budget overruns",
+          "Quality inconsistency"
+        ],
+        "brand_value": "Improves project predictability through system-based engineering solutions"
+      }
+    ],
+    "secondary_audience": [
+      {
+        "segment": "Interior Designers",
+        "role": "Space aesthetics and finishing coordination",
+        "value": "Ensures architectural aesthetics remain intact in execution"
+      },
+      {
+        "segment": "EPC Firms",
+        "role": "End-to-end engineering, procurement, and construction delivery",
+        "value": "Provides system-level integration for large-scale projects"
+      }
+    ],
+    "audience_strategy": {
+      "core_insight": "All audiences are connected by one need: reducing uncertainty between design and execution",
+      "unifying_value": "Architectural Engineering System Reliability",
+      "communication_focus": "System thinking over product thinking"
+    },
+    "positioning_logic": {
+      "message_to_all": "We convert architectural design into engineered, buildable ceiling systems",
+      "key_differentiator": "We serve all stakeholders through a unified engineering system, not fragmented products"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Market Position Map",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "market_landscape": {
+      "axis_1": {
+        "name": "Product vs System",
+        "description": "Degree of integration between isolated products and fully engineered systems"
+      },
+      "axis_2": {
+        "name": "Decoration vs Engineering",
+        "description": "Level of technical depth versus aesthetic-only positioning"
+      }
+    },
+    "positioning_coordinates": {
+      "AvizSazeh": {
+        "x_product_to_system": 0.9,
+        "y_decoration_to_engineering": 0.95,
+        "interpretation": "Highly engineered system provider with minimal product-based positioning"
+      },
+      "commodity_ceiling_suppliers": {
+        "x_product_to_system": 0.2,
+        "y_decoration_to_engineering": 0.3,
+        "interpretation": "Low engineering, product-focused, price-driven suppliers"
+      },
+      "interior_decor_brands": {
+        "x_product_to_system": 0.3,
+        "y_decoration_to_engineering": 0.2,
+        "interpretation": "Aesthetic-driven, low technical integration, design-only focus"
+      },
+      "traditional_contractors": {
+        "x_product_to_system": 0.5,
+        "y_decoration_to_engineering": 0.5,
+        "interpretation": "Execution-focused but lacking system-level engineering integration"
+      },
+      "global_engineering_brands": {
+        "x_product_to_system": 0.95,
+        "y_decoration_to_engineering": 0.9,
+        "interpretation": "High-end system integrators (e.g., Siemens, Autodesk, Hunter Douglas)"
+      }
+    },
+    "strategic_position": {
+      "current_position": "High-end Architectural Engineering System Provider",
+      "target_position": "Regional authority in engineered architectural ceiling systems",
+      "movement_direction": "From execution supplier → to system engineering authority"
+    },
+    "differentiation_zone": {
+      "unique_space": "Intersection of architectural intelligence and execution reliability",
+      "what_makes_unique": [
+        "System-based thinking instead of product-based selling",
+        "Engineering-driven architectural interpretation",
+        "Execution reliability embedded in design phase"
+      ]
+    },
+    "market_perception_goal": {
+      "primary_goal": "Be perceived as an engineering system company, not a material supplier",
+      "secondary_goal": "Be trusted by architects and EPC firms as a technical partner",
+      "final_goal": "Become default choice for complex architectural ceiling systems in region"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Competitive Analysis",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "competitive_landscape": {
+      "global_system_leaders": [
+        {
+          "name": "Siemens",
+          "positioning": "Engineering authority and system integrator",
+          "strengths": [
+            "Industrial engineering credibility",
+            "System-level thinking",
+            "Global EPC trust"
+          ],
+          "weaknesses": [
+            "Not architecture-specialized in ceiling systems",
+            "Low architectural design integration"
+          ]
+        },
+        {
+          "name": "Autodesk",
+          "positioning": "Design and BIM software ecosystem",
+          "strengths": [
+            "Architectural design intelligence",
+            "Digital system integration",
+            "Industry standard software"
+          ],
+          "weaknesses": [
+            "No physical execution capability",
+            "No manufacturing or installation layer"
+          ]
+        },
+        {
+          "name": "Hunter Douglas Architectural",
+          "positioning": "Premium architectural ceiling systems provider",
+          "strengths": [
+            "Strong architectural identity",
+            "High-quality ceiling systems",
+            "Global design recognition"
+          ],
+          "weaknesses": [
+            "Less engineering-heavy perception",
+            "More product-oriented than system integrator"
+          ]
+        },
+        {
+          "name": "SAS International",
+          "positioning": "Ceiling systems manufacturer with architectural focus",
+          "strengths": [
+            "Strong product engineering",
+            "Global presence in ceiling systems",
+            "Technical documentation"
+          ],
+          "weaknesses": [
+            "Limited architectural intelligence positioning",
+            "Still product-centered perception"
+          ]
+        }
+      ],
+      "regional_competitors": [
+        {
+          "type": "Local Contractors",
+          "positioning": "Execution-based construction providers",
+          "strengths": [
+            "Local market knowledge",
+            "Cost competitiveness",
+            "Fast execution capability"
+          ],
+          "weaknesses": [
+            "Low engineering integration",
+            "No system-level design thinking",
+            "Inconsistent quality"
+          ]
+        },
+        {
+          "type": "Material Suppliers",
+          "positioning": "Commodity ceiling material providers",
+          "strengths": [
+            "Low cost",
+            "Simple supply chain",
+            "Availability"
+          ],
+          "weaknesses": [
+            "No engineering design",
+            "No system integration",
+            "High execution risk"
+          ]
+        }
+      ],
+      "market_gap": {
+        "core_gap": "Architectural Engineering System Integration",
+        "description": "A missing category between architectural design intelligence and execution-driven manufacturing systems.",
+        "opportunity": "Provide fully engineered, architecturally-aware ceiling systems with execution reliability"
+      }
+    },
+    "avizsazeh_position": {
+      "category": "Architectural Engineering System Integrator",
+      "unique_position": "Bridging architecture, engineering, manufacturing, and execution into a single system",
+      "differentiation": [
+        "System-based thinking instead of product selling",
+        "Engineering validation before execution",
+        "Architectural intent preservation",
+        "Project-specific customization"
+      ]
+    },
+    "strategic_insight": {
+      "key_insight": "Competitors are either design-focused OR product-focused; AvizSazeh occupies the system integration layer.",
+      "critical_advantage": "Ability to translate architectural intent into buildable ceiling systems without loss of design integrity"
+    }
+  },
+  {
+    "id": 13,
+    "title": "Brand Archetype System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "primary_archetype": {
+      "name": "The Engineer",
+      "definition": "A rational builder of systems who transforms abstract concepts into structured, functional, and executable realities.",
+      "core_traits": [
+        "Logical",
+        "Precise",
+        "System-oriented",
+        "Analytical",
+        "Solution-driven"
+      ],
+      "brand_expression": "We design systems that make architecture buildable.",
+      "psychological_role": "Eliminates uncertainty between design and execution"
+    },
+    "secondary_archetype": {
+      "name": "The Creator",
+      "definition": "An entity that transforms ideas into tangible, structured, and meaningful forms.",
+      "core_traits": [
+        "Innovative",
+        "Design-sensitive",
+        "Transformational",
+        "Imaginative within structure"
+      ],
+      "brand_expression": "We turn architectural intent into engineered reality.",
+      "psychological_role": "Preserves architectural creativity within engineering constraints"
+    },
+    "supporting_archetypes": [
+      {
+        "name": "The Architect (Functional Archetype)",
+        "role": "Ensures spatial and structural logic in design translation",
+        "focus": "Balance between aesthetics and feasibility"
+      },
+      {
+        "name": "The Builder (Execution Archetype)",
+        "role": "Ensures real-world constructability and installation reliability",
+        "focus": "Execution accuracy and system implementation"
+      }
+    ],
+    "archetype_hierarchy": {
+      "dominance_order": [
+        "Engineer",
+        "Creator",
+        "Architect (Functional Layer)",
+        "Builder (Execution Layer)"
+      ]
+    },
+    "psychological_positioning": {
+      "core_identity": "Engineering authority in architectural systems",
+      "user_perception_goal": "This is a company that makes architecture buildable",
+      "emotional_effect": [
+        "Trust in execution",
+        "Reduction of project risk",
+        "Confidence in technical capability"
+      ]
+    },
+    "communication_alignment": {
+      "tone_mapping": {
+        "Engineer": "Technical, precise, structured",
+        "Creator": "Innovative, design-aware, solution-focused"
+      },
+      "language_rule": "No emotional exaggeration; only system-based communication"
+    },
+    "strategic_function": {
+      "role": "Defines behavioral DNA of the brand",
+      "impact": "Ensures all visual, verbal, and system outputs remain aligned with engineering architecture identity"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Brand Personality Traits",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "core_personality": {
+      "name": "Engineering Intelligence",
+      "definition": "A precise, system-driven personality that prioritizes logic, structure, and execution over emotion or decoration.",
+      "essence": "We think in systems, not objects"
+    },
+    "primary_traits": [
+      {
+        "trait": "Precision",
+        "definition": "Every output is structured, measurable, and free of ambiguity.",
+        "behavioral_expression": "No vague claims; all communication is clear and technical"
+      },
+      {
+        "trait": "Technical Intelligence",
+        "definition": "Deep understanding of architecture translated into engineered systems.",
+        "behavioral_expression": "Explains solutions through logic, not marketing language"
+      },
+      {
+        "trait": "Reliability",
+        "definition": "Consistent delivery of predictable and controlled outcomes.",
+        "behavioral_expression": "Focus on execution certainty and reduced project risk"
+      },
+      {
+        "trait": "System Thinking",
+        "definition": "Views architecture as interconnected systems rather than isolated products.",
+        "behavioral_expression": "Always communicates in architecture → system → execution flow"
+      },
+      {
+        "trait": "Solution Orientation",
+        "definition": "Focus on solving architectural execution problems through engineering.",
+        "behavioral_expression": "Every statement leads to a practical engineering outcome"
+      }
+    ],
+    "secondary_traits": [
+      {
+        "trait": "Innovation within structure",
+        "definition": "Creativity exists only within engineering constraints and system logic."
+      },
+      {
+        "trait": "Architectural Sensitivity",
+        "definition": "Respect for architectural intent and spatial design quality."
+      },
+      {
+        "trait": "Discipline",
+        "definition": "Strict adherence to engineering rules and system architecture."
+      }
+    ],
+    "behavioral_rules": {
+      "do": [
+        "Use structured, technical language",
+        "Focus on system logic",
+        "Explain cause-effect relationships",
+        "Prioritize execution clarity"
+      ],
+      "dont": [
+        "Use emotional exaggeration",
+        "Use decorative marketing language",
+        "Make subjective aesthetic claims without engineering basis",
+        "Speak in vague or inspirational-only terms"
+      ]
+    },
+    "tone_alignment": {
+      "default_tone": "Professional engineering communication",
+      "tone_variants": {
+        "technical": "Used in engineering documentation and system explanation",
+        "architectural": "Used when discussing design integration",
+        "executive": "Used in strategic or business-level communication"
+      }
+    },
+    "psychological_effect": {
+      "goal": "Create perception of high-trust engineering authority",
+      "user_feeling": [
+        "This company understands systems",
+        "This company reduces risk",
+        "This company can execute complex architecture"
+      ]
+    },
+    "strategic_role": {
+      "function": "Defines how the brand behaves across all touchpoints",
+      "impact": "Ensures consistency between visual identity, communication, and engineering system logic"
+    }
+  },
+  {
+    "id": 15,
+    "title": "Tone of Voice System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "core_tone": {
+      "name": "Engineering Authority Voice",
+      "definition": "A precise, structured, and technically grounded communication style that prioritizes clarity, logic, and system thinking over emotional persuasion.",
+      "essence": "We communicate like engineers, not advertisers"
+    },
+    "tone_principles": [
+      {
+        "principle": "Clarity over persuasion",
+        "description": "Messages must be immediately understandable and technically unambiguous."
+      },
+      {
+        "principle": "System over product",
+        "description": "Communication must focus on systems, not isolated products."
+      },
+      {
+        "principle": "Logic over emotion",
+        "description": "Arguments are based on engineering reasoning, not emotional appeal."
+      },
+      {
+        "principle": "Precision over exaggeration",
+        "description": "No superlatives or vague marketing claims are allowed."
+      }
+    ],
+    "tone_dimensions": {
+      "formality": {
+        "level": "High",
+        "description": "Professional and structured communication suitable for engineers and EPC stakeholders"
+      },
+      "technical_depth": {
+        "level": "High",
+        "description": "Uses engineering logic and system-based explanations"
+      },
+      "emotionality": {
+        "level": "Low",
+        "description": "Minimal emotional language; controlled and neutral tone"
+      },
+      "authority": {
+        "level": "High",
+        "description": "Confident, decisive, and system-validated statements"
+      }
+    },
+    "voice_behavior": {
+      "do": [
+        "Use structured sentences",
+        "Explain cause-effect relationships",
+        "Reference systems and processes",
+        "Use technical clarity",
+        "Maintain neutral confidence"
+      ],
+      "dont": [
+        "Use hype language",
+        "Use emotional exaggeration",
+        "Use vague marketing phrases like 'best', 'amazing', 'unique'",
+        "Use decorative storytelling without engineering logic"
+      ]
+    },
+    "language_style": {
+      "preferred_style": "Engineering documentation tone",
+      "sentence_structure": "Short to medium, logically connected",
+      "vocabulary": [
+        "system",
+        "engineering",
+        "execution",
+        "architecture",
+        "validation",
+        "integration"
+      ]
+    },
+    "tone_variants": {
+      "technical": {
+        "use_case": "Engineering documentation and system explanations",
+        "style": "Highly structured, data-driven, precise"
+      },
+      "architectural": {
+        "use_case": "Design and spatial integration discussions",
+        "style": "Balanced between design clarity and engineering logic"
+      },
+      "executive": {
+        "use_case": "Business communication with EPCs and stakeholders",
+        "style": "Concise, authoritative, decision-oriented"
+      }
+    },
+    "brand_voice_identity": {
+      "identity": "Architectural Engineering Authority",
+      "communication_role": "Translator between architecture and execution systems",
+      "core_message_style": "We explain systems, not sell products"
+    },
+    "strategic_goal": {
+      "objective": "Establish AvizSazeh as a trusted engineering voice in architectural systems",
+      "impact": "Ensure all communications reinforce system credibility and execution reliability"
+    }
+  },
+  {
+    "id": 16,
+    "title": "Communication Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "communication_principles": {
+      "core_rule": "Communicate as an engineering system provider, not a product seller.",
+      "essence": "All communication must reflect architecture → engineering → execution logic"
+    },
+    "mandatory_rules": [
+      {
+        "rule": "System-first communication",
+        "description": "Always describe systems, processes, and integration rather than isolated products."
+      },
+      {
+        "rule": "Engineering clarity",
+        "description": "Every statement must be technically clear, structured, and logically explainable."
+      },
+      {
+        "rule": "No marketing exaggeration",
+        "description": "Avoid superlative claims such as best, fastest, cheapest, or most advanced."
+      },
+      {
+        "rule": "Evidence-based language",
+        "description": "Claims must be based on engineering logic, process, or system capability."
+      },
+      {
+        "rule": "Architectural respect",
+        "description": "Maintain sensitivity to architectural intent and design integrity."
+      }
+    ],
+    "prohibited_language": {
+      "words_to_avoid": [
+        "best",
+        "perfect",
+        "luxury (as main claim)",
+        "cheap",
+        "unbeatable",
+        "unique (without technical proof)",
+        "magic solution"
+      ],
+      "phrases_to_avoid": [
+        "we are number one",
+        "the best choice",
+        "unmatched quality",
+        "world class without proof"
+      ]
+    },
+    "approved_language_style": {
+      "structure": "Technical + System-based + Clear",
+      "preferred_terms": [
+        "engineering system",
+        "architectural integration",
+        "execution reliability",
+        "custom-designed system",
+        "buildable solution"
+      ]
+    },
+    "message_structure": {
+      "format": "Problem → Engineering Logic → System Solution → Execution Outcome",
+      "rule": "Every communication must follow a structured reasoning flow"
+    },
+    "channel_specific_rules": {
+      "technical_documents": {
+        "tone": "Highly structured, engineering-focused",
+        "priority": "accuracy over readability"
+      },
+      "marketing_materials": {
+        "tone": "Controlled, minimal, system-focused",
+        "priority": "clarity over persuasion"
+      },
+      "website_content": {
+        "tone": "Balanced engineering + architectural clarity",
+        "priority": "user understanding of system value"
+      }
+    },
+    "interaction_rules": {
+      "clarity": "No ambiguous statements allowed",
+      "consistency": "All messages must align with AECS system",
+      "focus": "Always reinforce system thinking over product thinking"
+    },
+    "strategic_goal": {
+      "objective": "Build trust through engineering clarity, not persuasion",
+      "outcome": "Position AvizSazeh as a technical authority in architectural systems"
+    }
+  },
+  {
+    "id": 17,
+    "title": "Brand Character",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "core_identity": {
+      "archetype_expression": "An Engineering Architect that transforms architectural intent into executable systems",
+      "human_metaphor": "A senior system engineer who speaks the language of architecture and translates it into buildable reality"
+    },
+    "character_definition": {
+      "essence": "Structured intelligence applied to architectural execution",
+      "nature": "Analytical, disciplined, system-oriented, and execution-focused",
+      "behavior": "Always converts abstract architectural ideas into structured engineering logic"
+    },
+    "personality_dimensions": {
+      "intelligence": {
+        "level": "Very High",
+        "description": "Understands complex architectural systems and translates them into engineering frameworks"
+      },
+      "discipline": {
+        "level": "Very High",
+        "description": "Operates strictly within system rules, engineering logic, and execution constraints"
+      },
+      "creativity": {
+        "level": "Controlled",
+        "description": "Creative only within structured engineering and architectural boundaries"
+      },
+      "authority": {
+        "level": "High",
+        "description": "Confident in system decisions and engineering-based conclusions"
+      },
+      "emotional_expression": {
+        "level": "Low",
+        "description": "Minimal emotional behavior; focuses on clarity and logic"
+      }
+    },
+    "behavioral_model": {
+      "thinking_pattern": "System-first reasoning (Architecture → Engineering → Execution)",
+      "decision_logic": "Evidence-based and constraint-driven",
+      "communication_mode": "Technical translation of architectural intent"
+    },
+    "character_traits": [
+      "System thinker",
+      "Precision-oriented",
+      "Engineering-driven",
+      "Architecture-aware",
+      "Execution-focused",
+      "Risk-reduction oriented",
+      "Structure-based decision maker"
+    ],
+    "behavior_in_practice": {
+      "when_analyzing": "Breaks architectural problems into engineering systems",
+      "when_speaking": "Uses structured, technical, and clear language",
+      "when_deciding": "Prioritizes buildability and execution reliability",
+      "when_designing": "Ensures architectural intent is preserved in system form"
+    },
+    "interaction_style": {
+      "tone": "Calm, authoritative, technical",
+      "approach": "Explain systems rather than persuade",
+      "response_pattern": "Problem → System Logic → Engineering Solution → Execution Outcome"
+    },
+    "brand_identity_statement": {
+      "statement": "AvizSazeh is not a product company; it is an engineering character that transforms architecture into buildable systems.",
+      "meaning": "The brand behaves like a system engineer embedded in architectural thinking"
+    },
+    "strategic_role": {
+      "function": "Defines behavioral DNA across all brand expressions",
+      "impact": "Ensures consistency between strategy, communication, and execution systems"
+    }
+  },
+  {
+    "id": 18,
+    "title": "AECS Color System Master",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS v1.0 - Architectural Engineering Color System",
+    "core_definition": {
+      "description": "A structured color system designed to translate architectural engineering logic into visual identity, UI systems, and brand communication.",
+      "principle": "Color is not decoration; it is a structural language for engineering perception."
+    },
+    "color_architecture": {
+      "engineering_layer": {
+        "role": "Structural foundation of the brand",
+        "purpose": "Represents engineering authority, system logic, and technical depth",
+        "colors": [
+          {
+            "name": "Engineering Charcoal",
+            "hex": "#1F2328",
+            "usage": "Primary structural base, logo, typography, UI headers"
+          },
+          {
+            "name": "Graphite System Gray",
+            "hex": "#3D3D3D",
+            "usage": "Secondary structure, UI depth, system hierarchy"
+          },
+          {
+            "name": "Steel Engineering Gray",
+            "hex": "#4B5563",
+            "usage": "Supportive engineering elements, borders, technical UI"
+          }
+        ]
+      },
+      "architectural_layer": {
+        "role": "Spatial and environmental representation",
+        "purpose": "Represents architectural space, material neutrality, and visual balance",
+        "colors": [
+          {
+            "name": "Architectural Warm Gray",
+            "hex": "#B7B0A5",
+            "usage": "Background surfaces, architectural context, soft panels"
+          },
+          {
+            "name": "Architectural Ivory",
+            "hex": "#ECE9E3",
+            "usage": "Primary background, spatial clarity, content separation"
+          },
+          {
+            "name": "Pure White Space",
+            "hex": "#FFFFFF",
+            "usage": "Maximum clarity zones, architectural breathing space"
+          }
+        ]
+      },
+      "authority_accent_layer": {
+        "role": "Value signaling and transformation indicator",
+        "purpose": "Represents execution value, transformation point, and brand authority",
+        "colors": [
+          {
+            "name": "Architectural Gold Accent",
+            "hex": "#B89A63",
+            "usage": "CTA, transformation points, highlights, key system nodes"
+          }
+        ]
+      }
+    },
+    "color_hierarchy_rules": {
+      "distribution": {
+        "engineering_layer": "50%",
+        "architectural_layer": "40%",
+        "accent_layer": "10%"
+      },
+      "dominance_rule": "Engineering layer must always dominate perception",
+      "accent_rule": "Gold must never become a background or primary identity color"
+    },
+    "functional_mapping": {
+      "logo": "Engineering Charcoal + controlled Gold transformation point",
+      "website": "Architectural layer dominant with engineering structure overlay",
+      "ui_system": "Engineering layer for structure, architectural layer for space",
+      "marketing": "Minimal use of Gold for emphasis only"
+    },
+    "psychological_intent": {
+      "engineering_layer": "Creates trust, authority, and technical credibility",
+      "architectural_layer": "Creates spatial calmness and architectural intelligence perception",
+      "accent_layer": "Signals transformation, value, and decision points"
+    },
+    "misuse_rules": {
+      "forbidden_uses": [
+        "Gold as dominant background",
+        "Gradient luxury effects",
+        "Decorative color schemes",
+        "Fashion-style vibrant palettes"
+      ],
+      "risk": "Any misuse will shift brand perception from Engineering System → Decorative Brand"
+    },
+    "strategic_outcome": {
+      "goal": "Ensure all visual outputs consistently reinforce Architectural Engineering authority",
+      "result": "Instant recognition of AvizSazeh as a system-based engineering brand"
+    }
+  },
+  {
+    "id": 19,
+    "title": "Engineering Layer Colors",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "layer_definition": {
+      "name": "Engineering Layer",
+      "role": "Structural backbone of the brand identity system",
+      "purpose": "Represents engineering authority, system logic, technical precision, and execution reliability",
+      "perception_goal": "Make the brand feel like a structured engineering system, not a decorative brand"
+    },
+    "core_colors": [
+      {
+        "name": "Engineering Charcoal",
+        "hex": "#1F2328",
+        "rgb": "31, 35, 40",
+        "role": "Primary structural identity color",
+        "usage": [
+          "Logo primary shape",
+          "Typography main color",
+          "UI headers",
+          "Engineering diagrams",
+          "System backbone elements"
+        ],
+        "psychology": "Authority, stability, engineering discipline, seriousness"
+      },
+      {
+        "name": "System Graphite",
+        "hex": "#3D3D3D",
+        "rgb": "61, 61, 61",
+        "role": "Secondary structural depth color",
+        "usage": [
+          "UI layers",
+          "Secondary text",
+          "Component borders",
+          "Structural hierarchy separation"
+        ],
+        "psychology": "Technical depth, neutrality, system structure"
+      },
+      {
+        "name": "Steel Engineering Gray",
+        "hex": "#4B5563",
+        "rgb": "75, 86, 99",
+        "role": "Support engineering structure color",
+        "usage": [
+          "Icons",
+          "UI support elements",
+          "Technical annotations",
+          "Grid overlays"
+        ],
+        "psychology": "Technical clarity, industrial precision, functional stability"
+      }
+    ],
+    "usage_principles": {
+      "dominance_rule": "Engineering layer must always define the structural identity of the brand",
+      "hierarchy_rule": "Charcoal > Graphite > Steel Gray",
+      "visibility_rule": "These colors must always be visually dominant over architectural and accent layers in structural elements"
+    },
+    "system_behavior": {
+      "logo": "Engineering Charcoal as base structure",
+      "ui": "Engineering layer defines all structural components",
+      "typography": "Primary text always in Engineering Charcoal",
+      "layout": "Engineering layer defines hierarchy and grid logic"
+    },
+    "psychological_effect": {
+      "primary_impression": "Engineering authority and system reliability",
+      "secondary_impression": "Technical precision and structured intelligence",
+      "user_feeling": [
+        "This is a serious engineering company",
+        "This system is reliable and structured",
+        "This brand reduces execution risk"
+      ]
+    },
+    "strict_rules": {
+      "allowed": [
+        "Flat colors only",
+        "High contrast with architectural layer",
+        "Grid-based usage"
+      ],
+      "forbidden": [
+        "Gradients",
+        "Glow effects",
+        "Metallic rendering",
+        "Decorative shading",
+        "Luxury styling"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "title": "Architectural Layer Colors",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "layer_definition": {
+      "name": "Architectural Layer",
+      "role": "Spatial, environmental, and experiential foundation of the brand system",
+      "purpose": "Represents architecture, space, material neutrality, and visual breathing room",
+      "perception_goal": "Create architectural intelligence, spatial clarity, and calm structural environment"
+    },
+    "core_colors": [
+      {
+        "name": "Architectural Ivory",
+        "hex": "#ECE9E3",
+        "rgb": "236, 233, 227",
+        "role": "Primary spatial background color",
+        "usage": [
+          "Main website background",
+          "Section backgrounds",
+          "Catalog pages",
+          "Architectural presentation surfaces"
+        ],
+        "psychology": "Clarity, openness, architectural neutrality, spatial calm"
+      },
+      {
+        "name": "Warm Architectural Gray",
+        "hex": "#B7B0A5",
+        "rgb": "183, 176, 165",
+        "role": "Secondary architectural surface color",
+        "usage": [
+          "Soft UI panels",
+          "Background layering",
+          "Content separation zones",
+          "Architectural context blocks"
+        ],
+        "psychology": "Material realism, architectural warmth, grounded structure"
+      },
+      {
+        "name": "Pure Spatial White",
+        "hex": "#FFFFFF",
+        "rgb": "255, 255, 255",
+        "role": "Maximum clarity and negative space color",
+        "usage": [
+          "Whitespace dominance",
+          "High-clarity sections",
+          "Text readability zones",
+          "Architectural breathing space"
+        ],
+        "psychology": "Minimalism, clarity, spatial expansion, precision"
+      }
+    ],
+    "usage_principles": {
+      "dominance_rule": "Architectural layer defines spatial experience, not structural hierarchy",
+      "space_rule": "Whitespace is considered architectural space, not empty design area",
+      "balance_rule": "Must always support engineering layer without competing with it"
+    },
+    "system_behavior": {
+      "ui": "Defines background surfaces and spatial composition",
+      "layout": "Creates breathing room and architectural structure perception",
+      "content": "Ensures readability and spatial hierarchy",
+      "visual_identity": "Provides architectural calmness behind engineering authority"
+    },
+    "psychological_effect": {
+      "primary_impression": "Architectural intelligence and spatial clarity",
+      "secondary_impression": "High-end architectural design environment",
+      "user_feeling": [
+        "This feels like an architectural system, not a product catalog",
+        "This space is designed with intention and structure",
+        "This brand understands architecture deeply"
+      ]
+    },
+    "strict_rules": {
+      "allowed": [
+        "Flat neutral tones only",
+        "High whitespace usage",
+        "Subtle layering between tones"
+      ],
+      "forbidden": [
+        "Vibrant colors",
+        "Decorative gradients",
+        "High saturation palettes",
+        "Noise-heavy textures"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "title": "Authority Accent System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "layer_definition": {
+      "name": "Authority Accent Layer",
+      "role": "Value signaling and decision-point highlight system",
+      "purpose": "Represents transformation, engineering authority, and critical emphasis moments within the system",
+      "perception_goal": "Signal importance, control attention, and mark system-level transitions"
+    },
+    "core_color": {
+      "name": "Architectural Gold Accent",
+      "hex": "#B89A63",
+      "rgb": "184, 154, 99",
+      "role": "Primary authority and transformation indicator",
+      "usage": [
+        "Call-to-action (CTA) elements",
+        "Logo transformation point",
+        "Key highlights in UI",
+        "Critical system markers",
+        "Important architectural milestones"
+      ],
+      "psychology": "Value, transformation, precision luxury (controlled), engineering authority"
+    },
+    "usage_rules": {
+      "max_usage_ratio": "10%",
+      "dominance_rule": "Must never dominate visual system; always secondary to engineering layer",
+      "placement_rule": "Only used at decision points or transformation nodes"
+    },
+    "functional_roles": {
+      "transformation_marker": "Indicates shift from architecture → engineering → execution",
+      "attention_control": "Directs user focus to key actions or critical information",
+      "value_signal": "Represents high-value engineering decisions or outputs",
+      "hierarchy_separator": "Differentiates standard content from strategic content"
+    },
+    "system_behavior": {
+      "logo": "Appears only at transformation endpoint of system logic",
+      "ui": "Used sparingly for CTA buttons and key highlights",
+      "layout": "Never used as background or structural base color",
+      "data_visualization": "Marks critical nodes or final outputs"
+    },
+    "psychological_effect": {
+      "primary_impression": "Controlled authority and engineering value",
+      "secondary_impression": "Premium system intelligence",
+      "user_feeling": [
+        "This is a high-value engineering system",
+        "This brand controls precision and execution",
+        "This action or element is important"
+      ]
+    },
+    "strict_rules": {
+      "allowed": [
+        "Flat usage only",
+        "Small surface areas",
+        "Controlled highlights"
+      ],
+      "forbidden": [
+        "Gold backgrounds",
+        "Gradient gold",
+        "Heavy decorative use",
+        "Luxury branding dominance",
+        "Continuous UI use"
+      ]
+    },
+    "strategic_role": {
+      "function": "Defines moments of importance and transformation in the brand system",
+      "impact": "Ensures gold is perceived as engineering value signal, not decoration"
+    }
+  },
+  {
+    "id": 22,
+    "title": "Color Usage Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS v1.0 Color Governance Rules",
+    "core_principle": {
+      "statement": "Color is a functional engineering system, not a decorative choice.",
+      "interpretation": "Every color must serve a structural, architectural, or authority function within the system."
+    },
+    "global_distribution_rules": {
+      "engineering_layer": {
+        "ratio": "50%",
+        "role": "Structural foundation of all visual systems",
+        "mandatory_usage": "Must dominate typography, UI structure, and system hierarchy"
+      },
+      "architectural_layer": {
+        "ratio": "40%",
+        "role": "Spatial and environmental background system",
+        "mandatory_usage": "Must define space, layout breathing, and architectural clarity"
+      },
+      "authority_accent_layer": {
+        "ratio": "10%",
+        "role": "Transformation and value signaling system",
+        "mandatory_usage": "Only for CTA, highlights, and transformation points"
+      }
+    },
+    "hierarchy_rules": {
+      "rule_1": "Engineering layer always defines structural hierarchy",
+      "rule_2": "Architectural layer defines spatial perception",
+      "rule_3": "Authority accent defines importance and action points",
+      "rule_4": "No layer may visually dominate outside its assigned function"
+    },
+    "usage_constraints": {
+      "engineering_layer": {
+        "allowed": [
+          "Typography primary color",
+          "UI structure",
+          "Logo base",
+          "Technical diagrams"
+        ],
+        "forbidden": [
+          "Decorative gradients",
+          "Background dominance without structure"
+        ]
+      },
+      "architectural_layer": {
+        "allowed": [
+          "Background surfaces",
+          "Spacing zones",
+          "Content separation",
+          "Layout structure"
+        ],
+        "forbidden": [
+          "High contrast branding elements",
+          "Attention-seeking highlights"
+        ]
+      },
+      "authority_accent_layer": {
+        "allowed": [
+          "CTA buttons",
+          "Transformation nodes",
+          "Key highlights",
+          "Critical system markers"
+        ],
+        "forbidden": [
+          "Full backgrounds",
+          "Large surface fills",
+          "Continuous UI usage"
+        ]
+      }
+    },
+    "visual_balance_rules": {
+      "contrast_rule": "Engineering layer must always remain visually dominant in structural elements",
+      "space_rule": "Architectural layer must provide breathing space, not compete for attention",
+      "accent_rule": "Gold must appear only as a controlled signal, never as a theme",
+      "stability_rule": "No visual element should break system hierarchy clarity"
+    },
+    "risk_control": {
+      "color_misinterpretation_risks": [
+        "Gold dominance → luxury decoration brand perception",
+        "Over-dark engineering → software/CAD tool perception",
+        "Over-neutral architecture → weak brand identity"
+      ],
+      "prevention_strategy": "Strict adherence to ratio-based distribution and role separation"
+    },
+    "system_goal": {
+      "objective": "Ensure consistent architectural engineering perception across all brand outputs",
+      "outcome": "Instant recognition of AvizSazeh as a structured engineering system brand"
+    }
+  },
+  {
+    "id": 23,
+    "title": "Color Misuse Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS v1.0 Color Misuse Governance",
+    "core_principle": {
+      "statement": "Color misuse directly destroys system perception and shifts the brand away from engineering authority.",
+      "interpretation": "Every incorrect use of color weakens the architectural engineering identity and increases misclassification risk."
+    },
+    "critical_misuse_patterns": [
+      {
+        "name": "Gold Overuse",
+        "definition": "Using the authority accent (#B89A63) beyond its 10% rule or as a dominant color.",
+        "risk": "Shifts perception from engineering system → luxury decoration brand",
+        "examples": [
+          "Gold backgrounds",
+          "Gold text blocks",
+          "Gold-heavy UI themes"
+        ]
+      },
+      {
+        "name": "Decorative Gradient Usage",
+        "definition": "Applying gradients or blended colors for aesthetic effect.",
+        "risk": "Breaks engineering logic and introduces decorative branding perception",
+        "examples": [
+          "Gold gradients",
+          "Multicolor UI gradients",
+          "Soft luxury glow effects"
+        ]
+      },
+      {
+        "name": "Over-Saturation of Architectural Layer",
+        "definition": "Using architectural colors as attention-driven elements instead of spatial support.",
+        "risk": "Destroys spatial hierarchy and architectural neutrality",
+        "examples": [
+          "Strong contrast backgrounds",
+          "Colored sections competing with engineering layer"
+        ]
+      },
+      {
+        "name": "Engineering Layer Weakening",
+        "definition": "Reducing dominance of engineering colors in structural UI or typography.",
+        "risk": "Loss of engineering authority perception",
+        "examples": [
+          "Using light neutral colors for main text",
+          "Replacing charcoal with decorative tones"
+        ]
+      },
+      {
+        "name": "Mixed Layer Confusion",
+        "definition": "Using engineering, architectural, and accent colors without role separation.",
+        "risk": "Breaks system logic and creates visual inconsistency",
+        "examples": [
+          "Random color assignments",
+          "No clear hierarchy between layers"
+        ]
+      }
+    ],
+    "system_breaking_behaviors": {
+      "highest_risk": [
+        "Luxury-style branding overlays",
+        "Gradient-heavy design systems",
+        "Non-systematic color selection",
+        "Emotion-driven color usage"
+      ],
+      "impact": "Breaks perception of engineering system and reduces EPC-level trust"
+    },
+    "corrective_rules": {
+      "rule_1": "Always enforce 50/40/10 distribution model",
+      "rule_2": "Engineering layer must define structure",
+      "rule_3": "Architectural layer must define space, not attention",
+      "rule_4": "Accent layer must only signal transformation points",
+      "rule_5": "If unsure, default to engineering layer dominance"
+    },
+    "validation_checklist": {
+      "before_use": [
+        "Is engineering layer dominant?",
+        "Is architectural layer only providing space?",
+        "Is gold under 10% usage?",
+        "Is there any gradient usage? (must be NO)",
+        "Does this preserve system hierarchy?"
+      ]
+    },
+    "strategic_risk_summary": {
+      "main_risk": "Brand perception shift from Engineering System → Decorative Brand",
+      "secondary_risk": "Loss of trust in EPC and architectural markets",
+      "prevention": "Strict enforcement of AECS system logic in all design outputs"
+    }
+  },
+  {
+    "id": 24,
+    "title": "Typography System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Typography System v1.0",
+    "core_principle": {
+      "statement": "Typography is an engineering structure, not a decorative element.",
+      "interpretation": "Type must reflect system logic, hierarchy, and architectural clarity."
+    },
+    "typeface_stack": {
+      "persian_primary": [
+        {
+          "name": "Vazirmatn",
+          "role": "Primary Persian UI and branding font",
+          "reason": "High readability, modern structure, engineering-friendly geometry"
+        },
+        {
+          "name": "IRANSansX",
+          "role": "Alternative Persian corporate font",
+          "reason": "Strong corporate tone and structured readability"
+        }
+      ],
+      "latin_primary": [
+        {
+          "name": "Inter",
+          "role": "Primary English UI and digital font",
+          "reason": "Clean, neutral, system-oriented sans-serif"
+        },
+        {
+          "name": "IBM Plex Sans",
+          "role": "Technical documentation font",
+          "reason": "Engineering-grade readability and structured tone"
+        }
+      ]
+    },
+    "typographic_hierarchy": {
+      "h1": {
+        "size_rule": "Largest structural text element",
+        "weight": "Bold / 700",
+        "color": "Engineering Charcoal (#1F2328)",
+        "purpose": "Defines system-level sections and architectural authority"
+      },
+      "h2": {
+        "size_rule": "Secondary structural heading",
+        "weight": "SemiBold / 600",
+        "color": "Graphite (#3D3D3D)",
+        "purpose": "Defines subsystem layers and structured content blocks"
+      },
+      "h3": {
+        "size_rule": "Tertiary structural heading",
+        "weight": "Medium / 500",
+        "color": "Steel Gray (#4B5563)",
+        "purpose": "Defines supporting system elements"
+      },
+      "body": {
+        "size_rule": "Standard reading text",
+        "weight": "Regular / 400",
+        "color": "Engineering Charcoal or Graphite",
+        "purpose": "Main content readability layer"
+      },
+      "caption": {
+        "size_rule": "Smallest informational text",
+        "weight": "Regular / 400",
+        "color": "Steel Gray",
+        "purpose": "Metadata, annotations, technical notes"
+      }
+    },
+    "typographic_principles": [
+      {
+        "name": "Hierarchy First",
+        "description": "Typography must clearly express system hierarchy and structure."
+      },
+      {
+        "name": "Engineering Readability",
+        "description": "All text must be optimized for technical clarity, not decorative aesthetics."
+      },
+      {
+        "name": "Minimal Variation",
+        "description": "Limited font families and weights to maintain system discipline."
+      },
+      {
+        "name": "Grid Alignment",
+        "description": "All typography must align with architectural grid system."
+      }
+    ],
+    "spacing_system": {
+      "base_unit": "8px",
+      "scale": [
+        "4px (micro spacing)",
+        "8px (base unit)",
+        "16px (standard spacing)",
+        "24px (section spacing)",
+        "32px (layout spacing)",
+        "64px (architectural separation)"
+      ],
+      "rule": "Typography spacing must follow engineering grid logic"
+    },
+    "color_dependency": {
+      "rule": "Typography is primarily Engineering Layer driven",
+      "allowed_colors": [
+        "Engineering Charcoal (#1F2328)",
+        "Graphite (#3D3D3D)",
+        "Steel Gray (#4B5563)"
+      ],
+      "accent_usage": "Gold (#B89A63) only for minimal emphasis, never full text blocks"
+    },
+    "forbidden_typography_behaviors": [
+      "Use of decorative fonts",
+      "Script or handwritten styles",
+      "Overuse of font families",
+      "Gradient text effects",
+      "Excessive weight variation",
+      "Non-grid-aligned text layout"
+    ],
+    "strategic_goal": {
+      "objective": "Ensure typography reinforces engineering system identity",
+      "outcome": "Readable, structured, and system-oriented communication across all brand surfaces"
+    }
+  },
+  {
+    "id": 25,
+    "title": "Typography Hierarchy",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Typography Hierarchy v1.0",
+    "core_principle": {
+      "statement": "Typography hierarchy is a structural engineering system for information, not a visual styling choice.",
+      "interpretation": "Every text level must represent a clear position in the architectural and engineering information system."
+    },
+    "hierarchy_structure": [
+      {
+        "level": "H1",
+        "name": "System Title Level",
+        "role": "Primary architectural identity and system definition",
+        "typography_specs": {
+          "weight": "700 (Bold)",
+          "size_relation": "2.5x base body size",
+          "color": "Engineering Charcoal (#1F2328)",
+          "line_height": "1.1 - 1.2",
+          "letter_spacing": "-1% to -2%"
+        },
+        "usage": [
+          "Page titles",
+          "System headers",
+          "Brand statements",
+          "Hero section titles"
+        ],
+        "meaning": "Defines the core system identity"
+      },
+      {
+        "level": "H2",
+        "name": "Subsystem Level",
+        "role": "Secondary structural organization of content",
+        "typography_specs": {
+          "weight": "600 (SemiBold)",
+          "size_relation": "1.75x base body size",
+          "color": "Graphite (#3D3D3D)",
+          "line_height": "1.2 - 1.3",
+          "letter_spacing": "-0.5%"
+        },
+        "usage": [
+          "Section headers",
+          "System modules",
+          "Content grouping titles"
+        ],
+        "meaning": "Defines subsystem boundaries"
+      },
+      {
+        "level": "H3",
+        "name": "Component Level",
+        "role": "Functional breakdown of systems",
+        "typography_specs": {
+          "weight": "500 (Medium)",
+          "size_relation": "1.25x base body size",
+          "color": "Steel Gray (#4B5563)",
+          "line_height": "1.3 - 1.4",
+          "letter_spacing": "0%"
+        },
+        "usage": [
+          "Component titles",
+          "Feature labels",
+          "Technical sections"
+        ],
+        "meaning": "Defines functional components within systems"
+      },
+      {
+        "level": "BODY",
+        "name": "Content Level",
+        "role": "Primary information delivery layer",
+        "typography_specs": {
+          "weight": "400 (Regular)",
+          "size_relation": "1x base size",
+          "color": "Engineering Charcoal / Graphite",
+          "line_height": "1.5 - 1.7",
+          "letter_spacing": "0%"
+        },
+        "usage": [
+          "Paragraph text",
+          "Descriptions",
+          "Explanations",
+          "Technical content"
+        ],
+        "meaning": "Delivers system information clearly and efficiently"
+      },
+      {
+        "level": "CAPTION",
+        "name": "Metadata Level",
+        "role": "Supporting and contextual information",
+        "typography_specs": {
+          "weight": "400 (Regular)",
+          "size_relation": "0.85x base size",
+          "color": "Steel Gray (#4B5563)",
+          "line_height": "1.4 - 1.5",
+          "letter_spacing": "0.5%"
+        },
+        "usage": [
+          "Annotations",
+          "Technical notes",
+          "Labels",
+          "Metadata"
+        ],
+        "meaning": "Provides supporting system context"
+      }
+    ],
+    "hierarchy_rules": {
+      "rule_1": "H1 must always dominate visual structure",
+      "rule_2": "H2 defines system segmentation",
+      "rule_3": "H3 defines functional breakdown",
+      "rule_4": "Body is the neutral communication layer",
+      "rule_5": "Caption must never compete with primary content"
+    },
+    "visual_system_alignment": {
+      "grid_dependency": "All typography levels must align with 12-column grid system",
+      "spacing_dependency": "Spacing increases proportionally with hierarchy level",
+      "color_dependency": "Higher hierarchy = darker engineering tones"
+    },
+    "engineering_principle": {
+      "statement": "Typography hierarchy behaves like an engineering structure",
+      "interpretation": "H1 is the structural beam, H2 is the subsystem frame, H3 is the component module, Body is the functional material, Caption is metadata annotation"
+    },
+    "forbidden_patterns": [
+      "Random font sizing without hierarchy logic",
+      "Mixing hierarchy levels in same semantic role",
+      "Using decorative emphasis instead of structural hierarchy",
+      "Ignoring grid alignment",
+      "Using accent color (gold) for large text blocks"
+    ],
+    "strategic_goal": {
+      "objective": "Create a readable engineering information system",
+      "outcome": "Instant comprehension of architectural system structure through typography alone"
+    }
+  },
+  {
+    "id": 26,
+    "title": "Typography Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Typography Governance Rules v1.0",
+    "core_principle": {
+      "statement": "Typography is an engineering system, not a visual decoration tool.",
+      "interpretation": "Every typographic decision must follow hierarchy, structure, and system logic."
+    },
+    "global_typography_rules": [
+      {
+        "rule": "Hierarchy must always be visible",
+        "description": "No text can exist without a clear structural level (H1–H2–H3–Body–Caption)."
+      },
+      {
+        "rule": "One purpose per text style",
+        "description": "Each typographic style must serve only one functional role in the system."
+      },
+      {
+        "rule": "Engineering clarity over aesthetics",
+        "description": "Readability and system logic are more important than visual styling."
+      },
+      {
+        "rule": "Grid alignment is mandatory",
+        "description": "All typography must align with the 12-column architectural grid system."
+      },
+      {
+        "rule": "Consistency across all platforms",
+        "description": "Web, PDF, UI, and marketing must use identical typographic logic."
+      }
+    ],
+    "hierarchy_enforcement_rules": {
+      "H1": {
+        "rule": "Only one H1 per page/system section",
+        "restriction": "No competing large titles allowed",
+        "purpose": "Defines system identity"
+      },
+      "H2": {
+        "rule": "Used only for system segmentation",
+        "restriction": "Cannot be used as decorative headings",
+        "purpose": "Defines subsystem structure"
+      },
+      "H3": {
+        "rule": "Must represent functional components",
+        "restriction": "No duplication of H2 meaning",
+        "purpose": "Defines operational modules"
+      },
+      "BODY": {
+        "rule": "Default content layer",
+        "restriction": "No emphasis overload or multiple font families",
+        "purpose": "Information delivery layer"
+      },
+      "CAPTION": {
+        "rule": "Must remain secondary and non-dominant",
+        "restriction": "Cannot compete with body text visibility",
+        "purpose": "Metadata and technical notes"
+      }
+    },
+    "visual_conduct_rules": [
+      {
+        "rule": "No decorative typography",
+        "description": "Avoid script, handwritten, or stylized fonts."
+      },
+      {
+        "rule": "No random scaling",
+        "description": "Font sizes must follow defined hierarchy ratios only."
+      },
+      {
+        "rule": "No excessive font variety",
+        "description": "Maximum two font families per system (Persian + Latin)."
+      },
+      {
+        "rule": "No gradient or styled text effects",
+        "description": "Typography must remain flat and engineering-oriented."
+      },
+      {
+        "rule": "No emotional emphasis styling",
+        "description": "Avoid unnecessary bolding or color emphasis outside system rules."
+      }
+    ],
+    "color-typography_integration": {
+      "engineering_layer": "Primary text color (Charcoal/Graphite)",
+      "architectural_layer": "Background contrast support only",
+      "accent_layer": "Only for minimal keyword emphasis, never full text blocks"
+    },
+    "spacing_rules": {
+      "line_height": {
+        "H1": "1.1 - 1.2",
+        "H2": "1.2 - 1.3",
+        "H3": "1.3 - 1.4",
+        "BODY": "1.5 - 1.7",
+        "CAPTION": "1.4 - 1.5"
+      },
+      "letter_spacing": {
+        "H1": "-1% to -2%",
+        "H2": "-0.5%",
+        "H3": "0%",
+        "BODY": "0%",
+        "CAPTION": "0.5%"
+      }
+    },
+    "system_alignment_rules": {
+      "grid_dependency": "Typography must align with architectural grid system",
+      "component_dependency": "Text styles must match UI component hierarchy",
+      "layout_dependency": "Typography must reinforce spatial architecture"
+    },
+    "risk_control": {
+      "common_mistakes": [
+        "Using multiple font styles for emphasis",
+        "Breaking hierarchy consistency",
+        "Ignoring grid alignment",
+        "Overusing bold or accent colors in text"
+      ],
+      "impact": "Breaks engineering perception and reduces system clarity"
+    },
+    "strategic_goal": {
+      "objective": "Maintain strict structural clarity across all textual communication",
+      "outcome": "Typography behaves like an engineering framework supporting architectural system thinking"
+    }
+  },
+  {
+    "id": 27,
+    "title": "Logo Strategy",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Logo Strategy v1.0",
+    "core_principle": {
+      "statement": "The logo is not a symbol of decoration, but a visual representation of architectural transformation into engineered systems.",
+      "interpretation": "Logo must behave like a system diagram, not an artistic emblem."
+    },
+    "logo_identity_concept": {
+      "core_idea": "Architectural Transformation System",
+      "logic_flow": "Line → Module → System → Transformation Point → Execution Reality",
+      "meaning": "The logo visualizes the process of converting architectural intent into engineered, buildable systems."
+    },
+    "logo_positioning": {
+      "role": "Engineering identity marker for architectural systems",
+      "function": "Represents system intelligence, not product identity",
+      "perception_goal": "High-end architectural engineering authority"
+    },
+    "design_principles": [
+      {
+        "principle": "System over symbol",
+        "description": "Logo must reflect structured system logic, not illustrative shapes."
+      },
+      {
+        "principle": "Engineering geometry only",
+        "description": "Only 90° and 45° geometry allowed."
+      },
+      {
+        "principle": "Modular construction",
+        "description": "Logo must be constructed using grid-based system logic."
+      },
+      {
+        "principle": "Transformation-based design",
+        "description": "Logo must show progression from simple structure to system completion."
+      }
+    ],
+    "construction_system": {
+      "grid": "10x10 modular grid",
+      "base_element": "Single line / structural stroke",
+      "progression_stages": [
+        "Stage 1: Line (pure engineering input)",
+        "Stage 2: Module (segmentation)",
+        "Stage 3: System (structured grid)",
+        "Stage 4: Transformation Point (Gold accent node)"
+      ]
+    },
+    "logo_variants": {
+      "variant_a": {
+        "name": "Linear Transformation System",
+        "description": "A single line evolves into structured system ending in transformation point",
+        "strength": "Strongest alignment with engineering narrative"
+      },
+      "variant_b": {
+        "name": "Modular Grid System",
+        "description": "Grid-based composition showing architectural system order",
+        "strength": "Strong architectural intelligence perception"
+      },
+      "variant_c": {
+        "name": "Convergence System",
+        "description": "Multiple lines converge into a single engineered point",
+        "strength": "Strong execution and integration metaphor"
+      }
+    },
+    "color_logic": {
+      "base_color": "Engineering Charcoal (#1F2328)",
+      "system_color": "Graphite (#3D3D3D)",
+      "accent_color": "Architectural Gold (#B89A63)",
+      "rule": "Gold only appears at transformation point, never as structure"
+    },
+    "logo_behavior_rules": [
+      {
+        "rule": "No decorative shapes",
+        "description": "Logo must avoid ornamental or illustrative forms."
+      },
+      {
+        "rule": "No 3D or gradients",
+        "description": "Flat system design only."
+      },
+      {
+        "rule": "No architectural clichés",
+        "description": "No building icons, roofs, or ceiling metaphors."
+      },
+      {
+        "rule": "Maintain grid integrity",
+        "description": "Every element must align with system grid logic."
+      }
+    ],
+    "psychological_target": {
+      "primary_impression": "Engineering authority",
+      "secondary_impression": "Architectural system intelligence",
+      "final_perception": "Execution-ready architectural engineering company"
+    },
+    "strategic_goal": {
+      "objective": "Create a logo that behaves like a system diagram of architectural transformation",
+      "outcome": "Instant recognition of AvizSazeh as a structured engineering system brand"
+    }
+  },
+  {
+    "id": 28,
+    "title": "Logo Construction System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Logo Construction System v1.0",
+    "core_principle": {
+      "statement": "Logo construction follows engineering system logic, not artistic illustration rules.",
+      "interpretation": "The logo is built like an architectural structure: grid → module → system → transformation point."
+    },
+    "construction_framework": {
+      "grid_system": {
+        "type": "modular engineering grid",
+        "dimension": "10x10 base grid",
+        "subdivision": "1/2 and 1/4 precision subdivisions allowed",
+        "rule": "All geometry must align strictly to grid intersections"
+      },
+      "base_geometry_rules": {
+        "allowed_angles": [
+          "0°",
+          "45°",
+          "90°"
+        ],
+        "forbidden": [
+          "freeform curves",
+          "organic shapes",
+          "irregular geometry"
+        ]
+      },
+      "primary_building_unit": {
+        "name": "Engineering Line Unit",
+        "definition": "The smallest structural element of the logo system",
+        "properties": [
+          "flat stroke",
+          "constant thickness",
+          "grid-aligned endpoints"
+        ]
+      }
+    },
+    "construction_stages": [
+      {
+        "stage": 1,
+        "name": "Input Line (Engineering Origin)",
+        "description": "A single structured line represents architectural intent entering the system"
+      },
+      {
+        "stage": 2,
+        "name": "Segmentation (Module Formation)",
+        "description": "Line is divided into controlled segments representing architectural breakdown"
+      },
+      {
+        "stage": 3,
+        "name": "System Structuring",
+        "description": "Segments align into a modular grid forming a structured engineering system"
+      },
+      {
+        "stage": 4,
+        "name": "Integration Node",
+        "description": "System converges into a defined structural identity point"
+      },
+      {
+        "stage": 5,
+        "name": "Transformation Point",
+        "description": "Final node highlighted with Architectural Gold (#B89A63) indicating execution reality"
+      }
+    ],
+    "construction_rules": {
+      "alignment_rule": "Every element must snap to grid",
+      "consistency_rule": "Stroke thickness must remain constant across system",
+      "hierarchy_rule": "Visual hierarchy must follow engineering logic, not aesthetics",
+      "simplicity_rule": "Minimum elements, maximum structural meaning"
+    },
+    "color_construction_logic": {
+      "base_structure": "Engineering Charcoal (#1F2328)",
+      "system_structure": "Graphite (#3D3D3D)",
+      "support_structure": "Steel Gray (#4B5563)",
+      "transformation_point": "Architectural Gold (#B89A63)",
+      "rule": "Gold only applied at final transformation node"
+    },
+    "logo_variants_construction": {
+      "variant_a": {
+        "method": "linear transformation construction",
+        "structure_flow": "line → segment → system → point"
+      },
+      "variant_b": {
+        "method": "grid aggregation construction",
+        "structure_flow": "grid cells → modules → system block"
+      },
+      "variant_c": {
+        "method": "convergent vector construction",
+        "structure_flow": "multiple lines → convergence → system node"
+      }
+    },
+    "validation_rules": {
+      "engineering_check": "Must be interpretable as a system diagram",
+      "scalability_check": "Must remain clear at favicon size",
+      "clarity_check": "Must be readable without explanation",
+      "system_check": "Must represent transformation logic visually"
+    },
+    "forbidden_construction_methods": [
+      "freehand drawing",
+      "decorative ornamentation",
+      "3D modeling effects",
+      "gradient-based construction",
+      "illustrative symbolism"
+    ],
+    "strategic_goal": {
+      "objective": "Ensure logo is built like an engineering system diagram",
+      "outcome": "A scalable, structured, system-based identity mark representing architectural transformation"
+    }
+  },
+  {
+    "id": 29,
+    "title": "Logo Symbol Logic",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Logo Symbol Logic v1.0",
+    "core_principle": {
+      "statement": "The logo symbol is a representation of architectural transformation logic, not a decorative mark.",
+      "interpretation": "Every stroke must represent a system action: input, segmentation, structure, or transformation."
+    },
+    "symbol_foundation_logic": {
+      "concept": "Architectural Transformation System",
+      "logic_flow": "Input (Architecture) → Processing (Engineering) → Structuring (System) → Output (Execution Reality)",
+      "symbol_meaning": "A visual abstraction of how architectural intent becomes a buildable system"
+    },
+    "symbol_structure_layers": [
+      {
+        "layer": "Layer 1 - Input Line",
+        "meaning": "Pure architectural intent entering the system",
+        "visual_form": "single straight line",
+        "rule": "must be minimal and unbroken"
+      },
+      {
+        "layer": "Layer 2 - Segmentation Nodes",
+        "meaning": "Engineering breakdown of architectural idea",
+        "visual_form": "controlled divisions on line",
+        "rule": "must follow grid intersections only"
+      },
+      {
+        "layer": "Layer 3 - System Formation",
+        "meaning": "Organized engineering structure",
+        "visual_form": "modular alignment of segments",
+        "rule": "must create geometric order"
+      },
+      {
+        "layer": "Layer 4 - Structural Convergence",
+        "meaning": "System integration into unified logic",
+        "visual_form": "converging geometry or alignment point",
+        "rule": "must represent system unification"
+      },
+      {
+        "layer": "Layer 5 - Transformation Point",
+        "meaning": "Final execution reality marker",
+        "visual_form": "single node highlighted in gold",
+        "rule": "only one allowed per symbol"
+      }
+    ],
+    "symbol_geometry_rules": {
+      "allowed_geometry": [
+        "horizontal lines",
+        "vertical lines",
+        "45-degree diagonals"
+      ],
+      "forbidden_geometry": [
+        "curves",
+        "organic shapes",
+        "decorative flourishes",
+        "illustrative icons"
+      ],
+      "grid_dependency": "All symbol elements must align to 10x10 engineering grid"
+    },
+    "symbol_semantics": {
+      "line": "Architectural intent",
+      "segment": "Engineering decomposition",
+      "module": "System structure",
+      "node": "Integration point",
+      "gold_point": "Execution transformation"
+    },
+    "visual_dynamics": {
+      "progression": "From simplicity to structured complexity",
+      "reading_direction": "Left to right or bottom to top depending on layout system",
+      "focus_behavior": "Eye is guided toward transformation point"
+    },
+    "color_logic": {
+      "base": "Engineering Charcoal (#1F2328)",
+      "structure": "Graphite (#3D3D3D)",
+      "support": "Steel Gray (#4B5563)",
+      "final_accent": "Architectural Gold (#B89A63)",
+      "rule": "Gold appears only once as final transformation node"
+    },
+    "scalability_rules": {
+      "icon_size": "Must remain readable at 16px favicon scale",
+      "medium_scale": "Must clearly show segmentation logic",
+      "large_scale": "Must reveal full transformation system structure"
+    },
+    "cognitive_effect": {
+      "primary_perception": "Engineering system diagram",
+      "secondary_perception": "Architectural intelligence structure",
+      "final_understanding": "This brand transforms architecture into executable systems"
+    },
+    "validation_rules": {
+      "clarity_test": "Symbol must be understood without explanation",
+      "system_test": "Must represent a process, not a shape",
+      "engineering_test": "Must resemble a structured technical diagram",
+      "brand_test": "Must not resemble any decorative or industrial logo cliché"
+    },
+    "strategic_goal": {
+      "objective": "Ensure logo symbol functions as a system diagram of architectural transformation",
+      "outcome": "Instant recognition of AvizSazeh as an architectural engineering system brand"
+    }
+  },
+  {
+    "id": 30,
+    "title": "Logo Variants",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Logo Variant System v1.0",
+    "core_principle": {
+      "statement": "Each logo variant represents a different mode of architectural transformation into engineering systems.",
+      "interpretation": "Variants are not stylistic options, but different structural interpretations of the same system logic."
+    },
+    "base_identity_logic": {
+      "core_concept": "Architectural Transformation System",
+      "logic_flow": "Architecture → Engineering → System → Integration → Execution Reality",
+      "shared_foundation": "All variants must preserve grid-based engineering structure and transformation logic"
+    },
+    "variants": [
+      {
+        "id": "A",
+        "name": "Linear Transformation System",
+        "concept": "Single-line evolution into structured system",
+        "structure": "Line → Segmentation → Modular alignment → Transformation point",
+        "visual_character": "Minimal, directional, process-driven",
+        "strength": "Highest clarity of architectural transformation logic",
+        "use_case": [
+          "Primary brand logo",
+          "Corporate identity",
+          "Website header",
+          "Investor presentations"
+        ],
+        "perception_goal": "Engineering system clarity and authority"
+      },
+      {
+        "id": "B",
+        "name": "Modular Grid System",
+        "concept": "System built from architectural grid intelligence",
+        "structure": "Grid cells → Module grouping → Structural hierarchy → Integrated system",
+        "visual_character": "Structured, analytical, architectural intelligence",
+        "strength": "Strong architectural design perception",
+        "use_case": [
+          "Technical documentation",
+          "Architectural proposals",
+          "Engineering reports"
+        ],
+        "perception_goal": "Architectural intelligence and system organization"
+      },
+      {
+        "id": "C",
+        "name": "Convergence Engineering System",
+        "concept": "Multiple architectural inputs converge into unified system",
+        "structure": "Multiple lines → Convergence nodes → System integration → Final transformation point",
+        "visual_character": "Dynamic, integrative, execution-focused",
+        "strength": "Strong EPC and execution perception",
+        "use_case": [
+          "Large-scale EPC projects",
+          "Industrial presentations",
+          "Execution partnerships"
+        ],
+        "perception_goal": "System integration and execution reliability"
+      }
+    ],
+    "variant_comparison_matrix": {
+      "clarity": {
+        "A": 10,
+        "B": 8,
+        "C": 9
+      },
+      "architectural_intelligence": {
+        "A": 8,
+        "B": 10,
+        "C": 9
+      },
+      "execution_perception": {
+        "A": 9,
+        "B": 8,
+        "C": 10
+      },
+      "system_logic_strength": {
+        "A": 10,
+        "B": 9,
+        "C": 10
+      }
+    },
+    "selection_logic": {
+      "primary_variant": "A",
+      "reason": "Highest clarity of transformation narrative and strongest alignment with core brand philosophy",
+      "secondary_variants": [
+        "B",
+        "C"
+      ],
+      "usage_strategy": "Variant A for primary identity, B for architectural depth contexts, C for EPC and execution contexts"
+    },
+    "design_constraints": {
+      "mandatory": [
+        "10x10 grid system",
+        "flat geometry only",
+        "no curves or decorative elements",
+        "single transformation point (gold)"
+      ],
+      "forbidden": [
+        "3D effects",
+        "gradients",
+        "illustrative symbols",
+        "building icons"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Provide multiple structural interpretations of the same architectural engineering identity",
+      "outcome": "Flexible yet consistent brand system adaptable to architecture, engineering, and execution contexts"
+    }
+  },
+  {
+    "id": 31,
+    "title": "Logo Usage Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Logo Usage Governance v1.0",
+    "core_principle": {
+      "statement": "The logo is a structured engineering system mark, not a decorative identity symbol.",
+      "interpretation": "All usage must preserve structural integrity, grid logic, and transformation meaning."
+    },
+    "primary_usage_rules": [
+      {
+        "rule": "Maintain grid integrity",
+        "description": "Logo must always be aligned to its original 10x10 engineering grid system without distortion."
+      },
+      {
+        "rule": "Preserve transformation logic",
+        "description": "The internal structure (line → module → system → gold point) must remain visually readable."
+      },
+      {
+        "rule": "Respect clear space",
+        "description": "Minimum clear space must equal the height of the primary structural unit around the logo."
+      },
+      {
+        "rule": "Use approved color system only",
+        "description": "Only AECS colors are allowed: Engineering layer, Architectural layer, and Gold accent."
+      }
+    ],
+    "scaling_rules": {
+      "minimum_size": {
+        "digital": "16px favicon equivalent",
+        "print": "10mm height"
+      },
+      "guideline": "Below minimum size, use simplified variant without segmentation loss"
+    },
+    "color_usage_rules": {
+      "primary_color": "Engineering Charcoal (#1F2328)",
+      "secondary_color": "Graphite (#3D3D3D)",
+      "support_color": "Steel Gray (#4B5563)",
+      "accent_color": "Architectural Gold (#B89A63)",
+      "accent_rule": "Gold must only appear at transformation point, never as base structure"
+    },
+    "background_rules": {
+      "allowed_backgrounds": [
+        "White (#FFFFFF)",
+        "Architectural Ivory (#ECE9E3)",
+        "Dark Engineering Charcoal (#1F2328)"
+      ],
+      "forbidden_backgrounds": [
+        "High saturation colors",
+        "Gradients",
+        "Pattern-heavy backgrounds"
+      ]
+    },
+    "placement_rules": {
+      "alignment": "Always aligned to architectural grid system",
+      "positioning": "Must respect visual hierarchy of layout system",
+      "orientation": "No arbitrary rotation allowed; only 0°, 90° increments"
+    },
+    "misuse_restrictions": {
+      "strictly_forbidden": [
+        "Stretching or distorting proportions",
+        "Adding shadows, glow, or 3D effects",
+        "Applying gradients or textures",
+        "Embedding decorative elements",
+        "Recoloring outside AECS palette",
+        "Reconstructing logo outside grid logic"
+      ],
+      "risk": "Any violation reduces engineering perception and converts brand into decorative identity"
+    },
+    "variant_usage_rules": {
+      "variant_A": "Primary brand identity usage (default)",
+      "variant_B": "Technical documentation and architectural contexts",
+      "variant_C": "EPC, execution, and industrial project presentations"
+    },
+    "background_interaction_rules": {
+      "light_background": "Use full engineering contrast structure",
+      "dark_background": "Use inverted architectural clarity mode",
+      "neutral_background": "Preferred for all official use cases"
+    },
+    "strategic_goal": {
+      "objective": "Ensure consistent and disciplined use of logo across all platforms",
+      "outcome": "Maintain perception of AvizSazeh as an architectural engineering system brand"
+    }
+  },
+  {
+    "id": 32,
+    "title": "Logo Misuse Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Logo Misuse Governance v1.0",
+    "core_principle": {
+      "statement": "Any misuse of the logo directly breaks the architectural engineering system perception of the brand.",
+      "interpretation": "The logo is a structured system artifact, not a decorative or flexible visual element."
+    },
+    "critical_misuse_categories": [
+      {
+        "category": "Geometric Distortion",
+        "definition": "Altering proportions, grid alignment, or structural geometry of the logo.",
+        "violations": [
+          "Stretching horizontally or vertically",
+          "Rotating outside 0°, 90° increments",
+          "Breaking grid alignment"
+        ],
+        "impact": "Destroys engineering system integrity perception"
+      },
+      {
+        "category": "Color Misapplication",
+        "definition": "Using non-AECS colors or incorrect hierarchy in logo rendering.",
+        "violations": [
+          "Using gradients",
+          "Replacing engineering colors with decorative palettes",
+          "Using gold as primary structure color"
+        ],
+        "impact": "Shifts brand perception from engineering system to decorative brand"
+      },
+      {
+        "category": "Structural Modification",
+        "definition": "Changing internal logic of logo construction system.",
+        "violations": [
+          "Removing segmentation logic",
+          "Altering transformation flow (Line → System → Point)",
+          "Adding non-system elements"
+        ],
+        "impact": "Breaks architectural transformation meaning"
+      },
+      {
+        "category": "Decorative Enhancement",
+        "definition": "Adding visual effects to improve aesthetic appearance.",
+        "violations": [
+          "Shadows",
+          "Glow effects",
+          "3D extrusion",
+          "Textures or metallic effects"
+        ],
+        "impact": "Converts engineering identity into decorative branding"
+      },
+      {
+        "category": "Symbolic Replacement",
+        "definition": "Replacing system-based geometry with pictorial or illustrative symbols.",
+        "violations": [
+          "Using building icons",
+          "Ceiling or roof symbols",
+          "Generic architectural imagery"
+        ],
+        "impact": "Destroys system-based identity structure"
+      }
+    ],
+    "gold_accent_rules": {
+      "strict_rule": "Architectural Gold (#B89A63) must only appear at transformation point",
+      "forbidden_usage": [
+        "Background fills",
+        "Primary structural lines",
+        "Multiple nodes usage",
+        "Gradient or glow application"
+      ],
+      "risk": "Overuse of gold repositions brand as luxury decoration rather than engineering system"
+    },
+    "grid_violation_rules": {
+      "definition": "Any deviation from 10x10 modular grid system",
+      "violations": [
+        "Freeform placement of elements",
+        "Asymmetrical alignment without system logic",
+        "Manual adjustment outside grid coordinates"
+      ],
+      "impact": "Breaks perception of structured engineering system"
+    },
+    "variant_misuse_rules": {
+      "variant_A": "Must remain primary identity; not replaceable with decorative versions",
+      "variant_B": "Cannot be used as decorative logo alternative",
+      "variant_C": "Restricted to EPC and execution contexts only"
+    },
+    "context_misuse": {
+      "definition": "Using logo in environments that contradict engineering system positioning",
+      "examples": [
+        "Lifestyle branding contexts",
+        "Fashion or luxury decoration ads",
+        "Non-technical marketing campaigns"
+      ],
+      "impact": "Dilutes architectural engineering perception"
+    },
+    "strict_prohibitions": [
+      "Any visual redesign outside AECS system",
+      "Use of AI-generated decorative variants",
+      "Informal reinterpretation of logo structure",
+      "Use of non-standard colors or effects",
+      "Ignoring grid-based construction logic"
+    ],
+    "strategic_goal": {
+      "objective": "Preserve strict engineering identity of logo across all applications",
+      "outcome": "Maintain consistent perception of AvizSazeh as an Architectural Engineering System Brand"
+    }
+  },
+  {
+    "id": 33,
+    "title": "Visual Language Principles",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Visual Language System v1.0",
+    "core_principle": {
+      "statement": "Visual language is a structured engineering communication system, not an aesthetic style.",
+      "interpretation": "Every visual element must represent architecture, engineering logic, or system behavior."
+    },
+    "visual_identity_foundation": {
+      "concept": "Architectural Engineering System Expression",
+      "translation_logic": "Architecture → Engineering → System → Execution → Reality",
+      "visual_goal": "Make engineering systems visible through structured visual rules"
+    },
+    "core_visual_pillars": [
+      {
+        "name": "Engineering Structure",
+        "definition": "Represents logic, precision, and system stability",
+        "visual_expression": [
+          "Straight lines",
+          "Grid structures",
+          "Rigid geometry",
+          "Monochrome dominance"
+        ],
+        "color_dependency": "Engineering Layer (#1F2328, #3D3D3D, #4B5563)"
+      },
+      {
+        "name": "Architectural Space",
+        "definition": "Represents spatial thinking and environmental clarity",
+        "visual_expression": [
+          "Whitespace dominance",
+          "Layer separation",
+          "Soft neutral backgrounds",
+          "Spatial hierarchy"
+        ],
+        "color_dependency": "Architectural Layer (#ECE9E3, #B7B0A5, #FFFFFF)"
+      },
+      {
+        "name": "System Transformation",
+        "definition": "Represents conversion from design to execution",
+        "visual_expression": [
+          "Progression sequences",
+          "Modular transitions",
+          "Directional flow",
+          "Structured evolution"
+        ],
+        "color_dependency": "Controlled use of Accent Gold (#B89A63)"
+      }
+    ],
+    "geometry_rules": {
+      "allowed_geometry": [
+        "90-degree angles",
+        "45-degree angles",
+        "Linear structures",
+        "Modular repetition"
+      ],
+      "forbidden_geometry": [
+        "Organic shapes",
+        "Freeform curves",
+        "Decorative flourishes",
+        "Illustrative symbols"
+      ],
+      "grid_dependency": "All visual elements must align to 10x10 engineering grid system"
+    },
+    "composition_principles": {
+      "hierarchy": "Clear vertical and horizontal system hierarchy must always exist",
+      "alignment": "All elements must be grid-aligned without exception",
+      "balance": "Engineering layer defines structure, architectural layer defines space",
+      "focus": "Visual attention must always move toward system logic, not decoration"
+    },
+    "visual_flow_logic": {
+      "sequence": "Input → Structure → System → Transformation → Execution",
+      "reading_direction": "Left-to-right or top-to-bottom depending on layout context",
+      "focus_mechanism": "Attention guided toward transformation point (gold node)"
+    },
+    "texture_rules": {
+      "allowed": [
+        "Flat surfaces",
+        "Minimal contrast layers",
+        "Subtle shading for hierarchy only"
+      ],
+      "forbidden": [
+        "Gradients",
+        "Noise textures",
+        "Metallic effects",
+        "Photorealistic overlays"
+      ]
+    },
+    "iconography_rules": {
+      "style": "Engineering abstraction only",
+      "allowed": [
+        "Line-based icons",
+        "Geometric abstraction",
+        "System diagrams"
+      ],
+      "forbidden": [
+        "Real-world objects",
+        "Decorative illustrations",
+        "Furniture or ceiling icons",
+        "Lifestyle imagery"
+      ]
+    },
+    "typography_integration": {
+      "rule": "Typography must behave as part of visual system, not separate layer",
+      "alignment": "Must follow grid and structural logic",
+      "color_mapping": "Engineering layer dominates text structure"
+    },
+    "strategic_goal": {
+      "objective": "Create a unified visual system that behaves like an engineering architecture model",
+      "outcome": "Instant recognition of AvizSazeh as a structured architectural engineering system brand"
+    }
+  },
+  {
+    "id": 34,
+    "title": "Architectural Grid System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Grid System v1.0",
+    "core_principle": {
+      "statement": "The grid is the structural skeleton of all visual, spatial, and digital representations of the brand.",
+      "interpretation": "Every design output must follow a predefined engineering grid logic to ensure system consistency and architectural discipline."
+    },
+    "grid_foundation": {
+      "base_system": "10x10 modular engineering grid",
+      "unit_definition": "Each cell represents a structural unit of architectural logic",
+      "scalability": "Grid must scale proportionally across all formats (UI, print, logo, motion)"
+    },
+    "grid_structure_layers": [
+      {
+        "layer": "Primary Grid",
+        "description": "Main structural framework defining composition and layout",
+        "characteristics": [
+          "10x10 base structure",
+          "Equal spacing",
+          "Fixed alignment rules"
+        ]
+      },
+      {
+        "layer": "Secondary Grid",
+        "description": "Subdivision system for detailed architectural refinement",
+        "characteristics": [
+          "1/2 and 1/4 subdivisions allowed",
+          "Used for micro-alignment",
+          "Supports typography and UI precision"
+        ]
+      },
+      {
+        "layer": "Tertiary Grid",
+        "description": "Hidden alignment system for advanced system consistency",
+        "characteristics": [
+          "Invisible to user perception",
+          "Used for engineering precision",
+          "Supports complex layouts and diagrams"
+        ]
+      }
+    ],
+    "grid_behavior_rules": {
+      "alignment_rule": "All elements must snap to grid intersections",
+      "consistency_rule": "No freeform positioning allowed outside grid logic",
+      "spacing_rule": "All spacing must be derived from grid unit multiples",
+      "hierarchy_rule": "Visual hierarchy must follow grid-based positioning"
+    },
+    "layout_system_logic": {
+      "structure_flow": "Grid → Modules → Systems → Composition",
+      "organization_principle": "Information is structured like an architectural blueprint",
+      "balance_rule": "Negative space is treated as architectural space, not empty area"
+    },
+    "typography_integration": {
+      "rule": "Typography must align strictly to grid lines",
+      "baseline_system": "Baseline grid aligned with 8px spacing unit",
+      "alignment_modes": [
+        "Left grid alignment",
+        "Center modular alignment",
+        "System-based vertical rhythm"
+      ]
+    },
+    "visual_application": {
+      "logo_system": "All logo elements must align to grid geometry",
+      "ui_system": "UI components must be built on grid modules",
+      "print_system": "Catalog and documentation layouts must follow grid hierarchy",
+      "motion_system": "Animation paths must respect grid structure logic"
+    },
+    "forbidden_behaviors": [
+      "Free positioning without grid reference",
+      "Asymmetrical randomness without system logic",
+      "Breaking alignment rules for aesthetic purposes",
+      "Ignoring spacing ratios derived from grid units"
+    ],
+    "psychological_effect": {
+      "primary_impression": "Engineering precision and structural discipline",
+      "secondary_impression": "Architectural intelligence and system thinking",
+      "user_feeling": [
+        "This brand is highly structured",
+        "Everything follows a system",
+        "This is an engineering-level design language"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Ensure all visual outputs behave like architectural blueprints",
+      "outcome": "Consistent perception of AvizSazeh as a structured engineering system brand"
+    }
+  },
+  {
+    "id": 35,
+    "title": "Geometry Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Geometry System v1.0",
+    "core_principle": {
+      "statement": "Geometry is the structural language of the architectural engineering system.",
+      "interpretation": "Every shape must represent system logic, not visual decoration."
+    },
+    "geometry_foundation": {
+      "base_logic": "Architectural Engineering System Geometry",
+      "design_philosophy": "Structure over aesthetics, system over illustration, logic over form"
+    },
+    "allowed_geometry_rules": [
+      {
+        "rule": "Orthogonal structure (90°)",
+        "description": "All primary structural elements must follow vertical and horizontal engineering alignment."
+      },
+      {
+        "rule": "Angular system (45°)",
+        "description": "Diagonal elements allowed only for controlled system transformation and directionality."
+      },
+      {
+        "rule": "Modular repetition",
+        "description": "Shapes must be constructed from repeatable grid-based modules."
+      },
+      {
+        "rule": "Linear dominance",
+        "description": "Lines are the primary geometric building blocks of all visual systems."
+      }
+    ],
+    "forbidden_geometry": [
+      {
+        "type": "Organic curves",
+        "reason": "Breaks engineering system logic and introduces decorative interpretation"
+      },
+      {
+        "type": "Freeform shapes",
+        "reason": "Destroys grid-based structural discipline"
+      },
+      {
+        "type": "Illustrative icons",
+        "reason": "Shifts perception from system brand to product illustration brand"
+      },
+      {
+        "type": "Decorative geometry",
+        "reason": "Conflicts with engineering-first visual identity"
+      }
+    ],
+    "grid_dependency": {
+      "system": "10x10 Architectural Engineering Grid",
+      "rule": "All geometric elements must align strictly to grid intersections",
+      "subdivision": "Allowed: 1/2 and 1/4 precision only",
+      "violation_effect": "Loss of system coherence and engineering perception"
+    },
+    "shape_hierarchy": {
+      "level_1": "Line (primary engineering intent)",
+      "level_2": "Segment (controlled division)",
+      "level_3": "Module (grid-aligned unit)",
+      "level_4": "System (structured composition)",
+      "level_5": "Transformation Point (gold accent node)"
+    },
+    "composition_rules": {
+      "alignment": "All geometry must follow strict grid alignment",
+      "spacing": "All spacing derived from modular grid units",
+      "balance": "Engineering structure must dominate composition",
+      "focus": "Visual flow must lead toward transformation point"
+    },
+    "visual_behavior": {
+      "directionality": "Left-to-right or top-to-bottom system flow",
+      "motion_logic": "Geometry must imply transformation process",
+      "focus_control": "Eye movement must converge toward system node"
+    },
+    "material_expression_rules": {
+      "allowed": [
+        "Flat vector geometry",
+        "Monochrome structural forms",
+        "Minimal contrast layering"
+      ],
+      "forbidden": [
+        "3D geometry",
+        "Photorealistic shapes",
+        "Gradient-based forms",
+        "Textured surfaces"
+      ]
+    },
+    "psychological_effect": {
+      "primary_impression": "Engineering precision and structural logic",
+      "secondary_impression": "Architectural system intelligence",
+      "user_feeling": [
+        "This is a structured engineering system",
+        "Everything is logically constructed",
+        "Nothing is decorative or random"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Ensure all visual geometry behaves like an architectural engineering diagram",
+      "outcome": "Consistent perception of AvizSazeh as a system-based engineering brand"
+    }
+  },
+  {
+    "id": 36,
+    "title": "Iconography System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Iconography System v1.0",
+    "core_principle": {
+      "statement": "Icons are simplified engineering system diagrams, not decorative illustrations.",
+      "interpretation": "Each icon must represent a functional system component within architectural engineering logic."
+    },
+    "icon_system_foundation": {
+      "design_logic": "Architectural Engineering abstraction",
+      "visual_language": "Linear, geometric, grid-based system symbols",
+      "purpose": "Communicate system functions clearly and structurally"
+    },
+    "icon_style_rules": {
+      "stroke_style": {
+        "type": "Monoline",
+        "thickness": "consistent across all icons",
+        "rule": "No variation in stroke thickness within icon set"
+      },
+      "geometry": {
+        "allowed": [
+          "90-degree angles",
+          "45-degree angles",
+          "straight lines",
+          "modular grid alignment"
+        ],
+        "forbidden": [
+          "curves",
+          "organic shapes",
+          "illustrative detailing",
+          "hand-drawn style"
+        ]
+      },
+      "grid_system": {
+        "base": "10x10 AECS Grid",
+        "alignment": "All icons must snap to grid nodes",
+        "scaling": "Maintain proportional consistency across sizes"
+      }
+    },
+    "icon_semantic_system": [
+      {
+        "concept": "Architecture",
+        "icon_logic": "Abstract structural grid or foundation line system",
+        "meaning": "Input layer of architectural intent"
+      },
+      {
+        "concept": "Engineering",
+        "icon_logic": "Interconnected nodes and structural joints",
+        "meaning": "System validation and structural logic"
+      },
+      {
+        "concept": "System",
+        "icon_logic": "Modular grid assembly or connected blocks",
+        "meaning": "Integrated architectural system"
+      },
+      {
+        "concept": "Execution",
+        "icon_logic": "Directional flow or completion node",
+        "meaning": "Real-world buildable outcome"
+      },
+      {
+        "concept": "Transformation Point",
+        "icon_logic": "Single highlighted node (Gold accent #B89A63)",
+        "meaning": "Final system activation or decision point"
+      }
+    ],
+    "icon_hierarchy_rules": {
+      "level_1": "Core system icons (architecture, engineering, system)",
+      "level_2": "Functional process icons (design, analysis, execution)",
+      "level_3": "Support icons (documentation, measurement, compliance)",
+      "rule": "No icon may exceed its functional semantic level"
+    },
+    "color_system": {
+      "primary": "Engineering Charcoal (#1F2328)",
+      "secondary": "Graphite (#3D3D3D)",
+      "support": "Steel Gray (#4B5563)",
+      "accent": "Architectural Gold (#B89A63)",
+      "accent_rule": "Gold only used for transformation or key system nodes"
+    },
+    "icon_behavior_rules": {
+      "consistency": "All icons must belong to a single unified system style",
+      "scalability": "Must remain legible at 16px and scalable to large formats",
+      "simplicity": "Icons must be reduced to minimum structural elements",
+      "clarity": "Each icon must be immediately understandable as a system function"
+    },
+    "forbidden_icon_styles": [
+      "3D icons",
+      "Illustrative or pictorial icons",
+      "Gradient-based icons",
+      "Colorful decorative icon sets",
+      "Real-world object representations",
+      "Emoji-style icons"
+    ],
+    "system_integration_rules": {
+      "ui_usage": "Icons must align with typography and grid system",
+      "documentation_usage": "Icons must behave like engineering diagrams",
+      "branding_usage": "Icons must reinforce system-based identity, not decoration"
+    },
+    "psychological_effect": {
+      "primary_impression": "Structured engineering intelligence",
+      "secondary_impression": "Architectural system clarity",
+      "user_feeling": [
+        "This is a technical engineering system",
+        "Everything is structured and logical",
+        "This brand communicates like an architectural model"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Create a unified icon language that behaves like an engineering system diagram set",
+      "outcome": "Consistent recognition of AvizSazeh as an architectural engineering system brand"
+    }
+  },
+  {
+    "id": 37,
+    "title": "Photography Direction",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Photography Direction System v1.0",
+    "core_principle": {
+      "statement": "Photography is a documentation of architectural engineering systems, not a lifestyle or decorative visual tool.",
+      "interpretation": "Every image must communicate structure, execution, and system logic."
+    },
+    "photography_philosophy": {
+      "concept": "Engineering Reality Documentation",
+      "goal": "Show how architectural systems are designed, manufactured, and executed in real environments",
+      "anti_style": "Reject lifestyle, luxury, or decorative photography aesthetics"
+    },
+    "visual_subject_priorities": [
+      {
+        "priority": 1,
+        "subject": "Installed ceiling systems",
+        "description": "Final executed architectural ceiling systems in real buildings",
+        "purpose": "Show system outcome and engineering precision"
+      },
+      {
+        "priority": 2,
+        "subject": "Installation process",
+        "description": "On-site execution and assembly process",
+        "purpose": "Show system reliability and engineering control"
+      },
+      {
+        "priority": 3,
+        "subject": "Technical drawings in real context",
+        "description": "Blueprints, CAD references, and system documentation",
+        "purpose": "Show engineering intelligence behind execution"
+      },
+      {
+        "priority": 4,
+        "subject": "Manufacturing environment",
+        "description": "Factories, production lines, and system fabrication",
+        "purpose": "Show industrial engineering capability"
+      }
+    ],
+    "composition_rules": {
+      "perspective": [
+        "Architectural wide-angle (primary)",
+        "Orthographic engineering views (secondary)",
+        "Controlled isometric system views"
+      ],
+      "framing": "Grid-aligned composition preferred",
+      "focus": "Structural clarity over aesthetic dramatization",
+      "depth": "Shallow decorative depth is forbidden; structural depth is required"
+    },
+    "lighting_rules": {
+      "style": "Neutral industrial lighting",
+      "allowed": [
+        "Natural daylight in architectural spaces",
+        "Controlled industrial lighting",
+        "Soft neutral diffusion for clarity"
+      ],
+      "forbidden": [
+        "Cinematic luxury lighting",
+        "Colored artistic lighting",
+        "High contrast dramatic studio lighting"
+      ]
+    },
+    "color_grading_rules": {
+      "style": "Neutral engineering realism",
+      "allowed_tones": [
+        "Concrete gray",
+        "Steel tones",
+        "Neutral whites",
+        "Architectural beige"
+      ],
+      "forbidden": [
+        "Warm luxury grading",
+        "Teal-orange cinematic grading",
+        "Oversaturated aesthetic filters"
+      ]
+    },
+    "subject_behavior_rules": {
+      "human_elements": "Must appear only as functional workers or engineers in context",
+      "pose_style": "Natural, task-oriented, non-posed lifestyle behavior",
+      "prohibition": [
+        "Lifestyle posing",
+        "Fashion-style portraits",
+        "Emotional storytelling imagery"
+      ]
+    },
+    "environment_rules": {
+      "allowed_environments": [
+        "Construction sites",
+        "Industrial facilities",
+        "Architectural interiors",
+        "Manufacturing plants"
+      ],
+      "forbidden_environments": [
+        "Luxury interior staging",
+        "Lifestyle home setups",
+        "Decorative showroom scenes"
+      ]
+    },
+    "visual_narrative_logic": {
+      "sequence": "Design → Engineering → Manufacturing → Installation → Finished System",
+      "story_rule": "Each image must represent one stage of system transformation",
+      "consistency_rule": "All images must feel like parts of a single engineering documentation system"
+    },
+    "composition_geometry_rules": {
+      "alignment": "Grid-based architectural alignment preferred",
+      "geometry": "Strong linear and modular structure must dominate framing",
+      "repetition": "System patterns and modular repetition encouraged"
+    },
+    "forbidden_photography_styles": [
+      "Stock lifestyle photography",
+      "Luxury branding imagery",
+      "Fashion editorial style",
+      "Emotional storytelling portraits",
+      "Abstract artistic photography"
+    ],
+    "psychological_effect": {
+      "primary_impression": "Engineering precision and system reliability",
+      "secondary_impression": "Architectural industrial intelligence",
+      "viewer_feeling": [
+        "This is a real engineering system",
+        "This brand executes real projects",
+        "This is not decoration, this is infrastructure"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Position AvizSazeh as an engineering execution authority through real-world documentation",
+      "outcome": "Visual identity based on truth of execution, not aesthetic simulation"
+    }
+  },
+  {
+    "id": 38,
+    "title": "Image Style Rules",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Image Style System v1.0",
+    "core_principle": {
+      "statement": "Images are engineering documentation outputs, not aesthetic or marketing visuals.",
+      "interpretation": "Every image must represent architectural systems, execution logic, or industrial reality."
+    },
+    "visual_identity_philosophy": {
+      "concept": "Engineering Realism",
+      "goal": "Communicate architectural systems as real, buildable, and measurable structures",
+      "anti_style": "Reject lifestyle, luxury, and decorative visual language"
+    },
+    "primary_image_style": {
+      "style_name": "Industrial Architectural Documentation",
+      "characteristics": [
+        "Real-world architectural environments",
+        "Structural clarity and system visibility",
+        "Engineering-focused framing",
+        "Neutral industrial tone"
+      ],
+      "purpose": "Show real execution of architectural ceiling systems"
+    },
+    "composition_rules": {
+      "framing": [
+        "Wide architectural perspective (primary)",
+        "Orthographic/technical viewpoints (secondary)",
+        "Controlled isometric system views (supportive)"
+      ],
+      "focus": "Structural system clarity, not aesthetic composition",
+      "alignment": "Strong preference for grid-based and modular composition",
+      "depth": "Functional depth only (no cinematic blur effects)"
+    },
+    "lighting_rules": {
+      "allowed": [
+        "Natural daylight in architectural spaces",
+        "Neutral industrial lighting",
+        "Soft diffused technical lighting"
+      ],
+      "forbidden": [
+        "Luxury cinematic lighting",
+        "Colored mood lighting",
+        "High contrast artistic lighting",
+        "Stage-style spotlighting"
+      ]
+    },
+    "color_grading_rules": {
+      "style": "Neutral engineering realism",
+      "allowed_palette": [
+        "Concrete gray",
+        "Steel tones",
+        "Neutral whites",
+        "Architectural beige"
+      ],
+      "forbidden_palette": [
+        "Teal-orange cinematic grading",
+        "Luxury warm golden grading",
+        "Oversaturated artistic filters",
+        "Instagram-style enhancement"
+      ]
+    },
+    "material_realism_rules": {
+      "required": [
+        "Visible structural elements",
+        "Authentic construction materials",
+        "Real installation environments",
+        "Unpolished engineering surfaces"
+      ],
+      "forbidden": [
+        "Artificial glossy materials",
+        "Fake perfect renders",
+        "Non-existent architectural environments"
+      ]
+    },
+    "subject_rules": {
+      "human_presence": "Only functional roles allowed (engineers, installers, technicians)",
+      "behavior": "Task-oriented, natural, non-posed",
+      "forbidden": [
+        "Lifestyle posing",
+        "Fashion editorial style",
+        "Emotional storytelling portraits"
+      ]
+    },
+    "environment_rules": {
+      "allowed": [
+        "Construction sites",
+        "Industrial facilities",
+        "Manufacturing plants",
+        "Real architectural interiors"
+      ],
+      "forbidden": [
+        "Luxury interior staging",
+        "Decorative showroom setups",
+        "Lifestyle home environments"
+      ]
+    },
+    "visual_language_rules": {
+      "geometry": "Strong linear and modular structure must dominate",
+      "symmetry": "Engineering symmetry preferred over artistic composition",
+      "repetition": "System patterns encouraged to show modular architecture"
+    },
+    "post_processing_rules": {
+      "allowed": [
+        "Minimal contrast correction",
+        "Basic exposure correction",
+        "Clarity enhancement for engineering visibility"
+      ],
+      "forbidden": [
+        "Stylized filters",
+        "HDR exaggeration",
+        "vignette effects",
+        "artistic color grading"
+      ]
+    },
+    "forbidden_image_styles": [
+      "Luxury architectural photography",
+      "Lifestyle branding photography",
+      "Cinematic storytelling imagery",
+      "Fashion editorial style",
+      "Abstract artistic renders",
+      "AI-generated fantasy architecture"
+    ],
+    "psychological_effect": {
+      "primary_impression": "Engineering precision and system reliability",
+      "secondary_impression": "Industrial architectural intelligence",
+      "viewer_perception": [
+        "This is a real engineering company",
+        "This system is buildable and functional",
+        "This is not decoration, it is execution"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Ensure all visual outputs represent real architectural engineering systems",
+      "outcome": "Strong perception of AvizSazeh as a technical execution-focused engineering brand"
+    }
+  },
+  {
+    "id": 39,
+    "title": "UI Design System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS UI System v1.0",
+    "core_principle": {
+      "statement": "UI is an engineering interface, not a marketing design surface.",
+      "interpretation": "Every interface element must behave like part of an architectural engineering system."
+    },
+    "ui_philosophy": {
+      "concept": "Engineering Interface Design",
+      "goal": "Translate architectural system logic into digital interaction layers",
+      "anti_style": "Reject decorative UI, lifestyle aesthetics, and marketing-driven design"
+    },
+    "design_fundamentals": {
+      "grid_system": {
+        "base": "12-column layout system",
+        "subdivision": "8px modular spacing unit",
+        "rule": "All UI elements must align strictly to grid logic"
+      },
+      "layout_logic": "Architecture → System → Component → Interaction",
+      "visual_hierarchy": "Engineering layer defines structure, architectural layer defines space, accent defines action"
+    },
+    "color_in_ui": {
+      "engineering_layer": {
+        "role": "Primary structural UI elements",
+        "colors": [
+          "#1F2328",
+          "#3D3D3D",
+          "#4B5563"
+        ]
+      },
+      "architectural_layer": {
+        "role": "Background and spatial UI context",
+        "colors": [
+          "#ECE9E3",
+          "#B7B0A5",
+          "#FFFFFF"
+        ]
+      },
+      "accent_layer": {
+        "role": "Interactive actions and system highlights",
+        "colors": [
+          "#B89A63"
+        ],
+        "rule": "Used only for interactive or transformation elements"
+      }
+    },
+    "typography_in_ui": {
+      "rule": "Typography is part of system structure, not decoration",
+      "fonts": {
+        "persian": [
+          "Vazirmatn",
+          "IRANSansX"
+        ],
+        "latin": [
+          "Inter",
+          "IBM Plex Sans"
+        ]
+      },
+      "behavior": "Strict hierarchy alignment (H1–H2–H3–Body–Caption)"
+    },
+    "component_system": {
+      "buttons": {
+        "style": "Flat, geometric, grid-aligned",
+        "states": [
+          "default",
+          "hover",
+          "active",
+          "disabled"
+        ],
+        "accent_usage": "Only primary CTA uses gold accent"
+      },
+      "cards": {
+        "style": "Structural containers representing system modules",
+        "rule": "Must reflect engineering segmentation logic"
+      },
+      "navigation": {
+        "style": "System-based navigation (not decorative)",
+        "behavior": "Linear, hierarchical, predictable flow"
+      },
+      "forms": {
+        "style": "Engineering input systems",
+        "rule": "Minimal decoration, maximum clarity"
+      }
+    },
+    "interaction_design": {
+      "principle": "Every interaction must reflect system transformation logic",
+      "flow": "Input → Validation → System Processing → Output",
+      "animation": {
+        "style": "Minimal, linear, functional transitions only",
+        "forbidden": [
+          "elastic animations",
+          "bouncy motion",
+          "decorative effects"
+        ]
+      }
+    },
+    "layout_system": {
+      "structure": "Modular system blocks",
+      "alignment": "Strict grid-based positioning",
+      "spacing": "8px system multiples only",
+      "visual_rhythm": "Consistent vertical engineering rhythm"
+    },
+    "icon_integration": {
+      "style": "Line-based engineering abstraction",
+      "rule": "Icons must behave like system diagrams",
+      "forbidden": [
+        "emoji style",
+        "3D icons",
+        "illustrative icons"
+      ]
+    },
+    "responsive_behavior": {
+      "principle": "System scalability across devices",
+      "rule": "No loss of hierarchy or grid structure on any screen size",
+      "adaptation": "Reflow must preserve engineering logic"
+    },
+    "forbidden_ui_patterns": [
+      "Gradient-heavy interfaces",
+      "Decorative UI elements",
+      "Lifestyle imagery integration",
+      "Non-grid layouts",
+      "Over-animated interfaces",
+      "Marketing-style visual clutter"
+    ],
+    "psychological_effect": {
+      "primary_impression": "Engineering-grade system interface",
+      "secondary_impression": "Architectural intelligence and precision",
+      "user_perception": [
+        "This is a technical system, not a marketing website",
+        "Everything is structured and logical",
+        "This company operates like an engineering platform"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Create a digital interface that behaves like an architectural engineering system",
+      "outcome": "Users perceive AvizSazeh as a structured, reliable engineering authority"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Mission & Vision",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "mission": {
+      "statement": "Design, engineer, manufacture, and execute architectural ceiling systems that fully integrate aesthetic requirements, technical constraints, and buildability into a unified engineered solution.",
+      "core_actions": [
+        "Architectural system design",
+        "Engineering validation of designs",
+        "Custom manufacturing of ceiling systems",
+        "Controlled execution and installation support",
+        "Technical coordination with EPC and architectural teams"
+      ],
+      "mission_focus": "Transform architectural concepts into reliable, buildable ceiling systems without loss of design intent"
+    },
+    "vision": {
+      "statement": "To become the most trusted Architectural Engineering System brand in Iran and a recognized regional authority in architectural ceiling systems across the Middle East and CIS markets.",
+      "long_term_goal": "Establish AvizSazeh as a global benchmark for engineered architectural ceiling systems",
+      "vision_expansion": [
+        "Regional leadership in GCC architectural EPC projects",
+        "Recognition as a system-based engineering brand",
+        "Expansion into advanced architectural envelope systems"
+      ]
+    },
+    "strategic_alignment": {
+      "mission_alignment": "Execution-focused engineering delivery system",
+      "vision_alignment": "Regional and global architectural engineering authority",
+      "brand_direction": "From product manufacturer → to system engineering partner"
+    },
+    "success_definition": {
+      "short_term": "Trusted supplier for architectural ceiling systems in EPC projects",
+      "mid_term": "Preferred engineering partner for architects and consultants",
+      "long_term": "Regional leader in architectural system engineering solutions"
+    }
+  },
+  {
+    "id": 40,
+    "title": "Color Tokens System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Color Tokens System v1.0",
+    "core_principle": {
+      "statement": "Color tokens are a machine-readable representation of the architectural engineering color system.",
+      "interpretation": "All visual systems (UI, web, print, motion) must consume colors through structured tokens, not raw hex values."
+    },
+    "token_architecture": {
+      "format_standard": "semantic + layer-based token system",
+      "structure_logic": "Engineering Layer → Architectural Layer → Accent Layer",
+      "usage_rule": "No direct hex usage in production systems"
+    },
+    "engineering_layer_tokens": {
+      "engineering-900": "#1F2328",
+      "engineering-700": "#3D3D3D",
+      "engineering-500": "#4B5563",
+      "description": "Structural backbone tokens used for typography, UI structure, and system hierarchy"
+    },
+    "architectural_layer_tokens": {
+      "architectural-100": "#ECE9E3",
+      "architectural-300": "#B7B0A5",
+      "architectural-0": "#FFFFFF",
+      "description": "Spatial system tokens used for backgrounds, layout structure, and architectural surfaces"
+    },
+    "accent_layer_tokens": {
+      "accent-500": "#B89A63",
+      "description": "Authority and transformation token used for CTA, highlights, and system transition points"
+    },
+    "semantic_tokens": {
+      "text-primary": "engineering-900",
+      "text-secondary": "engineering-700",
+      "text-tertiary": "engineering-500",
+      "background-primary": "architectural-0",
+      "background-secondary": "architectural-100",
+      "surface": "architectural-300",
+      "border": "engineering-500",
+      "cta-primary": "accent-500",
+      "highlight": "accent-500"
+    },
+    "ui_token_mapping": {
+      "buttons": {
+        "primary": "accent-500 + engineering-900 text",
+        "secondary": "engineering-700 outline style",
+        "disabled": "engineering-500 with reduced opacity"
+      },
+      "cards": {
+        "background": "architectural-100",
+        "border": "engineering-500",
+        "text": "engineering-900"
+      },
+      "typography": {
+        "heading": "engineering-900",
+        "body": "engineering-700",
+        "caption": "engineering-500"
+      }
+    },
+    "usage_rules": {
+      "rule_1": "No raw hex usage in UI or codebase",
+      "rule_2": "All colors must be referenced via semantic tokens",
+      "rule_3": "Accent tokens must remain under 10% visual dominance",
+      "rule_4": "Engineering tokens define structure hierarchy",
+      "rule_5": "Architectural tokens define spatial context"
+    },
+    "system_behavior": {
+      "engineering_layer_role": "Defines structure and hierarchy",
+      "architectural_layer_role": "Defines space and layout environment",
+      "accent_layer_role": "Defines interaction and transformation points"
+    },
+    "scalability_rules": {
+      "theme_support": "Supports light and dark system extension",
+      "platform_support": "Web, mobile, print, motion systems",
+      "consistency_rule": "Same token mapping must be used across all platforms"
+    },
+    "anti_patterns": [
+      "Direct hex usage in components",
+      "Unstructured color naming",
+      "Multiple conflicting accent colors",
+      "Decorative color overrides",
+      "Ignoring token hierarchy"
+    ],
+    "psychological_effect": {
+      "primary_impression": "Highly structured engineering design system",
+      "secondary_impression": "Enterprise-grade architectural system thinking",
+      "user_perception": [
+        "This is a system-driven engineering brand",
+        "Everything is controlled and structured",
+        "There is no decorative randomness here"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Ensure all digital and visual systems are driven by structured color logic",
+      "outcome": "Unified, scalable, engineering-grade brand identity system"
+    }
+  },
+  {
+    "id": 41,
+    "title": "Component System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Component System v1.0",
+    "core_principle": {
+      "statement": "UI components are modular engineering units, not visual design elements.",
+      "interpretation": "Every component must behave like a functional part of an architectural engineering system."
+    },
+    "system_architecture": {
+      "structure_logic": "Design System → Components → Modules → Pages → System Output",
+      "principle": "All UI elements must be built from reusable engineering components"
+    },
+    "component_fundamentals": {
+      "modularity": "Each component is a standalone engineering unit",
+      "consistency": "All components follow shared grid, color, and typography systems",
+      "predictability": "Components must behave identically across all contexts",
+      "scalability": "Components must work across web, mobile, and documentation systems"
+    },
+    "core_components": [
+      {
+        "name": "Button System",
+        "type": "interaction component",
+        "structure": "Primary / Secondary / Tertiary / Disabled",
+        "rules": [
+          "Primary uses Accent token only (#B89A63)",
+          "No decorative styling allowed",
+          "Must follow 8px grid spacing"
+        ],
+        "behavior": "Represents system action and transformation trigger"
+      },
+      {
+        "name": "Card System",
+        "type": "layout component",
+        "structure": "Header / Body / Footer (optional)",
+        "rules": [
+          "Must align to 12-column grid",
+          "Must use engineering layer borders",
+          "Must reflect system segmentation logic"
+        ],
+        "behavior": "Represents modular architectural system blocks"
+      },
+      {
+        "name": "Navigation System",
+        "type": "structural component",
+        "structure": "Hierarchical system navigation",
+        "rules": [
+          "Linear or tree-based structure only",
+          "No decorative menus",
+          "Must reflect system hierarchy"
+        ],
+        "behavior": "Represents architectural system flow"
+      },
+      {
+        "name": "Form System",
+        "type": "data input component",
+        "structure": "Input / Validation / Feedback",
+        "rules": [
+          "Minimal styling",
+          "Engineering clarity over aesthetics",
+          "Strict alignment with grid system"
+        ],
+        "behavior": "Represents system input layer"
+      },
+      {
+        "name": "Table System",
+        "type": "data structure component",
+        "structure": "Row / Column / Header hierarchy",
+        "rules": [
+          "Must be fully grid-aligned",
+          "No decorative borders",
+          "Engineering hierarchy only"
+        ],
+        "behavior": "Represents structured engineering data"
+      }
+    ],
+    "layout_components": {
+      "container": {
+        "rule": "Defines structural boundaries of system content",
+        "alignment": "12-column grid mandatory"
+      },
+      "section": {
+        "rule": "Represents system modules",
+        "spacing": "Based on 8px system scale"
+      },
+      "divider": {
+        "rule": "Engineering separation line, not decorative element",
+        "style": "Flat, minimal, charcoal-based"
+      }
+    },
+    "state_system": {
+      "interaction_states": [
+        "default",
+        "hover",
+        "active",
+        "disabled",
+        "loading"
+      ],
+      "rule": "States must remain functional, not decorative"
+    },
+    "design_constraints": {
+      "allowed": [
+        "Flat geometry",
+        "Grid-aligned layouts",
+        "Engineering color tokens",
+        "Minimal transitions"
+      ],
+      "forbidden": [
+        "3D components",
+        "Gradient UI elements",
+        "Decorative animations",
+        "Freeform layouts",
+        "Non-system components"
+      ]
+    },
+    "animation_rules": {
+      "principle": "Motion must reflect system logic, not aesthetics",
+      "allowed": [
+        "Linear transitions",
+        "Opacity changes",
+        "Grid-based movement"
+      ],
+      "forbidden": [
+        "Bounce effects",
+        "Elastic animations",
+        "Cinematic transitions"
+      ]
+    },
+    "psychological_effect": {
+      "primary_impression": "Structured engineering interface system",
+      "secondary_impression": "Predictable and reliable system behavior",
+      "user_perception": [
+        "This is a controlled engineering system",
+        "Everything is modular and logical",
+        "This behaves like an architectural framework"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Ensure UI is perceived as an engineering system, not a visual design",
+      "outcome": "Consistent modular architecture across all digital interfaces"
+    }
+  },
+  {
+    "id": 42,
+    "title": "Layout System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Layout System v1.0",
+    "core_principle": {
+      "statement": "Layout is an architectural engineering structure for organizing information, not a visual composition technique.",
+      "interpretation": "Every layout must behave like a structured architectural blueprint."
+    },
+    "layout_foundation": {
+      "grid_system": "12-column architectural engineering grid",
+      "base_unit": "8px modular spacing system",
+      "structure_logic": "System → Modules → Sections → Components → Content"
+    },
+    "layout_hierarchy": [
+      {
+        "level": "System Frame",
+        "definition": "Top-level structure defining overall page architecture",
+        "role": "Defines global boundaries and system alignment",
+        "rules": [
+          "Must use full-width grid logic",
+          "No freeform positioning allowed",
+          "Defines entire page structure"
+        ]
+      },
+      {
+        "level": "Module Section",
+        "definition": "Logical grouping of related system components",
+        "role": "Represents architectural subsystems",
+        "rules": [
+          "Must align to grid columns",
+          "Must maintain consistent vertical rhythm",
+          "Must reflect engineering segmentation"
+        ]
+      },
+      {
+        "level": "Component Block",
+        "definition": "Reusable UI engineering unit",
+        "role": "Functional system elements (cards, forms, tables)",
+        "rules": [
+          "Must be modular and reusable",
+          "Must follow component system rules",
+          "Must align strictly to grid"
+        ]
+      },
+      {
+        "level": "Content Layer",
+        "definition": "Information display layer",
+        "role": "Typography and data presentation",
+        "rules": [
+          "Must follow typography hierarchy system",
+          "Must avoid decorative formatting",
+          "Must maintain readability and structure"
+        ]
+      }
+    ],
+    "layout_principles": [
+      {
+        "name": "Structural Hierarchy",
+        "description": "Every layout must clearly express system hierarchy from top to bottom."
+      },
+      {
+        "name": "Grid Discipline",
+        "description": "All elements must strictly align to the 12-column grid system."
+      },
+      {
+        "name": "Modular Construction",
+        "description": "Layouts must be composed of reusable system modules."
+      },
+      {
+        "name": "Spatial Engineering",
+        "description": "Whitespace is treated as architectural space, not empty design."
+      },
+      {
+        "name": "Predictable Flow",
+        "description": "User navigation must follow logical engineering structure."
+      }
+    ],
+    "spacing_system": {
+      "base_unit": "8px",
+      "scale": [
+        "4px micro spacing",
+        "8px base unit",
+        "16px small separation",
+        "24px medium separation",
+        "32px section spacing",
+        "64px architectural separation"
+      ],
+      "rule": "All spacing must be derived from base unit multiples"
+    },
+    "alignment_rules": {
+      "horizontal": "Strict 12-column alignment required",
+      "vertical": "Consistent baseline rhythm mandatory",
+      "module_alignment": "All modules must snap to grid intersections",
+      "content_alignment": "Typography must follow grid baseline system"
+    },
+    "responsive_behavior": {
+      "principle": "Structural consistency across all breakpoints",
+      "rule": "Layout hierarchy must remain intact on all screen sizes",
+      "adaptation": "Columns collapse but system logic remains unchanged"
+    },
+    "visual_behavior": {
+      "density": "Engineering-balanced spacing, not decorative density",
+      "flow": "Top-down system logic flow",
+      "focus": "Guided toward system structure, not visual attraction"
+    },
+    "forbidden_layout_patterns": [
+      "Freeform positioning",
+      "Non-grid alignment",
+      "Decorative spacing",
+      "Asymmetrical randomness without system logic",
+      "Overlapping elements without engineering purpose"
+    ],
+    "psychological_effect": {
+      "primary_impression": "Highly structured engineering system",
+      "secondary_impression": "Architectural blueprint logic",
+      "user_perception": [
+        "This system is predictable and structured",
+        "Everything follows engineering logic",
+        "This feels like a technical blueprint, not a design"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Ensure all layouts behave like architectural engineering blueprints",
+      "outcome": "Consistent perception of AvizSazeh as a structured system-based engineering brand"
+    }
+  },
+  {
+    "id": 43,
+    "title": "Homepage Architecture",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Homepage Architecture v1.0",
+    "core_principle": {
+      "statement": "The homepage is a system entry point, not a marketing landing page.",
+      "interpretation": "It must function as an architectural engineering interface that guides users through system understanding."
+    },
+    "information_architecture": {
+      "flow_logic": "System Introduction → Trust → Proof → Systems → Engineering Logic → Execution → Action",
+      "structure_type": "Engineering-driven modular homepage system"
+    },
+    "page_structure": [
+      {
+        "section": "Hero System",
+        "purpose": "Define core identity instantly",
+        "content": [
+          "Brand statement: Architectural Engineering System Provider",
+          "Core message: Architecture → Engineering → Execution",
+          "Visual: system-based logo + structural geometry"
+        ],
+        "rule": "No marketing slogans allowed"
+      },
+      {
+        "section": "Trust System",
+        "purpose": "Establish engineering credibility",
+        "content": [
+          "Key metrics (projects, scale, regions)",
+          "Engineering capability indicators",
+          "System reliability proof"
+        ],
+        "rule": "Must be factual and system-based"
+      },
+      {
+        "section": "Proof System",
+        "purpose": "Show real execution capability",
+        "content": [
+          "Selected completed projects",
+          "Execution documentation",
+          "Before/after system logic"
+        ],
+        "rule": "Only real engineering outputs allowed"
+      },
+      {
+        "section": "Systems Overview",
+        "purpose": "Explain product/system architecture",
+        "content": [
+          "Ceiling system categories",
+          "Engineering breakdown of systems",
+          "Modular system logic"
+        ],
+        "rule": "Must be structured, not catalog-based"
+      },
+      {
+        "section": "Engineering Logic System",
+        "purpose": "Explain transformation process",
+        "content": [
+          "Design → Engineering → Manufacturing → Execution",
+          "System validation process",
+          "Risk reduction logic"
+        ],
+        "rule": "Must emphasize system thinking"
+      },
+      {
+        "section": "Execution System",
+        "purpose": "Show real-world implementation capability",
+        "content": [
+          "Installation methodology",
+          "Project workflow",
+          "Engineering control system"
+        ],
+        "rule": "Must reflect controlled execution process"
+      },
+      {
+        "section": "CTA System",
+        "purpose": "Trigger engineering engagement",
+        "content": [
+          "Request engineering consultation",
+          "Project analysis request",
+          "System design inquiry"
+        ],
+        "rule": "No marketing CTA language, only engineering actions"
+      }
+    ],
+    "visual_architecture_rules": {
+      "grid_system": "12-column AECS grid mandatory",
+      "spacing": "8px engineering modular system",
+      "color_logic": {
+        "primary": "Engineering Layer (#1F2328)",
+        "background": "Architectural Layer (#ECE9E3 / #FFFFFF)",
+        "accent": "Gold only for system transitions"
+      },
+      "hierarchy": "Engineering structure must dominate all visual decisions"
+    },
+    "interaction_flow": {
+      "user_journey": [
+        "Understand system identity",
+        "Verify engineering credibility",
+        "See real execution proof",
+        "Understand system architecture",
+        "Engage with engineering process"
+      ],
+      "behavior_rule": "No emotional persuasion, only system logic progression"
+    },
+    "content_rules": [
+      "No marketing language",
+      "No decorative storytelling",
+      "No lifestyle imagery",
+      "Only engineering system communication",
+      "All content must map to system logic"
+    ],
+    "psychological_effect": {
+      "primary_impression": "Engineering system authority",
+      "secondary_impression": "Architectural execution intelligence",
+      "user_perception": [
+        "This is not a website, it is a system interface",
+        "This company operates like an engineering platform",
+        "Everything here is structured and logical"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Transform homepage into an engineering system interface",
+      "outcome": "Instant perception of AvizSazeh as a structured architectural engineering authority"
+    }
+  },
+  {
+    "id": 44,
+    "title": "Product Architecture System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Product Architecture System v1.0",
+    "core_principle": {
+      "statement": "Products are not standalone items; they are engineered components of an architectural system.",
+      "interpretation": "Every ceiling solution must be defined as part of a modular architectural engineering system."
+    },
+    "product_system_philosophy": {
+      "concept": "Systemized Product Architecture",
+      "logic": "Product → Module → System → Architectural Application → Execution",
+      "anti_concept": "Reject standalone product thinking without engineering context"
+    },
+    "product_definition_model": {
+      "rule": "No product exists without system classification",
+      "structure": {
+        "system_family": "Architectural Ceiling Systems",
+        "sub_systems": [
+          "Metal Ceiling Systems",
+          "Suspended Ceiling Structures",
+          "Modular Ceiling Grids",
+          "Custom Architectural Ceiling Solutions"
+        ]
+      }
+    },
+    "system_classification": [
+      {
+        "name": "Linear Ceiling Systems",
+        "definition": "Continuous engineered ceiling solutions based on linear modules",
+        "characteristics": [
+          "Directional structure",
+          "High modular repeatability",
+          "Engineering precision alignment"
+        ]
+      },
+      {
+        "name": "Grid Ceiling Systems",
+        "definition": "Modular grid-based architectural ceiling systems",
+        "characteristics": [
+          "Full 10x10 alignment logic",
+          "Highly structured modular pattern",
+          "Architectural consistency"
+        ]
+      },
+      {
+        "name": "Custom Engineered Systems",
+        "definition": "Project-specific engineered ceiling systems",
+        "characteristics": [
+          "Fully customized geometry",
+          "Engineering-driven design process",
+          "Architecture-specific adaptation"
+        ]
+      },
+      {
+        "name": "Hybrid Architectural Systems",
+        "definition": "Combination of multiple ceiling system types",
+        "characteristics": [
+          "Multi-system integration",
+          "Complex architectural execution",
+          "High engineering coordination"
+        ]
+      }
+    ],
+    "architecture_logic": {
+      "system_flow": "Architecture → Engineering Design → System Definition → Product Modules → Execution",
+      "rule": "Product cannot exist without system definition",
+      "dependency": "Every product must be traceable to an engineering system structure"
+    },
+    "engineering_constraints": {
+      "modularity": "All products must be modular system components",
+      "scalability": "Must support architectural scaling without redesign",
+      "integration": "Must integrate with other ceiling system modules",
+      "precision": "Must follow AECS grid and geometry rules"
+    },
+    "product_identity_rules": {
+      "naming_system": "System-based naming only (no standalone product naming)",
+      "example_format": "System + Type + Application",
+      "rule": "Avoid consumer-style product naming"
+    },
+    "value_structure": {
+      "core_value": "Engineering reliability of architectural ceiling systems",
+      "secondary_value": "Customization for architectural requirements",
+      "supporting_value": "Execution control and system integration"
+    },
+    "market_positioning": {
+      "perception_goal": "System provider, not product seller",
+      "category_shift": "From ceiling manufacturer → Architectural Engineering System Provider",
+      "differentiation": "We design systems, not sell products"
+    },
+    "psychological_effect": {
+      "primary_impression": "Highly engineered architectural system provider",
+      "secondary_impression": "Technical execution authority",
+      "user_perception": [
+        "This is not a product catalog, this is a system portfolio",
+        "Everything is engineered and structured",
+        "This company thinks in systems, not items"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Eliminate product-level thinking and enforce system-level perception",
+      "outcome": "AvizSazeh is perceived as an architectural engineering system authority, not a manufacturer"
+    }
+  },
+  {
+    "id": 45,
+    "title": "Engineering Execution System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Engineering Execution System v1.0",
+    "core_principle": {
+      "statement": "Execution is a controlled engineering process, not a construction activity.",
+      "interpretation": "Every architectural system must pass through structured engineering execution phases to ensure buildability and reliability."
+    },
+    "execution_philosophy": {
+      "concept": "Controlled Architectural Execution System",
+      "logic_flow": "Design → Engineering Validation → System Definition → Manufacturing → Installation → Verification",
+      "anti_concept": "Reject unstructured construction-based execution"
+    },
+    "execution_pipeline": [
+      {
+        "stage": "1. Design Intake",
+        "description": "Receive architectural intent and spatial requirements",
+        "output": "Preliminary system concept",
+        "rule": "No execution without system interpretation"
+      },
+      {
+        "stage": "2. Engineering Validation",
+        "description": "Analyze feasibility, loads, geometry, and constraints",
+        "output": "Validated engineering model",
+        "rule": "All designs must pass engineering checks before systemization"
+      },
+      {
+        "stage": "3. System Definition",
+        "description": "Convert validated design into modular ceiling system architecture",
+        "output": "System blueprint and modular breakdown",
+        "rule": "Everything must become a structured system"
+      },
+      {
+        "stage": "4. Manufacturing Engineering",
+        "description": "Translate system into production-ready components",
+        "output": "Fabrication instructions and modular parts",
+        "rule": "Manufacturing follows system logic, not ad-hoc production"
+      },
+      {
+        "stage": "5. Site Execution",
+        "description": "Controlled installation of engineered system",
+        "output": "Installed architectural ceiling system",
+        "rule": "Installation must follow system documentation exactly"
+      },
+      {
+        "stage": "6. System Verification",
+        "description": "Validate installation against engineering model",
+        "output": "Approved execution report",
+        "rule": "No project is complete without system verification"
+      }
+    ],
+    "execution_control_system": {
+      "quality_assurance": "Engineering-based verification at every stage",
+      "risk_control": "Pre-execution validation of all system components",
+      "coordination_model": "Engineering-led site coordination",
+      "documentation": "Full traceability from design to installation"
+    },
+    "engineering_constraints": {
+      "geometry_control": "Must follow AECS geometry and grid system",
+      "modularity": "All components must be system-based modules",
+      "consistency": "No deviation from approved engineering model",
+      "precision": "Tolerance-controlled installation required"
+    },
+    "site_behavior_rules": {
+      "installation_discipline": "Execution teams follow engineering documentation only",
+      "no_field_design": "No design decisions allowed on-site",
+      "system_first": "All decisions must reference system documentation",
+      "error_handling": "Any deviation triggers engineering review"
+    },
+    "integration_with_brand_system": {
+      "product_system_link": "Execution is final phase of Product Architecture System",
+      "design_system_link": "Execution validates Design → Engineering → System flow",
+      "quality_system_link": "Execution outcome defines brand credibility"
+    },
+    "visual_documentation_rules": {
+      "required": [
+        "Installation process documentation",
+        "System assembly stages",
+        "Before/after engineering comparison",
+        "Technical verification records"
+      ],
+      "forbidden": [
+        "Lifestyle site photography",
+        "Decorative marketing shots",
+        "Non-technical visual storytelling"
+      ]
+    },
+    "psychological_effect": {
+      "primary_impression": "Highly controlled engineering execution authority",
+      "secondary_impression": "Industrial system reliability",
+      "user_perception": [
+        "This company controls execution like an engineering system",
+        "Nothing is random in installation",
+        "Everything is verified and structured"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Transform construction into controlled engineering execution",
+      "outcome": "AvizSazeh is perceived as an execution-grade architectural engineering system provider"
+    }
+  },
+  {
+    "id": 46,
+    "title": "Project Documentation System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Project Documentation System v1.0",
+    "core_principle": {
+      "statement": "Project documentation is the formal memory of the engineering system.",
+      "interpretation": "Every architectural project must be fully traceable from design intent to final execution through structured documentation."
+    },
+    "documentation_philosophy": {
+      "concept": "Engineering Traceability System",
+      "goal": "Ensure every decision, change, and execution step is recorded as part of a controlled system",
+      "anti_concept": "Reject informal, unstructured, or non-engineered documentation"
+    },
+    "documentation_structure": {
+      "system_flow": "Concept → Design → Engineering → System Definition → Manufacturing → Execution → Verification → Closure",
+      "rule": "Each stage must produce structured documentation artifacts"
+    },
+    "core_document_types": [
+      {
+        "name": "Project Brief Document",
+        "purpose": "Capture architectural intent and client requirements",
+        "content": [
+          "Project scope",
+          "Architectural goals",
+          "Constraints and requirements",
+          "Initial system expectations"
+        ]
+      },
+      {
+        "name": "Engineering Analysis Report",
+        "purpose": "Validate feasibility and structural logic",
+        "content": [
+          "Load analysis",
+          "Geometry validation",
+          "Material considerations",
+          "Risk assessment"
+        ]
+      },
+      {
+        "name": "System Definition Document",
+        "purpose": "Convert design into modular engineering system",
+        "content": [
+          "System architecture",
+          "Modular breakdown",
+          "Grid alignment mapping",
+          "Component definitions"
+        ]
+      },
+      {
+        "name": "Manufacturing Documentation",
+        "purpose": "Define production-ready system components",
+        "content": [
+          "Fabrication drawings",
+          "Material specifications",
+          "Assembly instructions",
+          "Tolerance definitions"
+        ]
+      },
+      {
+        "name": "Installation Guide",
+        "purpose": "Control on-site execution process",
+        "content": [
+          "Step-by-step installation flow",
+          "System assembly sequence",
+          "Site constraints",
+          "Safety and engineering rules"
+        ]
+      },
+      {
+        "name": "Execution Report",
+        "purpose": "Document actual installation results",
+        "content": [
+          "Installed system verification",
+          "Deviation report",
+          "Quality control results",
+          "Final system approval"
+        ]
+      },
+      {
+        "name": "Project Closure Report",
+        "purpose": "Finalize project lifecycle documentation",
+        "content": [
+          "Final system confirmation",
+          "Client approval",
+          "Performance evaluation",
+          "Project archive entry"
+        ]
+      }
+    ],
+    "engineering_traceability_rules": {
+      "rule_1": "Every decision must be documented",
+      "rule_2": "No undocumented field changes allowed",
+      "rule_3": "All changes must reference system version",
+      "rule_4": "Execution must match documented engineering model",
+      "rule_5": "Final output must be fully traceable"
+    },
+    "system_integration": {
+      "product_system_link": "All products must map to system definitions",
+      "execution_system_link": "All installation steps must follow documentation",
+      "design_system_link": "All designs must originate from structured documentation"
+    },
+    "format_standards": {
+      "structure": "Engineering-first structured documents",
+      "style": "Technical, precise, non-marketing language",
+      "format": "Modular documentation blocks with clear hierarchy",
+      "visual_logic": "Grid-aligned diagrams and structured tables preferred"
+    },
+    "quality_control": {
+      "validation_points": [
+        "Engineering accuracy check",
+        "System consistency check",
+        "Execution alignment check",
+        "Documentation completeness check"
+      ],
+      "rule": "No project can be closed without full validation pass"
+    },
+    "psychological_effect": {
+      "primary_impression": "Highly controlled engineering documentation system",
+      "secondary_impression": "Enterprise-grade architectural traceability",
+      "user_perception": [
+        "Everything is documented and controlled",
+        "This is a structured engineering organization",
+        "Nothing is left to improvisation"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Create full traceability of architectural engineering projects",
+      "outcome": "Position AvizSazeh as a system-driven engineering authority with full documentation control"
+    }
+  },
+  {
+    "id": 47,
+    "title": "Brand Experience System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Brand Experience System v1.0",
+    "core_principle": {
+      "statement": "Brand experience is the perception of an engineering system in every interaction, not emotional marketing engagement.",
+      "interpretation": "Every touchpoint must reinforce the feeling of structured architectural engineering intelligence."
+    },
+    "experience_architecture": {
+      "system_flow": "Awareness → Understanding → Trust → Validation → Engagement → Execution → Loyalty",
+      "rule": "Each stage must be driven by system clarity, not emotional persuasion"
+    },
+    "experience_layers": [
+      {
+        "layer": "Perception Layer",
+        "purpose": "First impression of the brand as an engineering system",
+        "elements": [
+          "Logo system",
+          "Color system",
+          "Typography system",
+          "Visual structure"
+        ],
+        "goal": "Immediate recognition of engineering authority"
+      },
+      {
+        "layer": "Understanding Layer",
+        "purpose": "User comprehension of system logic",
+        "elements": [
+          "Homepage architecture",
+          "System explanation pages",
+          "Engineering diagrams",
+          "Product system structure"
+        ],
+        "goal": "User understands AvizSazeh as a system, not a product brand"
+      },
+      {
+        "layer": "Trust Layer",
+        "purpose": "Validation of engineering capability",
+        "elements": [
+          "Project documentation",
+          "Execution reports",
+          "Engineering proof",
+          "Technical transparency"
+        ],
+        "goal": "Reduce perceived risk through system evidence"
+      },
+      {
+        "layer": "Engagement Layer",
+        "purpose": "Interaction with engineering system",
+        "elements": [
+          "Consultation requests",
+          "Project analysis",
+          "System inquiries",
+          "Technical communication"
+        ],
+        "goal": "Shift interaction from marketing to engineering dialogue"
+      },
+      {
+        "layer": "Execution Layer",
+        "purpose": "Real-world system delivery",
+        "elements": [
+          "Engineering execution process",
+          "Installation system",
+          "Manufacturing system",
+          "Project delivery"
+        ],
+        "goal": "Deliver controlled architectural engineering systems"
+      }
+    ],
+    "touchpoint_rules": {
+      "website": "Must behave like engineering system interface",
+      "documents": "Must follow structured technical logic",
+      "visuals": "Must reflect architectural engineering reality",
+      "communication": "Must be system-based, not promotional"
+    },
+    "interaction_principles": [
+      {
+        "name": "System First Interaction",
+        "description": "Every interaction must introduce system logic before product detail"
+      },
+      {
+        "name": "Engineering Clarity",
+        "description": "No ambiguity or emotional persuasion in communication"
+      },
+      {
+        "name": "Progressive System Disclosure",
+        "description": "User understanding must evolve step-by-step through system layers"
+      }
+    ],
+    "user_journey_model": {
+      "step_1": "User sees structured engineering identity",
+      "step_2": "User understands system-based architecture",
+      "step_3": "User validates technical capability",
+      "step_4": "User engages with engineering process",
+      "step_5": "User enters execution phase collaboration"
+    },
+    "experience_design_rules": {
+      "consistency": "All channels must reflect same engineering system logic",
+      "clarity": "No decorative or emotional inconsistency allowed",
+      "structure": "All experiences must be modular and system-based",
+      "predictability": "User journey must follow defined system flow"
+    },
+    "psychological_effect": {
+      "primary_impression": "Structured engineering authority",
+      "secondary_impression": "Highly reliable architectural system provider",
+      "user_perception": [
+        "This is not a brand, it is an engineering system",
+        "Everything is structured and controlled",
+        "This company operates like a technical platform"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Transform all brand interactions into engineering system experiences",
+      "outcome": "Consistent perception of AvizSazeh as an architectural engineering system authority"
+    }
+  },
+  {
+    "id": 48,
+    "title": "Brand Perception Control System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Perception Control System v1.0",
+    "core_principle": {
+      "statement": "Brand perception is a controlled engineering output, not an uncontrolled emotional interpretation.",
+      "interpretation": "Every interaction must be designed to shape how the brand is cognitively classified as an architectural engineering system."
+    },
+    "perception_objective": {
+      "target_identity": "Architectural Engineering System Provider",
+      "forbidden_identity": [
+        "Product seller",
+        "Construction contractor",
+        "Interior decoration brand",
+        "Marketing-driven construction company"
+      ]
+    },
+    "perception_architecture": {
+      "control_layers": [
+        {
+          "layer": "Structural Identity Layer",
+          "function": "Defines core engineering perception",
+          "components": [
+            "Logo system",
+            "Typography system",
+            "Grid system",
+            "Color system"
+          ],
+          "effect": "Immediate recognition of engineering authority"
+        },
+        {
+          "layer": "System Understanding Layer",
+          "function": "Defines how users interpret brand logic",
+          "components": [
+            "Homepage architecture",
+            "System diagrams",
+            "Product architecture system",
+            "Engineering explanations"
+          ],
+          "effect": "User perceives brand as structured system, not product catalog"
+        },
+        {
+          "layer": "Trust Validation Layer",
+          "function": "Reduces uncertainty through engineering proof",
+          "components": [
+            "Project documentation",
+            "Execution system reports",
+            "Technical validation outputs"
+          ],
+          "effect": "Perception shifts from claim → verified system capability"
+        },
+        {
+          "layer": "Execution Reality Layer",
+          "function": "Final perception confirmation through real-world delivery",
+          "components": [
+            "Installed systems",
+            "Manufacturing outputs",
+            "Site execution documentation"
+          ],
+          "effect": "Brand becomes perceived as real engineering authority"
+        }
+      ]
+    },
+    "perception_control_mechanisms": {
+      "consistency_enforcement": "All outputs must follow AECS system rules",
+      "visual_control": "Only structured engineering visuals allowed",
+      "language_control": "System-based communication only",
+      "interaction_control": "Engineering-driven user journeys only"
+    },
+    "communication_rules": {
+      "allowed": [
+        "System explanations",
+        "Engineering logic descriptions",
+        "Structured technical communication",
+        "Execution process descriptions"
+      ],
+      "forbidden": [
+        "Emotional persuasion",
+        "Luxury marketing language",
+        "Decorative storytelling",
+        "Lifestyle branding narratives"
+      ]
+    },
+    "cognitive_shaping_model": {
+      "phase_1": "User sees structured engineering identity",
+      "phase_2": "User understands system logic behind products",
+      "phase_3": "User validates technical capability",
+      "phase_4": "User accepts execution reliability",
+      "phase_5": "User perceives brand as engineering authority"
+    },
+    "risk_control": {
+      "perception_risks": [
+        "Luxury brand misclassification",
+        "Product vendor perception",
+        "Construction contractor association",
+        "Marketing-driven identity dilution"
+      ],
+      "prevention_strategy": "Strict adherence to AECS system structure across all touchpoints"
+    },
+    "system_alignment": {
+      "design": "Must follow engineering grid and system logic",
+      "content": "Must reflect architectural engineering thinking",
+      "visuals": "Must be documentation-based, not decorative",
+      "interaction": "Must reinforce system understanding"
+    },
+    "psychological_effect": {
+      "primary_impression": "Controlled engineering authority",
+      "secondary_impression": "Highly structured architectural system intelligence",
+      "user_perception": [
+        "This is a technical engineering system, not a brand",
+        "Everything is controlled and structured",
+        "This company operates like a design-to-execution platform"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Fully control how AvizSazeh is cognitively classified in the market",
+      "outcome": "Consistent perception of AvizSazeh as an Architectural Engineering System Authority"
+    }
+  },
+  {
+    "id": 49,
+    "title": "Brand Governance System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "system_name": "AECS Brand Governance System v1.0",
+    "core_principle": {
+      "statement": "Brand governance ensures that every output of the organization remains aligned with the architectural engineering system identity.",
+      "interpretation": "No visual, verbal, or operational element is allowed outside the AECS system logic."
+    },
+    "governance_structure": {
+      "levels": [
+        {
+          "level": "Level 1 - System Authority",
+          "role": "Defines AECS system rules and architecture",
+          "responsibility": [
+            "Define brand system structure",
+            "Approve all core frameworks",
+            "Control system evolution"
+          ]
+        },
+        {
+          "level": "Level 2 - Design Governance",
+          "role": "Ensures visual and communication compliance",
+          "responsibility": [
+            "Validate UI/UX consistency",
+            "Enforce visual language rules",
+            "Control typography, color, grid adherence"
+          ]
+        },
+        {
+          "level": "Level 3 - Execution Governance",
+          "role": "Ensures real-world implementation alignment",
+          "responsibility": [
+            "Validate engineering execution outputs",
+            "Ensure project documentation compliance",
+            "Control installation and manufacturing alignment"
+          ]
+        },
+        {
+          "level": "Level 4 - Content Governance",
+          "role": "Controls messaging and communication system",
+          "responsibility": [
+            "Enforce tone of voice rules",
+            "Validate messaging framework compliance",
+            "Prevent marketing-style distortion"
+          ]
+        }
+      ]
+    },
+    "decision_system": {
+      "rule_based": "All decisions must follow AECS system rules",
+      "hierarchy": [
+        "System Rule (highest priority)",
+        "Engineering Logic",
+        "Design Consistency",
+        "Operational Efficiency"
+      ],
+      "override_rule": "No subjective or aesthetic decision can override system logic"
+    },
+    "compliance_rules": {
+      "mandatory": [
+        "Strict adherence to AECS color system",
+        "Strict adherence to typography hierarchy",
+        "Strict adherence to grid system",
+        "Strict adherence to logo construction rules",
+        "Strict adherence to engineering execution model"
+      ],
+      "forbidden": [
+        "Brand interpretation outside system framework",
+        "Decorative design decisions",
+        "Marketing-driven visual changes",
+        "Uncontrolled local variations"
+      ]
+    },
+    "quality_control_system": {
+      "validation_layers": [
+        "System Consistency Check",
+        "Engineering Logic Validation",
+        "Visual Identity Compliance",
+        "Execution Accuracy Review"
+      ],
+      "failure_response": "Non-compliant outputs must be rejected or re-engineered within AECS system"
+    },
+    "system_evolution_rules": {
+      "principle": "The system can evolve, but never break its structural logic",
+      "allowed_changes": [
+        "Adding new system modules",
+        "Expanding engineering definitions",
+        "Refining visual constraints"
+      ],
+      "forbidden_changes": [
+        "Breaking grid system logic",
+        "Changing core color philosophy",
+        "Removing engineering-first principle",
+        "Introducing decorative brand direction"
+      ]
+    },
+    "risk_management": {
+      "critical_risks": [
+        "Brand dilution into decorative identity",
+        "Loss of engineering perception",
+        "Fragmentation of system logic",
+        "Inconsistent execution across channels"
+      ],
+      "prevention_strategy": "Centralized enforcement of AECS system rules across all brand outputs"
+    },
+    "psychological_effect": {
+      "primary_impression": "Fully controlled engineering organization",
+      "secondary_impression": "Highly structured architectural system governance",
+      "user_perception": [
+        "This is not a brand, it is a governed engineering system",
+        "Everything is controlled and standardized",
+        "No randomness exists in this organization"
+      ]
+    },
+    "strategic_goal": {
+      "objective": "Ensure full structural control over all brand outputs",
+      "outcome": "AvizSazeh operates as a fully governed Architectural Engineering System with zero deviation"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Brand Enemy Definition",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "primary_enemy": {
+      "name": "Unengineered Material Procurement",
+      "definition": "The practice of selecting and purchasing architectural materials based only on price, appearance, or catalog specifications without engineering validation or system-level design integration.",
+      "impact": "Leads to execution failure, design distortion, installation inefficiency, and increased project risk."
+    },
+    "secondary_enemies": [
+      {
+        "name": "Decoration-Driven Decision Making",
+        "definition": "Choosing ceiling systems based on visual appeal rather than architectural or engineering requirements.",
+        "risk": "Transforms architectural projects into decorative outputs with reduced structural integrity."
+      },
+      {
+        "name": "Product-Based Thinking",
+        "definition": "Treating ceiling systems as isolated products instead of integrated architectural systems.",
+        "risk": "Breaks system logic and leads to incompatibility in execution."
+      },
+      {
+        "name": "Low-Engineering Contractors",
+        "definition": "Execution entities that lack technical understanding of architectural system design and rely on manual or non-standard installation methods.",
+        "risk": "Causes deviations from design intent and reduces project quality."
+      }
+    ],
+    "system_conflict": {
+      "core_conflict": "System Engineering vs Material Purchase Thinking",
+      "description": "AvizSazeh operates as a system engineering brand, while the enemy represents fragmented, non-engineered decision making in construction projects."
+    },
+    "brand_stance": {
+      "position": "Strictly against non-engineered selection of architectural ceiling systems",
+      "approach": "Promote system-based thinking instead of product-based purchasing behavior",
+      "communication_rule": "Educate, not attack; reframe, not insult"
+    },
+    "strategic_importance": {
+      "function": "Defines market contrast and strengthens brand positioning",
+      "role": "Creates cognitive separation between engineered systems and commodity construction materials"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Brand Value System",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "core_values": [
+      {
+        "name": "Precision",
+        "definition": "Every design, component, and execution step must follow exact engineering logic and measurable accuracy.",
+        "behavioral_expression": "No ambiguity in design or execution; all outputs are structured and calculable."
+      },
+      {
+        "name": "Engineering Integrity",
+        "definition": "Commitment to ensuring that all architectural designs are validated through engineering principles before execution.",
+        "behavioral_expression": "Rejects non-engineered decisions and ensures system-level validation in all projects."
+      },
+      {
+        "name": "Reliability",
+        "definition": "Ability to consistently deliver predictable, stable, and buildable architectural systems.",
+        "behavioral_expression": "Projects are executed with controlled outcomes and reduced uncertainty."
+      },
+      {
+        "name": "Architectural Intelligence",
+        "definition": "Deep understanding of architectural intent and its translation into functional systems.",
+        "behavioral_expression": "Interprets design not as image, but as an executable system."
+      },
+      {
+        "name": "Customization",
+        "definition": "Every project is treated as a unique system requiring tailored engineering solutions.",
+        "behavioral_expression": "No generic product mindset; all systems are project-specific."
+      },
+      {
+        "name": "Responsibility",
+        "definition": "Ownership of both design interpretation and execution outcome.",
+        "behavioral_expression": "Ensures accountability across design-to-installation lifecycle."
+      },
+      {
+        "name": "Quality",
+        "definition": "Commitment to structural, visual, and functional excellence in all architectural systems.",
+        "behavioral_expression": "Quality is defined as successful execution of architectural intent."
+      }
+    ],
+    "value_hierarchy": {
+      "primary_values": [
+        "Engineering Integrity",
+        "Precision",
+        "Reliability"
+      ],
+      "secondary_values": [
+        "Architectural Intelligence",
+        "Customization"
+      ],
+      "supporting_values": [
+        "Responsibility",
+        "Quality"
+      ]
+    },
+    "value_logic": {
+      "principle": "Value is defined by execution reliability, not visual appearance alone",
+      "system_statement": "A system is valuable only if it can be built without loss of architectural intent"
+    },
+    "strategic_role": {
+      "function": "Defines internal behavior standards and external brand perception",
+      "impact": "Ensures consistency across engineering, manufacturing, and communication layers"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Messaging Framework",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "core_message": {
+      "statement": "Architectural ceiling systems engineered for execution.",
+      "meaning": "AvizSazeh transforms architectural intent into buildable, reliable, and customized ceiling systems through engineering-driven processes."
+    },
+    "supporting_messages": [
+      {
+        "message": "From architectural idea to engineered system.",
+        "purpose": "Explains transformation logic in simple form"
+      },
+      {
+        "message": "Design, engineering, and execution in one integrated system.",
+        "purpose": "Highlights system integration capability"
+      },
+      {
+        "message": "Buildable solutions for complex architectural requirements.",
+        "purpose": "Emphasizes engineering reliability"
+      },
+      {
+        "message": "Every project is a custom-engineered ceiling system.",
+        "purpose": "Communicates customization principle"
+      }
+    ],
+    "message_hierarchy": {
+      "primary": "Engineering architectural intent into reality",
+      "secondary": "Integrated design-to-execution ceiling systems",
+      "tertiary": "Custom solutions for architectural projects"
+    },
+    "communication_strategy": {
+      "approach": "Technical clarity over marketing persuasion",
+      "tone_alignment": "Professional, evidence-based, engineering-focused",
+      "avoidance_rules": [
+        "No exaggerated marketing claims",
+        "No emotional luxury language",
+        "No generic construction slogans"
+      ]
+    },
+    "audience_mapping": {
+      "architects": "Preserve design intent through engineering systems",
+      "consulting_engineers": "Ensure technical compliance and buildability",
+      "contractors": "Reduce execution risk and installation uncertainty",
+      "developers": "Improve reliability and reduce project failure cost"
+    },
+    "brand_narrative_flow": {
+      "sequence": "Problem → Engineering Solution → System Integration → Execution Reliability → Architectural Outcome",
+      "interpretation": "Every message must reinforce system thinking, not product selling"
+    },
+    "strategic_goal": {
+      "objective": "Position AvizSazeh as an engineering system partner, not a material supplier",
+      "perception_target": "Architectural Engineering Authority"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Brand Story",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "origin_context": {
+      "background": "AvizSazeh was formed from the need to bridge a critical gap between architectural design intent and real-world execution in ceiling systems.",
+      "industry_problem": "Architectural ceiling designs often fail during execution due to lack of engineering integration, leading to loss of design quality and structural inconsistency."
+    },
+    "story_narrative": {
+      "beginning": {
+        "situation": "Architectural ideas were being designed with high visual and spatial quality, but execution often reduced them to simplified, non-engineered results.",
+        "problem": "The absence of a system-level engineering approach caused a disconnect between design and construction reality."
+      },
+      "transformation": {
+        "insight": "The solution is not better materials, but better systems.",
+        "realization": "Ceiling systems must be engineered as integrated architectural systems rather than isolated products.",
+        "action": "AvizSazeh was developed as an engineering-driven brand to convert architectural intent into buildable systems."
+      },
+      "current_state": {
+        "position": "AvizSazeh operates as an Architectural Engineering System provider.",
+        "capability": "It integrates design interpretation, engineering validation, manufacturing control, and execution reliability into a single system."
+      },
+      "future_state": {
+        "vision": "A future where architectural ceiling systems are always engineered, never improvised.",
+        "goal": "To become the regional reference for system-based architectural execution."
+      }
+    },
+    "core_message_of_story": {
+      "statement": "We do not manufacture ceilings. We engineer architectural systems that make design buildable.",
+      "interpretation": "The brand exists to ensure architectural ideas survive execution without compromise."
+    },
+    "emotional_layer": {
+      "architect": "Your design will be preserved in execution.",
+      "engineer": "The system is structured, measurable, and reliable.",
+      "developer": "Your project risk is significantly reduced.",
+      "contractor": "Execution becomes predictable and controlled."
+    },
+    "brand_philosophy": {
+      "principle": "Architecture without engineering is incomplete.",
+      "belief": "The value of design is measured in its ability to be built accurately."
+    },
+    "strategic_role": {
+      "function": "Creates narrative foundation for all brand communication",
+      "impact": "Transforms brand perception from product supplier to system engineering authority"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Brand Manifesto",
+    "brand": "AvizSazeh",
+    "category": "Architectural Engineering System Brand",
+    "manifesto": {
+      "statement": "We believe architecture is not complete until it is built exactly as it was designed.",
+      "core_belief": "Design without engineering is an illusion. Execution without system is chaos.",
+      "position": "We are not a manufacturer of ceilings. We are engineers of architectural reality."
+    },
+    "principles": [
+      {
+        "title": "Architecture must be buildable",
+        "description": "Every architectural idea must pass through engineering validation before becoming reality."
+      },
+      {
+        "title": "Systems are more important than products",
+        "description": "We do not sell materials; we design and deliver integrated architectural systems."
+      },
+      {
+        "title": "Execution defines value",
+        "description": "The value of design is measured by how precisely it can be executed."
+      },
+      {
+        "title": "Engineering is responsibility",
+        "description": "We take responsibility for translating design intent into physical reality without distortion."
+      }
+    ],
+    "rejection_statements": [
+      "We reject decoration without engineering.",
+      "We reject material selection without system thinking.",
+      "We reject architectural compromise in execution.",
+      "We reject fragmented construction without integration."
+    ],
+    "identity_statement": {
+      "core_identity": "Architectural Engineering System Provider",
+      "meaning": "A brand that connects architecture, engineering, manufacturing, and execution into one unified system."
+    },
+    "voice": {
+      "tone": "Direct, technical, precise, non-promotional",
+      "style": "Engineering logic over emotional persuasion",
+      "language_rule": "We explain systems, not sell products"
+    },
+    "vision_alignment": {
+      "future": "A world where every architectural ceiling system is engineered, not improvised.",
+      "goal": "To make architectural execution predictable, precise, and system-driven across regions."
+    },
+    "closing_statement": {
+      "line": "We do not decorate space. We engineer architecture into reality."
+    }
+  },
+  {
+    "brand_system": "AvizSazeh AECS v1.0",
+    "description": "Architectural Engineering Brand System for metal ceiling systems",
+    "files": [
+      {
+        "id": 1,
+        "title": "Brand Core Strategy",
+        "content": "Defines AvizSazeh as an Architectural Engineering System brand focused on transforming architectural intent into buildable ceiling systems. Core principle: Architecture → Engineering → Execution."
+      },
+      {
+        "id": 2,
+        "title": "Brand Essence & Purpose",
+        "content": "Essence: Engineering Architecture Into Reality. Purpose: Bridge between architectural design and real-world execution systems."
+      },
+      {
+        "id": 3,
+        "title": "Brand Positioning System",
+        "content": "Positioned as an Architectural Engineering System Provider for EPCs, architects, and developers across Iran, GCC, and CIS markets."
+      },
+      {
+        "id": 4,
+        "title": "Mission & Vision",
+        "content": "Mission: Design and deliver engineered ceiling systems. Vision: Become regional authority in architectural ceiling systems."
+      },
+      {
+        "id": 5,
+        "title": "Brand Enemy Definition",
+        "content": "Opposes non-engineered material purchasing decisions that ignore architectural and execution requirements."
+      },
+      {
+        "id": 6,
+        "title": "Brand Value System",
+        "content": "Precision, reliability, expertise, innovation, responsibility, quality form the core brand values."
+      },
+      {
+        "id": 7,
+        "title": "Messaging Framework",
+        "content": "Key messages: engineered ceiling systems, architecture-to-execution workflow, project-specific solutions, integrated design and production."
+      },
+      {
+        "id": 8,
+        "title": "Brand Story",
+        "content": "AvizSazeh transforms architectural ideas into executable systems through engineering-driven design and manufacturing."
+      },
+      {
+        "id": 9,
+        "title": "Brand Manifesto",
+        "content": "We believe architecture must be buildable. We reject decoration without engineering. We deliver systems, not products."
+      },
+      {
+        "id": 10,
+        "title": "Target Audience System",
+        "content": "Architects, EPC contractors, consultants, developers, and project managers requiring engineered ceiling solutions."
+      },
+      {
+        "id": 11,
+        "title": "Market Position Map",
+        "content": "Positioned between architectural design firms and industrial manufacturers as a system integrator."
+      },
+      {
+        "id": 12,
+        "title": "Competitive Analysis",
+        "content": "Benchmarked against Siemens, Autodesk, Hunter Douglas, SAS International, Foster + Partners in system thinking and execution."
+      },
+      {
+        "id": 13,
+        "title": "Brand Archetype System",
+        "content": "Primary archetype: Engineer. Secondary: Creator. Focus on logic, structure, and transformation."
+      },
+      {
+        "id": 14,
+        "title": "Brand Personality Traits",
+        "content": "Precise, technical, reliable, intelligent, structured, solution-oriented, and architectural."
+      },
+      {
+        "id": 15,
+        "title": "Tone of Voice",
+        "content": "Professional, technical, evidence-based, non-promotional, clear, and engineering-focused."
+      },
+      {
+        "id": 16,
+        "title": "Communication Rules",
+        "content": "Avoid superlatives, emotional marketing language, and decorative claims. Focus on measurable engineering value."
+      },
+      {
+        "id": 17,
+        "title": "Brand Character",
+        "content": "A senior engineering architect who translates design intent into executable systems."
+      },
+      {
+        "id": 18,
+        "title": "AECS Color System Master",
+        "content": "Core system: Engineering + Architecture + Authority Accent. Designed for industrial architectural branding."
+      },
+      {
+        "id": 19,
+        "title": "Engineering Layer Colors",
+        "content": "#1F2328, #3D3D3D, #4B5563 used for structural identity and engineering communication."
+      },
+      {
+        "id": 20,
+        "title": "Architectural Layer Colors",
+        "content": "#ECE9E3, #B7B0A5, #FFFFFF used for spatial and architectural representation."
+      },
+      {
+        "id": 21,
+        "title": "Authority Accent System",
+        "content": "#B89A63 used only for highlights, transformation points, and CTA emphasis."
+      },
+      {
+        "id": 22,
+        "title": "Color Usage Rules",
+        "content": "Engineering 50%, Architecture 40%, Accent 10%. Strict hierarchy control required."
+      },
+      {
+        "id": 23,
+        "title": "Color Misuse Rules",
+        "content": "No gradient gold, no decorative palettes, no luxury dominance, no soft pastel branding."
+      },
+      {
+        "id": 24,
+        "title": "Typography System",
+        "content": "Persian: Vazirmatn, IRANSansX. English: Inter, IBM Plex Sans. Focus on clarity and engineering readability."
+      },
+      {
+        "id": 25,
+        "title": "Typography Hierarchy",
+        "content": "H1 bold engineering tone, H2 structured clarity, body text neutral, captions minimal."
+      },
+      {
+        "id": 26,
+        "title": "Typography Rules",
+        "content": "No decorative fonts. No script styles. Maintain industrial architectural clarity."
+      },
+      {
+        "id": 27,
+        "title": "Logo Strategy",
+        "content": "Logo represents transformation system, not physical ceiling products."
+      },
+      {
+        "id": 28,
+        "title": "Logo Construction System",
+        "content": "Built on 10x10 grid with modular transformation logic from line to system."
+      },
+      {
+        "id": 29,
+        "title": "Logo Symbol Logic",
+        "content": "Line → Module → System → Transformation point representing architectural execution."
+      },
+      {
+        "id": 30,
+        "title": "Logo Variants",
+        "content": "Variant A linear transformation, Variant B modular grid, Variant C convergence system."
+      },
+      {
+        "id": 31,
+        "title": "Logo Usage Rules",
+        "content": "Maintain safe space, avoid distortion, maintain grid integrity and color hierarchy."
+      },
+      {
+        "id": 32,
+        "title": "Logo Misuse Rules",
+        "content": "No 3D effects, no bevel, no building shapes, no decorative icons allowed."
+      },
+      {
+        "id": 33,
+        "title": "Visual Language Principles",
+        "content": "Based on engineering structure, modular systems, and architectural logic."
+      },
+      {
+        "id": 34,
+        "title": "Architectural Grid System",
+        "content": "10x10 modular grid used for all visual compositions and layouts."
+      },
+      {
+        "id": 35,
+        "title": "Geometry Rules",
+        "content": "Allowed: 90° and 45° geometry. Forbidden: organic and decorative shapes."
+      },
+      {
+        "id": 36,
+        "title": "Iconography System",
+        "content": "Minimal engineering icons only. No decorative or illustrative styles."
+      },
+      {
+        "id": 37,
+        "title": "Photography Direction",
+        "content": "Focus on real architectural spaces, installation processes, and technical execution imagery."
+      },
+      {
+        "id": 38,
+        "title": "Image Style Rules",
+        "content": "Avoid stock lifestyle imagery. Prioritize real industrial and architectural documentation."
+      },
+      {
+        "id": 39,
+        "title": "UI Design System",
+        "content": "Engineering-first UI with grid-based structure, neutral tones, and controlled accent usage."
+      },
+      {
+        "id": 40,
+        "title": "Color Tokens System",
+        "content": "CSS/Tailwind tokens derived from AECS system for consistent digital implementation."
+      },
+      {
+        "id": 41,
+        "title": "Component System",
+        "content": "Buttons, cards, and UI components follow strict engineering hierarchy and spacing rules."
+      },
+      {
+        "id": 42,
+        "title": "Layout System",
+        "content": "12-column grid system with architectural spacing logic and modular structure."
+      },
+      {
+        "id": 43,
+        "title": "Homepage Architecture",
+        "content": "Hero → Trust → Projects → Systems → Engineering Proof → CTA structure."
+      },
+      {
+        "id": 44,
+        "title": "Product Architecture System",
+        "content": "Defines ceiling systems as modular engineering solutions, not products."
+      },
+      {
+        "id": 45,
+        "title": "Engineering Execution System",
+        "content": "End-to-end workflow from design support to manufacturing and installation."
+      },
+      {
+        "id": 46,
+        "title": "Project Documentation System",
+        "content": "Technical documentation includes drawings, specs, and execution methodology."
+      },
+      {
+        "id": 47,
+        "title": "Brand Experience System",
+        "content": "User journey designed to shift perception from product seller to engineering partner."
+      },
+      {
+        "id": 48,
+        "title": "Brand Perception Control",
+        "content": "Ensures perception of engineering authority, architectural intelligence, and execution reliability."
+      },
+      {
+        "id": 49,
+        "title": "Brand Governance System",
+        "content": "Final rulebook controlling all brand, design, communication, and execution standards."
+      }
+    ]
+  }
+]

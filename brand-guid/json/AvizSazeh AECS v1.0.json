@@ -1,0 +1,261 @@
+{
+  "brand_system": "AvizSazeh AECS v1.0",
+  "description": "Architectural Engineering Brand System for metal ceiling systems",
+  "files": [
+    {
+      "id": 1,
+      "title": "Brand Core Strategy",
+      "content": "Defines AvizSazeh as an Architectural Engineering System brand focused on transforming architectural intent into buildable ceiling systems. Core principle: Architecture → Engineering → Execution."
+    },
+    {
+      "id": 2,
+      "title": "Brand Essence & Purpose",
+      "content": "Essence: Engineering Architecture Into Reality. Purpose: Bridge between architectural design and real-world execution systems."
+    },
+    {
+      "id": 3,
+      "title": "Brand Positioning System",
+      "content": "Positioned as an Architectural Engineering System Provider for EPCs, architects, and developers across Iran, GCC, and CIS markets."
+    },
+    {
+      "id": 4,
+      "title": "Mission & Vision",
+      "content": "Mission: Design and deliver engineered ceiling systems. Vision: Become regional authority in architectural ceiling systems."
+    },
+    {
+      "id": 5,
+      "title": "Brand Enemy Definition",
+      "content": "Opposes non-engineered material purchasing decisions that ignore architectural and execution requirements."
+    },
+    {
+      "id": 6,
+      "title": "Brand Value System",
+      "content": "Precision, reliability, expertise, innovation, responsibility, quality form the core brand values."
+    },
+
+    {
+      "id": 7,
+      "title": "Messaging Framework",
+      "content": "Key messages: engineered ceiling systems, architecture-to-execution workflow, project-specific solutions, integrated design and production."
+    },
+    {
+      "id": 8,
+      "title": "Brand Story",
+      "content": "AvizSazeh transforms architectural ideas into executable systems through engineering-driven design and manufacturing."
+    },
+    {
+      "id": 9,
+      "title": "Brand Manifesto",
+      "content": "We believe architecture must be buildable. We reject decoration without engineering. We deliver systems, not products."
+    },
+    {
+      "id": 10,
+      "title": "Target Audience System",
+      "content": "Architects, EPC contractors, consultants, developers, and project managers requiring engineered ceiling solutions."
+    },
+    {
+      "id": 11,
+      "title": "Market Position Map",
+      "content": "Positioned between architectural design firms and industrial manufacturers as a system integrator."
+    },
+    {
+      "id": 12,
+      "title": "Competitive Analysis",
+      "content": "Benchmarked against Siemens, Autodesk, Hunter Douglas, SAS International, Foster + Partners in system thinking and execution."
+    },
+
+    {
+      "id": 13,
+      "title": "Brand Archetype System",
+      "content": "Primary archetype: Engineer. Secondary: Creator. Focus on logic, structure, and transformation."
+    },
+    {
+      "id": 14,
+      "title": "Brand Personality Traits",
+      "content": "Precise, technical, reliable, intelligent, structured, solution-oriented, and architectural."
+    },
+    {
+      "id": 15,
+      "title": "Tone of Voice",
+      "content": "Professional, technical, evidence-based, non-promotional, clear, and engineering-focused."
+    },
+    {
+      "id": 16,
+      "title": "Communication Rules",
+      "content": "Avoid superlatives, emotional marketing language, and decorative claims. Focus on measurable engineering value."
+    },
+    {
+      "id": 17,
+      "title": "Brand Character",
+      "content": "A senior engineering architect who translates design intent into executable systems."
+    },
+
+    {
+      "id": 18,
+      "title": "AECS Color System Master",
+      "content": "Core system: Engineering + Architecture + Authority Accent. Designed for industrial architectural branding."
+    },
+    {
+      "id": 19,
+      "title": "Engineering Layer Colors",
+      "content": "#1F2328, #3D3D3D, #4B5563 used for structural identity and engineering communication."
+    },
+    {
+      "id": 20,
+      "title": "Architectural Layer Colors",
+      "content": "#ECE9E3, #B7B0A5, #FFFFFF used for spatial and architectural representation."
+    },
+    {
+      "id": 21,
+      "title": "Authority Accent System",
+      "content": "#B89A63 used only for highlights, transformation points, and CTA emphasis."
+    },
+    {
+      "id": 22,
+      "title": "Color Usage Rules",
+      "content": "Engineering 50%, Architecture 40%, Accent 10%. Strict hierarchy control required."
+    },
+    {
+      "id": 23,
+      "title": "Color Misuse Rules",
+      "content": "No gradient gold, no decorative palettes, no luxury dominance, no soft pastel branding."
+    },
+
+    {
+      "id": 24,
+      "title": "Typography System",
+      "content": "Persian: Vazirmatn, IRANSansX. English: Inter, IBM Plex Sans. Focus on clarity and engineering readability."
+    },
+    {
+      "id": 25,
+      "title": "Typography Hierarchy",
+      "content": "H1 bold engineering tone, H2 structured clarity, body text neutral, captions minimal."
+    },
+    {
+      "id": 26,
+      "title": "Typography Rules",
+      "content": "No decorative fonts. No script styles. Maintain industrial architectural clarity."
+    },
+
+    {
+      "id": 27,
+      "title": "Logo Strategy",
+      "content": "Logo represents transformation system, not physical ceiling products."
+    },
+    {
+      "id": 28,
+      "title": "Logo Construction System",
+      "content": "Built on 10x10 grid with modular transformation logic from line to system."
+    },
+    {
+      "id": 29,
+      "title": "Logo Symbol Logic",
+      "content": "Line → Module → System → Transformation point representing architectural execution."
+    },
+    {
+      "id": 30,
+      "title": "Logo Variants",
+      "content": "Variant A linear transformation, Variant B modular grid, Variant C convergence system."
+    },
+    {
+      "id": 31,
+      "title": "Logo Usage Rules",
+      "content": "Maintain safe space, avoid distortion, maintain grid integrity and color hierarchy."
+    },
+    {
+      "id": 32,
+      "title": "Logo Misuse Rules",
+      "content": "No 3D effects, no bevel, no building shapes, no decorative icons allowed."
+    },
+
+    {
+      "id": 33,
+      "title": "Visual Language Principles",
+      "content": "Based on engineering structure, modular systems, and architectural logic."
+    },
+    {
+      "id": 34,
+      "title": "Architectural Grid System",
+      "content": "10x10 modular grid used for all visual compositions and layouts."
+    },
+    {
+      "id": 35,
+      "title": "Geometry Rules",
+      "content": "Allowed: 90° and 45° geometry. Forbidden: organic and decorative shapes."
+    },
+    {
+      "id": 36,
+      "title": "Iconography System",
+      "content": "Minimal engineering icons only. No decorative or illustrative styles."
+    },
+
+    {
+      "id": 37,
+      "title": "Photography Direction",
+      "content": "Focus on real architectural spaces, installation processes, and technical execution imagery."
+    },
+    {
+      "id": 38,
+      "title": "Image Style Rules",
+      "content": "Avoid stock lifestyle imagery. Prioritize real industrial and architectural documentation."
+    },
+
+    {
+      "id": 39,
+      "title": "UI Design System",
+      "content": "Engineering-first UI with grid-based structure, neutral tones, and controlled accent usage."
+    },
+    {
+      "id": 40,
+      "title": "Color Tokens System",
+      "content": "CSS/Tailwind tokens derived from AECS system for consistent digital implementation."
+    },
+    {
+      "id": 41,
+      "title": "Component System",
+      "content": "Buttons, cards, and UI components follow strict engineering hierarchy and spacing rules."
+    },
+    {
+      "id": 42,
+      "title": "Layout System",
+      "content": "12-column grid system with architectural spacing logic and modular structure."
+    },
+    {
+      "id": 43,
+      "title": "Homepage Architecture",
+      "content": "Hero → Trust → Projects → Systems → Engineering Proof → CTA structure."
+    },
+
+    {
+      "id": 44,
+      "title": "Product Architecture System",
+      "content": "Defines ceiling systems as modular engineering solutions, not products."
+    },
+    {
+      "id": 45,
+      "title": "Engineering Execution System",
+      "content": "End-to-end workflow from design support to manufacturing and installation."
+    },
+    {
+      "id": 46,
+      "title": "Project Documentation System",
+      "content": "Technical documentation includes drawings, specs, and execution methodology."
+    },
+
+    {
+      "id": 47,
+      "title": "Brand Experience System",
+      "content": "User journey designed to shift perception from product seller to engineering partner."
+    },
+    {
+      "id": 48,
+      "title": "Brand Perception Control",
+      "content": "Ensures perception of engineering authority, architectural intelligence, and execution reliability."
+    },
+    {
+      "id": 49,
+      "title": "Brand Governance System",
+      "content": "Final rulebook controlling all brand, design, communication, and execution standards."
+    }
+  ]
+}

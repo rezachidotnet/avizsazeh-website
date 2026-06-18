@@ -1,0 +1,132 @@
+{
+  "id": 48,
+  "title": "Brand Perception Control System",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS Perception Control System v1.0",
+
+  "core_principle": {
+    "statement": "Brand perception is a controlled engineering output, not an uncontrolled emotional interpretation.",
+    "interpretation": "Every interaction must be designed to shape how the brand is cognitively classified as an architectural engineering system."
+  },
+
+  "perception_objective": {
+    "target_identity": "Architectural Engineering System Provider",
+    "forbidden_identity": [
+      "Product seller",
+      "Construction contractor",
+      "Interior decoration brand",
+      "Marketing-driven construction company"
+    ]
+  },
+
+  "perception_architecture": {
+    "control_layers": [
+      {
+        "layer": "Structural Identity Layer",
+        "function": "Defines core engineering perception",
+        "components": [
+          "Logo system",
+          "Typography system",
+          "Grid system",
+          "Color system"
+        ],
+        "effect": "Immediate recognition of engineering authority"
+      },
+      {
+        "layer": "System Understanding Layer",
+        "function": "Defines how users interpret brand logic",
+        "components": [
+          "Homepage architecture",
+          "System diagrams",
+          "Product architecture system",
+          "Engineering explanations"
+        ],
+        "effect": "User perceives brand as structured system, not product catalog"
+      },
+      {
+        "layer": "Trust Validation Layer",
+        "function": "Reduces uncertainty through engineering proof",
+        "components": [
+          "Project documentation",
+          "Execution system reports",
+          "Technical validation outputs"
+        ],
+        "effect": "Perception shifts from claim → verified system capability"
+      },
+      {
+        "layer": "Execution Reality Layer",
+        "function": "Final perception confirmation through real-world delivery",
+        "components": [
+          "Installed systems",
+          "Manufacturing outputs",
+          "Site execution documentation"
+        ],
+        "effect": "Brand becomes perceived as real engineering authority"
+      }
+    ]
+  },
+
+  "perception_control_mechanisms": {
+    "consistency_enforcement": "All outputs must follow AECS system rules",
+    "visual_control": "Only structured engineering visuals allowed",
+    "language_control": "System-based communication only",
+    "interaction_control": "Engineering-driven user journeys only"
+  },
+
+  "communication_rules": {
+    "allowed": [
+      "System explanations",
+      "Engineering logic descriptions",
+      "Structured technical communication",
+      "Execution process descriptions"
+    ],
+    "forbidden": [
+      "Emotional persuasion",
+      "Luxury marketing language",
+      "Decorative storytelling",
+      "Lifestyle branding narratives"
+    ]
+  },
+
+  "cognitive_shaping_model": {
+    "phase_1": "User sees structured engineering identity",
+    "phase_2": "User understands system logic behind products",
+    "phase_3": "User validates technical capability",
+    "phase_4": "User accepts execution reliability",
+    "phase_5": "User perceives brand as engineering authority"
+  },
+
+  "risk_control": {
+    "perception_risks": [
+      "Luxury brand misclassification",
+      "Product vendor perception",
+      "Construction contractor association",
+      "Marketing-driven identity dilution"
+    ],
+    "prevention_strategy": "Strict adherence to AECS system structure across all touchpoints"
+  },
+
+  "system_alignment": {
+    "design": "Must follow engineering grid and system logic",
+    "content": "Must reflect architectural engineering thinking",
+    "visuals": "Must be documentation-based, not decorative",
+    "interaction": "Must reinforce system understanding"
+  },
+
+  "psychological_effect": {
+    "primary_impression": "Controlled engineering authority",
+    "secondary_impression": "Highly structured architectural system intelligence",
+    "user_perception": [
+      "This is a technical engineering system, not a brand",
+      "Everything is controlled and structured",
+      "This company operates like a design-to-execution platform"
+    ]
+  },
+
+  "strategic_goal": {
+    "objective": "Fully control how AvizSazeh is cognitively classified in the market",
+    "outcome": "Consistent perception of AvizSazeh as an Architectural Engineering System Authority"
+  }
+}

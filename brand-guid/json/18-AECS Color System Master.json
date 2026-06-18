@@ -1,0 +1,109 @@
+{
+  "id": 18,
+  "title": "AECS Color System Master",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS v1.0 - Architectural Engineering Color System",
+
+  "core_definition": {
+    "description": "A structured color system designed to translate architectural engineering logic into visual identity, UI systems, and brand communication.",
+    "principle": "Color is not decoration; it is a structural language for engineering perception."
+  },
+
+  "color_architecture": {
+    "engineering_layer": {
+      "role": "Structural foundation of the brand",
+      "purpose": "Represents engineering authority, system logic, and technical depth",
+      "colors": [
+        {
+          "name": "Engineering Charcoal",
+          "hex": "#1F2328",
+          "usage": "Primary structural base, logo, typography, UI headers"
+        },
+        {
+          "name": "Graphite System Gray",
+          "hex": "#3D3D3D",
+          "usage": "Secondary structure, UI depth, system hierarchy"
+        },
+        {
+          "name": "Steel Engineering Gray",
+          "hex": "#4B5563",
+          "usage": "Supportive engineering elements, borders, technical UI"
+        }
+      ]
+    },
+
+    "architectural_layer": {
+      "role": "Spatial and environmental representation",
+      "purpose": "Represents architectural space, material neutrality, and visual balance",
+      "colors": [
+        {
+          "name": "Architectural Warm Gray",
+          "hex": "#B7B0A5",
+          "usage": "Background surfaces, architectural context, soft panels"
+        },
+        {
+          "name": "Architectural Ivory",
+          "hex": "#ECE9E3",
+          "usage": "Primary background, spatial clarity, content separation"
+        },
+        {
+          "name": "Pure White Space",
+          "hex": "#FFFFFF",
+          "usage": "Maximum clarity zones, architectural breathing space"
+        }
+      ]
+    },
+
+    "authority_accent_layer": {
+      "role": "Value signaling and transformation indicator",
+      "purpose": "Represents execution value, transformation point, and brand authority",
+      "colors": [
+        {
+          "name": "Architectural Gold Accent",
+          "hex": "#B89A63",
+          "usage": "CTA, transformation points, highlights, key system nodes"
+        }
+      ]
+    }
+  },
+
+  "color_hierarchy_rules": {
+    "distribution": {
+      "engineering_layer": "50%",
+      "architectural_layer": "40%",
+      "accent_layer": "10%"
+    },
+    "dominance_rule": "Engineering layer must always dominate perception",
+    "accent_rule": "Gold must never become a background or primary identity color"
+  },
+
+  "functional_mapping": {
+    "logo": "Engineering Charcoal + controlled Gold transformation point",
+    "website": "Architectural layer dominant with engineering structure overlay",
+    "ui_system": "Engineering layer for structure, architectural layer for space",
+    "marketing": "Minimal use of Gold for emphasis only"
+  },
+
+  "psychological_intent": {
+    "engineering_layer": "Creates trust, authority, and technical credibility",
+    "architectural_layer": "Creates spatial calmness and architectural intelligence perception",
+    "accent_layer": "Signals transformation, value, and decision points"
+  },
+
+  "misuse_rules": {
+    "forbidden_uses": [
+      "Gold as dominant background",
+      "Gradient luxury effects",
+      "Decorative color schemes",
+      "Fashion-style vibrant palettes"
+    ],
+    "risk": "Any misuse will shift brand perception from Engineering System → Decorative Brand"
+  },
+
+  "strategic_outcome": {
+    "goal": "Ensure all visual outputs consistently reinforce Architectural Engineering authority",
+    "result": "Instant recognition of AvizSazeh as a system-based engineering brand"
+  }
+}

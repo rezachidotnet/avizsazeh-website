@@ -1,0 +1,99 @@
+{
+  "id": 22,
+  "title": "Color Usage Rules",
+  "brand": "AvizSazeh",
+  "category": "Architectural Engineering System Brand",
+
+  "system_name": "AECS v1.0 Color Governance Rules",
+
+  "core_principle": {
+    "statement": "Color is a functional engineering system, not a decorative choice.",
+    "interpretation": "Every color must serve a structural, architectural, or authority function within the system."
+  },
+
+  "global_distribution_rules": {
+    "engineering_layer": {
+      "ratio": "50%",
+      "role": "Structural foundation of all visual systems",
+      "mandatory_usage": "Must dominate typography, UI structure, and system hierarchy"
+    },
+    "architectural_layer": {
+      "ratio": "40%",
+      "role": "Spatial and environmental background system",
+      "mandatory_usage": "Must define space, layout breathing, and architectural clarity"
+    },
+    "authority_accent_layer": {
+      "ratio": "10%",
+      "role": "Transformation and value signaling system",
+      "mandatory_usage": "Only for CTA, highlights, and transformation points"
+    }
+  },
+
+  "hierarchy_rules": {
+    "rule_1": "Engineering layer always defines structural hierarchy",
+    "rule_2": "Architectural layer defines spatial perception",
+    "rule_3": "Authority accent defines importance and action points",
+    "rule_4": "No layer may visually dominate outside its assigned function"
+  },
+
+  "usage_constraints": {
+    "engineering_layer": {
+      "allowed": [
+        "Typography primary color",
+        "UI structure",
+        "Logo base",
+        "Technical diagrams"
+      ],
+      "forbidden": [
+        "Decorative gradients",
+        "Background dominance without structure"
+      ]
+    },
+    "architectural_layer": {
+      "allowed": [
+        "Background surfaces",
+        "Spacing zones",
+        "Content separation",
+        "Layout structure"
+      ],
+      "forbidden": [
+        "High contrast branding elements",
+        "Attention-seeking highlights"
+      ]
+    },
+    "authority_accent_layer": {
+      "allowed": [
+        "CTA buttons",
+        "Transformation nodes",
+        "Key highlights",
+        "Critical system markers"
+      ],
+      "forbidden": [
+        "Full backgrounds",
+        "Large surface fills",
+        "Continuous UI usage"
+      ]
+    }
+  },
+
+  "visual_balance_rules": {
+    "contrast_rule": "Engineering layer must always remain visually dominant in structural elements",
+    "space_rule": "Architectural layer must provide breathing space, not compete for attention",
+    "accent_rule": "Gold must appear only as a controlled signal, never as a theme",
+    "stability_rule": "No visual element should break system hierarchy clarity"
+  },
+
+  "risk_control": {
+    "color_misinterpretation_risks": [
+      "Gold dominance → luxury decoration brand perception",
+      "Over-dark engineering → software/CAD tool perception",
+      "Over-neutral architecture → weak brand identity"
+    ],
+    "prevention_strategy": "Strict adherence to ratio-based distribution and role separation"
+  },
+
+  "system_goal": {
+    "objective": "Ensure consistent architectural engineering perception across all brand outputs",
+    "outcome": "Instant recognition of AvizSazeh as a structured engineering system brand"
+  }
+}
