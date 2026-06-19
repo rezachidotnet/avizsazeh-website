@@ -4,7 +4,7 @@ export const runtime = 'edge';
 
 const size = { width: 1200, height: 630 };
 
-/** Default branded OpenGraph image — uses the approved standard-logo on a light plate. */
+/** Default branded OpenGraph image — transparent-background logo on the dark plate. */
 export async function GET(request: Request) {
   // Same-origin as the running deployment (localhost in dev, live domain in prod),
   // so the logo always resolves without depending on a hardcoded host.
@@ -12,7 +12,7 @@ export async function GET(request: Request) {
 
   let logo = false;
   try {
-    const res = await fetch(`${origin}/brand/standard-logo.png`, {
+    const res = await fetch(`${origin}/brand/standard-logo-trans.png`, {
       cache: 'force-cache',
     });
     logo = res.ok;
@@ -35,18 +35,10 @@ export async function GET(request: Request) {
         }}
       >
         {logo ? (
-          <div
-            style={{
-              display: 'flex',
-              alignSelf: 'flex-start',
-              background: '#FFFFFF',
-              borderRadius: 10,
-              padding: '20px 28px',
-            }}
-          >
-            {/* standard-logo asset (unmodified) */}
+          <div style={{ display: 'flex', alignSelf: 'flex-start' }}>
+            {/* transparent-background logo — sits directly on the dark plate, no box */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`${origin}/brand/standard-logo.png`} height={60} alt="AvizSazeh" />
+            <img src={`${origin}/brand/standard-logo-trans.png`} height={72} alt="AvizSazeh logo" />
           </div>
         ) : (
           <div style={{ color: '#FFFFFF', fontSize: 44, fontWeight: 700, letterSpacing: 8 }}>
