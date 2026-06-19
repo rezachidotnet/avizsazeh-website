@@ -6,8 +6,11 @@ import type { Locale } from '@/i18n/routing';
  * canonical origin is the www host. Keep this in sync with the apex→www
  * redirect in next.config.mjs and the NEXT_PUBLIC_SITE_URL env value.
  */
+const SITE_URL_ENV = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.avizsazeh.ir'
+  SITE_URL_ENV && SITE_URL_ENV.length > 0
+    ? SITE_URL_ENV
+    : 'https://www.avizsazeh.ir'
 ).replace(/\/$/, '');
 
 /**
