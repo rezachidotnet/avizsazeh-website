@@ -210,13 +210,6 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
   if (config.teamId) leadValues.team_id = config.teamId;
   if (config.sourceId) leadValues.source_id = config.sourceId;
 
-  // Assign the lead to the dedicated AvizSazeh-website salesperson, if one is
-  // configured and resolvable. team_id and user_id are both passed explicitly
-  // to create(); UI onchanges don't run on ORM create, so the configured team
-  // is preserved rather than being overridden by the salesperson's default.
-  const salespersonId = await resolveSalespersonId(config, uid);
-  if (salespersonId) leadValues.user_id = salespersonId;
-
   const leadId = await odooJsonRpc<number>(config, 'object', 'execute_kw', [
     config.db,
     uid,
@@ -225,6 +218,29 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
     'create',
     [leadValues],
   ]);
+
+  // Assign the dedicated AvizSazeh-website salesperson AFTER creation, as a
+  // best-effort follow-up write. The integration user can only create leads it
+  // owns (or that are unassigned), so assigning ownership to another user can
+  // raise AccessError — which must NOT discard an already-created lead. If the
+  // write fails, the lead is still delivered (in its team) and assignment can
+  // be handled Odoo-side (elevated rights on the integration user, or a team
+  // automation rule). See ODOO_SALESPERSON_LOGIN in .env.example.
+  const salespersonId = await resolveSalespersonId(config, uid);
+  if (salespersonId) {
+    try {
+      await odooJsonRpc<boolean>(config, 'object', 'execute_kw', [
+        config.db,
+        uid,
+        config.password,
+        'crm.lead',
+        'write',
+        [[leadId], { user_id: salespersonId }],
+      ]);
+    } catch {
+      // Lead already created & delivered; salesperson assignment deferred.
+    }
+  }
 
   return { configured: true, leadId };
 }
