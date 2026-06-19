@@ -15,7 +15,8 @@ export function Hero() {
         alt={t('imageAlt')}
         fill
         priority
-        quality={95}
+        fetchPriority="high"
+        quality={82}
         sizes="100vw"
         className="object-cover object-center"
       />

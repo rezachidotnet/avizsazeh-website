@@ -25,11 +25,17 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  // Inter only backs `font-latin` (tabular numerals), all below the fold.
+  // Keep it self-hosted but don't preload — it must not compete with the
+  // hero LCP or the critical body/display fonts.
+  preload: false,
 });
 const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
+  // No italic display text exists in the UI; dropping the italic style
+  // removes an entire preloaded font file from every page.
+  style: ['normal'],
   variable: '--font-display',
   display: 'swap',
 });
