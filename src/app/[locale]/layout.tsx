@@ -11,6 +11,7 @@ import { routing, localeDirection, type Locale } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileActionBar } from '@/components/layout/MobileActionBar';
+import { Analytics } from '@/components/analytics/Analytics';
 import { JsonLd } from '@/components/shared/JsonLd';
 import { organizationJsonLd, websiteJsonLd, localeUrl } from '@/lib/seo';
 import { SITE_URL } from '@/lib/site';
@@ -113,6 +114,18 @@ export default async function LocaleLayout({
       className={`${vazir.variable} ${inter.variable} ${sourceSerif.variable}`}
     >
       <body className="flex min-h-screen flex-col pb-16 lg:pb-0">
+        <Analytics />
+        {process.env.NEXT_PUBLIC_GTM_ID ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+              title="gtm"
+            />
+          </noscript>
+        ) : null}
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main"

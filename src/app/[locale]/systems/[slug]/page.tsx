@@ -24,6 +24,7 @@ import { DesignVariants } from '@/components/system/DesignVariants';
 import { SystemSelectionGuidance } from '@/components/system/SystemSelectionGuidance';
 import { VisualDocumentation } from '@/components/system/VisualDocumentation';
 import { SystemFAQ } from '@/components/system/SystemFAQ';
+import { TrackView } from '@/components/analytics/TrackView';
 import { systems, getSystem } from '@/lib/content/systems';
 import { applications } from '@/lib/content/applications';
 import { projects, hasCaseStudy, projectName } from '@/lib/content/projects';
@@ -93,6 +94,7 @@ export default async function SystemDetailPage({
 
   return (
     <>
+      <TrackView event="system_page_view" params={{ ceiling_system: system.slug }} />
       {/* SECTION 1 — System hero */}
       <PageHero
         eyebrow={localized(system.category, locale)}
@@ -305,7 +307,7 @@ export default async function SystemDetailPage({
             <p className="mt-4 text-body-s text-ink-500">{t('ctaTrust')}</p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-            <Button href="/rfq" variant="gold" size="lg">
+            <Button href={`/rfq?system=${system.slug}`} variant="gold" size="lg">
               {tc('submitProject')}
             </Button>
             <Button href="/systems/compare" variant="outline" size="lg">

@@ -70,7 +70,7 @@ export default async function RfqPage({
             </div>
           </div>
 
-          <RfqEngine systemOptions={systemOptions} />
+          <RfqEngine systemOptions={systemOptions} locale={locale} />
         </div>
       </Section>
 

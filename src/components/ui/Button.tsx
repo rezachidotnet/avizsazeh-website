@@ -36,6 +36,7 @@ type AsButton = CommonProps &
 type AsLink = CommonProps & {
   href: string;
   external?: boolean;
+  onClick?: () => void;
 };
 
 export const Button = forwardRef<HTMLButtonElement, AsButton | AsLink>(
@@ -44,16 +45,22 @@ export const Button = forwardRef<HTMLButtonElement, AsButton | AsLink>(
     const classes = cn(base, variants[variant], sizes[size], className);
 
     if ('href' in props && props.href) {
-      const { href, external } = props as AsLink;
+      const { href, external, onClick } = props as AsLink;
       if (external) {
         return (
-          <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes}
+            onClick={onClick}
+          >
             {children}
           </a>
         );
       }
       return (
-        <Link href={href} className={classes}>
+        <Link href={href} className={classes} onClick={onClick}>
           {children}
         </Link>
       );

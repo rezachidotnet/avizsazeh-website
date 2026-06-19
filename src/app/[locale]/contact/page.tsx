@@ -8,6 +8,7 @@ import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
 import { JsonLd } from '@/components/shared/JsonLd';
 import { SystemIcon, type IconKey } from '@/components/icons/SystemIcon';
+import { ContactRouting } from '@/components/contact/ContactRouting';
 import { company, localized } from '@/lib/site';
 
 export async function generateMetadata({
@@ -125,6 +126,13 @@ export default async function ContactPage({
               </span>
             </a>
           </div>
+        </div>
+      </Section>
+
+      <Section ivory>
+        <h2 className="font-display text-h2 font-semibold text-white">{t('routingTitle')}</h2>
+        <div className="mt-10">
+          <ContactRouting />
         </div>
       </Section>
 

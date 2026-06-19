@@ -35,6 +35,10 @@ export const company = {
   phoneConsultDisplay: '031-35134',
   mobile: '09120656528',
   mobileDisplay: '0912-065-6528',
+  /** International (E.164-style) forms for WhatsApp / cross-border contact. */
+  mobileIntl: '989120656528',
+  mobileIntlDisplay: '+98 912 065 6528',
+  whatsappUrl: 'https://wa.me/989120656528',
   email: 'info@avizsazeh.ir',
   emailAlt: 'info@avizsazeh.com',
   instagram: 'Avizsazeh',
