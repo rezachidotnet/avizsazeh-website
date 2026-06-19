@@ -14,9 +14,12 @@ import { cn } from '@/lib/utils';
 export function ClientWall({
   locale,
   className,
+  limit,
 }: {
   locale: Locale;
   className?: string;
+  /** when set, show a compact static grid of the first N logos (no carousel) */
+  limit?: number;
 }) {
   const trackRef = useRef<HTMLUListElement>(null);
 
@@ -25,6 +28,31 @@ export function ClientWall({
     if (!el) return;
     const rtl = getComputedStyle(el).direction === 'rtl';
     el.scrollBy({ left: dir * (rtl ? -1 : 1) * (el.clientWidth * 0.8), behavior: 'smooth' });
+  }
+
+  // Compact homepage variant — a curated, scannable set without overload.
+  if (limit) {
+    return (
+      <ul className={cn('grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4', className)}>
+        {clients.slice(0, limit).map((client) => (
+          <li
+            key={client.file}
+            className="group flex h-24 items-center justify-center rounded-sm border border-white/10 bg-white px-5"
+            title={localized(client.name, locale)}
+          >
+            <Image
+              src={`/clients/${client.file}`}
+              alt={localized(client.name, locale)}
+              width={160}
+              height={90}
+              loading="lazy"
+              sizes="(max-width: 640px) 40vw, 220px"
+              className="max-h-12 w-auto object-contain opacity-70 grayscale transition-all duration-medium ease-aecs group-hover:opacity-100 group-hover:grayscale-0"
+            />
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   return (

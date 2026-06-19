@@ -10,6 +10,11 @@ export type RfqInput = {
   location?: string;
   technicalRequirements?: string;
   deadline?: string;
+  /** Optional engineering-context fields (free text, used for routing/CRM only). */
+  projectStage?: string;
+  hasDrawings?: string;
+  needsMep?: string;
+  projectChallenge?: string;
   contactName?: string;
   company?: string;
   phone?: string;
@@ -40,7 +45,7 @@ export function classifySystem(input: RfqInput): string {
   }
   const haystack = `${input.projectType} ${input.buildingType ?? ''} ${
     input.technicalRequirements ?? ''
-  }`;
+  } ${input.projectChallenge ?? ''}`;
   for (const { match, slug } of KEYWORD_MAP) {
     if (match.test(haystack)) return slug;
   }
@@ -58,9 +63,10 @@ export function scoreComplexity(input: RfqInput): {
   if (a > 2000) score += 20;
   if (a > 8000) score += 20;
 
-  const reqLen = (input.technicalRequirements ?? '').length;
+  const reqText = `${input.technicalRequirements ?? ''} ${input.projectChallenge ?? ''}`;
+  const reqLen = reqText.trim().length;
   if (reqLen > 80) score += 10;
-  if (/seismic|load|height|50|آکوستیک|زلزله|ارتفاع|بار/i.test(input.technicalRequirements ?? '')) {
+  if (/seismic|load|height|50|آکوستیک|زلزله|ارتفاع|بار/i.test(reqText)) {
     score += 15;
   }
   score = Math.min(100, score);

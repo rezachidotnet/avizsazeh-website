@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
 
-/** Home hero — full-bleed engineering imagery with the system thesis card. */
+/** Home hero — brand-positioning statement over full-bleed engineering imagery. */
 export function Hero() {
   const t = useTranslations('home.hero');
   const tc = useTranslations('cta');
@@ -29,31 +28,20 @@ export function Hero() {
         {/* left — system thesis */}
         <div className="lg:col-span-7 lg:self-end lg:pb-6">
           <span className="eyebrow text-gold">{t('eyebrow')}</span>
-          <h1 className="mt-6 max-w-2xl font-display text-h1 font-semibold leading-[1.06] text-white">
+          <h1 className="mt-6 max-w-3xl font-display text-h1 font-semibold leading-[1.08] text-white">
             {t('headline')}
           </h1>
-          <p className="mt-6 font-display text-body-l italic text-gold-300">
+          <p className="mt-6 max-w-2xl text-body-l leading-relaxed text-ink-300">
             {t('subheadline')}
-          </p>
-          <p className="mt-5 max-w-xl text-body-l text-ink-300">
-            {t('description')}
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="/rfq" variant="gold" size="lg">
               {tc('requestAnalysis')}
             </Button>
-            <Link
-              href="/engineering"
-              className="group inline-flex items-center gap-3 text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white transition-colors hover:text-gold"
-            >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 transition-colors group-hover:border-gold">
-                <svg viewBox="0 0 24 24" className="h-4 w-4 ps-0.5" fill="currentColor" aria-hidden="true">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </span>
-              {tc('watchIntro')}
-            </Link>
+            <Button href="/engineering" variant="outline" size="lg">
+              {tc('viewEngineeringLogic')}
+            </Button>
           </div>
         </div>
 

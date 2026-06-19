@@ -11,6 +11,7 @@ import { Reveal } from '@/components/ui/Reveal';
 
 const FLOW_ICONS: IconKey[] = ['architecture', 'engineering', 'system', 'execution'];
 const CAP_ICONS: IconKey[] = ['office', 'team', 'control', 'quality'];
+const PROOF_ICONS: IconKey[] = ['engineering', 'system', 'execution', 'quality'];
 
 export async function generateMetadata({
   params,
@@ -42,6 +43,7 @@ export default async function EngineeringPage({
   const flow = tFlow.raw('steps') as { title: string; text: string }[];
   const process = t.raw('process') as { title: string; text: string }[];
   const capabilities = tExec.raw('capabilities') as { title: string; text: string }[];
+  const proofCards = t.raw('proofCards') as { title: string; text: string }[];
 
   return (
     <>
@@ -121,6 +123,25 @@ export default async function EngineeringPage({
             {tc('requestAnalysis')}
           </Button>
         </div>
+      </Section>
+
+      {/* engineering output as buildable proof */}
+      <Section dark>
+        <SectionHeader dark eyebrow={t('eyebrow')} title={t('proofTitle')} description={t('proofIntro')} />
+        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-white/10 sm:grid-cols-2 xl:grid-cols-4">
+          {proofCards.map((card, i) => (
+            <Reveal as="div" key={card.title} delay={i * 70}>
+              <div className="h-full bg-ink-900 p-7">
+                <span className="flex h-12 w-12 items-center justify-center rounded border border-white/10 bg-white/[0.04] text-gold">
+                  <SystemIcon name={PROOF_ICONS[i]} className="h-6 w-6" />
+                </span>
+                <h3 className="mt-6 text-h4 font-semibold text-white">{card.title}</h3>
+                <p className="mt-3 text-body-s text-ink-300">{card.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <p className="mt-8 text-body-s text-ink-500">{t('proofNote')}</p>
       </Section>
 
       <JsonLd

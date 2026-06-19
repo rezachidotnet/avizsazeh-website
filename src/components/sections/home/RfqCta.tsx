@@ -5,6 +5,7 @@ import { SystemIcon } from '@/components/icons/SystemIcon';
 /** Conversion trigger — engineering action, not a sales prompt. */
 export function RfqCta() {
   const t = useTranslations('home.rfqCta');
+  const tc = useTranslations('cta');
 
   return (
     <section className="bg-ink-950 text-white">
@@ -17,11 +18,15 @@ export function RfqCta() {
               {t('title')}
             </h2>
             <p className="mt-4 max-w-xl text-body-l text-ink-300">{t('description')}</p>
-            <div className="mt-9">
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button href="/rfq" variant="gold" size="lg">
                 {t('button')}
               </Button>
+              <Button href="/contact" variant="outline" size="lg">
+                {tc('contactEngineering')}
+              </Button>
             </div>
+            <p className="mt-6 text-caption text-ink-500">{t('microcopy')}</p>
           </div>
         </div>
       </div>

@@ -15,6 +15,9 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
   const tComplexity = useTranslations('common.complexity');
   const { step, draft, setField, next, back, reset } = useRfqStore();
   const steps = t.raw('steps') as string[];
+  const stageOptions = t.raw('fields.projectStageOptions') as string[];
+  const drawingsOptions = t.raw('fields.hasDrawingsOptions') as string[];
+  const mepOptions = t.raw('fields.needsMepOptions') as string[];
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -52,6 +55,10 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
           location: draft.location,
           technicalRequirements: draft.technicalRequirements,
           deadline: draft.deadline,
+          projectStage: draft.projectStage,
+          hasDrawings: draft.hasDrawings,
+          needsMep: draft.needsMep,
+          projectChallenge: draft.projectChallenge,
           contactName: draft.contactName,
           company: draft.company,
           phone: draft.phone,
@@ -192,7 +199,7 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
         )}
 
         {step === 2 && (
-          <div className="grid gap-5">
+          <div className="grid gap-5 sm:grid-cols-2">
             <Field label={t('fields.deadline')}>
               <input
                 className="aecs-input"
@@ -201,13 +208,64 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
                 placeholder={t('fields.deadlinePlaceholder')}
               />
             </Field>
-            <Field label={t('fields.requirements')}>
+            <Field label={t('fields.projectStage')}>
+              <select
+                className="aecs-input"
+                value={draft.projectStage}
+                onChange={(e) => setField('projectStage', e.target.value)}
+              >
+                <option value="">{t('fields.selectPlaceholder')}</option>
+                {stageOptions.map((o) => (
+                  <option key={o} value={o}>
+                    {o}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <Field label={t('fields.hasDrawings')}>
+              <select
+                className="aecs-input"
+                value={draft.hasDrawings}
+                onChange={(e) => setField('hasDrawings', e.target.value)}
+              >
+                <option value="">{t('fields.selectPlaceholder')}</option>
+                {drawingsOptions.map((o) => (
+                  <option key={o} value={o}>
+                    {o}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <Field label={t('fields.needsMep')}>
+              <select
+                className="aecs-input"
+                value={draft.needsMep}
+                onChange={(e) => setField('needsMep', e.target.value)}
+              >
+                <option value="">{t('fields.selectPlaceholder')}</option>
+                {mepOptions.map((o) => (
+                  <option key={o} value={o}>
+                    {o}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <Field label={t('fields.requirements')} className="sm:col-span-2">
               <textarea
-                rows={5}
+                rows={4}
                 className="aecs-input resize-y"
                 value={draft.technicalRequirements}
                 onChange={(e) => setField('technicalRequirements', e.target.value)}
                 placeholder={t('fields.requirementsPlaceholder')}
+              />
+            </Field>
+            <Field label={t('fields.challenge')} className="sm:col-span-2">
+              <textarea
+                rows={3}
+                className="aecs-input resize-y"
+                value={draft.projectChallenge}
+                onChange={(e) => setField('projectChallenge', e.target.value)}
+                placeholder={t('fields.challengePlaceholder')}
               />
             </Field>
           </div>

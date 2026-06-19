@@ -56,11 +56,17 @@ export async function Footer() {
   const locale = (await getLocale()) as Locale;
   const t = await getTranslations('footer');
   const tc = await getTranslations('cta');
-
-  const engineeringLinks = t.raw('engineeringLinks') as string[];
-  const projectsLinks = t.raw('projectsLinks') as string[];
-  const aboutLinks = t.raw('aboutLinks') as string[];
+  const tNav = await getTranslations('nav');
   const host = SITE_URL.replace(/^https?:\/\//, '');
+
+  // Real, distinct destinations only — no same-page sub-navigation.
+  const navLinks = [
+    { label: tNav('engineering'), href: '/engineering' },
+    { label: t('bim'), href: '/bim' },
+    { label: tNav('projects'), href: '/projects' },
+    { label: tNav('about'), href: '/about' },
+    { label: tNav('contact'), href: '/contact' },
+  ];
 
   return (
     <footer className="border-t border-white/10 bg-ink-950 text-ink-400">
@@ -77,8 +83,8 @@ export async function Footer() {
             <p className="mt-4 text-caption text-ink-500">{t('parentNote')}</p>
           </div>
 
-          {/* link columns */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:col-span-9 lg:grid-cols-5">
+          {/* link columns — real destinations only */}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:col-span-9">
             <nav aria-label={t('systemsTitle')}>
               <ColumnTitle>{t('systemsTitle')}</ColumnTitle>
               <ul className="mt-5 space-y-3">
@@ -87,38 +93,17 @@ export async function Footer() {
                     {localized(s.name, locale)}
                   </FooterLink>
                 ))}
+                <FooterLink href="/systems/compare">{t('compareSystems')}</FooterLink>
                 <FooterLink href="/systems">{t('allSystems')}</FooterLink>
               </ul>
             </nav>
 
-            <nav aria-label={t('engineeringTitle')}>
-              <ColumnTitle>{t('engineeringTitle')}</ColumnTitle>
+            <nav aria-label={t('navTitle')}>
+              <ColumnTitle>{t('navTitle')}</ColumnTitle>
               <ul className="mt-5 space-y-3">
-                {engineeringLinks.map((label) => (
-                  <FooterLink key={label} href="/engineering">
-                    {label}
-                  </FooterLink>
-                ))}
-              </ul>
-            </nav>
-
-            <nav aria-label={t('projectsTitle')}>
-              <ColumnTitle>{t('projectsTitle')}</ColumnTitle>
-              <ul className="mt-5 space-y-3">
-                {projectsLinks.map((label) => (
-                  <FooterLink key={label} href="/projects">
-                    {label}
-                  </FooterLink>
-                ))}
-              </ul>
-            </nav>
-
-            <nav aria-label={t('aboutTitle')}>
-              <ColumnTitle>{t('aboutTitle')}</ColumnTitle>
-              <ul className="mt-5 space-y-3">
-                {aboutLinks.map((label) => (
-                  <FooterLink key={label} href="/about">
-                    {label}
+                {navLinks.map((l) => (
+                  <FooterLink key={l.href} href={l.href}>
+                    {l.label}
                   </FooterLink>
                 ))}
               </ul>
@@ -136,15 +121,18 @@ export async function Footer() {
                     {localized(company.city, locale)} · {localized(company.address, locale)}
                   </span>
                 </li>
+                {/* Primary phone = complete mobile number. TODO(client): confirm the full
+                    landline (031-35134 appears to be a shortened/extension number) before
+                    promoting it as a primary contact. */}
                 <li>
                   <a
-                    href={`tel:${company.phoneConsult}`}
+                    href={`tel:${company.mobile}`}
                     className="flex gap-3 transition-colors hover:text-white"
                   >
                     <svg {...iconProps}>
                       <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
                     </svg>
-                    <span className="nums">{company.phoneConsultDisplay}</span>
+                    <span className="nums">{company.mobileDisplay}</span>
                   </a>
                 </li>
                 <li>

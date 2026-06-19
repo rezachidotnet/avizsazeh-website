@@ -58,10 +58,10 @@ export function TrustMetrics() {
                 {ICONS[i]}
               </svg>
               <div className="flex flex-col gap-1">
-                <dd className="font-display text-[1.3rem] font-semibold leading-none text-white">
+                <dd className="font-display text-[1.4rem] font-bold leading-none text-gold">
                   {m.value}
                 </dd>
-                <dt className="text-caption uppercase tracking-[0.12em] text-gold/80">
+                <dt className="text-caption uppercase tracking-[0.12em] text-ink-400">
                   {m.label}
                 </dt>
               </div>

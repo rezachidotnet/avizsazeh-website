@@ -4,11 +4,13 @@ import type { Locale } from '@/i18n/routing';
 import { buildMetadata } from '@/lib/seo';
 import { Hero } from '@/components/sections/home/Hero';
 import { TrustMetrics } from '@/components/sections/home/TrustMetrics';
-import { SystemDefinition } from '@/components/sections/home/SystemDefinition';
+import { DifferentiationTable } from '@/components/sections/home/DifferentiationTable';
+import { AudienceSection } from '@/components/sections/home/AudienceSection';
 import { SystemsOverview } from '@/components/sections/home/SystemsOverview';
 import { EngineeringFlow } from '@/components/sections/home/EngineeringFlow';
 import { ExecutionCapabilities } from '@/components/sections/home/ExecutionCapabilities';
 import { ProofClients } from '@/components/sections/home/ProofClients';
+import { RFQExplainer } from '@/components/sections/home/RFQExplainer';
 import { RfqCta } from '@/components/sections/home/RfqCta';
 
 export async function generateMetadata({
@@ -32,11 +34,13 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
     <>
       <Hero />
       <TrustMetrics />
-      <SystemDefinition />
+      <DifferentiationTable />
+      <AudienceSection />
       <SystemsOverview />
       <EngineeringFlow />
       <ExecutionCapabilities />
       <ProofClients />
+      <RFQExplainer />
       <RfqCta />
     </>
   );

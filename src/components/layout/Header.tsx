@@ -1,11 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { Logo } from '@/components/brand/Logo';
 import { LocaleSwitcher } from './LocaleSwitcher';
 import { Button } from '@/components/ui/Button';
+import { systems } from '@/lib/content/systems';
+import { localized } from '@/lib/site';
+import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 
 const NAV = [
@@ -20,6 +23,7 @@ const NAV = [
 export function Header() {
   const t = useTranslations('nav');
   const tc = useTranslations('cta');
+  const locale = useLocale() as Locale;
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -38,6 +42,12 @@ export function Header() {
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
+  const navLinkClass = (href: string) =>
+    cn(
+      'relative py-1 text-[0.82rem] font-medium tracking-wide transition-colors duration-fast hover:text-gold',
+      isActive(href) ? 'text-white' : 'text-ink-400',
+    );
+
   return (
     <header
       className={cn(
@@ -51,60 +61,71 @@ export function Header() {
         <Logo priority imgClassName="h-[3.6rem] md:h-[4.2rem]" />
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
-          {NAV.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              className={cn(
-                'relative py-1 text-[0.82rem] font-medium tracking-wide transition-colors duration-fast hover:text-white',
-                isActive(item.href) ? 'text-white' : 'text-ink-400',
-              )}
-            >
-              {t(item.key)}
-              {isActive(item.href) ? (
-                <span className="absolute -bottom-1 start-0 h-px w-full bg-gold" />
-              ) : null}
-            </Link>
-          ))}
+          {NAV.map((item) =>
+            item.key === 'systems' ? (
+              <div key={item.key} className="group relative">
+                <Link href={item.href} className={cn(navLinkClass(item.href), 'inline-flex items-center gap-1')}>
+                  {t(item.key)}
+                  <svg viewBox="0 0 12 12" className="h-3 w-3 text-ink-500" fill="none" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+                    <path d="M3 4.5 6 7.5 9 4.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {isActive(item.href) ? (
+                    <span className="absolute -bottom-1 start-0 h-px w-full bg-gold" />
+                  ) : null}
+                </Link>
+                {/* desktop systems dropdown — revealed on hover / keyboard focus */}
+                <div className="invisible absolute start-0 top-full z-50 w-64 translate-y-1 pt-3 opacity-0 transition-all duration-fast group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  <ul className="overflow-hidden rounded-lg border border-white/10 bg-ink-900 p-2 shadow-lg">
+                    {systems.map((s) => (
+                      <li key={s.slug}>
+                        <Link
+                          href={`/systems/${s.slug}`}
+                          className="block rounded-sm px-3 py-2.5 text-body-s text-ink-300 transition-colors duration-fast hover:bg-white/[0.05] hover:text-white"
+                        >
+                          {localized(s.name, locale)}
+                        </Link>
+                      </li>
+                    ))}
+                    <li className="mt-1 border-t border-white/10 pt-1">
+                      <Link
+                        href="/systems"
+                        className="block rounded-sm px-3 py-2.5 text-body-s font-medium text-gold transition-colors duration-fast hover:bg-white/[0.05]"
+                      >
+                        {tc('exploreAllSystems')}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <Link key={item.key} href={item.href} className={navLinkClass(item.href)}>
+                {t(item.key)}
+                {isActive(item.href) ? (
+                  <span className="absolute -bottom-1 start-0 h-px w-full bg-gold" />
+                ) : null}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-4">
           <LocaleSwitcher className="hidden sm:inline-flex" />
           <span className="hidden h-6 w-px bg-white/10 lg:block" />
-          <Button
-            href="/rfq"
-            variant="outline"
-            size="sm"
-            className="hidden md:inline-flex"
-          >
+          <Button href="/rfq" variant="gold" size="sm" className="hidden md:inline-flex">
             {tc('requestAnalysis')}
           </Button>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-white/15 text-white lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/15 text-white lg:hidden"
             aria-expanded={open}
+            aria-controls="mobile-nav"
             aria-label={open ? t('close') : t('menu')}
             onClick={() => setOpen((v) => !v)}
           >
             <span className="relative block h-4 w-5">
-              <span
-                className={cn(
-                  'absolute inset-x-0 top-0 h-0.5 bg-white transition-transform duration-fast',
-                  open && 'top-1.5 rotate-45',
-                )}
-              />
-              <span
-                className={cn(
-                  'absolute inset-x-0 top-1.5 h-0.5 bg-white transition-opacity duration-fast',
-                  open && 'opacity-0',
-                )}
-              />
-              <span
-                className={cn(
-                  'absolute inset-x-0 top-3 h-0.5 bg-white transition-transform duration-fast',
-                  open && 'top-1.5 -rotate-45',
-                )}
-              />
+              <span className={cn('absolute inset-x-0 top-0 h-0.5 bg-white transition-transform duration-fast', open && 'top-1.5 rotate-45')} />
+              <span className={cn('absolute inset-x-0 top-1.5 h-0.5 bg-white transition-opacity duration-fast', open && 'opacity-0')} />
+              <span className={cn('absolute inset-x-0 top-3 h-0.5 bg-white transition-transform duration-fast', open && 'top-1.5 -rotate-45')} />
             </span>
           </button>
         </div>
@@ -112,9 +133,11 @@ export function Header() {
 
       {/* Mobile navigation */}
       <div
+        id="mobile-nav"
+        aria-hidden={!open}
         className={cn(
-          'overflow-hidden border-t border-white/10 bg-ink-950 lg:hidden',
-          open ? 'max-h-screen' : 'max-h-0 border-t-0',
+          'overflow-hidden border-white/10 bg-ink-950 lg:hidden',
+          open ? 'max-h-screen border-t' : 'max-h-0',
           'transition-[max-height] duration-medium ease-aecs',
         )}
       >
@@ -123,11 +146,10 @@ export function Header() {
             <Link
               key={item.key}
               href={item.href}
+              tabIndex={open ? undefined : -1}
               className={cn(
                 'rounded-sm px-3 py-3 text-body font-medium',
-                isActive(item.href)
-                  ? 'bg-white/[0.05] text-white'
-                  : 'text-ink-400',
+                isActive(item.href) ? 'bg-white/[0.05] text-white' : 'text-ink-400',
               )}
             >
               {t(item.key)}
@@ -135,7 +157,7 @@ export function Header() {
           ))}
           <div className="mt-3 flex items-center justify-between gap-3">
             <LocaleSwitcher />
-            <Button href="/rfq" variant="gold" size="sm" className="flex-1">
+            <Button href="/rfq" variant="gold" size="sm" className="flex-1" >
               {tc('requestAnalysis')}
             </Button>
           </div>

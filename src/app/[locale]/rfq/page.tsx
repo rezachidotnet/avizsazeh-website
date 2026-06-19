@@ -52,6 +52,24 @@ export default async function RfqPage({
 
       <Section ivory>
         <div className="mx-auto max-w-3xl">
+          {/* preamble — set expectations before the wizard */}
+          <div className="mb-8 rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+            <p className="text-body-l leading-relaxed text-ink-300">{t('preamble')}</p>
+            <div className="mt-6 border-t border-white/10 pt-6">
+              <h2 className="text-caption font-semibold uppercase tracking-[0.16em] text-gold">
+                {t('needTitle')}
+              </h2>
+              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                {(t.raw('needList') as string[]).map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-body-s text-ink-300">
+                    <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
           <RfqEngine systemOptions={systemOptions} />
         </div>
       </Section>

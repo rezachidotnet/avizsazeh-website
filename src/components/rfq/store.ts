@@ -8,6 +8,10 @@ export type RfqDraft = {
   location: string;
   deadline: string;
   technicalRequirements: string;
+  projectStage: string;
+  hasDrawings: string;
+  needsMep: string;
+  projectChallenge: string;
   contactName: string;
   company: string;
   phone: string;
@@ -21,6 +25,10 @@ const empty: RfqDraft = {
   location: '',
   deadline: '',
   technicalRequirements: '',
+  projectStage: '',
+  hasDrawings: '',
+  needsMep: '',
+  projectChallenge: '',
   contactName: '',
   company: '',
   phone: '',

@@ -4,6 +4,7 @@ import type { Locale } from '@/i18n/routing';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { PageHero } from '@/components/layout/PageHero';
 import { Section } from '@/components/ui/Section';
+import { Button } from '@/components/ui/Button';
 import { SystemCard } from '@/components/system/SystemCard';
 import { Reveal } from '@/components/ui/Reveal';
 import { JsonLd } from '@/components/shared/JsonLd';
@@ -33,6 +34,7 @@ export default async function SystemsPage({
   const locale = (await getLocale()) as Locale;
   const t = await getTranslations('systemsPage');
   const tNav = await getTranslations('nav');
+  const tCompare = await getTranslations('systemCompare');
 
   const factors = t.raw('selectionFactors') as string[];
 
@@ -55,6 +57,13 @@ export default async function SystemsPage({
               <SystemCard system={system} locale={locale} index={i} />
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-12 flex flex-col items-start gap-4 rounded-lg border border-white/10 bg-white/[0.03] p-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl text-body-l text-ink-300">{tCompare('title')}</p>
+          <Button href="/systems/compare" variant="outline" size="lg" className="shrink-0">
+            {tCompare('matrixTitle')}
+          </Button>
         </div>
       </Section>
 

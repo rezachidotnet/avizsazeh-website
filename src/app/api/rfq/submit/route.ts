@@ -46,6 +46,12 @@ export async function POST(request: Request) {
       ? String(body.technicalRequirements).trim()
       : undefined,
     deadline: body.deadline ? String(body.deadline).trim() : undefined,
+    projectStage: body.projectStage ? String(body.projectStage).trim() : undefined,
+    hasDrawings: body.hasDrawings ? String(body.hasDrawings).trim() : undefined,
+    needsMep: body.needsMep ? String(body.needsMep).trim() : undefined,
+    projectChallenge: body.projectChallenge
+      ? String(body.projectChallenge).trim()
+      : undefined,
     contactName: body.contactName ? String(body.contactName).trim() : undefined,
     company: body.company ? String(body.company).trim() : undefined,
     phone: body.phone ? String(body.phone).trim() : undefined,
@@ -84,6 +90,10 @@ export async function POST(request: Request) {
     country: deriveCountry(input.location),
     deadline: input.deadline,
     requirements: input.technicalRequirements,
+    projectStage: input.projectStage,
+    hasDrawings: input.hasDrawings,
+    needsMep: input.needsMep,
+    projectChallenge: input.projectChallenge,
     projectId,
   };
 

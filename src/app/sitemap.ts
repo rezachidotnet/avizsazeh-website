@@ -5,7 +5,9 @@ import { systemSlugs } from '@/lib/content/systems';
 const STATIC_PATHS = [
   '/',
   '/systems',
+  '/systems/compare',
   '/engineering',
+  '/bim',
   '/projects',
   '/about',
   '/contact',

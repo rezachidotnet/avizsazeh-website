@@ -23,6 +23,10 @@ export type OdooLeadInput = {
   country?: string;
   deadline?: string;
   requirements?: string;
+  projectStage?: string;
+  hasDrawings?: string;
+  needsMep?: string;
+  projectChallenge?: string;
   projectId: string;
 };
 
@@ -115,6 +119,9 @@ function formatLeadDescription(input: OdooLeadInput): string {
     input.area !== undefined && input.area !== '' && `Area: ${input.area} m²`,
     input.location && `Location: ${input.location}`,
     input.country && `Country: ${input.country}`,
+    input.projectStage && `Project stage: ${input.projectStage}`,
+    input.hasDrawings && `Architectural drawings: ${input.hasDrawings}`,
+    input.needsMep && `Lighting/MEP coordination: ${input.needsMep}`,
     input.deadline && `Timeline: ${input.deadline}`,
   ].filter((l): l is string => Boolean(l));
 
@@ -134,6 +141,12 @@ function formatLeadDescription(input: OdooLeadInput): string {
     lines.push('');
     lines.push('Technical requirements');
     lines.push(input.requirements);
+  }
+
+  if (input.projectChallenge) {
+    lines.push('');
+    lines.push('Project challenge');
+    lines.push(input.projectChallenge);
   }
 
   return lines.join('\n');
