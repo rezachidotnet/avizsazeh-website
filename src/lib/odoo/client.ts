@@ -39,6 +39,10 @@ type OdooConfig = {
   password: string;
   teamId?: number;
   sourceId?: number;
+  /** Salesperson to own AvizSazeh-website leads — numeric res.users id. */
+  salespersonId?: number;
+  /** …or the salesperson login, resolved to an id at lead-creation time. */
+  salespersonLogin?: string;
 };
 
 type OdooJsonRpcResponse<T> = {
@@ -67,7 +71,37 @@ function getOdooConfig(): OdooConfig | null {
     password,
     teamId: numberFromEnv(process.env.ODOO_CRM_TEAM_ID),
     sourceId: numberFromEnv(process.env.ODOO_CRM_SOURCE_ID),
+    salespersonId: numberFromEnv(process.env.ODOO_SALESPERSON_ID),
+    salespersonLogin: process.env.ODOO_SALESPERSON_LOGIN?.trim() || undefined,
   };
+}
+
+/**
+ * Resolve the configured salesperson to a res.users id. Prefers an explicit
+ * numeric id; otherwise looks the login up (best-effort — returns undefined if
+ * the user does not exist yet or the lookup fails, so lead creation never
+ * breaks just because the salesperson hasn't been created in Odoo).
+ */
+async function resolveSalespersonId(
+  config: OdooConfig,
+  uid: number,
+): Promise<number | undefined> {
+  if (config.salespersonId) return config.salespersonId;
+  if (!config.salespersonLogin) return undefined;
+  try {
+    const ids = await odooJsonRpc<number[]>(config, 'object', 'execute_kw', [
+      config.db,
+      uid,
+      config.password,
+      'res.users',
+      'search',
+      [[['login', '=', config.salespersonLogin]]],
+      { limit: 1 },
+    ]);
+    return Array.isArray(ids) && ids.length ? ids[0] : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 /** True when the Odoo JSON-RPC transport is fully configured. */
@@ -175,6 +209,13 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
   if (input.company) leadValues.partner_name = input.company;
   if (config.teamId) leadValues.team_id = config.teamId;
   if (config.sourceId) leadValues.source_id = config.sourceId;
+
+  // Assign the lead to the dedicated AvizSazeh-website salesperson, if one is
+  // configured and resolvable. team_id and user_id are both passed explicitly
+  // to create(); UI onchanges don't run on ORM create, so the configured team
+  // is preserved rather than being overridden by the salesperson's default.
+  const salespersonId = await resolveSalespersonId(config, uid);
+  if (salespersonId) leadValues.user_id = salespersonId;
 
   const leadId = await odooJsonRpc<number>(config, 'object', 'execute_kw', [
     config.db,
