@@ -246,10 +246,10 @@ export async function Footer() {
           © <span className="nums">2026</span> {t('rights')}
         </p>
         <div className="flex items-center gap-6">
-          <Link href="/contact" className="transition-colors hover:text-white">
+          <Link href="/legal/privacy" className="transition-colors hover:text-white">
             {t('privacy')}
           </Link>
-          <Link href="/contact" className="transition-colors hover:text-white">
+          <Link href="/legal/terms" className="transition-colors hover:text-white">
             {t('terms')}
           </Link>
         </div>

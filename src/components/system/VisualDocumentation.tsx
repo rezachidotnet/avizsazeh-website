@@ -35,7 +35,7 @@ export function VisualDocumentation({
             key={item}
             className="flex aspect-[16/10] flex-col justify-between rounded-lg border border-dashed border-white/15 bg-grid-lines [background-size:28px_28px] p-5"
           >
-            <span className="inline-flex w-fit items-center gap-1.5 rounded-sm border border-white/10 bg-ink-950/60 px-2 py-1 text-[0.6rem] uppercase tracking-[0.12em] text-ink-500">
+            <span className="inline-flex w-fit items-center gap-1.5 rounded-sm border border-white/10 bg-ink-950/60 px-2 py-1 text-micro uppercase tracking-[0.12em] text-ink-500">
               <span className="h-1.5 w-1.5 rounded-full bg-gold/70" />
               {badge}
             </span>

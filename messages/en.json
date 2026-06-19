@@ -612,5 +612,80 @@
     "faqTitle": "Frequently asked questions",
     "ctaTitle": "Have a project like this?",
     "ctaText": "Submit your project so the AvizSazeh engineering team can assess system feasibility, execution constraints and the production and installation path."
+  },
+  "legal": {
+    "label": "Legal",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdated": "June 2026",
+    "privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "intro": "This policy explains what information AvizSazeh Naghsh Jahan collects through this website, how it is used, and the choices available to you. We only collect information needed to respond to engineering and procurement enquiries.",
+      "sections": [
+        {
+          "heading": "Information we collect",
+          "body": "When you submit a Request for Quotation (RFQ) or contact us, we collect the details you provide — such as your name, company, phone number, project type, area, location and technical requirements. We do not ask for, or intentionally collect, sensitive personal data."
+        },
+        {
+          "heading": "How we use your information",
+          "body": "Submitted information is used solely to classify your project, prepare an engineering assessment and respond with a relevant proposal. It is not sold or rented to third parties."
+        },
+        {
+          "heading": "CRM and processing",
+          "body": "RFQ submissions are recorded in our internal customer relationship management (CRM) system so the engineering team can follow up. Access is limited to authorised AvizSazeh personnel."
+        },
+        {
+          "heading": "Data retention",
+          "body": "Enquiry records are kept only as long as needed to handle your request and meet legitimate business and legal obligations, after which they are removed or anonymised."
+        },
+        {
+          "heading": "Cookies and analytics",
+          "body": "The website uses only the cookies required for it to function. If privacy-friendly analytics are enabled, they are used in aggregate to understand traffic and do not identify individual visitors."
+        },
+        {
+          "heading": "Your rights",
+          "body": "You may ask us to access, correct or delete the information you have submitted. To make a request, contact us using the details below."
+        },
+        {
+          "heading": "Contact",
+          "body": "For any question about this policy or your data, email info@avizsazeh.ir."
+        }
+      ]
+    },
+    "terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of Use",
+      "intro": "These terms govern your use of the AvizSazeh Naghsh Jahan website. By using the site you agree to them. If you do not agree, please do not use the site.",
+      "sections": [
+        {
+          "heading": "Use of the website",
+          "body": "You may use this website for lawful purposes related to learning about and enquiring into our ceiling systems and engineering services. You agree not to misuse the site, disrupt its operation or attempt unauthorised access."
+        },
+        {
+          "heading": "Intellectual property",
+          "body": "The content, brand, designs, system documentation and imagery on this site belong to AvizSazeh Naghsh Jahan or its licensors and may not be reproduced or redistributed without written permission."
+        },
+        {
+          "heading": "RFQ submissions and quotations",
+          "body": "Information returned by the RFQ engine — including the suggested system and complexity assessment — is an automated, indicative classification, not a binding offer. Any formal quotation is confirmed separately by our engineering team."
+        },
+        {
+          "heading": "Accuracy and availability",
+          "body": "We work to keep technical information accurate and the site available, but we provide the site on an \"as is\" basis without warranties, and we may update content or specifications at any time."
+        },
+        {
+          "heading": "Limitation of liability",
+          "body": "To the extent permitted by law, AvizSazeh is not liable for indirect or consequential loss arising from use of this website or reliance on its content. Engineering decisions should be confirmed with our team for your specific project."
+        },
+        {
+          "heading": "External links",
+          "body": "The site may link to third-party services (for example a map provider). We are not responsible for the content or privacy practices of external sites."
+        },
+        {
+          "heading": "Governing law and changes",
+          "body": "These terms are governed by the laws of the Islamic Republic of Iran. We may update them from time to time; the current version always applies. For questions, email info@avizsazeh.ir."
+        }
+      ]
+    }
   }
 }

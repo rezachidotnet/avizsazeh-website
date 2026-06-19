@@ -62,6 +62,7 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
           contactName: draft.contactName,
           company: draft.company,
           phone: draft.phone,
+          website: draft.website,
         }),
       });
       if (!res.ok) throw new Error('submit failed');
@@ -116,6 +117,21 @@ export function RfqEngine({ systemOptions }: { systemOptions: SystemOption[] }) 
 
   return (
     <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:p-10">
+      {/* Honeypot — hidden from humans, ignored by assistive tech. A filled
+          value flags the submission as a bot on the server. */}
+      <div aria-hidden className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
+        <label>
+          Website
+          <input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={draft.website}
+            onChange={(e) => setField('website', e.target.value)}
+          />
+        </label>
+      </div>
+
       {/* progress */}
       <ol className="flex items-center gap-2" aria-label="progress">
         {steps.map((label, i) => (

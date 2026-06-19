@@ -44,7 +44,7 @@ export function Header() {
 
   const navLinkClass = (href: string) =>
     cn(
-      'relative py-1 text-[0.82rem] font-medium tracking-wide transition-colors duration-fast hover:text-gold',
+      'relative py-1 text-label-lg font-medium tracking-wide transition-colors duration-fast hover:text-gold',
       isActive(href) ? 'text-white' : 'text-ink-400',
     );
 

@@ -50,7 +50,7 @@ export function ProjectCard({ name, sector, logo, image, badge, cardText, href }
             )}
           </>
         )}
-        <span className="absolute end-4 top-4 rounded-full border border-gold/40 bg-ink-950/80 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-gold backdrop-blur-sm">
+        <span className="absolute end-4 top-4 rounded-full border border-gold/40 bg-ink-950/80 px-3 py-1 text-micro font-semibold uppercase tracking-[0.1em] text-gold backdrop-blur-sm">
           {badge}
         </span>
       </div>

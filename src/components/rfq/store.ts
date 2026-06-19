@@ -15,6 +15,8 @@ export type RfqDraft = {
   contactName: string;
   company: string;
   phone: string;
+  /** Honeypot — must stay empty; bots that fill it are silently rejected. */
+  website: string;
 };
 
 const empty: RfqDraft = {
@@ -32,6 +34,7 @@ const empty: RfqDraft = {
   contactName: '',
   company: '',
   phone: '',
+  website: '',
 };
 
 type RfqState = {

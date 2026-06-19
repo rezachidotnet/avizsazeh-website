@@ -56,7 +56,7 @@ export function SystemCard({
               <path d="M8 1.5 14.5 8 8 14.5 1.5 8 8 1.5Z" />
               <circle cx="8" cy="8" r="1.6" fill="currentColor" stroke="none" />
             </svg>
-            <span className="text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-white">
+            <span className="text-label font-semibold uppercase tracking-[0.1em] text-white">
               {name}
             </span>
           </div>

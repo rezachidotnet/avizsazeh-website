@@ -88,7 +88,13 @@ const config: Config = {
         display: ['var(--font-display)', 'var(--font-vazir)', 'Georgia', 'serif'],
       },
       fontSize: {
-        // type scale (clamped) — structural, not decorative
+        // type scale (clamped) — structural, not decorative.
+        // Sub-caption label tokens replace previously-arbitrary text-[…rem]
+        // sizes on small uppercase labels, tags, nav items and control text.
+        // Each usage still sets its own tracking; these only fix the size step.
+        micro: ['0.625rem', { lineHeight: '1.2' }], // tags / format badges (was 0.6–0.65rem)
+        label: ['0.6875rem', { lineHeight: '1.2' }], // buttons / control labels (was 0.7–0.72rem)
+        'label-lg': ['0.8125rem', { lineHeight: '1.25' }], // nav / mobile actions (was 0.78–0.82rem)
         caption: ['0.75rem', { lineHeight: '1.4', letterSpacing: '0.02em' }],
         'body-s': ['0.875rem', { lineHeight: '1.6' }],
         body: ['1rem', { lineHeight: '1.6' }],

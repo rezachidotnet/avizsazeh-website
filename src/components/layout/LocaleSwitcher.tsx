@@ -20,7 +20,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
       onClick={() => router.replace(pathname, { locale: next })}
       aria-label={`Switch language to ${labels[next]}`}
       className={cn(
-        'inline-flex h-11 items-center gap-1.5 rounded-sm px-2 text-[0.78rem] font-medium tracking-wide text-ink-300 transition-colors duration-fast hover:text-white',
+        'inline-flex h-11 items-center gap-1.5 rounded-sm px-2 text-label-lg font-medium tracking-wide text-ink-300 transition-colors duration-fast hover:text-white',
         className,
       )}
     >

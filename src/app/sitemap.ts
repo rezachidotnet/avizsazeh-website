@@ -15,6 +15,8 @@ const STATIC_PATHS = [
   '/about',
   '/contact',
   '/rfq',
+  '/legal/privacy',
+  '/legal/terms',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -35,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (path.startsWith('/systems/')) return 0.8;
     if (path.startsWith('/applications/')) return 0.8;
     if (path.startsWith('/projects/')) return 0.7;
+    if (path.startsWith('/legal/')) return 0.3;
     return 0.7;
   };
 

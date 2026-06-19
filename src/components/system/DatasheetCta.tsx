@@ -14,7 +14,7 @@ export function DatasheetCta({ locale, href }: { locale: Locale; href?: string }
     locale === 'fa' ? 'دیتاشیت در حال آماده‌سازی' : 'Datasheet in preparation';
 
   const base =
-    'group inline-flex items-center gap-2.5 rounded-sm border px-5 h-11 text-[0.72rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-fast';
+    'group inline-flex items-center gap-2.5 rounded-sm border px-5 h-11 text-label font-semibold uppercase tracking-[0.08em] transition-colors duration-fast';
 
   if (href) {
     return (
@@ -37,7 +37,7 @@ export function DatasheetCta({ locale, href }: { locale: Locale; href?: string }
     >
       <SystemIcon name="quality" className="h-4 w-4" />
       {label}
-      <span className="ms-1 rounded-sm border border-white/10 px-1.5 py-0.5 text-[0.6rem] tracking-normal text-ink-500">
+      <span className="ms-1 rounded-sm border border-white/10 px-1.5 py-0.5 text-micro tracking-normal text-ink-500">
         {pending}
       </span>
     </span>

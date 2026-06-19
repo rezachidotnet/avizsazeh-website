@@ -84,15 +84,64 @@ export function makeProjectId(now: number, salt: number): string {
   return `AVZ-${year}-${String(seq % 10000).padStart(4, '0')}`;
 }
 
+/** Upper bounds for free-text fields — reject oversized payloads server-side. */
+export const RFQ_LIMITS = {
+  short: 200, // single-line fields (name, company, phone, location, …)
+  long: 4000, // multi-line fields (requirements, challenge)
+  area: 1_000_000, // m² — generous physical ceiling on building scale
+} as const;
+
+/**
+ * Server-side validation. Authoritative regardless of the client: required
+ * fields must be present, the area must be a sane positive number, and every
+ * field is length-capped so a malicious client cannot post unbounded text.
+ */
 export function validateRfq(input: Partial<RfqInput>): {
   ok: boolean;
   errors: Record<string, string>;
 } {
   const errors: Record<string, string> = {};
+
   if (!input.projectType?.trim()) errors.projectType = 'required';
   if (!input.systemPreference?.trim()) errors.systemPreference = 'required';
-  if (input.area_m2 === undefined || Number.isNaN(input.area_m2) || input.area_m2 <= 0) {
+
+  if (
+    input.area_m2 === undefined ||
+    Number.isNaN(input.area_m2) ||
+    !Number.isFinite(input.area_m2) ||
+    input.area_m2 <= 0 ||
+    input.area_m2 > RFQ_LIMITS.area
+  ) {
     errors.area_m2 = 'area';
   }
+
+  const shortFields: (keyof RfqInput)[] = [
+    'projectType',
+    'buildingType',
+    'systemPreference',
+    'location',
+    'deadline',
+    'projectStage',
+    'hasDrawings',
+    'needsMep',
+    'contactName',
+    'company',
+    'phone',
+  ];
+  for (const key of shortFields) {
+    const value = input[key];
+    if (typeof value === 'string' && value.length > RFQ_LIMITS.short) {
+      errors[key] = 'too_long';
+    }
+  }
+
+  const longFields: (keyof RfqInput)[] = ['technicalRequirements', 'projectChallenge'];
+  for (const key of longFields) {
+    const value = input[key];
+    if (typeof value === 'string' && value.length > RFQ_LIMITS.long) {
+      errors[key] = 'too_long';
+    }
+  }
+
   return { ok: Object.keys(errors).length === 0, errors };
 }

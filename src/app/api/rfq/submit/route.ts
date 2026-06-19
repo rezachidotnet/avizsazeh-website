@@ -9,8 +9,14 @@ import {
 } from '@/lib/rfq';
 import { getSystem } from '@/lib/content/systems';
 import { isOdooConfigured, sendLeadToOdoo, type OdooLeadInput } from '@/lib/odoo/client';
+import { rateLimit, clientIpFrom } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
+
+// Basic spam throttle: max submissions per IP per window. Best-effort
+// (per-instance) — see lib/rate-limit.ts.
+const RFQ_RATE_LIMIT = 5;
+const RFQ_RATE_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
 
 /** Derive a best-effort country from a "city / country" location string. */
 function deriveCountry(location?: string): string {
@@ -29,12 +35,30 @@ function deriveCountry(location?: string): string {
  * `result.lead` and logged for follow-up.
  */
 export async function POST(request: Request) {
-  let body: Partial<RfqInput>;
+  // ── Rate limit by client IP (basic spam protection) ──────────────────────
+  const ip = clientIpFrom(request.headers);
+  const limit = rateLimit(`rfq:${ip}`, RFQ_RATE_LIMIT, RFQ_RATE_WINDOW_MS);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
+    );
+  }
+
+  let raw: Record<string, unknown>;
   try {
-    body = (await request.json()) as Partial<RfqInput>;
+    raw = (await request.json()) as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: 'invalid_json' }, { status: 400 });
   }
+  const body = raw as Partial<RfqInput>;
+
+  // ── Honeypot ─────────────────────────────────────────────────────────────
+  // `website` is a hidden, off-screen field no human fills. If it carries a
+  // value the request is almost certainly a bot: accept it silently (so the
+  // bot sees a normal 200) but never create a CRM lead.
+  const honeypotTripped =
+    typeof raw.website === 'string' && raw.website.trim().length > 0;
 
   const input: RfqInput = {
     projectType: String(body.projectType ?? '').trim(),
@@ -97,7 +121,10 @@ export async function POST(request: Request) {
     projectId,
   };
 
-  if (isOdooConfigured()) {
+  if (honeypotTripped) {
+    // Spam: skip CRM entirely, return a normal-looking result.
+    console.warn(`[RFQ] ${projectId} · honeypot tripped (ip ${ip}) — lead suppressed`);
+  } else if (isOdooConfigured()) {
     try {
       const lead = await sendLeadToOdoo(leadInput);
       result.lead = { delivered: true, leadId: lead.leadId };

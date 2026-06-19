@@ -1,8 +1,13 @@
 import type { Locale } from '@/i18n/routing';
 
-/** Canonical origin — overridable via env for preview/prod parity. */
+/**
+ * Canonical origin — overridable via env for preview/prod parity.
+ * Production redirects the apex (avizsazeh.ir) to the www host, so the
+ * canonical origin is the www host. Keep this in sync with the apex→www
+ * redirect in next.config.mjs and the NEXT_PUBLIC_SITE_URL env value.
+ */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://avizsazeh.ir'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.avizsazeh.ir'
 ).replace(/\/$/, '');
 
 /**
