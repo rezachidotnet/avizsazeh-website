@@ -26,6 +26,29 @@ export type ProjectCategory =
 
 export type ProofStatus = 'documented' | 'partial' | 'logo-only';
 
+/**
+ * Bilingual case-study content. Qualitative engineering narrative tied to the
+ * project type — NOT fabricated metrics. Hard numbers (area, height, year) stay
+ * in the `null`-able fields above until verified by the engineering team.
+ */
+export type CaseStudy = {
+  seo: { title: Record<Locale, string>; description: Record<Locale, string> };
+  /** project type / facility line shown under the title */
+  projectType: Record<Locale, string>;
+  lead: Record<Locale, string>;
+  challenge: Record<Locale, string>;
+  systemLogic: Record<Locale, string>;
+  constraints: Record<Locale, string>;
+  /** AvizSazeh's role on a project of this type */
+  role: Record<Locale, string>;
+  /** honest note that exact technical data is pending verification */
+  dataNote: Record<Locale, string>;
+  /** placeholder labels for visuals still to be supplied */
+  visualPlaceholders: Record<Locale, string[]>;
+  relatedSystems: string[];
+  relatedApplications: string[];
+};
+
 export type Project = {
   slug: string;
   titleFa: string;
@@ -36,6 +59,7 @@ export type Project = {
   logo?: string;
   /** High-level sector derived from the client's known identity (not project data). */
   sectorFa?: string | null;
+  sectorEn?: string | null;
   locationFa?: string | null;
   countryFa?: string | null;
   year?: string | null;
@@ -45,6 +69,8 @@ export type Project = {
   challengeFa?: string | null;
   solutionFa?: string | null;
   images?: string[];
+  /** Rich, bilingual case-study content (only the published case studies). */
+  caseStudy?: CaseStudy;
   proofStatus: ProofStatus;
   isFeatured: boolean;
 };
@@ -64,6 +90,7 @@ export const projects: Project[] = [
     clientNameEn: 'Imam Khomeini Int’l Airport',
     logo: 'imam-khomeini-airport.png',
     sectorFa: 'زیرساخت فرودگاهی',
+    sectorEn: 'Airport infrastructure',
     locationFa: null,
     countryFa: null,
     year: null,
@@ -73,7 +100,50 @@ export const projects: Project[] = [
     challengeFa: null,
     solutionFa: null,
     images: [],
-    proofStatus: 'logo-only',
+    caseStudy: {
+      seo: {
+        title: {
+          fa: 'سقف کاذب فرودگاه امام خمینی | پروژه سقف فلزی آویزسازه',
+          en: 'Imam Khomeini Airport Metal Ceiling | AvizSazeh Project',
+        },
+        description: {
+          fa: 'پرونده پروژه سقف کاذب فرودگاه بین‌المللی امام خمینی؛ چالش سقف فلزی فرودگاهی، منطق سیستم و نقش مهندسی آویزسازه. داده‌های فنی دقیق نیازمند تأیید واحد مهندسی است.',
+          en: 'Project record for the Imam Khomeini International Airport metal ceiling — the airport ceiling challenge, system logic and AvizSazeh’s engineering role. Exact technical data is to be confirmed by the engineering team.',
+        },
+      },
+      projectType: { fa: 'پایانه فرودگاهی · زیرساخت حمل‌ونقل', en: 'Airport terminal · transport infrastructure' },
+      lead: {
+        fa: 'فرودگاه بین‌المللی امام خمینی یکی از مراجع اجرایی ثبت‌شده آویزسازه در حوزه سقف کاذب فرودگاه است. این پرونده، چالش و منطق مهندسی سقف فلزی فرودگاهی را توضیح می‌دهد؛ داده‌های فنی دقیق پس از تأیید واحد مهندسی منتشر می‌شود.',
+        en: 'Imam Khomeini International Airport is one of AvizSazeh’s recorded execution references in airport metal ceilings. This record explains the challenge and engineering logic of an airport metal ceiling; exact technical data is published once confirmed by the engineering team.',
+      },
+      challenge: {
+        fa: 'سقف یک پایانه فرودگاهی باید در دهانه‌های بسیار وسیع، ریتم بصری منظم و یکپارچه را حفظ کند و هم‌زمان با روشنایی، تهویه، اعلام و اطفای حریق و علائم مسیریابی هماهنگ شود. نصب در ارتفاع، کنترل تراز و دسترسی بلندمدت به پلنوم، این پروژه را از یک کار نصب ساده به یک مسئله مهندسی تبدیل می‌کند.',
+        en: 'The ceiling of an airport terminal must hold a regular, unified visual rhythm across very wide spans while coordinating with lighting, HVAC, fire detection and suppression and wayfinding. Installation at height, level control and long-term plenum access turn the project from a simple fit-out into an engineering problem.',
+      },
+      systemLogic: {
+        fa: 'برای فضاهای فرودگاهی، سیستم‌های سقف خطی فلزی، گریلیوم و تایل فلزی به‌عنوان گزینه‌های اصلی بررسی می‌شوند: سقف خطی برای ریتم و هدایت بصری، گریلیوم برای دسترسی و عمق بصری، و تایل فلزی برای نظم و نگهداری. انتخاب نهایی به هندسه، ارتفاع و الزامات تأسیساتی هر بخش وابسته است.',
+        en: 'For airport spaces, linear metal, open cell and metal tile ceilings are evaluated as the main options: linear for rhythm and visual guidance, open cell for access and visual depth, and metal tile for order and maintenance. The final selection depends on the geometry, height and service requirements of each zone.',
+      },
+      constraints: {
+        fa: 'بهره‌برداری پیوسته فرودگاه، اجرا در ارتفاع، الزامات ایمنی و حریق و نیاز به نگهداری بدون اختلال، محدودیت‌های اصلی اجرا هستند. توالی نصب و منطق تعلیق برای کار در ارتفاع و حداقل اختلال طراحی می‌شود.',
+        en: 'Continuous airport operation, work at height, safety and fire requirements and the need for non-disruptive maintenance are the main execution constraints. The installation sequence and suspension logic are designed for work at height with minimal disruption.',
+      },
+      role: {
+        fa: 'نقش آویزسازه در پروژه‌هایی از این دست، تعریف سقف به‌عنوان سیستم مهندسی است: تهیه نقشه اجرایی، هماهنگی تأسیسات، تولید سفارشی و کنترل اجرا تا تحویل نتیجه معماری.',
+        en: 'In projects of this kind, AvizSazeh’s role is to define the ceiling as an engineered system: shop drawings, service coordination, custom manufacturing and execution control through to handover of the architectural result.',
+      },
+      dataNote: {
+        fa: 'مساحت، ارتفاع، سال اجرا و مشخصات دقیق سیستم این پروژه نیازمند تأیید واحد مهندسی آویزسازه است و پس از تأیید منتشر می‌شود.',
+        en: 'The exact area, height, year and system specifications of this project are to be confirmed by the AvizSazeh engineering team and will be published once verified.',
+      },
+      visualPlaceholders: {
+        fa: ['عکس اجرای سقف فلزی در سالن فرودگاه', 'دیتیل اتصال و سیستم تعلیق در ارتفاع', 'نمای هماهنگی سقف با روشنایی و تأسیسات'],
+        en: ['Installed metal ceiling in the terminal hall', 'Connection and suspension detail at height', 'Ceiling coordinated with lighting and services'],
+      },
+      relatedSystems: ['linear-ceiling', 'open-cell', 'metal-tile'],
+      relatedApplications: ['airport-ceiling'],
+    },
+    proofStatus: 'partial',
     isFeatured: true,
   },
   {
@@ -106,6 +176,7 @@ export const projects: Project[] = [
     clientNameEn: 'Bushehr Mall',
     logo: 'bushehr-mall.jpeg',
     sectorFa: 'مرکز تجاری',
+    sectorEn: 'Commercial centre',
     locationFa: null,
     countryFa: null,
     year: null,
@@ -115,7 +186,50 @@ export const projects: Project[] = [
     challengeFa: null,
     solutionFa: null,
     images: [],
-    proofStatus: 'logo-only',
+    caseStudy: {
+      seo: {
+        title: {
+          fa: 'سقف کاذب بوشهر مال | پروژه سقف فلزی تجاری آویزسازه',
+          en: 'Bushehr Mall Metal Ceiling | AvizSazeh Commercial Project',
+        },
+        description: {
+          fa: 'پرونده پروژه سقف کاذب تجاری بوشهر مال؛ چالش سقف فلزی مرکز خرید، منطق سیستم و نقش مهندسی آویزسازه. داده‌های فنی دقیق نیازمند تأیید واحد مهندسی است.',
+          en: 'Project record for the Bushehr Mall commercial metal ceiling — the mall ceiling challenge, system logic and AvizSazeh’s engineering role. Exact technical data is to be confirmed by the engineering team.',
+        },
+      },
+      projectType: { fa: 'مرکز خرید · فضای تجاری', en: 'Shopping mall · commercial space' },
+      lead: {
+        fa: 'بوشهر مال یکی از مراجع اجرایی ثبت‌شده آویزسازه در حوزه سقف کاذب تجاری است. این پرونده، چالش و منطق مهندسی سقف فلزی مرکز خرید را توضیح می‌دهد؛ داده‌های فنی دقیق پس از تأیید واحد مهندسی منتشر می‌شود.',
+        en: 'Bushehr Mall is one of AvizSazeh’s recorded execution references in commercial metal ceilings. This record explains the challenge and engineering logic of a mall metal ceiling; exact technical data is published once confirmed by the engineering team.',
+      },
+      challenge: {
+        fa: 'سقف یک مرکز خرید باید هم‌زمان هویت بصری فضای تجاری را بسازد و دسترسی سریع به تأسیسات پرتردد را حفظ کند. اجرای یکنواخت در سطوح وسیع، هماهنگی با نورپردازی فروشگاهی و نگهداری بدون اختلال در بهره‌برداری، چالش‌های اصلی این نوع پروژه است.',
+        en: 'A mall ceiling must simultaneously build the visual identity of the retail space and keep fast access to high-traffic services. Uniform execution over large areas, coordination with retail lighting and non-disruptive maintenance are the main challenges of this kind of project.',
+      },
+      systemLogic: {
+        fa: 'برای فضاهای تجاری، سقف گریلیوم برای دسترسی و عمق بصری، سقف بافل برای بیان معماری و آکوستیک و سقف خطی فلزی برای ریتم و مسیریابی بررسی می‌شوند. انتخاب نهایی بر پایه مفهوم معماری، بودجه و الزامات اجرا انجام می‌شود.',
+        en: 'For commercial spaces, open cell is evaluated for access and visual depth, baffle for architectural expression and acoustics, and the linear metal ceiling for rhythm and wayfinding. The final selection is based on the architectural concept, budget and execution requirements.',
+      },
+      constraints: {
+        fa: 'بهره‌برداری تجاری پیوسته، نیاز به نگهداری بدون توقف، اجرای یکنواخت در سطوح بزرگ و هماهنگی با تأسیسات و نورپردازی، محدودیت‌های اصلی اجرا هستند.',
+        en: 'Continuous retail operation, the need for non-stop maintenance, uniform execution over large areas and coordination with services and lighting are the main execution constraints.',
+      },
+      role: {
+        fa: 'آویزسازه سقف کاذب تجاری را به‌صورت سیستم کامل تعریف می‌کند: نقشه اجرایی، هماهنگی تأسیسات، تولید سفارشی و کنترل اجرا تا تحویل نهایی.',
+        en: 'AvizSazeh defines the commercial metal ceiling as a complete system: shop drawings, service coordination, custom manufacturing and execution control through to final handover.',
+      },
+      dataNote: {
+        fa: 'مساحت، ارتفاع، سال اجرا و مشخصات دقیق سیستم این پروژه نیازمند تأیید واحد مهندسی آویزسازه است و پس از تأیید منتشر می‌شود.',
+        en: 'The exact area, height, year and system specifications of this project are to be confirmed by the AvizSazeh engineering team and will be published once verified.',
+      },
+      visualPlaceholders: {
+        fa: ['عکس اجرای سقف فلزی در فضای تجاری', 'دیتیل دسترسی به پلنوم و تأسیسات', 'نمای هماهنگی سقف با نورپردازی فروشگاهی'],
+        en: ['Installed metal ceiling in the retail space', 'Plenum and service access detail', 'Ceiling coordinated with retail lighting'],
+      },
+      relatedSystems: ['open-cell', 'baffle', 'linear-ceiling'],
+      relatedApplications: ['commercial-ceiling'],
+    },
+    proofStatus: 'partial',
     isFeatured: true,
   },
   {
@@ -474,7 +588,8 @@ export function projectsByGroup(): Record<ClientGroupKey, Project[]> {
 /** A project may link to a case-study page only once it carries real content. */
 export function hasCaseStudy(p: Project): boolean {
   return Boolean(
-    p.challengeFa ||
+    p.caseStudy ||
+      p.challengeFa ||
       p.solutionFa ||
       (p.images && p.images.length > 0) ||
       p.locationFa ||
@@ -492,4 +607,10 @@ export function getProject(slug: string): Project | undefined {
 /** Localised display name for a project. */
 export function projectName(p: Project, locale: Locale): string {
   return locale === 'en' && p.titleEn ? p.titleEn : p.titleFa;
+}
+
+/** Localised sector line (falls back to Persian when no English value exists). */
+export function projectSector(p: Project, locale: Locale): string | null {
+  if (locale === 'en') return p.sectorEn ?? p.sectorFa ?? null;
+  return p.sectorFa ?? null;
 }

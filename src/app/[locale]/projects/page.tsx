@@ -13,6 +13,7 @@ import {
   projectsByGroup,
   hasCaseStudy,
   projectName,
+  projectSector,
   CLIENT_GROUP_ORDER,
   type Project,
   type ProofStatus,
@@ -50,7 +51,7 @@ export default async function ProjectsPage({
 
   const toCard = (p: Project) => ({
     name: projectName(p, locale),
-    sector: p.sectorFa,
+    sector: projectSector(p, locale),
     logo: p.logo,
     image: p.images && p.images.length > 0 ? p.images[0] : undefined,
     badge: badgeFor(p.proofStatus),

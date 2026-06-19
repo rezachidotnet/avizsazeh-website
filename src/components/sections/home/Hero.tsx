@@ -12,7 +12,7 @@ export function Hero() {
       {/* background imagery — design-system hero (rendered crisp, no blur) */}
       <Image
         src="/design-system/hero-home.png"
-        alt=""
+        alt={t('imageAlt')}
         fill
         priority
         quality={95}

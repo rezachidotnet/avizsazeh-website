@@ -1,4 +1,5 @@
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { SystemCard } from '@/components/system/SystemCard';
 import { Reveal } from '@/components/ui/Reveal';
 import { Button } from '@/components/ui/Button';
@@ -36,10 +37,25 @@ export function SystemsOverview() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button href="/metal-suspended-ceiling" variant="gold" size="lg">
+            {locale === 'fa' ? 'راهنمای جامع سقف کاذب فلزی' : 'Metal suspended ceiling guide'}
+          </Button>
           <Button href="/systems" variant="outline" size="lg">
             {tc('exploreAllSystems')}
           </Button>
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-body-s">
+          <span className="text-ink-500">
+            {locale === 'fa' ? 'کاربردها:' : 'Applications:'}
+          </span>
+          <Link href="/applications/airport-ceiling" className="text-gold transition-colors hover:text-gold-300">
+            {locale === 'fa' ? 'سقف کاذب فرودگاه' : 'Airport metal ceiling'}
+          </Link>
+          <Link href="/applications/commercial-ceiling" className="text-gold transition-colors hover:text-gold-300">
+            {locale === 'fa' ? 'سقف کاذب تجاری' : 'Commercial metal ceiling'}
+          </Link>
         </div>
       </div>
     </section>

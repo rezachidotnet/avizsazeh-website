@@ -18,6 +18,12 @@ type BuildMetaArgs = {
   description: string;
   images?: string[];
   type?: 'website' | 'article';
+  /**
+   * When true the title is used verbatim (no parent " · AvizSazeh" template
+   * suffix). Use for pages whose SEO title already carries the brand + the
+   * commercial keyword and must match the audited string exactly.
+   */
+  titleAbsolute?: boolean;
 };
 
 /**
@@ -30,6 +36,7 @@ export function buildMetadata({
   description,
   images,
   type = 'website',
+  titleAbsolute = false,
 }: BuildMetaArgs): Metadata {
   const canonical = localeUrl(locale, path);
   const ogImages = (images ?? [OG_IMAGE]).map((src) =>
@@ -37,7 +44,7 @@ export function buildMetadata({
   );
 
   return {
-    title,
+    title: titleAbsolute ? { absolute: title } : title,
     description,
     alternates: {
       canonical,
@@ -174,5 +181,95 @@ export function systemJsonLd(args: {
     url: localeUrl(args.locale, `/systems/${args.slug}`),
     brand: { '@type': 'Brand', name: company.shortName[args.locale] },
     manufacturer: { '@id': `${SITE_URL}/#organization` },
+  };
+}
+
+/**
+ * Service schema — frames a system / category / application page as an
+ * engineering service offered by AvizSazeh (design, manufacturing, execution).
+ */
+export function serviceJsonLd(args: {
+  locale: Locale;
+  name: string;
+  description: string;
+  path: string;
+  serviceType?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: args.name,
+    serviceType:
+      args.serviceType ??
+      (args.locale === 'fa'
+        ? 'طراحی، تولید و اجرای سقف کاذب فلزی'
+        : 'Metal suspended ceiling design, manufacturing and installation'),
+    description: args.description,
+    url: localeUrl(args.locale, args.path),
+    provider: { '@id': `${SITE_URL}/#organization` },
+    areaServed: company.regions,
+    availableLanguage: ['fa', 'en'],
+  };
+}
+
+/** LocalBusiness — for the contact/homepage layer (address, geo, hours, phone). */
+export function localBusinessJsonLd(locale: Locale) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${SITE_URL}/#localbusiness`,
+    name: company.legalName[locale],
+    image: `${SITE_URL}${OG_IMAGE}`,
+    url: SITE_URL,
+    telephone: `+98${company.mobile.replace(/^0/, '')}`,
+    email: company.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address[locale],
+      addressLocality: company.city[locale],
+      addressRegion: company.postalRegion,
+      addressCountry: company.countryCode,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: company.geo.lat,
+      longitude: company.geo.lng,
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: `+98${company.mobile.replace(/^0/, '')}`,
+      contactType: 'sales',
+      areaServed: company.regions,
+      availableLanguage: ['fa', 'en'],
+    },
+    parentOrganization: { '@id': `${SITE_URL}/#organization` },
+    areaServed: company.regions,
+  };
+}
+
+/** CreativeWork — used for project case-study pages (no fabricated ratings). */
+export function creativeWorkJsonLd(args: {
+  locale: Locale;
+  name: string;
+  description: string;
+  path: string;
+  images?: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: args.name,
+    description: args.description,
+    url: localeUrl(args.locale, args.path),
+    inLanguage: args.locale === 'fa' ? 'fa-IR' : 'en-US',
+    creator: { '@id': `${SITE_URL}/#organization` },
+    ...(args.images && args.images.length
+      ? {
+          image: args.images.map((src) => ({
+            '@type': 'ImageObject',
+            url: src.startsWith('http') ? src : `${SITE_URL}${src}`,
+          })),
+        }
+      : {}),
   };
 }

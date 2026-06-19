@@ -68,6 +68,18 @@ export async function Footer() {
     { label: tNav('contact'), href: '/contact' },
   ];
 
+  const hubLabel = locale === 'fa' ? 'سقف کاذب فلزی' : 'Metal suspended ceiling';
+  const applicationLinks = [
+    {
+      label: locale === 'fa' ? 'سقف کاذب فرودگاه' : 'Airport metal ceiling',
+      href: '/applications/airport-ceiling',
+    },
+    {
+      label: locale === 'fa' ? 'سقف کاذب تجاری' : 'Commercial metal ceiling',
+      href: '/applications/commercial-ceiling',
+    },
+  ];
+
   return (
     <footer className="border-t border-white/10 bg-ink-950 text-ink-400">
       {/* primary grid */}
@@ -88,9 +100,15 @@ export async function Footer() {
             <nav aria-label={t('systemsTitle')}>
               <ColumnTitle>{t('systemsTitle')}</ColumnTitle>
               <ul className="mt-5 space-y-3">
+                <FooterLink href="/metal-suspended-ceiling">{hubLabel}</FooterLink>
                 {systems.map((s) => (
                   <FooterLink key={s.slug} href={`/systems/${s.slug}`}>
                     {localized(s.name, locale)}
+                  </FooterLink>
+                ))}
+                {applicationLinks.map((l) => (
+                  <FooterLink key={l.href} href={l.href}>
+                    {l.label}
                   </FooterLink>
                 ))}
                 <FooterLink href="/systems/compare">{t('compareSystems')}</FooterLink>

@@ -13,6 +13,18 @@ const nextConfig = {
     deviceSizes: [360, 640, 768, 1024, 1280, 1440, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  async redirects() {
+    // Canonical host is the non-www apex (avizsazeh.ir). Permanently redirect
+    // the www host so only one host is ever indexed.
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.avizsazeh.ir' }],
+        destination: 'https://avizsazeh.ir/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     const immutable = [
       { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },

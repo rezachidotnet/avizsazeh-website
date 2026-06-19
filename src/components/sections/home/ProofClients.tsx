@@ -4,7 +4,7 @@ import { ClientWall } from '@/components/sections/ClientWall';
 import { ProjectCard } from '@/components/projects/ProjectCard';
 import { Button } from '@/components/ui/Button';
 import type { Locale } from '@/i18n/routing';
-import { featuredProjects, hasCaseStudy, projectName, type ProofStatus } from '@/lib/content/projects';
+import { featuredProjects, hasCaseStudy, projectName, projectSector, type ProofStatus } from '@/lib/content/projects';
 
 export function ProofClients() {
   const t = useTranslations('home.proof');
@@ -31,7 +31,7 @@ export function ProofClients() {
           <ProjectCard
             key={p.slug}
             name={projectName(p, locale)}
-            sector={p.sectorFa}
+            sector={projectSector(p, locale)}
             logo={p.logo}
             image={p.images && p.images.length > 0 ? p.images[0] : undefined}
             badge={badgeFor(p.proofStatus)}

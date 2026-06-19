@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
-import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
+import { buildMetadata, breadcrumbJsonLd, localBusinessJsonLd } from '@/lib/seo';
 import { PageHero } from '@/components/layout/PageHero';
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
@@ -129,13 +129,16 @@ export default async function ContactPage({
       </Section>
 
       <JsonLd
-        data={breadcrumbJsonLd(
-          [
-            { name: tNav('home'), path: '/' },
-            { name: tNav('contact'), path: '/contact' },
-          ],
-          locale,
-        )}
+        data={[
+          localBusinessJsonLd(locale),
+          breadcrumbJsonLd(
+            [
+              { name: tNav('home'), path: '/' },
+              { name: tNav('contact'), path: '/contact' },
+            ],
+            locale,
+          ),
+        ]}
       />
     </>
   );

@@ -3,11 +3,12 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
-import { routing } from '@/i18n/routing';
+import { routing, Link } from '@/i18n/routing';
 import {
   buildMetadata,
   breadcrumbJsonLd,
   systemJsonLd,
+  serviceJsonLd,
   faqJsonLd,
 } from '@/lib/seo';
 import { PageHero } from '@/components/layout/PageHero';
@@ -24,6 +25,8 @@ import { SystemSelectionGuidance } from '@/components/system/SystemSelectionGuid
 import { VisualDocumentation } from '@/components/system/VisualDocumentation';
 import { SystemFAQ } from '@/components/system/SystemFAQ';
 import { systems, getSystem } from '@/lib/content/systems';
+import { applications } from '@/lib/content/applications';
+import { projects, hasCaseStudy, projectName } from '@/lib/content/projects';
 import { localized } from '@/lib/site';
 
 export const dynamicParams = false;
@@ -47,6 +50,7 @@ export async function generateMetadata({
     title: localized(system.seo.title, params.locale),
     description: localized(system.seo.description, params.locale),
     images: [system.cover],
+    titleAbsolute: true,
   });
 }
 
@@ -67,6 +71,19 @@ export default async function SystemDetailPage({
   const name = localized(system.name, locale);
   const h1 = localized(system.h1, locale);
   const related = systems.filter((s) => s.slug !== system.slug);
+
+  const heroAlt =
+    locale === 'fa'
+      ? `${name} — سقف کاذب فلزی مهندسی‌شده آویزسازه`
+      : `${name} — engineered metal suspended ceiling by AvizSazeh`;
+
+  // Topic-cluster links: applications + case studies that reference this system.
+  const relatedApplications = applications.filter((a) =>
+    a.suitableSystems.includes(system.slug),
+  );
+  const relatedCaseStudies = projects.filter(
+    (p) => hasCaseStudy(p) && p.caseStudy?.relatedSystems.includes(system.slug),
+  );
 
   const crumbs = [
     { name: tNav('home'), path: '/' },
@@ -89,7 +106,7 @@ export default async function SystemDetailPage({
         <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-white/10 bg-ink-100">
           <Image
             src={system.cover}
-            alt={locale === 'fa' ? `نمای سیستم ${name}` : `${name} overview`}
+            alt={heroAlt}
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 1100px"
@@ -222,6 +239,63 @@ export default async function SystemDetailPage({
         <SystemFAQ locale={locale} title={t('faqTitle')} items={system.faq} />
       </Section>
 
+      {/* Topic-cluster links — category hub, applications, case studies */}
+      <Section ivory>
+        <div className="grid gap-10 lg:grid-cols-3">
+          <div>
+            <h2 className="font-display text-h3 font-semibold text-white">
+              {locale === 'fa' ? 'مرجع سقف کاذب فلزی' : 'Metal suspended ceiling hub'}
+            </h2>
+            <ul className="mt-5 space-y-3">
+              <li>
+                <Link href="/metal-suspended-ceiling" className="group flex items-center gap-2 text-body-s text-gold transition-colors hover:text-gold-300">
+                  {locale === 'fa' ? 'سقف کاذب فلزی' : 'Metal suspended ceiling'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/systems/compare" className="text-body-s text-ink-300 transition-colors hover:text-white">
+                  {t('compareCta')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {relatedApplications.length > 0 ? (
+            <div>
+              <h2 className="font-display text-h3 font-semibold text-white">
+                {locale === 'fa' ? 'کاربردهای مرتبط' : 'Related applications'}
+              </h2>
+              <ul className="mt-5 space-y-3">
+                {relatedApplications.map((a) => (
+                  <li key={a.slug}>
+                    <Link href={`/applications/${a.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-white">
+                      {localized(a.keyword, locale)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {relatedCaseStudies.length > 0 ? (
+            <div>
+              <h2 className="font-display text-h3 font-semibold text-white">
+                {locale === 'fa' ? 'پروژه‌های مرتبط' : 'Related projects'}
+              </h2>
+              <ul className="mt-5 space-y-3">
+                {relatedCaseStudies.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/projects/${p.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-white">
+                      {projectName(p, locale)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </Section>
+
       {/* SECTION 8 — Conversion CTA */}
       <Section dark>
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
@@ -264,6 +338,12 @@ export default async function SystemDetailPage({
             description: localized(system.definition, locale),
             slug: system.slug,
             image: system.cover,
+          }),
+          serviceJsonLd({
+            locale,
+            name,
+            description: localized(system.seo.description, locale),
+            path: `/systems/${system.slug}`,
           }),
           faqJsonLd(
             system.faq.map((f) => ({

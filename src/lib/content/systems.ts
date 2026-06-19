@@ -105,21 +105,21 @@ export const systems: CeilingSystem[] = [
     },
     seo: {
       title: {
-        fa: 'سقف خطی آلومینیوم | آویزسازه — فرودگاه، تجاری، صنعتی',
-        en: 'Aluminium Linear Ceiling | AvizSazeh — Airport, Commercial, Industrial',
+        fa: 'سقف خطی فلزی | طراحی و اجرای سقف کاذب خطی آویزسازه',
+        en: 'Linear Metal Ceiling | Airport & Commercial Ceiling Systems',
       },
       description: {
-        fa: 'سقف خطی آلومینیومی آویزسازه با نقشه اجرایی اختصاصی، تسمه‌های فلزی با پوشش پلی‌استر، دسترسی به پلنوم و قابلیت طراحی خطی، مورب یا شعاعی برای فضاهای تجاری، فرودگاهی و صنعتی.',
-        en: 'AvizSazeh aluminium linear ceiling with dedicated shop drawings, polyester-coated metal strips, plenum access and linear, diagonal or radial layouts for commercial, airport and industrial spaces.',
+        fa: 'سقف خطی فلزی آویزسازه با نقشه اجرایی اختصاصی، تسمه‌های آلومینیومی با پوشش پلی‌استر، دسترسی به پلنوم و قابلیت طراحی خطی، مورب یا شعاعی برای فضاهای تجاری، فرودگاهی و صنعتی.',
+        en: 'AvizSazeh linear metal ceiling with dedicated shop drawings, polyester-coated aluminium strips, plenum access and linear, diagonal or radial layouts for commercial, airport and industrial spaces.',
       },
     },
     h1: {
-      fa: 'سیستم سقف خطی — سقف معماری برای فضاهای طولانی و بزرگ‌مقیاس',
-      en: 'Linear Ceiling System — Architectural ceilings for long, large-scale spaces',
+      fa: 'سقف خطی فلزی برای فضاهای تجاری، فرودگاهی و معماری داخلی',
+      en: 'Linear Metal Ceiling System for Airport, Commercial and Architectural Spaces',
     },
     lead: {
-      fa: 'سقف خطی سیستمی نواری از تسمه‌های آلومینیومی است که ریتم خطی پیوسته و جهت‌دار می‌سازد و سقف کاذب فلزی معماری را به ابزار هدایت بصری تبدیل می‌کند. این سیستم زمانی تخصیص می‌یابد که فضا کشیده و بزرگ‌مقیاس باشد، ترکیب با نور خطی اهمیت داشته باشد و دسترسی دوره‌ای به پلنوم لازم باشد. قابلیت اجرای خطی، مورب، شعاعی و منحنی، آن را به گزینه‌ای انعطاف‌پذیر برای فرودگاه‌ها، راهروها و فضاهای تجاری بدل می‌کند.',
-      en: 'The linear ceiling is a strip system of aluminium profiles that builds a continuous, directional rhythm and turns an architectural metal ceiling into a wayfinding device. It is specified when a space is elongated and large-scale, when integration with linear lighting matters, and when periodic plenum access is required. Linear, diagonal, radial and curved layouts make it a flexible choice for airports, corridors and commercial interiors.',
+      fa: 'سقف خطی فلزی سیستمی نواری از تسمه‌های آلومینیومی است که ریتم خطی پیوسته و جهت‌دار می‌سازد و سقف کاذب فلزی معماری را به ابزار هدایت بصری تبدیل می‌کند. این سیستم زمانی تخصیص می‌یابد که فضا کشیده و بزرگ‌مقیاس باشد، ترکیب با نور خطی اهمیت داشته باشد و دسترسی دوره‌ای به پلنوم لازم باشد. قابلیت اجرای خطی، مورب، شعاعی و منحنی، آن را به گزینه‌ای انعطاف‌پذیر برای فرودگاه‌ها، راهروها و فضاهای تجاری بدل می‌کند.',
+      en: 'The linear metal ceiling is a strip system of aluminium profiles that builds a continuous, directional rhythm and turns an architectural metal ceiling into a wayfinding device. It is specified when a space is elongated and large-scale, when integration with linear lighting matters, and when periodic plenum access is required. Linear, diagonal, radial and curved layouts make it a flexible choice for airports, corridors and commercial interiors.',
     },
     logic: {
       fa: [
@@ -279,8 +279,8 @@ export const systems: CeilingSystem[] = [
     },
     seo: {
       title: {
-        fa: 'سقف سلول‌باز گریلیوم فلزی | آویزسازه — تجاری، مال، حمل‌ونقل',
-        en: 'Open Cell Grilliom Metal Ceiling | AvizSazeh — Retail, Mall, Transit',
+        fa: 'سقف کاذب گریلیوم | طراحی و اجرای سقف سلول باز فلزی',
+        en: 'Open Cell Ceiling | Grilliom Metal Ceiling System',
       },
       description: {
         fa: 'سقف گریلیوم آلومینیومی آویزسازه با شبکه باز، دسترسی فوری به پلنوم، هماهنگی با روشنایی، HVAC و سیستم‌های اعلام و اطفای حریق. مناسب مال‌ها، مراکز تجاری و پایانه‌های حمل‌ونقل.',
@@ -288,8 +288,8 @@ export const systems: CeilingSystem[] = [
       },
     },
     h1: {
-      fa: 'سیستم سقف سلول‌باز (گریلیوم) — شبکه باز با یکپارچگی کامل MEP',
-      en: 'Open Cell (Grilliom) System — An open grid with full MEP integration',
+      fa: 'سقف کاذب گریلیوم؛ دسترسی کامل به تأسیسات و ریتم معماری باز',
+      en: 'Open Cell Ceiling System — Grilliom Metal Ceiling for Open Architectural Spaces',
     },
     lead: {
       fa: 'سقف سلول‌باز یا گریلیوم، سیستمی شبکه‌ای از پروفیل‌های U نر و ماده است که سطحی باز و دارای عمق بصری می‌سازد و دید به پلنوم را حفظ می‌کند. این سیستم زمانی انتخاب می‌شود که دسترسی سریع و مکرر به تأسیسات MEP، نصب سریع و عمق بصری باز اهمیت داشته باشد. عبور آزاد نور و هوا، آن را برای مال‌ها، مراکز تجاری و پایانه‌های پرتردد مناسب می‌کند.',
@@ -457,21 +457,21 @@ export const systems: CeilingSystem[] = [
     },
     seo: {
       title: {
-        fa: 'تایل فلزی سقف | آویزسازه — آکوستیک، بیمارستان، CBI Europe',
-        en: 'Metal Ceiling Tile | AvizSazeh — Acoustic, Hospital, CBI Europe',
+        fa: 'تایل سقفی فلزی | طراحی و اجرای سقف کاذب تایل فلزی',
+        en: 'Metal Ceiling Tile | Modular Suspended Metal Ceiling System',
       },
       description: {
-        fa: 'تایل فلزی آویزسازه از گالوانیزه یا آلومینیوم با پوشش الکترواستاتیک، امکان پانچ آکوستیک، دسترسی آسان به پلنوم و قابلیت بررسی برای فضاهای بیمارستانی، اداری، فرودگاهی و سیستم‌های تابشی CBI Europe.',
+        fa: 'تایل سقفی فلزی آویزسازه از گالوانیزه یا آلومینیوم با پوشش الکترواستاتیک، امکان پانچ آکوستیک، دسترسی آسان به پلنوم و قابلیت بررسی برای فضاهای بیمارستانی، اداری، فرودگاهی و سیستم‌های تابشی CBI Europe.',
         en: 'AvizSazeh metal tile in galvanised steel or aluminium with electrostatic coating, optional acoustic perforation, easy plenum access and reviewability for hospital, office and airport spaces and CBI Europe radiant systems.',
       },
     },
     h1: {
-      fa: 'سیستم تایل فلزی — سقف پنلی با عملکرد آکوستیک و قابلیت یکپارچگی تأسیساتی',
-      en: 'Metal Tile System — A panelised ceiling with acoustic performance and service integration',
+      fa: 'تایل سقفی فلزی برای فضاهای اداری، تجاری و پروژه‌های بزرگ',
+      en: 'Metal Ceiling Tile System for Modular Suspended Ceiling Projects',
     },
     lead: {
-      fa: 'تایل فلزی سیستمی پنلی از تایل‌های گالوانیزه یا آلومینیوم با پوشش الکترواستاتیک است که سطحی منظم، ماژولار و قابل‌تعویض می‌سازد. این سیستم زمانی انتخاب می‌شود که نظم بصری، نگهداری آسان، عملکرد آکوستیک با پانچ و امکان هماهنگی تأسیساتی اهمیت داشته باشد. قابلیت بررسی برای فضاهای بهداشتی و سازگاری با سیستم‌های تابشی CBI Europe، دامنه کاربرد آن را گسترده می‌کند.',
-      en: 'The metal tile is a panelised system of galvanised or aluminium tiles with an electrostatic finish that creates an ordered, modular and replaceable surface. It is specified when visual order, easy maintenance, perforated acoustic performance and service coordination matter. Reviewability for hygienic spaces and compatibility with CBI Europe radiant systems broaden its range.',
+      fa: 'تایل سقفی فلزی سیستمی پنلی از تایل‌های گالوانیزه یا آلومینیوم با پوشش الکترواستاتیک است که سطحی منظم، ماژولار و قابل‌تعویض می‌سازد. این سیستم زمانی انتخاب می‌شود که نظم بصری، نگهداری آسان، عملکرد آکوستیک با پانچ و امکان هماهنگی تأسیساتی اهمیت داشته باشد. قابلیت بررسی برای فضاهای بهداشتی و سازگاری با سیستم‌های تابشی CBI Europe، دامنه کاربرد آن را گسترده می‌کند.',
+      en: 'The metal ceiling tile is a panelised system of galvanised or aluminium tiles with an electrostatic finish that creates an ordered, modular and replaceable surface. It is specified when visual order, easy maintenance, perforated acoustic performance and service coordination matter. Reviewability for hygienic spaces and compatibility with CBI Europe radiant systems broaden its range.',
     },
     logic: {
       fa: [
@@ -643,8 +643,8 @@ export const systems: CeilingSystem[] = [
     },
     seo: {
       title: {
-        fa: 'سقف بافل فلزی | آویزسازه — آکوستیک، مدرسه، فضای معماری',
-        en: 'Metal Baffle Ceiling | AvizSazeh — Acoustic, School, Architectural',
+        fa: 'سقف بافل | طراحی و اجرای سقف کاذب بافل فلزی',
+        en: 'Baffle Ceiling | Acoustic & Architectural Metal Baffle System',
       },
       description: {
         fa: 'سیستم بافل فلزی آویزسازه برای ایجاد عمق معماری، کنترل آکوستیک و حفظ دسترسی به پلنوم. قابل بررسی برای اجرای خطی، منحنی یا موج‌دار با رنگ‌های ویژه و طرح چوب.',
@@ -652,12 +652,12 @@ export const systems: CeilingSystem[] = [
       },
     },
     h1: {
-      fa: 'سیستم بافل — عمق معماری، کنترل آکوستیک و امکان اجرای خطی یا موج‌دار',
-      en: 'Baffle System — Architectural depth, acoustic control and straight or wavy execution',
+      fa: 'سقف بافل فلزی برای کنترل آکوستیک و عمق معماری فضا',
+      en: 'Baffle Ceiling System for Acoustic and Architectural Depth',
     },
     lead: {
-      fa: 'سیستم بافل از المان‌های خطی و عمودی ساخته می‌شود که عمق معماری و ریتم بصری می‌سازند و سقف اصلی و پلنوم را قابل‌دسترس نگه می‌دارند. این سیستم زمانی انتخاب می‌شود که کنترل آکوستیک، بیان معماری و امکان اجرای منحنی یا موج‌دار اهمیت داشته باشد. تنوع متریال و پوشش — ساده، رنگ ویژه و طرح چوب — آن را به ابزاری گویا برای مدارس، لابی‌ها و فضاهای اداری بدل می‌کند.',
-      en: 'The baffle system is built from linear vertical elements that create architectural depth and visual rhythm while keeping the main slab and plenum accessible. It is specified when acoustic control, architectural expression and the option of curved or wavy execution matter. A range of materials and finishes — plain, special colour and wood-look — makes it an expressive tool for schools, lobbies and offices.',
+      fa: 'سقف بافل فلزی از المان‌های خطی و عمودی ساخته می‌شود که عمق معماری و ریتم بصری می‌سازند و سقف اصلی و پلنوم را قابل‌دسترس نگه می‌دارند. این سیستم زمانی انتخاب می‌شود که کنترل آکوستیک، بیان معماری و امکان اجرای منحنی یا موج‌دار اهمیت داشته باشد. تنوع متریال و پوشش — ساده، رنگ ویژه و طرح چوب — آن را به ابزاری گویا برای مدارس، لابی‌ها و فضاهای اداری بدل می‌کند.',
+      en: 'The baffle ceiling is built from linear vertical metal elements that create architectural depth and visual rhythm while keeping the main slab and plenum accessible. It is specified when acoustic control, architectural expression and the option of curved or wavy execution matter. A range of materials and finishes — plain, special colour and wood-look — makes it an expressive tool for schools, lobbies and offices.',
     },
     logic: {
       fa: [

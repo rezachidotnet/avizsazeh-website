@@ -45,8 +45,11 @@
   "home": {
     "hero": {
       "eyebrow": "Precision Engineered · Flawless Execution",
-      "headline": "Engineered Metal Ceiling Systems for Architecture That Demands Precision",
-      "subheadline": "AvizSazeh translates architectural ceiling concepts into structurally validated, manufacturable, and site-executable metal ceiling systems — from design intent to installed reality.",
+      "metaTitle": "Metal Suspended Ceiling Systems | Design, Engineering & Execution | AvizSazeh",
+      "metaDescription": "AvizSazeh designs, engineers, manufactures and installs metal suspended ceiling systems, including linear metal ceilings, open cell ceilings, baffle ceilings and metal ceiling tiles for commercial and architectural projects.",
+      "imageAlt": "Engineered metal suspended ceiling installed in a large-scale architectural space",
+      "headline": "Metal Suspended Ceiling Systems — Engineered from Design to Execution",
+      "subheadline": "AvizSazeh translates architectural ceiling concepts into structurally validated, manufacturable, and site-executable metal suspended ceiling systems — from design intent to installed reality.",
       "description": "We do not sell materials. We deliver executable ceiling systems.",
       "cardTitle": "A ceiling is an engineered system — not a product.",
       "cardText": "We integrate design, engineering, materials and installation into high-performance ceiling systems.",
@@ -383,6 +386,12 @@
     "eyebrow": "Project record",
     "challengeTitle": "Project challenge",
     "solutionTitle": "Engineering solution",
+    "systemLogicTitle": "System logic",
+    "constraintsTitle": "Execution constraints",
+    "roleTitle": "AvizSazeh’s role",
+    "relatedSystemsTitle": "Related systems",
+    "relatedApplicationsTitle": "Related applications",
+    "pendingVisualsTitle": "Visual documentation (pending)",
     "galleryTitle": "Execution photos",
     "techTitle": "Technical specifications",
     "labels": {
@@ -589,5 +598,19 @@
     "ctaTitle": "Not sure which system fits?",
     "ctaText": "Send your drawings and the AvizSazeh engineering team will help you select the right system.",
     "cta": "Send drawings to select the right system"
+  },
+  "applicationsPage": {
+    "useCasesTitle": "Where this applies",
+    "challengesTitle": "Design & engineering challenges",
+    "requirementsTitle": "Engineering requirements",
+    "systemsTitle": "Suitable ceiling systems",
+    "systemsIntro": "These AvizSazeh metal ceiling systems are the strongest fit for this application. Final selection follows an engineering review.",
+    "hubTitle": "Part of our metal suspended ceiling systems",
+    "hubText": "This application is one route into the full AvizSazeh metal suspended ceiling offering — explore the category hub for systems, comparison and engineering process.",
+    "projectsTitle": "Project proof",
+    "projectsIntro": "Recorded AvizSazeh execution references related to this application.",
+    "faqTitle": "Frequently asked questions",
+    "ctaTitle": "Have a project like this?",
+    "ctaText": "Submit your project so the AvizSazeh engineering team can assess system feasibility, execution constraints and the production and installation path."
   }
 }
