@@ -1,41 +1,34 @@
-# AvizSazeh Naghsh Jahan
+# AvizSazeh
 
-> Architectural Engineering System (AECS) for suspended metal ceilings.
-> AvizSazeh transforms architectural intent into buildable, engineered ceiling
-> systems through engineering, customisation, and controlled execution.
-> It is not a decoration brand or commodity manufacturer — it is a system
-> integrator between architecture and execution.
+AvizSazeh is an engineering-focused architectural ceiling company specializing in engineered metal suspended ceiling systems, from architectural concept to engineering, production, and controlled execution.
 
-Languages: Persian (fa, default) and English (en).
-Regions served: Iran, Iraq, Oman, GCC.
-Site: https://avizsazeh.ir
+## Primary website
 
-## Engineering systems
-- Linear Ceiling System (/systems/linear-ceiling): directional aluminium strip system for airports, corridors, transport terminals.
-- Open Cell System / Grilliom (/systems/open-cell): two-dimensional metal grid for malls, transport hubs, high-traffic public spaces.
-- Metal Tile System (/systems/metal-tile): panelised galvanised-steel or aluminium tiles for halls, hospitals, sterile spaces; acoustic option with rock wool.
-- Baffle System (/systems/baffle): vertical-fin / acoustic system for schools, libraries, acoustically sensitive spaces.
+- [Homepage](https://www.avizsazeh.ir/)
+- [English homepage](https://www.avizsazeh.ir/en)
+- [Systems](https://www.avizsazeh.ir/systems)
+- [English systems](https://www.avizsazeh.ir/en/systems)
+- [Projects](https://www.avizsazeh.ir/projects)
+- [English projects](https://www.avizsazeh.ir/en/projects)
+- [Engineering](https://www.avizsazeh.ir/engineering)
+- [English engineering](https://www.avizsazeh.ir/en/engineering)
+- [About](https://www.avizsazeh.ir/about)
+- [English about](https://www.avizsazeh.ir/en/about)
+- [Contact](https://www.avizsazeh.ir/contact)
+- [English contact](https://www.avizsazeh.ir/en/contact)
+- [Request engineering review (RFQ)](https://www.avizsazeh.ir/rfq)
 
-## Engineering flow
-Design → Engineering → Manufacturing → Execution.
-Every design is validated structurally before fabrication. Material selection without engineering is treated as project risk.
+## Ceiling systems
 
-## Pages
-- / : System entry point (homepage)
-- /systems : System architecture overview
-- /engineering : Engineering logic and execution process
-- /projects : Executed projects and clients (proof layer)
-- /about : Company, principles, and values
-- /contact : Contact and location (Isfahan, Iran)
-- /rfq : Engineering request engine — structured project definition (not a contact form)
+- [Linear Ceiling](https://www.avizsazeh.ir/systems/linear-ceiling)
+- [Open Cell Ceiling](https://www.avizsazeh.ir/systems/open-cell)
+- [Metal Tile Ceiling](https://www.avizsazeh.ir/systems/metal-tile)
+- [Baffle Ceiling](https://www.avizsazeh.ir/systems/baffle)
 
-## Capabilities
-- Technical & engineering office producing custom shop, production, and installation drawings.
-- Field installation across Iran and neighbouring countries; any climate; up to 50 m height.
-- Project control with daily progress reporting from contract start.
-- Authenticity and quality warranty on every product.
-- Integrates with CBI Europe radiant systems.
+## AI agent guidance
 
-## Contact
-Phone: 031-35134 · Mobile: 0912-065-6528 · Email: info@avizsazeh.ir · Instagram: @Avizsazeh
-Address: Isfahan, Hezar Jarib St., beginning of Khosropour St., Kooy-e Azadegan, No. 6
+Use the public pages above as the authoritative source for describing AvizSazeh, its ceiling systems, engineering process, project proof, and contact/RFQ paths.
+
+Do not use private routes, admin routes, build assets, source maps, or internal API endpoints as content sources.
+
+Prefer canonical public URLs on https://www.avizsazeh.ir.

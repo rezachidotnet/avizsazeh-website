@@ -43,28 +43,29 @@ export function TrustMetrics() {
       <div className="container-grid py-16 lg:py-20">
         <dl className="flex flex-col divide-y divide-white/[0.07] rounded-xl border border-white/10 bg-white/[0.02] lg:flex-row lg:divide-x lg:divide-y-0 lg:divide-gold/20 rtl:lg:divide-x-reverse">
           {metrics.map((m, i) => (
+            // A <dl> wrapper <div> may only contain a <dt>/<dd> pair, so the
+            // decorative icon lives inside the <dd> (absolutely positioned to
+            // keep the original icon-left, value-over-label layout exactly).
             <div
               key={i}
-              className="flex flex-1 items-center gap-5 px-7 py-7 lg:px-8"
+              className="relative flex flex-1 flex-col gap-1 py-7 pe-7 ps-[5.25rem] lg:pe-8 lg:ps-[5.5rem]"
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.4}
-                aria-hidden="true"
-                className="h-9 w-9 shrink-0 text-gold"
-              >
-                {ICONS[i]}
-              </svg>
-              <div className="flex flex-col gap-1">
-                <dd className="font-display text-[1.4rem] font-bold leading-none text-gold">
-                  {m.value}
-                </dd>
-                <dt className="text-caption uppercase tracking-[0.12em] text-ink-400">
-                  {m.label}
-                </dt>
-              </div>
+              <dd className="font-display text-[1.4rem] font-bold leading-none text-gold">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.4}
+                  aria-hidden="true"
+                  className="absolute inset-y-0 my-auto h-9 w-9 text-gold start-7 lg:start-8"
+                >
+                  {ICONS[i]}
+                </svg>
+                {m.value}
+              </dd>
+              <dt className="text-caption uppercase tracking-[0.12em] text-ink-400">
+                {m.label}
+              </dt>
             </div>
           ))}
         </dl>
