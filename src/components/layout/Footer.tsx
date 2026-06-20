@@ -2,6 +2,7 @@ import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Logo } from '@/components/brand/Logo';
 import { systems } from '@/lib/content/systems';
+import { TrackedTel } from '@/components/analytics/TrackedTel';
 import { company, localized, SITE_URL } from '@/lib/site';
 import type { Locale } from '@/i18n/routing';
 
@@ -143,15 +144,16 @@ export async function Footer() {
                     landline (031-35134 appears to be a shortened/extension number) before
                     promoting it as a primary contact. */}
                 <li>
-                  <a
-                    href={`tel:${company.mobile}`}
+                  <TrackedTel
+                    phone={company.mobile}
+                    location="footer_contact"
                     className="flex gap-3 transition-colors hover:text-white"
                   >
                     <svg {...iconProps}>
                       <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
                     </svg>
                     <span className="nums">{company.mobileDisplay}</span>
-                  </a>
+                  </TrackedTel>
                 </li>
                 <li>
                   <a
@@ -213,15 +215,16 @@ export async function Footer() {
                 <path d="M3 6h18v12H3zM3 7l9 6 9-6" strokeLinejoin="round" />
               </svg>
             </a>
-            <a
-              href={`tel:${company.mobile}`}
-              aria-label="Phone"
+            <TrackedTel
+              phone={company.mobile}
+              location="footer_social"
+              ariaLabel="Phone"
               className="text-ink-400 transition-colors hover:text-gold"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.6} aria-hidden="true">
                 <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
               </svg>
-            </a>
+            </TrackedTel>
           </div>
 
           <p className="flex items-center gap-3 text-caption font-medium uppercase tracking-[0.2em] text-ink-300">

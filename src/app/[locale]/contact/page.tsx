@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/Button';
 import { JsonLd } from '@/components/shared/JsonLd';
 import { SystemIcon, type IconKey } from '@/components/icons/SystemIcon';
 import { ContactRouting } from '@/components/contact/ContactRouting';
+import { TrackedTel } from '@/components/analytics/TrackedTel';
 import { company, localized } from '@/lib/site';
 
 export async function generateMetadata({
@@ -38,9 +39,9 @@ export default async function ContactPage({
 
   const mapsUrl = `https://www.google.com/maps?q=${company.geo.lat},${company.geo.lng}`;
 
-  const rows: { icon: IconKey; label: string; value: string; href?: string; mono?: boolean }[] = [
-    { icon: 'control', label: t('phone'), value: company.phoneConsultDisplay, href: `tel:${company.phoneConsult}`, mono: true },
-    { icon: 'team', label: t('mobile'), value: company.mobileDisplay, href: `tel:${company.mobile}`, mono: true },
+  const rows: { icon: IconKey; label: string; value: string; href?: string; mono?: boolean; tel?: string; track?: string }[] = [
+    { icon: 'control', label: t('phone'), value: company.phoneConsultDisplay, href: `tel:${company.phoneConsult}`, mono: true, tel: company.phoneConsult, track: 'contact_page_phone' },
+    { icon: 'team', label: t('mobile'), value: company.mobileDisplay, href: `tel:${company.mobile}`, mono: true, tel: company.mobile, track: 'contact_page_mobile' },
     { icon: 'office', label: t('email'), value: company.email, href: `mailto:${company.email}` },
     { icon: 'system', label: t('instagram'), value: `@${company.instagram}`, href: company.instagramUrl },
     { icon: 'architecture', label: t('address'), value: localized(company.address, locale) },
@@ -81,7 +82,15 @@ export default async function ContactPage({
                 );
                 return (
                   <li key={row.label} className="bg-ink-900">
-                    {row.href ? (
+                    {row.tel && row.track ? (
+                      <TrackedTel
+                        phone={row.tel}
+                        location={row.track}
+                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-white/[0.03]"
+                      >
+                        {content}
+                      </TrackedTel>
+                    ) : row.href ? (
                       <a
                         href={row.href}
                         target={row.href.startsWith('http') ? '_blank' : undefined}

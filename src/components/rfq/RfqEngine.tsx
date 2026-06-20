@@ -190,6 +190,13 @@ export function RfqEngine({
       const data = (await res.json()) as RfqResult;
       setResult(data);
       trackEvent('rfq_submit_success', { ...eventParams(), project_id: data.projectId });
+      // GA4-recommended conversion event mirroring the successful RFQ. Carries
+      // only safe metadata (no PII) so it can be marked a Key Event in GA4.
+      trackEvent('generate_lead', {
+        ...eventParams(),
+        project_id: data.projectId,
+        lead_source: 'rfq',
+      });
       if (data.lead) {
         trackEvent(data.lead.delivered ? 'odoo_sync_success' : 'odoo_sync_failed', {
           project_id: data.projectId,
