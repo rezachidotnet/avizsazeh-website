@@ -233,7 +233,10 @@ export function RfqEngine({
           <ResultRow label={t('fields.projectType')} value={draft.projectType || '—'} />
           {place ? <ResultRow label={t('fields.location')} value={place} /> : null}
           {draft.company ? <ResultRow label={t('fields.company')} value={draft.company} /> : null}
-          <ResultRow label={t('complexity')} value={tComplexity(result.complexity)} />
+          <ResultRow
+            label={t('complexity')}
+            value={result.complexity ? tComplexity(result.complexity) : '—'}
+          />
         </dl>
 
         {/* Urgent coordination */}
