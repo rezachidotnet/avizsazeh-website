@@ -160,7 +160,7 @@ export default async function ProjectsPage({
               <span className="mt-0.5 font-latin text-body-s font-bold tabular-nums text-gold">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <span className="text-body text-ink-200">{item}</span>
+              <span className="text-body text-ink-300">{item}</span>
             </li>
           ))}
         </ul>
@@ -173,7 +173,7 @@ export default async function ProjectsPage({
           {caseFields.map((field, i) => (
             <li
               key={i}
-              className="flex items-center gap-3 rounded-sm border border-white/10 bg-white/[0.03] px-5 py-4"
+              className="flex items-center gap-3 rounded-sm border border-white/10 bg-white/[0.05] px-5 py-4"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -185,7 +185,7 @@ export default async function ProjectsPage({
               >
                 <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span className="text-body-s text-ink-200">{field}</span>
+              <span className="text-body-s text-ink-300">{field}</span>
             </li>
           ))}
         </ul>
