@@ -33,7 +33,10 @@ const inter = Inter({
 });
 const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  // Display headings only ever set 500/600/700 (and the serif is LTR-only).
+  // The 400 face was never rendered, so dropping it removes six dead
+  // @font-face blocks (one per subset) from the render-blocking global CSS.
+  weight: ['500', '600', '700'],
   // No italic display text exists in the UI; dropping the italic style
   // removes an entire preloaded font file from every page.
   style: ['normal'],
