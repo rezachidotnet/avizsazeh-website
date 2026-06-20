@@ -109,6 +109,18 @@
   }
 }
 
+/* ── Persian/RTL display headings ──────────────────────────────────────────
+   The editorial display face (Source Serif 4) ships Latin glyphs only, so any
+   Persian text set in `font-display` falls through to the Georgia/serif
+   fallback — rendering the wrong serif (and inconsistently across devices as
+   the font swap resolves, e.g. desktop vs. mobile). Persian/RTL must use the
+   Persian-safe sans (Vazirmatn); English/LTR keeps the editorial serif.
+   Unlayered so it beats Tailwind's `.font-display` utility regardless of
+   cascade-layer order. */
+[dir='rtl'] .font-display {
+  font-family: var(--font-vazir), system-ui, sans-serif;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
