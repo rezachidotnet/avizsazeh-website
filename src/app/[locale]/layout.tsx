@@ -39,6 +39,13 @@ const sourceSerif = Source_Serif_4({
   style: ['normal'],
   variable: '--font-display',
   display: 'swap',
+  // `--font-display` only renders on English (LTR) routes — Persian/RTL pages
+  // remap `.font-display` to Vazirmatn (see globals.css), so the editorial
+  // serif paints nothing above the fold on the default-locale homepage. Don't
+  // preload it: that kept a ~50 KiB Latin face in every page's critical path
+  // for no visible glyphs. English display headings now discover it via CSS
+  // with `swap`, backed by next/font's metric-adjusted serif fallback (no CLS).
+  preload: false,
 });
 
 export function generateStaticParams() {
