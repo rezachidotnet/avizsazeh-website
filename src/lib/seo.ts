@@ -169,18 +169,21 @@ export function systemJsonLd(args: {
   name: string;
   description: string;
   slug: string;
-  image: string;
+  serviceType: string;
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'Service',
     name: args.name,
-    category: 'Architectural ceiling system',
+    serviceType: args.serviceType,
     description: args.description,
-    image: `${SITE_URL}${args.image}`,
     url: localeUrl(args.locale, `/systems/${args.slug}`),
-    brand: { '@type': 'Brand', name: company.shortName[args.locale] },
-    manufacturer: { '@id': `${SITE_URL}/#organization` },
+    provider: {
+      '@type': 'Organization',
+      name: 'آویزسازه نقش جهان',
+      url: SITE_URL,
+    },
+    areaServed: company.regions,
   };
 }
 
@@ -206,7 +209,11 @@ export function serviceJsonLd(args: {
         : 'Metal suspended ceiling design, manufacturing and installation'),
     description: args.description,
     url: localeUrl(args.locale, args.path),
-    provider: { '@id': `${SITE_URL}/#organization` },
+    provider: {
+      '@type': 'Organization',
+      name: 'آویزسازه نقش جهان',
+      url: SITE_URL,
+    },
     areaServed: company.regions,
     availableLanguage: ['fa', 'en'],
   };

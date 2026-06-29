@@ -8,7 +8,6 @@ import {
   buildMetadata,
   breadcrumbJsonLd,
   systemJsonLd,
-  serviceJsonLd,
   faqJsonLd,
 } from '@/lib/seo';
 import { PageHero } from '@/components/layout/PageHero';
@@ -72,6 +71,16 @@ export default async function SystemDetailPage({
   const name = localized(system.name, locale);
   const h1 = localized(system.h1, locale);
   const related = systems.filter((s) => s.slug !== system.slug);
+  const schemaName =
+    system.slug === 'linear-ceiling' && locale === 'fa' ? 'سقف خطی فلزی' : name;
+  const schemaServiceType =
+    system.slug === 'linear-ceiling'
+      ? locale === 'fa'
+        ? 'طراحی، تولید و اجرای سقف کاذب فلزی خطی'
+        : 'Design, manufacturing and installation of linear metal suspended ceilings'
+      : locale === 'fa'
+        ? `طراحی، تولید و اجرای ${name}`
+        : `${name} design, manufacturing and installation`;
 
   const heroAlt =
     locale === 'fa'
@@ -336,16 +345,10 @@ export default async function SystemDetailPage({
         data={[
           systemJsonLd({
             locale,
-            name,
+            name: schemaName,
             description: localized(system.definition, locale),
             slug: system.slug,
-            image: system.cover,
-          }),
-          serviceJsonLd({
-            locale,
-            name,
-            description: localized(system.seo.description, locale),
-            path: `/systems/${system.slug}`,
+            serviceType: schemaServiceType,
           }),
           faqJsonLd(
             system.faq.map((f) => ({
