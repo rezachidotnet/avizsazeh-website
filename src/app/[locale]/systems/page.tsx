@@ -10,6 +10,7 @@ import { Reveal } from '@/components/ui/Reveal';
 import { JsonLd } from '@/components/shared/JsonLd';
 import { SystemIcon } from '@/components/icons/SystemIcon';
 import { systems } from '@/lib/content/systems';
+import { localized } from '@/lib/site';
 
 export async function generateMetadata({
   params,
@@ -34,6 +35,7 @@ export default async function SystemsPage({
   const locale = (await getLocale()) as Locale;
   const t = await getTranslations('systemsPage');
   const tNav = await getTranslations('nav');
+  const tCta = await getTranslations('cta');
   const tCompare = await getTranslations('systemCompare');
 
   const factors = t.raw('selectionFactors') as string[];
@@ -54,7 +56,13 @@ export default async function SystemsPage({
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {systems.map((system, i) => (
             <Reveal key={system.slug} delay={i * 70}>
-              <SystemCard system={system} locale={locale} index={i} />
+              <SystemCard
+                system={system}
+                locale={locale}
+                index={i}
+                context={localized(system.context, locale)}
+                cta={tCta('viewThisSystem')}
+              />
             </Reveal>
           ))}
         </div>

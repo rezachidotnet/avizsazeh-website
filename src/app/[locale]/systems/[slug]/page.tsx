@@ -25,9 +25,10 @@ import { VisualDocumentation } from '@/components/system/VisualDocumentation';
 import { SystemFAQ } from '@/components/system/SystemFAQ';
 import { TrackView } from '@/components/analytics/TrackView';
 import { systems, getSystem } from '@/lib/content/systems';
+import { getArabicSystemDetail, type ArabicSystemDetail } from '@/lib/content/systems-ar';
 import { applications } from '@/lib/content/applications';
 import { projects, hasCaseStudy, projectName } from '@/lib/content/projects';
-import { localized } from '@/lib/site';
+import { localized, localizedList } from '@/lib/site';
 
 export const dynamicParams = false;
 
@@ -44,11 +45,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const system = getSystem(params.slug);
   if (!system) return {};
+  const arabicDetail =
+    params.locale === 'ar' ? getArabicSystemDetail(system.slug) : undefined;
   return buildMetadata({
     locale: params.locale,
     path: `/systems/${system.slug}`,
-    title: localized(system.seo.title, params.locale),
-    description: localized(system.seo.description, params.locale),
+    title: arabicDetail?.metaTitle ?? localized(system.seo.title, params.locale),
+    description: arabicDetail?.metaDescription ?? localized(system.seo.description, params.locale),
     images: [system.cover],
     titleAbsolute: true,
   });
@@ -67,6 +70,21 @@ export default async function SystemDetailPage({
   const t = await getTranslations('systemDetail');
   const tNav = await getTranslations('nav');
   const tc = await getTranslations('cta');
+
+  if (locale === 'ar') {
+    const arabicDetail = getArabicSystemDetail(system.slug);
+    if (arabicDetail) {
+      return (
+        <ArabicSystemDetailPage
+          detail={arabicDetail}
+          system={system}
+          tNavHome={tNav('home')}
+          tNavSystems={tNav('systems')}
+          submitLabel={tc('submitProject')}
+        />
+      );
+    }
+  }
 
   const name = localized(system.name, locale);
   const h1 = localized(system.h1, locale);
@@ -131,8 +149,8 @@ export default async function SystemDetailPage({
         <EngineeringLogic
           locale={locale}
           title={t('logicTitle')}
-          bullets={system.logic[locale]}
-          anatomy={system.anatomy[locale]}
+          bullets={localizedList(system.logic, locale)}
+          anatomy={localizedList(system.anatomy, locale)}
         />
       </Section>
 
@@ -161,7 +179,7 @@ export default async function SystemDetailPage({
           <ApplicationFitGrid
             locale={locale}
             applications={system.applications}
-            notRecommended={system.notRecommended[locale]}
+            notRecommended={localizedList(system.notRecommended, locale)}
             notRecommendedTitle={t('notRecommendedTitle')}
           />
         </div>
@@ -230,7 +248,7 @@ export default async function SystemDetailPage({
         <div className="mt-8">
           <SystemSelectionGuidance
             locale={locale}
-            criteria={system.selection[locale]}
+            criteria={localizedList(system.selection, locale)}
             compareLabel={t('compareCta')}
           />
         </div>
@@ -241,7 +259,7 @@ export default async function SystemDetailPage({
         <VisualDocumentation
           locale={locale}
           title={t('visualsTitle')}
-          items={system.requiredVisuals[locale]}
+          items={localizedList(system.requiredVisuals, locale)}
         />
       </Section>
 
@@ -363,5 +381,143 @@ export default async function SystemDetailPage({
         ]}
       />
     </>
+  );
+}
+
+function ArabicSystemDetailPage({
+  detail,
+  system,
+  tNavHome,
+  tNavSystems,
+  submitLabel,
+}: {
+  detail: ArabicSystemDetail;
+  system: NonNullable<ReturnType<typeof getSystem>>;
+  tNavHome: string;
+  tNavSystems: string;
+  submitLabel: string;
+}) {
+  const crumbs = [
+    { name: tNavHome, path: '/' },
+    { name: tNavSystems, path: '/systems' },
+    { name: detail.name, path: `/systems/${detail.slug}`, current: true },
+  ];
+  const related = systems.filter((s) => s.slug !== detail.slug);
+
+  return (
+    <>
+      <TrackView event="system_page_view" params={{ ceiling_system: detail.slug }} />
+      <PageHero
+        eyebrow={detail.category}
+        title={detail.title}
+        intro={detail.intro}
+        breadcrumbs={crumbs}
+      />
+
+      <Section className="!pb-0">
+        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-white/10 bg-ink-100">
+          <Image
+            src={system.cover}
+            alt={`${detail.name} - نظام سقف معدني معلّق من آویزسازه`}
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 1100px"
+            className="object-cover"
+          />
+        </div>
+      </Section>
+
+      <Section>
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <span className="eyebrow">الوصف التقني</span>
+            <h2 className="mt-4 font-display text-h2 font-semibold text-white">
+              نظام سقف معماري قابل للتصنيع والتركيب
+            </h2>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="text-body-l leading-relaxed text-ink-300">
+              {detail.technicalDescription}
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section ivory>
+        <div className="grid gap-8 lg:grid-cols-3">
+          <ArabicListBlock title="التطبيقات المناسبة" items={detail.applications} />
+          <ArabicListBlock title="المزايا المعمارية والهندسية" items={detail.advantages} />
+          <ArabicListBlock title="ملاحظات الهندسة والتنفيذ" items={detail.executionNotes} />
+        </div>
+      </Section>
+
+      <Section dark>
+        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+          <div className="max-w-2xl">
+            <span className="eyebrow">تحليل المشروع</span>
+            <h2 className="mt-4 font-display text-h2 font-semibold text-white">
+              هل يناسب هذا النظام مشروعك؟
+            </h2>
+            <p className="mt-4 text-body-l text-ink-300">{detail.cta}</p>
+          </div>
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+            <Button href={`/rfq?system=${detail.slug}`} variant="gold" size="lg">
+              {submitLabel}
+            </Button>
+            <Button href="/systems" variant="outline" size="lg">
+              العودة إلى الأنظمة
+            </Button>
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <span className="eyebrow">أنظمة أخرى</span>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {related.map((relatedSystem, i) => (
+            <SystemCard
+              key={relatedSystem.slug}
+              system={relatedSystem}
+              locale="ar"
+              index={i}
+              context={localized(relatedSystem.context, 'ar')}
+              cta="عرض هذا النظام"
+            />
+          ))}
+        </div>
+      </Section>
+
+      <JsonLd
+        data={[
+          systemJsonLd({
+            locale: 'ar',
+            name: detail.name,
+            description: detail.technicalDescription,
+            slug: detail.slug,
+            serviceType: `${detail.name} - تصميم وهندسة وإنتاج وتنفيذ`,
+          }),
+          breadcrumbJsonLd(
+            crumbs.map((c) => ({ name: c.name, path: c.path })),
+            'ar',
+          ),
+        ]}
+      />
+    </>
+  );
+}
+
+function ArabicListBlock({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-7">
+      <h2 className="font-display text-h3 font-semibold text-white">{title}</h2>
+      <ul className="mt-5 space-y-4">
+        {items.map((item) => (
+          <li key={item} className="flex gap-3 text-body-s leading-relaxed text-ink-700">
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

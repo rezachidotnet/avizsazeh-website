@@ -13,7 +13,7 @@ import { Footer } from '@/components/layout/Footer';
 import { MobileActionBar } from '@/components/layout/MobileActionBar';
 import { Analytics } from '@/components/analytics/Analytics';
 import { JsonLd } from '@/components/shared/JsonLd';
-import { organizationJsonLd, websiteJsonLd, localeUrl } from '@/lib/seo';
+import { languageAlternates, organizationJsonLd, websiteJsonLd, localeUrl } from '@/lib/seo';
 import { SITE_URL } from '@/lib/site';
 import '../globals.css';
 
@@ -79,11 +79,7 @@ export async function generateMetadata({
     applicationName: t('name'),
     alternates: {
       canonical: localeUrl(locale, '/'),
-      languages: {
-        fa: localeUrl('fa', '/'),
-        en: localeUrl('en', '/'),
-        'x-default': localeUrl('fa', '/'),
-      },
+      languages: languageAlternates('/'),
     },
     icons: {
       icon: [

@@ -1,17 +1,10 @@
 import type { Locale } from '@/i18n/routing';
 
 /**
- * Canonical origin — overridable via env for preview/prod parity.
- * Production redirects the apex (avizsazeh.ir) to the www host, so the
- * canonical origin is the www host. Keep this in sync with the apex→www
- * redirect in next.config.mjs and the NEXT_PUBLIC_SITE_URL env value.
+ * Canonical origin. Keep metadata, sitemap, robots, JSON-LD and redirects on
+ * the public www host even when preview/local requests use another host.
  */
-const SITE_URL_ENV = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-export const SITE_URL = (
-  SITE_URL_ENV && SITE_URL_ENV.length > 0
-    ? SITE_URL_ENV
-    : 'https://www.avizsazeh.ir'
-).replace(/\/$/, '');
+export const SITE_URL = 'https://www.avizsazeh.ir';
 
 /**
  * Real company identity (source: avizsazeh.ir + brand-guid).
@@ -21,10 +14,12 @@ export const company = {
   legalName: {
     fa: 'شرکت آویزسازه نقش جهان',
     en: 'Avizsazeh Naghsh Jahan Co.',
+    ar: 'شركة آویزسازه نقش جهان',
   },
   shortName: {
     fa: 'آویزسازه',
     en: 'AvizSazeh',
+    ar: 'آویزسازه',
   },
   parent: {
     fa: 'شرکت فضاسازه نقش جهان',
@@ -46,22 +41,45 @@ export const company = {
   address: {
     fa: 'اصفهان، خیابان هزارجریب، ابتدای خیابان خسروپور، کوی آزادگان، پلاک ۶',
     en: 'Isfahan, Hezar Jarib St., beginning of Khosropour St., Kooy-e Azadegan, No. 6',
+    ar: 'أصفهان، شارع هزار جريب، بداية شارع خسروبور، حي آزادگان، رقم 6',
   },
-  city: { fa: 'اصفهان', en: 'Isfahan' },
-  country: { fa: 'ایران', en: 'Iran' },
+  city: { fa: 'اصفهان', en: 'Isfahan', ar: 'أصفهان' },
+  country: { fa: 'ایران', en: 'Iran', ar: 'إيران' },
   countryCode: 'IR',
   postalRegion: 'Isfahan',
   hours: {
     fa: 'شنبه تا چهارشنبه ۸ تا ۱۶ — پنجشنبه ۸ تا ۱۲',
     en: 'Sat–Wed 08:00–16:00 · Thu 08:00–12:00',
+    ar: 'السبت إلى الأربعاء 08:00–16:00 · الخميس 08:00–12:00',
   },
   geo: { lat: 32.6125, lng: 51.6675 }, // Isfahan (city-level)
   regions: ['IR', 'IQ', 'OM'],
 } as const;
 
-export function localized<T extends Record<Locale, string>>(
+export type LocalizedString = {
+  fa: string;
+  en?: string;
+  ar?: string;
+  ru?: string;
+};
+
+export type LocalizedList = {
+  fa: string[];
+  en?: string[];
+  ar?: string[];
+  ru?: string[];
+};
+
+export function localized<T extends LocalizedString>(
   field: T,
   locale: Locale,
 ): string {
+  return field[locale] ?? field.fa;
+}
+
+export function localizedList<T extends LocalizedList>(
+  field: T,
+  locale: Locale,
+): string[] {
   return field[locale] ?? field.fa;
 }

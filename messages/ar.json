@@ -1,0 +1,772 @@
+{
+  "brand": {
+    "name": "آویزسازه",
+    "fullName": "آویزسازه نقش جهان",
+    "tagline": "أنظمة أسقف معدنية معلّقة بهندسة معمارية متكاملة"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "systems": "الأنظمة",
+    "engineering": "الهندسة والتنفيذ",
+    "projects": "المشاريع",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "rfq": "طلب تحليل هندسي",
+    "menu": "القائمة",
+    "close": "إغلاق"
+  },
+  "cta": {
+    "requestAnalysis": "طلب تحليل هندسي",
+    "exploreSystems": "استكشاف بنية الأنظمة",
+    "understandLogic": "فهم منطق النظام",
+    "compareSystems": "مقارنة الأنظمة الهندسية",
+    "viewProof": "عرض أدلة التنفيذ",
+    "startRequest": "بدء طلب هندسي",
+    "submitProject": "إرسال المشروع للتقييم الهندسي",
+    "viewSystem": "عرض النظام",
+    "viewCeilingSystems": "عرض أنظمة الأسقف",
+    "viewCompletedProjects": "عرض المشاريع المنفذة",
+    "viewEngineeringLogic": "عرض المنطق الهندسي",
+    "requestSimilarReview": "طلب مراجعة لمشروع مشابه",
+    "requestAnalysisShort": "طلب تحليل",
+    "viewThisSystem": "عرض هذا النظام",
+    "exploreAllSystems": "استكشاف جميع أنظمة الأسقف",
+    "startProjectDefinition": "بدء تعريف المشروع",
+    "seeEngineeringProcess": "عرض عملية الهندسة",
+    "talkToEngineering": "التحدث مع فريق الهندسة",
+    "viewAllProjects": "عرض جميع المشاريع",
+    "viewProjectsProof": "عرض المشاريع وأدلة التنفيذ",
+    "viewProjectDetails": "عرض تفاصيل المشروع",
+    "compareApproach": "مقارنة منهجنا الهندسي",
+    "submitForAnalysis": "إرسال المشروع للتحليل",
+    "contactEngineering": "التواصل مع فريق الهندسة",
+    "startWithRole": "ابدأ حسب دورك في المشروع"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "هندسة دقيقة · تنفيذ مضبوط",
+      "metaTitle": "أنظمة أسقف معدنية معلّقة | تصميم وهندسة وإنتاج وتنفيذ | آویزسازه",
+      "metaDescription": "آویزسازه تصمم وتهندس وتنتج وتنفذ أنظمة الأسقف المعدنية المعلّقة، بما في ذلك الأسقف الخطية المعدنية، الجريليوم، البافل، والبلاطات المعدنية للمشاريع التجارية والمعمارية في العراق ودول الخليج.",
+      "imageAlt": "تنفيذ سقف معدني معلّق مُهندس في مساحة معمارية واسعة",
+      "headline": "أنظمة أسقف معدنية معلّقة من التصميم الهندسي إلى التنفيذ",
+      "subheadline": "تحوّل آویزسازه أفكار الأسقف المعمارية إلى أنظمة معدنية معلّقة قابلة للتصنيع والتركيب والتحكم في الموقع، عبر التصميم، الهندسة، الإنتاج المخصص، والتنفيذ المنضبط.",
+      "description": "نحن لا نبيع مواد فقط؛ نحن نسلّم نظام سقف قابلًا للتنفيذ.",
+      "cardTitle": "السقف نظام هندسي، وليس منتجًا منفردًا.",
+      "cardText": "نربط التصميم والهندسة والمواد والتركيب ضمن نظام سقف عالي الأداء.",
+      "flow": [
+        "العمارة",
+        "الهندسة",
+        "النظام",
+        "التنفيذ"
+      ]
+    },
+    "trust": {
+      "title": "موثوقية هندسية",
+      "metrics": [
+        {
+          "value": "+300",
+          "label": "مشروع منفذ"
+        },
+        {
+          "value": "ثلاثة عقود",
+          "label": "خبرة متخصصة"
+        },
+        {
+          "value": "حتى 50 مترًا",
+          "label": "ارتفاع تنفيذ"
+        },
+        {
+          "value": "إيران · العراق · عُمان",
+          "label": "أسواق إقليمية"
+        }
+      ]
+    },
+    "systems": {
+      "eyebrow": "أنظمتنا الهندسية",
+      "title": "أنظمة أسقف معدنية بهندسة متكاملة",
+      "description": "يُختار كل نظام وفق هندسة المساحة، منطق التعليق، متطلبات الخدمات، وقابلية التنفيذ، وليس وفق توفر المواد فقط."
+    },
+    "engineering": {
+      "eyebrow": "المنطق الهندسي",
+      "title": "من الفكرة التصميمية إلى واقع قابل للبناء",
+      "description": "نحوّل متطلبات المعمار إلى تنفيذ مضبوط عبر أربع مراحل واضحة.",
+      "steps": [
+        {
+          "title": "التصميم",
+          "text": "مراجعة الفكرة المعمارية، منطق توزيع السقف، واختيار النظام المناسب."
+        },
+        {
+          "title": "الهندسة",
+          "text": "رسومات تنفيذية، تنسيق فني، ومراجعة إنشائية وتنفيذية قبل الإنتاج."
+        },
+        {
+          "title": "الإنتاج",
+          "text": "تصنيع مخصص وتجهيز مواد المشروع وفق الرسومات وبضبط جودة."
+        },
+        {
+          "title": "التنفيذ",
+          "text": "تخطيط التركيب، تنسيق الموقع، ضبط الجودة، والتسليم النهائي."
+        }
+      ]
+    },
+    "execution": {
+      "eyebrow": "نظام التنفيذ",
+      "title": "تنفيذ مضبوط في الارتفاعات والبيئات المتطلبة",
+      "summary": "توثيق فني، تنسيق إنتاج، ومراجعة جودة بعد التركيب.",
+      "capabilities": [
+        {
+          "title": "مكتب فني ورسومات تنفيذية",
+          "text": "إعداد Shop Drawings وضبط هندسة السقف وتفاصيل التعليق قبل التنفيذ."
+        },
+        {
+          "title": "تنسيق الإنتاج والتصنيع المخصص",
+          "text": "إنتاج مطابق للرسومات وظروف المشروع الفعلية مع تنسيق كامل."
+        },
+        {
+          "title": "فرق تركيب وضبط موقعي",
+          "text": "التحكم في الاستقامة، الإيقاع، الوصلات، الحوامل وسماحات التنفيذ حتى ارتفاعات كبيرة."
+        },
+        {
+          "title": "تقارير مشروع وفحص جودة",
+          "text": "متابعة تقدم العمل ومراجعة الجودة بعد التركيب لتسليم النتيجة المعمارية المطلوبة."
+        }
+      ]
+    },
+    "proof": {
+      "eyebrow": "دليل التنفيذ",
+      "title": "نفذنا ما نتحدث عنه.",
+      "description": "أكثر من 300 مشروع منفذ، من البنية التحتية والمشاريع الصناعية إلى المراكز التجارية والمباني العامة. قوة آویزسازه تأتي من تحويل التصميم المعماري إلى نظام قابل للتصنيع والتركيب والسيطرة في التنفيذ."
+    },
+    "rfqExplainer": {
+      "eyebrow": "بداية تعريف المشروع",
+      "title": "هذا ليس نموذج تواصل عاديًا؛ بل نقطة بداية لتعريف المشروع.",
+      "text": "يساعدنا طلبك على فهم نوع المشروع، نظام السقف، الهدف المعماري، القيود الفنية، ومتطلبات التنفيذ قبل إعداد الرد الهندسي التالي.",
+      "steps": [
+        "إرسال معلومات المشروع",
+        "مراجعة متطلبات النظام من فريق الهندسة",
+        "استلام مسار الرد الفني والتجاري التالي"
+      ]
+    },
+    "rfqCta": {
+      "title": "عرّف سقف مشروعك كنظام هندسي",
+      "description": "أرسل تفاصيل المشروع ليدرس فريق آویزسازه السقف كنظام معماري-هندسي متكامل، وليس كقائمة مواد.",
+      "microcopy": "مخرجات هذا الطلب هي تعريف منظم للمشروع، وليس مكالمة بيع بسيطة.",
+      "button": "إرسال المشروع للتحليل"
+    },
+    "differentiation": {
+      "eyebrow": "الفرق الجوهري",
+      "title": "لماذا آویزسازه ليست مورّد مواد",
+      "subtitle": "مورّد المواد والمقاول العام ينقلان مخاطرة النتيجة النهائية إلى المشروع. آویزسازه تعرّف السقف وتنتجه وتنفذه كنظام هندسي كامل.",
+      "closing": "تتعامل آویزسازه مع سقف مشروعك كنظام هندسي، لا كطلب مواد.",
+      "sellerTitle": "مورّد مواد",
+      "contractorTitle": "مقاول عام",
+      "avizTitle": "آویزسازه",
+      "rows": [
+        {
+          "seller": "بيع قطع السقف",
+          "contractor": "تركيب ما يتم توريده",
+          "aviz": "تعريف نظام السقف الكامل"
+        },
+        {
+          "seller": "تركيز على السعر والكمية",
+          "contractor": "تركيز على التنفيذ فقط",
+          "aviz": "تركيز على العمارة والهندسة والإنتاج والتركيب"
+        },
+        {
+          "seller": "مسؤولية محدودة بعد التسليم",
+          "contractor": "تنسيق فني محدود",
+          "aviz": "مسار هندسي وتنفيذي مضبوط"
+        },
+        {
+          "seller": "بدون منطق رسومات تنفيذية",
+          "contractor": "تنسيق موقعي أساسي",
+          "aviz": "مكتب فني ورسومات تنفيذية ورسومات إنتاج ومنطق تركيب"
+        },
+        {
+          "seller": "الجودة النهائية تعتمد على أطراف أخرى",
+          "contractor": "الجودة تعتمد على تنفيذ الموقع",
+          "aviz": "الجودة تُضبط من خلال تعريف النظام"
+        }
+      ]
+    },
+    "audiences": {
+      "eyebrow": "مصمم لمشروعك",
+      "title": "مصمم للمعماريين والمالكين والمقاولين",
+      "link": "ابدأ حسب دورك في المشروع",
+      "cards": [
+        {
+          "title": "للمعماريين",
+          "text": "نحوّل نية التصميم إلى أنظمة أسقف قابلة للتنفيذ."
+        },
+        {
+          "title": "للمالكين والمطورين",
+          "text": "نقلل مخاطر التنفيذ ومشاكل التنسيق وعدم اليقين في الجودة النهائية."
+        },
+        {
+          "title": "للمقاولين",
+          "text": "نوفر منطق النظام وتنسيق الإنتاج ودعم التركيب في الموقع."
+        }
+      ]
+    },
+    "featuredProjects": {
+      "eyebrow": "دليل التنفيذ",
+      "title": "نماذج من خبرة التنفيذ",
+      "subtitle": "تسلّم آویزسازه السقف تحت السيطرة من التصميم إلى التنفيذ، وهذه نماذج من جهات تم تنفيذ هذا المسار في مشاريعها.",
+      "systemLabel": "نوع النظام",
+      "challengeLabel": "تحدي المشروع",
+      "solutionLabel": "الحل الهندسي",
+      "outcomeLabel": "النتيجة",
+      "pending": "سيتم نشر التفاصيل الكاملة بعد اكتمال التوثيق الفني.",
+      "name": "مطار الإمام الخميني الدولي",
+      "system": "نظام سقف معدني مُهندس"
+    }
+  },
+  "systemsPage": {
+    "eyebrow": "هندسة أنظمة الأسقف",
+    "title": "أنظمة الأسقف المعدنية المعلّقة",
+    "intro": "تتعامل آویزسازه مع السقف المعدني بوصفه نظاماً معمارياً هندسياً متكاملاً، لا مجرد توريد مواد. اختيار النظام يبدأ من هندسة الفراغ، متطلبات التحميل، تنسيق الخدمات، وإمكانية التصنيع والتركيب في الموقع.",
+    "selectionTitle": "منطق اختيار النظام",
+    "selectionFactors": [
+      "هندسة الفراغ المعماري",
+      "متطلبات التحميل والتعليق",
+      "تنسيق الإضاءة والتهوية والخدمات",
+      "قيود التصنيع والتركيب في الموقع"
+    ],
+    "principle": "الفكرة المعمارية تحدد المسألة. الهندسة تحولها إلى نظام قابل للتصنيع. والتنفيذ المنضبط يحول النظام إلى سقف مكتمل في المشروع."
+  },
+  "systemDetail": {
+    "definition": "System definition",
+    "logic": "Engineering logic",
+    "logicTitle": "The engineering logic of this system",
+    "useCases": "Applications",
+    "specs": "Technical specifications",
+    "specsCaption": "Unverified certified values are marked “To be confirmed by AvizSazeh engineering team”.",
+    "applicationsTitle": "Where is this system the right fit?",
+    "notRecommendedTitle": "When is this system not recommended?",
+    "gallery": "Execution gallery",
+    "variantsTitle": "Design variety & customisation",
+    "selectionTitle": "When should you choose this system?",
+    "deepDive": "Specialised detail",
+    "visualsTitle": "Visual documentation",
+    "faqTitle": "Frequently asked questions",
+    "related": "Other systems",
+    "ctaTitle": "Is this the right system for your project?",
+    "ctaText": "Submit your project specifications for engineering evaluation and system selection.",
+    "ctaTrust": "After you submit, the AvizSazeh engineering team prepares a proposed system specification for an initial review.",
+    "compareCta": "View system comparison"
+  },
+  "engineeringPage": {
+    "eyebrow": "Logic & Execution",
+    "title": "Engineering & Execution System",
+    "intro": "Design is meaningless until it becomes a buildable system. AvizSazeh bridges architectural design and real-world execution, reducing project risk through engineering-driven ceiling systems.",
+    "flowTitle": "Engineering flow",
+    "processTitle": "The project path — from analysis to handover",
+    "process": [
+      {
+        "title": "Inquiry & consultation",
+        "text": "Receive project information, assess needs, and provide a technical and financial proposal."
+      },
+      {
+        "title": "Contract & production",
+        "text": "Finalise design, scheduling, and transparent pricing; sign the contract and manufacture."
+      },
+      {
+        "title": "Installation & delivery",
+        "text": "Precise fabrication and installation per contract, delivered on time."
+      }
+    ],
+    "capabilitiesTitle": "Execution capabilities",
+    "proofTitle": "Engineering output is not just an explanation — it is a buildable document.",
+    "proofIntro": "On every project, the AvizSazeh technical team aims to turn architectural design into drawings, details, manufacturable parts, and a controllable installation path.",
+    "proofNote": "The examples shown are conceptual diagrams of engineering output, not documentation from a specific project.",
+    "proofCards": [
+      {
+        "title": "Shop drawings",
+        "text": "Turning architectural design into precise execution drawings with connection details and buildable dimensions."
+      },
+      {
+        "title": "Production logic",
+        "text": "Defining parts, cutting patterns, and build sequence for controlled, low-error manufacturing."
+      },
+      {
+        "title": "Installation method",
+        "text": "Setting the installation order, suspension points, and execution details for a controllable on-site build."
+      },
+      {
+        "title": "Quality control",
+        "text": "Reviewing execution against the drawings and approved quality criteria through to final handover."
+      }
+    ]
+  },
+  "bimPage": {
+    "eyebrow": "Execution-model coordination",
+    "title": "BIM coordination for engineered metal ceilings",
+    "intro": "In architectural and commercial projects, the metal ceiling must be coordinated with lighting, HVAC, fire detection/suppression, maintenance access, and architectural detailing. With a systems view, AvizSazeh turns the ceiling into a coordinable part of the project's execution model.",
+    "sectionsTitle": "Coordinating the ceiling in the execution model",
+    "sections": [
+      {
+        "title": "Why BIM matters for metal suspended ceilings",
+        "text": "The metal ceiling is the layer with the most interference from services above it. Modelling the ceiling in BIM exposes conflicts before execution and keeps detailing under control."
+      },
+      {
+        "title": "Coordination with MEP and lighting",
+        "text": "Luminaires, diffusers, sprinklers, and detectors are aligned with the ceiling rhythm and module so the final result is regular, symmetrical, and buildable."
+      },
+      {
+        "title": "Reducing site conflicts",
+        "text": "Detecting clashes between hangers, substructure, and service routes in the model reduces rework and site stoppages."
+      },
+      {
+        "title": "From architectural model to shop drawings",
+        "text": "The coordinated model becomes shop drawings with precise levels, modules, and connection details."
+      },
+      {
+        "title": "What we need from architects and consultants",
+        "text": "Reflected ceiling plans, finished levels, MEP and lighting layouts, and the final architectural expectation are the inputs we need for precise coordination."
+      }
+    ],
+    "ctaTitle": "Submit your ceiling for engineering coordination",
+    "ctaText": "Send your drawings and project conditions so we can analyse the ceiling as a coordinated part of the execution model."
+  },
+  "projectsPage": {
+    "eyebrow": "إثبات التنفيذ",
+    "title": "المشاريع ومراجع التنفيذ",
+    "metaTitle": "المشاريع ومراجع التنفيذ | آویزسازه",
+    "metaDescription": "مراجع مشاريع وعملاء آویزسازه في أنظمة الأسقف المعدنية المعلّقة، مع تركيز على القدرة الهندسية، الإنتاج المخصص، والتنفيذ المنضبط في المشاريع الصناعية والتجارية والعامة.",
+    "intro": "تأتي موثوقية آویزسازه الهندسية من نتائج مشاريع حقيقية: تحويل الفكرة المعمارية إلى نظام سقف معدني قابل للتصنيع، قابل للتركيب، وقابل للتحكم أثناء التنفيذ.",
+    "support": "أكثر من 300 مشروع منفذ، ثلاثة عقود من الخبرة المتخصصة، وأنظمة أسقف معدنية نُفذت في مشاريع صناعية وتجارية وإدارية وبنى تحتية.",
+    "stats": [
+      {
+        "value": "+300",
+        "label": "مشروع منفذ"
+      },
+      {
+        "value": "ثلاثة عقود",
+        "label": "خبرة متخصصة"
+      },
+      {
+        "value": "حتى 50 م",
+        "label": "ارتفاع تنفيذ"
+      },
+      {
+        "value": "إيران · العراق · عُمان",
+        "label": "نطاق العمل"
+      }
+    ],
+    "statsNote": "يتم تنظيم جزء من توثيق المشاريع ونشره تدريجياً مع استكمال الصور والبيانات الفنية المعتمدة.",
+    "featuredTitle": "مشاريع مرجعية بارزة",
+    "featuredIntro": "مراجع تنفيذ مسجلة لدى آویزسازه، مبنية على عملاء ومشاريع حقيقية دون اختلاق أرقام أو بيانات غير مؤكدة.",
+    "badgeFile": "ملف مشروع",
+    "badgeNeedsPhoto": "صور التنفيذ قيد الإكمال",
+    "badgeTechPending": "التوثيق الفني قيد الإكمال",
+    "featuredCardText": "هذا المشروع مسجل كأحد مراجع التنفيذ لدى آویزسازه، وسيُستكمل ملفه بصور التركيب ومواصفات النظام والبيانات الفنية.",
+    "clientsTitle": "العملاء والشركاء",
+    "clientsIntro": "تم تجميع المراجع حسب دورها في المشروع حتى يكون وزن كل مرجع واضحاً: مالك مشروع، جهة عامة، عميل صناعي، أو مقاول وشريك تنفيذ.",
+    "groups": {
+      "infrastructure": "مشاريع بارزة وبنى تحتية",
+      "public": "جهات عامة ومؤسسية",
+      "contractor": "مقاولون وشركات شريكة"
+    },
+    "provesTitle": "ماذا يثبت المشروع الموثق؟",
+    "proves": [
+      "نوع نظام السقف المعدني الذي تم اختياره.",
+      "طبيعة المشروع واستخدامه المعماري أو التشغيلي.",
+      "التحدي المعماري أو التنفيذي في السقف.",
+      "حل آویزسازه الهندسي ومسار تحويل التصميم إلى نظام قابل للتنفيذ.",
+      "صور تركيب حقيقية وتفاصيل تنفيذ عند توفرها.",
+      "بيانات فنية مثل المساحة، الارتفاع، زمن التنفيذ، ومواصفات المواد بعد اعتمادها."
+    ],
+    "caseStructureTitle": "هيكل ملف دراسة الحالة",
+    "caseStructureIntro": "يتم استكمال كل ملف مشروع في آویزسازه وفق هيكل واضح يربط بين القدرة الهندسية، التنفيذ المنضبط، ونتيجة السقف المعمارية.",
+    "caseFields": [
+      "اسم المشروع",
+      "العميل / الجهة المشغلة",
+      "الموقع",
+      "سنة التنفيذ",
+      "نظام السقف",
+      "مساحة التنفيذ",
+      "ارتفاع التنفيذ",
+      "تحدي المشروع",
+      "الحل الهندسي",
+      "صور التنفيذ",
+      "التوثيق الفني"
+    ],
+    "finalTitle": "هل لديك مشروع مشابه؟",
+    "finalText": "إذا كان مشروعك في مرحلة التصميم أو المناقصة أو التنفيذ، أرسل المواصفات الأولية ليقيّم فريق آویزسازه الفني قابلية النظام، مخاطر التنفيذ، ومسار الإنتاج والتركيب."
+  },
+  "projectDetail": {
+    "eyebrow": "Project record",
+    "challengeTitle": "Project challenge",
+    "solutionTitle": "Engineering solution",
+    "systemLogicTitle": "System logic",
+    "constraintsTitle": "Execution constraints",
+    "roleTitle": "AvizSazeh’s role",
+    "relatedSystemsTitle": "Related systems",
+    "relatedApplicationsTitle": "Related applications",
+    "pendingVisualsTitle": "Visual documentation (pending)",
+    "galleryTitle": "Execution photos",
+    "techTitle": "Technical specifications",
+    "labels": {
+      "client": "Client / operator",
+      "sector": "Sector",
+      "location": "Location",
+      "year": "Year of execution",
+      "system": "Ceiling system",
+      "area": "Executed area",
+      "height": "Execution height"
+    }
+  },
+  "aboutPage": {
+    "eyebrow": "عن آویزسازه",
+    "title": "علامة هندسية متخصصة في أنظمة الأسقف المعمارية",
+    "subtitle": "آویزسازه تعمل للمشاريع التي لا يكون فيها السقف مجرد تغطية، بل جزءاً من الهوية المعمارية، جودة الفراغ، وضبط التنفيذ الهندسي.",
+    "lead": "آویزسازه نقش جهان علامة متخصصة في أنظمة الأسقف المعمارية المعدنية؛ تربط بين التصميم المعماري والهندسة والإنتاج المخصص والتركيب المنضبط لتحويل الفكرة إلى نظام سقف قابل للتنفيذ.",
+    "story": [
+      "منذ تسعينيات القرن الماضي، عمل الفريق الأساسي في آویزسازه في مجال الأسقف المعدنية المعلّقة، من المطارات والمجمعات الصناعية إلى المراكز التجارية والمباني الإدارية والعامة، ضمن مشاريع تتطلب دقة معمارية وتعقيداً فنياً عالياً.",
+      "يتعامل المكتب الفني في آویزسازه مع كل مشروع كنظام مستقل: مراجعة الفكرة، إعداد مخططات التنفيذ، تنسيق السقف مع الإضاءة والتهوية والخدمات، ثم ضبط الإنتاج والتركيب حتى التسليم.",
+      "ليست قيمة آویزسازه في بيع مادة سقف فقط، بل في تقليل مخاطر المشروع عبر هندسة التفاصيل، الإنتاج حسب الطلب، والتحكم في جودة التنفيذ في الموقع.",
+      "تخدم آویزسازه المعماريين والاستشاريين والمقاولين وشركات EPC ومالكي المشاريع، وهي جاهزة للتعاون في مشاريع إيران والعراق وعُمان وأسواق المنطقة."
+    ],
+    "principlesTitle": "المبادئ الأساسية",
+    "principles": [
+      "الفكرة المعمارية يجب أن تتحول إلى نظام قابل للبناء.",
+      "اختيار المادة من دون هندسة تفصيلية يضيف مخاطر على المشروع.",
+      "السقف المعدني الناجح يحتاج إلى تصميم، إنتاج، وتركيب ضمن منظومة واحدة.",
+      "النتيجة النهائية تقاس بجودة الفراغ ودقة التنفيذ، لا بالمادة وحدها."
+    ],
+    "valuesTitle": "القيم",
+    "values": [
+      "تصميم هندسي مخصص",
+      "إنتاج مضبوط حسب المشروع",
+      "تركيب قابل للتحكم",
+      "تكامل معماري مع الخدمات",
+      "تقليل مخاطر التنفيذ"
+    ],
+    "beliefsTitle": "ما الذي نؤمن به",
+    "storyTitle": "الخبرة والخلفية",
+    "riskTitle": "لماذا يسبب توريد المواد فقط مخاطر في السقف",
+    "riskText": "عندما يتم شراء مواد السقف فقط، تبقى تفاصيل التثبيت، تنسيق الخدمات، ضبط المناسيب، الإيقاع البصري، ومسؤولية النتيجة النهائية موزعة بين أطراف المشروع. هذا ينقل مخاطر التنفيذ والجودة المعمارية إلى المالك والمقاول.",
+    "roleTitle": "دورنا بين المعماري والاستشاري والمقاول ومالك المشروع",
+    "roleText": "تعمل آویزسازه في نقطة التقاء التصميم المعماري، مواصفات الاستشاري، واقع تنفيذ المقاول، وتوقعات مالك المشروع، وتحوّل هذه المتطلبات إلى نظام سقف واحد قابل للتصنيع والتركيب.",
+    "responsibilityTitle": "المسؤولية الهندسية",
+    "responsibilityText": "نلتزم بالنتيجة المعمارية من مرحلة مخططات التنفيذ والإنتاج المضبوط حتى متابعة التركيب، المناسيب، نقاط التعليق، الوصلات، وجودة التسليم النهائي.",
+    "conceptTitle": "من الفكرة إلى نظام سقف قابل للتنفيذ",
+    "conceptText": "نأخذ مفهوم السقف المعماري ونحوله، عبر التصميم الهندسي والإنتاج المخصص والتنفيذ المنضبط، إلى نظام سقف معدني متكامل ينسجم مع هوية المشروع ومتطلبات الموقع.",
+    "teamTitle": "الفريق الهندسي",
+    "teamNote": "سيتم نشر ملفات تعريف الفريق الهندسي لاحقاً. حالياً يمكن للمعماريين والاستشاريين والمقاولين ومالكي المشاريع التواصل مع الفريق لإجراء مراجعة فنية أولية للمشروع."
+  },
+  "contactPage": {
+    "eyebrow": "تواصل معنا",
+    "title": "تواصل مع الفريق الهندسي",
+    "intro": "للاستشارة الفنية، إرسال مخططات المشروع، أو تعريف طلب نظام سقف معدني معلّق، تواصل مع فريق آویزسازه.",
+    "phone": "خط الاستشارة",
+    "mobile": "الهاتف المحمول",
+    "email": "البريد الإلكتروني",
+    "address": "العنوان",
+    "hours": "ساعات العمل",
+    "instagram": "إنستغرام",
+    "mapAlt": "موقع مكتب آویزسازه في أصفهان",
+    "routingTitle": "كيف يمكننا مساعدتك؟",
+    "inquiriesTitle": "لاستفسارات المشاريع",
+    "inquiriesText": "أرسل نوع المشروع، نظام السقف، المساحة والموقع حتى يراجع فريقنا السقف كنظام هندسي قابل للتنفيذ.",
+    "urgentTitle": "للتنسيق العاجل",
+    "urgentText": "يمكنك الوصول مباشرة إلى فريق الهندسة عبر واتساب أو الهاتف.",
+    "urgentCta": "واتساب / اتصال بالفريق الهندسي",
+    "drawingsTitle": "للمخططات ووثائق المناقصة",
+    "drawingsText": "أرسل المخططات، BOQ، مخططات الأسقف المنعكسة أو وثائق المشروع للمراجعة الفنية.",
+    "drawingsCta": "إرسال الوثائق بالبريد",
+    "afterTitle": "ماذا يحدث بعد التواصل معنا؟",
+    "afterSteps": [
+      "نستلم معلومات المشروع الأساسية.",
+      "يراجع فريقنا نوع النظام، المساحة، الموقع والقيود الفنية.",
+      "نتواصل معك لاستكمال أي معلومات ناقصة.",
+      "نحدد مسار الرد الفني أو التجاري التالي."
+    ],
+    "responseTitle": "وقت الاستجابة",
+    "responseText": "رد أولي خلال أقرب فترة عمل"
+  },
+  "rfq": {
+    "eyebrow": "محرك الطلب الهندسي",
+    "title": "عرّف مشروعك كنظام سقف",
+    "intro": "هذا ليس طلب سعر بسيطاً؛ بل هو الخطوة الأولى للتحليل الهندسي. نراجع المخططات، هندسة الفراغ، نوع النظام، قيود التنفيذ، والتوقع المعماري النهائي للمشروع. آویزسازه نشطة في إيران والعراق وعُمان وجاهزة للتعاون في مشاريع المنطقة.",
+    "preamble": "يستغرق هذا النموذج نحو دقيقتين. نحتاج فقط إلى معلومات المشروع الأساسية، وسيقوم فريق آویزسازه الهندسي بمراجعتها والتواصل معك.",
+    "needTitle": "ما الذي تحتاجه",
+    "needList": [
+      "نوع المشروع",
+      "المساحة التقريبية",
+      "نظام السقف إذا كان معروفاً",
+      "بيانات التواصل"
+    ],
+    "steps": [
+      "نوع المشروع",
+      "اختيار النظام",
+      "المعطيات الفنية",
+      "الإرسال"
+    ],
+    "stepLabel": "الخطوة",
+    "of": "من",
+    "internationalNote": "لمشاريع العراق وعُمان ودول الخليج، يمكنك إرسال المخططات أو BOQ أو مخططات السقف المنعكسة. سيقوم فريقنا بمراجعة النطاق الفني وتحديد مسار الرد الهندسي التالي.",
+    "whatsappHelp": "تحتاج إلى تنسيق عاجل؟ واتساب / اتصال",
+    "fields": {
+      "projectType": "نوع المشروع",
+      "projectTypePlaceholder": "مثال: مطار، مول، قاعة صناعية، مستشفى",
+      "buildingType": "استخدام المبنى",
+      "buildingTypePlaceholder": "تجاري، صناعي، إداري، عام",
+      "projectName": "اسم المشروع",
+      "projectNamePlaceholder": "اختياري - اسم المشروع أو الموقع",
+      "projectCountry": "دولة المشروع",
+      "projectCountryPlaceholder": "مثال: إيران، العراق، عُمان",
+      "projectCity": "مدينة المشروع",
+      "projectCityPlaceholder": "مثال: أصفهان، بغداد، مسقط",
+      "location": "الموقع",
+      "area": "مساحة المشروع التقريبية (م²)",
+      "areaPlaceholder": "مثال: 2500",
+      "areaUnknown": "غير معروفة حالياً",
+      "ceilingHeight": "ارتفاع السقف (م)",
+      "ceilingHeightPlaceholder": "مثال: 4.5",
+      "systemPreference": "نظام السقف",
+      "systemAuto": "غير متأكد / أحتاج إلى توصية هندسية",
+      "applicationZone": "منطقة التطبيق",
+      "applicationZoneOptions": [
+        "ردهة",
+        "ممر",
+        "محطة / صالة نقل",
+        "منطقة مشتركة في مول",
+        "منطقة مكاتب",
+        "منطقة فندقية",
+        "منطقة مطار",
+        "قاعة تجارية",
+        "أخرى"
+      ],
+      "deadline": "الجدول الزمني المستهدف",
+      "deadlinePlaceholder": "مثال: الربع الثالث 2026",
+      "projectStage": "مرحلة المشروع",
+      "projectStageOptions": [
+        "فكرة أولية",
+        "تطوير التصميم",
+        "مناقصة",
+        "قيد التنفيذ",
+        "تجديد / استبدال"
+      ],
+      "supplyScope": "نطاق التوريد",
+      "supplyScopeOptions": [
+        "توريد فقط",
+        "توريد + تركيب",
+        "غير متأكد"
+      ],
+      "acousticRequirement": "متطلبات صوتية",
+      "fireRequirement": "متطلبات الحريق",
+      "requirementOptions": [
+        "مطلوب",
+        "غير مطلوب",
+        "غير متأكد"
+      ],
+      "finishRequirement": "متطلبات التشطيب / اللون",
+      "finishRequirementPlaceholder": "مثال: لون RAL، مظهر خشبي، تشطيب خاص",
+      "notes": "الرسالة / وصف المشروع",
+      "notesPlaceholder": "اكتب وصفاً مختصراً للمشروع، متطلبات السقف، أو أي معلومات يجب أن يعرفها فريق الهندسة...",
+      "selectPlaceholder": "اختر...",
+      "optional": "اختياري",
+      "name": "الاسم",
+      "namePlaceholder": "اسمك",
+      "company": "الشركة / الجهة",
+      "companyPlaceholder": "اسم الشركة",
+      "buyerRole": "دورك في المشروع",
+      "buyerRoleOptions": [
+        "معماري",
+        "استشاري",
+        "مقاول",
+        "EPC",
+        "مطوّر",
+        "مالك المشروع",
+        "مدير مشروع",
+        "أخرى"
+      ],
+      "phone": "الهاتف / واتساب",
+      "phonePlaceholder": "مثال: +98 912 065 6528",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "name@company.com",
+      "preferredContact": "طريقة التواصل المفضلة",
+      "preferredContactOptions": [
+        "هاتف",
+        "واتساب",
+        "بريد إلكتروني"
+      ],
+      "fileUpload": "المخططات / الوثائق",
+      "fileUploadHint": "اختياري - PDF, DWG, DXF, JPG, PNG, ZIP, DOC, XLS. حتى 5 ملفات، 8 ميغابايت لكل ملف."
+    },
+    "consentText": "أوافق على أن تقوم آویزسازه بحفظ هذه المعلومات واستخدامها للرد على استفسار مشروعي.",
+    "next": "الخطوة التالية",
+    "back": "رجوع",
+    "submit": "إرسال المشروع للتقييم الهندسي",
+    "submitting": "جارٍ الإرسال...",
+    "successTitle": "تم استلام طلبك الهندسي.",
+    "successText": "تم تسجيل مشروعك الآن كتعريف هندسي منظم.\nستراجع آویزسازه نوع المشروع، نظام السقف، المساحة، الموقع، الملاحظات الفنية والملفات المرفوعة قبل تحديد مسار الرد الفني أو التجاري التالي.",
+    "successUrgentTitle": "للتنسيق العاجل",
+    "successContact": "تواصل مع الفريق الهندسي",
+    "successWhatsapp": "تنسيق عاجل عبر واتساب",
+    "projectId": "رقم المرجع",
+    "assignedSystem": "النظام المقترح",
+    "complexity": "مستوى التعقيد",
+    "nextStep": "الخطوة التالية",
+    "nextStepValue": "مراجعة هندسية",
+    "newRequest": "إرسال مشروع آخر",
+    "errorRequired": "هذا الحقل مطلوب.",
+    "errorArea": "يجب أن تكون المساحة أكبر من صفر.",
+    "errorEmail": "يرجى إدخال بريد إلكتروني صحيح.",
+    "errorConsent": "يرجى قبول هذا الشرط للمتابعة.",
+    "errorGeneric": "فشل الإرسال. يرجى المحاولة مرة أخرى."
+  },
+  "footer": {
+    "tagline": "نحوّل الأنظمة المعمارية إلى أسقف معدنية دقيقة قابلة للتصنيع والتنفيذ.",
+    "systemsTitle": "الأنظمة",
+    "engineeringTitle": "الهندسة",
+    "projectsTitle": "المشاريع",
+    "aboutTitle": "من نحن",
+    "companyTitle": "الشركة",
+    "contactTitle": "اتصل بنا",
+    "allSystems": "جميع الأنظمة",
+    "followUs": "تابعونا",
+    "motto": "هندسة دقيقة. أداء منفذ.",
+    "rights": "آویزسازه للهندسة. جميع الحقوق محفوظة.",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الاستخدام",
+    "parentNote": "مدعومة بخبرة تنفيذ فضاسازه نقش جهان",
+    "navTitle": "التنقل",
+    "bim": "تنسيق BIM",
+    "engineeringLinks": [
+      "Engineering Approach",
+      "Design Intelligence",
+      "Engineering Logic",
+      "Execution Reality",
+      "BIM & Coordination"
+    ],
+    "projectsLinks": [
+      "Featured Projects",
+      "Commercial",
+      "Corporate",
+      "Hospitality",
+      "All Projects"
+    ],
+    "aboutLinks": [
+      "Our Story",
+      "Our Values",
+      "Careers"
+    ],
+    "compareSystems": "مقارنة الأنظمة"
+  },
+  "common": {
+    "complexity": {
+      "Low": "منخفض",
+      "Medium": "متوسط",
+      "High": "عالٍ",
+      "Critical": "حرج"
+    },
+    "skipToContent": "تجاوز إلى المحتوى",
+    "backToSystems": "العودة إلى الأنظمة",
+    "loading": "جارٍ التحميل...",
+    "whatsapp": "واتساب",
+    "call": "اتصال",
+    "language": "اللغة"
+  },
+  "systemCompare": {
+    "eyebrow": "دليل اختيار النظام",
+    "title": "أي نظام سقف معدني يناسب مشروعك؟",
+    "intro": "Ceiling selection depends on geometry, MEP coordination, acoustics, plenum access, hygiene, fire strategy, maintenance and architectural intent. The matrix below compares the four AvizSazeh systems across these criteria so you can shortlist before an engineering review.",
+    "matrixTitle": "مصفوفة القرار",
+    "criterion": "Criterion",
+    "note": "Fit levels are design-oriented guidance, not certified ratings. Certified engineering values are confirmed per project.",
+    "ctaTitle": "Not sure which system fits?",
+    "ctaText": "Send your drawings and the AvizSazeh engineering team will help you select the right system.",
+    "cta": "Send drawings to select the right system"
+  },
+  "applicationsPage": {
+    "useCasesTitle": "Where this applies",
+    "challengesTitle": "Design & engineering challenges",
+    "requirementsTitle": "Engineering requirements",
+    "systemsTitle": "Suitable ceiling systems",
+    "systemsIntro": "These AvizSazeh metal ceiling systems are the strongest fit for this application. Final selection follows an engineering review.",
+    "hubTitle": "Part of our metal suspended ceiling systems",
+    "hubText": "This application is one route into the full AvizSazeh metal suspended ceiling offering — explore the category hub for systems, comparison and engineering process.",
+    "projectsTitle": "Project proof",
+    "projectsIntro": "Recorded AvizSazeh execution references related to this application.",
+    "faqTitle": "Frequently asked questions",
+    "ctaTitle": "Have a project like this?",
+    "ctaText": "Submit your project so the AvizSazeh engineering team can assess system feasibility, execution constraints and the production and installation path."
+  },
+  "legal": {
+    "label": "Legal",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdated": "June 2026",
+    "privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "intro": "This policy explains what information AvizSazeh Naghsh Jahan collects through this website, how it is used, and the choices available to you. We only collect information needed to respond to engineering and procurement enquiries.",
+      "sections": [
+        {
+          "heading": "Information we collect",
+          "body": "When you submit a Request for Quotation (RFQ) or contact us, we collect the details you provide — such as your name, company, phone number, project type, area, location and technical requirements. We do not ask for, or intentionally collect, sensitive personal data."
+        },
+        {
+          "heading": "How we use your information",
+          "body": "Submitted information is used solely to classify your project, prepare an engineering assessment and respond with a relevant proposal. It is not sold or rented to third parties."
+        },
+        {
+          "heading": "CRM and processing",
+          "body": "RFQ submissions are recorded in our internal customer relationship management (CRM) system so the engineering team can follow up. Access is limited to authorised AvizSazeh personnel."
+        },
+        {
+          "heading": "Data retention",
+          "body": "Enquiry records are kept only as long as needed to handle your request and meet legitimate business and legal obligations, after which they are removed or anonymised."
+        },
+        {
+          "heading": "Cookies and analytics",
+          "body": "The website uses only the cookies required for it to function. If privacy-friendly analytics are enabled, they are used in aggregate to understand traffic and do not identify individual visitors."
+        },
+        {
+          "heading": "Your rights",
+          "body": "You may ask us to access, correct or delete the information you have submitted. To make a request, contact us using the details below."
+        },
+        {
+          "heading": "Contact",
+          "body": "For any question about this policy or your data, email info@avizsazeh.ir."
+        }
+      ]
+    },
+    "terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of Use",
+      "intro": "These terms govern your use of the AvizSazeh Naghsh Jahan website. By using the site you agree to them. If you do not agree, please do not use the site.",
+      "sections": [
+        {
+          "heading": "Use of the website",
+          "body": "You may use this website for lawful purposes related to learning about and enquiring into our ceiling systems and engineering services. You agree not to misuse the site, disrupt its operation or attempt unauthorised access."
+        },
+        {
+          "heading": "Intellectual property",
+          "body": "The content, brand, designs, system documentation and imagery on this site belong to AvizSazeh Naghsh Jahan or its licensors and may not be reproduced or redistributed without written permission."
+        },
+        {
+          "heading": "RFQ submissions and quotations",
+          "body": "Information returned by the RFQ engine — including the suggested system and complexity assessment — is an automated, indicative classification, not a binding offer. Any formal quotation is confirmed separately by our engineering team."
+        },
+        {
+          "heading": "Accuracy and availability",
+          "body": "We work to keep technical information accurate and the site available, but we provide the site on an \"as is\" basis without warranties, and we may update content or specifications at any time."
+        },
+        {
+          "heading": "Limitation of liability",
+          "body": "To the extent permitted by law, AvizSazeh is not liable for indirect or consequential loss arising from use of this website or reliance on its content. Engineering decisions should be confirmed with our team for your specific project."
+        },
+        {
+          "heading": "External links",
+          "body": "The site may link to third-party services (for example a map provider). We are not responsible for the content or privacy practices of external sites."
+        },
+        {
+          "heading": "Governing law and changes",
+          "body": "These terms are governed by the laws of the Islamic Republic of Iran. We may update them from time to time; the current version always applies. For questions, email info@avizsazeh.ir."
+        }
+      ]
+    }
+  }
+}

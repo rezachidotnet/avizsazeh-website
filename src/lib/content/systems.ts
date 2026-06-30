@@ -1,83 +1,84 @@
 import type { Locale } from '@/i18n/routing';
+import type { LocalizedList, LocalizedString } from '@/lib/site';
 
-export type SpecRow = { label: Record<Locale, string>; value: Record<Locale, string> };
+export type SpecRow = { label: LocalizedString; value: LocalizedString };
 
 /** A single execution photo with a meaningful (non-filename) caption. */
-export type GalleryItem = { src: string; caption: Record<Locale, string> };
+export type GalleryItem = { src: string; caption: LocalizedString };
 
 /** An application zone + the engineering reason this system fits it. */
-export type ApplicationFit = { type: Record<Locale, string>; why: Record<Locale, string> };
+export type ApplicationFit = { type: LocalizedString; why: LocalizedString };
 
 /** A focused technical subsection (e.g. CBI Europe radiant integration, acoustic baffle). */
-export type SystemSubsection = { title: Record<Locale, string>; body: Record<Locale, string> };
+export type SystemSubsection = { title: LocalizedString; body: LocalizedString };
 
 /** A single FAQ entry. */
-export type Faq = { q: Record<Locale, string>; a: Record<Locale, string> };
+export type Faq = { q: LocalizedString; a: LocalizedString };
 
 export type CeilingSystem = {
   slug: string;
   order: number;
   iconKey: 'linear' | 'grid' | 'tile' | 'baffle';
-  name: Record<Locale, string>;
+  name: LocalizedString;
   /** engineering category framing (micro-label) */
-  category: Record<Locale, string>;
+  category: LocalizedString;
   /** one practical application line (homepage system cards) */
-  context: Record<Locale, string>;
+  context: LocalizedString;
   /** Level 1 — system definition (one structured sentence) */
-  definition: Record<Locale, string>;
+  definition: LocalizedString;
   /** SEO — keyword-rich title + persuasive description */
-  seo: { title: Record<Locale, string>; description: Record<Locale, string> };
+  seo: { title: LocalizedString; description: LocalizedString };
   /** detail-page H1 (longer, descriptive) */
-  h1: Record<Locale, string>;
+  h1: LocalizedString;
   /** 2–3 sentence lead — what it is + when to specify it */
-  lead: Record<Locale, string>;
+  lead: LocalizedString;
   /** Level 2 — engineering logic (4–6 bullets) */
-  logic: Record<Locale, string[]>;
+  logic: LocalizedList;
   /** system anatomy labels: profile / carrier / hanger / plenum / MEP access */
-  anatomy: Record<Locale, string[]>;
+  anatomy: LocalizedList;
   /** technical parameters — expanded spec sheet (15–20 rows) */
   specs: SpecRow[];
   /** application zones with the reason each fits */
   applications: ApplicationFit[];
   /** when NOT to specify this system */
-  notRecommended: Record<Locale, string[]>;
+  notRecommended: LocalizedList;
   /** execution gallery with meaningful captions */
   gallery: GalleryItem[];
   /** design / customisation variants (dimensions, spacing, colour, finish, acoustic, curve) */
   variants: SpecRow[];
   /** 3–4 system-selection decision criteria */
-  selection: Record<Locale, string[]>;
+  selection: LocalizedList;
   /** focused technical subsections (optional — e.g. CBI Europe, acoustic baffle) */
   subsections?: SystemSubsection[];
   /** required visuals / visual-documentation checklist (placeholders until real assets exist) */
-  requiredVisuals: Record<Locale, string[]>;
+  requiredVisuals: LocalizedList;
   /** 4 FAQ entries */
   faq: Faq[];
   /** system-specific conversion CTA text */
-  systemCta: Record<Locale, string>;
+  systemCta: LocalizedString;
   /** short comparison hint shown in the related-systems section */
-  comparisonHint: Record<Locale, string>;
+  comparisonHint: LocalizedString;
   cover: string;
 };
 
 /** Repeated, deliberately honest placeholder for unverified certified values. */
-const TBD: Record<Locale, string> = {
+const TBD: LocalizedString = {
   fa: 'نیازمند تأیید واحد مهندسی آویزسازه',
   en: 'To be confirmed by AvizSazeh engineering team',
 };
-const BY_ARCH: Record<Locale, string> = {
+const BY_ARCH: LocalizedString = {
   fa: 'قابل تعریف براساس طراحی معماری',
   en: 'Definable per architectural design',
 };
-const COAT: Record<Locale, string> = {
+const COAT: LocalizedString = {
   fa: 'رنگ پودری الکترواستاتیک پلی‌استر',
   en: 'Electrostatic polyester powder coat',
 };
-const COAT_25: Record<Locale, string> = {
+const COAT_25: LocalizedString = {
   fa: 'رنگ پودری الکترواستاتیک، ۲۵ میکرون',
   en: 'Electrostatic powder coat, 25 µm',
 };
-const COLORS: Record<Locale, string> = {
+const COLORS: LocalizedString = {
   fa: 'رنگ‌های استاندارد و سفارشی پروژه',
   en: 'Standard & custom project colours',
 };
@@ -93,11 +94,16 @@ export const systems: CeilingSystem[] = [
     slug: 'linear-ceiling',
     order: 1,
     iconKey: 'linear',
-    name: { fa: 'سیستم سقف خطی', en: 'Linear Ceiling System' },
-    category: { fa: 'سیستم نواری جهت‌دار', en: 'Directional strip system' },
+    name: { fa: 'سیستم سقف خطی', en: 'Linear Ceiling System', ar: 'نظام السقف الخطي' },
+    category: {
+      fa: 'سیستم نواری جهت‌دار',
+      en: 'Directional strip system',
+      ar: 'نظام خطي موجّه / لوفر معدني',
+    },
     context: {
       fa: 'برای معماری جهت‌دار، راهروها، فضاهای تجاری و ریتم خطی تمیز.',
       en: 'For directional architecture, corridors, commercial interiors and clean linear rhythm.',
+      ar: 'للعمارة ذات الاتجاه الواضح، الممرات، المساحات التجارية، والإيقاع الخطي النظيف.',
     },
     definition: {
       fa: 'یک سیستم سقف کاذب نواری ماژولار از تسمه‌های آلومینیومی که در کنار هم الگوهای خطی، مورب یا شعاعی می‌سازد.',
@@ -267,11 +273,16 @@ export const systems: CeilingSystem[] = [
     slug: 'open-cell',
     order: 2,
     iconKey: 'grid',
-    name: { fa: 'سیستم سقف سلول‌باز (گریلیوم)', en: 'Open Cell System (Grilliom)' },
-    category: { fa: 'سیستم شبکه‌ای دوبعدی', en: 'Two-dimensional grid system' },
+    name: { fa: 'سیستم سقف سلول‌باز (گریلیوم)', en: 'Open Cell System (Grilliom)', ar: 'نظام السقف مفتوح الخلايا (جريليوم)' },
+    category: {
+      fa: 'سیستم شبکه‌ای دوبعدی',
+      en: 'Two-dimensional grid system',
+      ar: 'نظام شبكي معدني مفتوح',
+    },
     context: {
       fa: 'برای عمق بصری باز، تهویه، دسترسی تأسیسات و سقف‌های وسیع.',
       en: 'For open visual depth, ventilation, MEP accessibility and large ceiling fields.',
+      ar: 'لعمق بصري مفتوح، التهوية، سهولة الوصول إلى الخدمات، ومساحات السقف الواسعة.',
     },
     definition: {
       fa: 'یک سیستم شبکه‌ای ماژولار از پروفیل‌های U نر و ماده که ساختار سلولی باز برای عبور نور و هوا ایجاد می‌کند.',
@@ -445,11 +456,16 @@ export const systems: CeilingSystem[] = [
     slug: 'metal-tile',
     order: 3,
     iconKey: 'tile',
-    name: { fa: 'سیستم تایل فلزی', en: 'Metal Tile System' },
-    category: { fa: 'سیستم شبکه‌ای پنلی', en: 'Panelised grid system' },
+    name: { fa: 'سیستم تایل فلزی', en: 'Metal Tile System', ar: 'نظام البلاطات المعدنية' },
+    category: {
+      fa: 'سیستم شبکه‌ای پنلی',
+      en: 'Panelised grid system',
+      ar: 'نظام بلاطات معدنية معيارية',
+    },
     context: {
       fa: 'برای چیدمان ماژولار، قابل‌دسترس و تمیز با دیتیل کنترل‌شده.',
       en: 'For modular, accessible and clean ceiling layouts with controlled detailing.',
+      ar: 'لتخطيطات معيارية نظيفة وسهلة الوصول مع تفاصيل مضبوطة.',
     },
     definition: {
       fa: 'یک سیستم پنلی از تایل‌های فولاد گالوانیزه یا آلومینیوم با پوشش رنگ پودری الکترواستاتیک پلی‌استر.',
@@ -631,11 +647,16 @@ export const systems: CeilingSystem[] = [
     slug: 'baffle',
     order: 4,
     iconKey: 'baffle',
-    name: { fa: 'سیستم بافل', en: 'Baffle System' },
-    category: { fa: 'سیستم خطی عمودی / آکوستیک', en: 'Vertical-fin / acoustic system' },
+    name: { fa: 'سیستم بافل', en: 'Baffle System', ar: 'نظام البافل المعدني' },
+    category: {
+      fa: 'سیستم خطی عمودی / آکوستیک',
+      en: 'Vertical-fin / acoustic system',
+      ar: 'نظام زعانف رأسية / حل معماري خاص',
+    },
     context: {
       fa: 'برای ریتم آکوستیک، عمق بصری و سقف‌های معماری گویا.',
       en: 'For acoustic rhythm, visual depth and expressive architectural ceilings.',
+      ar: 'للإيقاع الصوتي، العمق البصري، والأسقف المعمارية ذات التعبير الواضح.',
     },
     definition: {
       fa: 'یک سیستم سقف باز با المان‌های خطی و عمودی که ریتم بصری و عمق فضایی می‌سازد و سقف اصلی را قابل‌مشاهده نگه می‌دارد.',

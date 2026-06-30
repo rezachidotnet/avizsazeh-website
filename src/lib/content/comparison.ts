@@ -1,4 +1,4 @@
-import type { Locale } from '@/i18n/routing';
+import type { LocalizedString } from '@/lib/site';
 
 /**
  * Ceiling-system decision matrix. Honest, design-oriented fit levels — not
@@ -7,7 +7,7 @@ import type { Locale } from '@/i18n/routing';
  */
 export type FitLevel = 'excellent' | 'suitable' | 'review' | 'no';
 
-export const fitLabels: Record<FitLevel, Record<Locale, string>> = {
+export const fitLabels: Record<FitLevel, LocalizedString> = {
   excellent: { fa: 'عالی', en: 'Excellent' },
   suitable: { fa: 'مناسب', en: 'Suitable' },
   review: { fa: 'نیازمند بررسی', en: 'Needs review' },
@@ -15,7 +15,7 @@ export const fitLabels: Record<FitLevel, Record<Locale, string>> = {
 };
 
 export type CompareRow = {
-  criterion: Record<Locale, string>;
+  criterion: LocalizedString;
   /** keyed by system slug */
   values: Record<string, FitLevel>;
 };

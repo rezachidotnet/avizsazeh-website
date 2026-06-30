@@ -1,14 +1,33 @@
 import type { Metadata } from 'next';
-import type { Locale } from '@/i18n/routing';
-import { SITE_URL, company } from './site';
+import { routing, type Locale } from '@/i18n/routing';
+import { SITE_URL, company, localized } from './site';
 
 const OG_IMAGE = '/og';
+export const SEO_LOCALES = ['fa', 'en', 'ar'] as const;
+const OPEN_GRAPH_LOCALE: Record<Locale, string> = {
+  fa: 'fa_IR',
+  en: 'en_US',
+  ar: 'ar',
+  ru: 'ru_RU',
+};
 
-/** Build an absolute URL for a locale + in-app path. fa is unprefixed, en is /en. */
+/** Build an absolute canonical URL for a locale + in-app path. */
 export function localeUrl(locale: Locale, path = '/'): string {
-  const clean = path === '/' ? '' : path.replace(/\/$/, '');
-  const prefix = locale === 'fa' ? '' : `/${locale}`;
-  return `${SITE_URL}${prefix}${clean}` || SITE_URL;
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  const clean = normalizedPath === '/' ? '' : normalizedPath.replace(/\/$/, '');
+  if (locale === routing.defaultLocale) {
+    return `${SITE_URL}${clean || '/'}`;
+  }
+  return `${SITE_URL}/${locale}${clean}`;
+}
+
+export function languageAlternates(path = '/'): Record<string, string> {
+  const alternates: Record<string, string> = {};
+  for (const locale of SEO_LOCALES) {
+    alternates[locale] = localeUrl(locale, path);
+  }
+  alternates['x-default'] = localeUrl('fa', path);
+  return alternates;
 }
 
 type BuildMetaArgs = {
@@ -44,23 +63,23 @@ export function buildMetadata({
   );
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: titleAbsolute ? { absolute: title } : title,
     description,
     alternates: {
       canonical,
-      languages: {
-        fa: localeUrl('fa', path),
-        en: localeUrl('en', path),
-        'x-default': localeUrl('fa', path),
-      },
+      languages: languageAlternates(path),
     },
     openGraph: {
       type,
       title,
       description,
       url: canonical,
-      siteName: company.shortName[locale],
-      locale: locale === 'fa' ? 'fa_IR' : 'en_US',
+      siteName: localized(company.shortName, locale),
+      locale: OPEN_GRAPH_LOCALE[locale],
+      alternateLocale: SEO_LOCALES.filter((item) => item !== locale).map(
+        (item) => OPEN_GRAPH_LOCALE[item],
+      ),
       images: ogImages.map((url) => ({ url, width: 1200, height: 630, alt: title })),
     },
     twitter: {
@@ -79,8 +98,8 @@ export function organizationJsonLd(locale: Locale) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
-    name: company.legalName[locale],
-    alternateName: company.legalName[locale === 'fa' ? 'en' : 'fa'],
+    name: localized(company.legalName, locale),
+    alternateName: locale === 'en' ? company.legalName.fa : company.legalName.en,
     url: SITE_URL,
     logo: `${SITE_URL}/brand/standard-logo.png`,
     image: `${SITE_URL}${OG_IMAGE}`,
@@ -88,11 +107,13 @@ export function organizationJsonLd(locale: Locale) {
     description:
       locale === 'fa'
         ? 'مشاوره، طراحی، تولید و اجرای سیستم‌های سقف فلزی آویزان به‌صورت سیستم مهندسی معماری.'
+        : locale === 'ar'
+          ? 'استشارات وتصميم وهندسة وإنتاج وتنفيذ أنظمة الأسقف المعدنية المعلّقة كنظم معمارية هندسية متكاملة.'
         : 'Consulting, design, manufacturing and installation of suspended metal ceiling systems, delivered as architectural engineering systems.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: company.address[locale],
-      addressLocality: company.city[locale],
+      streetAddress: localized(company.address, locale),
+      addressLocality: localized(company.city, locale),
       addressRegion: company.postalRegion,
       addressCountry: company.countryCode,
     },
@@ -107,7 +128,7 @@ export function organizationJsonLd(locale: Locale) {
         telephone: `+98${company.phoneConsult.replace(/^0/, '')}`,
         contactType: 'sales',
         areaServed: company.regions,
-        availableLanguage: ['fa', 'en'],
+        availableLanguage: [...SEO_LOCALES],
       },
     ],
     email: company.email,
@@ -130,8 +151,8 @@ export function websiteJsonLd(locale: Locale) {
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     url: SITE_URL,
-    name: company.shortName[locale],
-    inLanguage: locale === 'fa' ? 'fa-IR' : 'en-US',
+    name: localized(company.shortName, locale),
+    inLanguage: OPEN_GRAPH_LOCALE[locale].replace('_', '-'),
     publisher: { '@id': `${SITE_URL}/#organization` },
   };
 }
@@ -215,7 +236,7 @@ export function serviceJsonLd(args: {
       url: SITE_URL,
     },
     areaServed: company.regions,
-    availableLanguage: ['fa', 'en'],
+    availableLanguage: [...SEO_LOCALES],
   };
 }
 
@@ -225,15 +246,15 @@ export function localBusinessJsonLd(locale: Locale) {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${SITE_URL}/#localbusiness`,
-    name: company.legalName[locale],
+    name: localized(company.legalName, locale),
     image: `${SITE_URL}${OG_IMAGE}`,
     url: SITE_URL,
     telephone: `+98${company.mobile.replace(/^0/, '')}`,
     email: company.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: company.address[locale],
-      addressLocality: company.city[locale],
+      streetAddress: localized(company.address, locale),
+      addressLocality: localized(company.city, locale),
       addressRegion: company.postalRegion,
       addressCountry: company.countryCode,
     },
@@ -247,7 +268,7 @@ export function localBusinessJsonLd(locale: Locale) {
       telephone: `+98${company.mobile.replace(/^0/, '')}`,
       contactType: 'sales',
       areaServed: company.regions,
-      availableLanguage: ['fa', 'en'],
+      availableLanguage: [...SEO_LOCALES],
     },
     parentOrganization: { '@id': `${SITE_URL}/#organization` },
     areaServed: company.regions,
@@ -268,7 +289,7 @@ export function creativeWorkJsonLd(args: {
     name: args.name,
     description: args.description,
     url: localeUrl(args.locale, args.path),
-    inLanguage: args.locale === 'fa' ? 'fa-IR' : 'en-US',
+    inLanguage: OPEN_GRAPH_LOCALE[args.locale].replace('_', '-'),
     creator: { '@id': `${SITE_URL}/#organization` },
     ...(args.images && args.images.length
       ? {

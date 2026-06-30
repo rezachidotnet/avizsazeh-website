@@ -26,6 +26,12 @@ const nextConfig = {
         destination: 'https://www.avizsazeh.ir/:path*',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: '(?<subdomain>.*)\\.vercel\\.app' }],
+        destination: 'https://www.avizsazeh.ir/:path*',
+        permanent: true,
+      },
     ];
   },
   async headers() {

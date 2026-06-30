@@ -20,7 +20,7 @@ import { SystemIcon } from '@/components/icons/SystemIcon';
 import { applications, getApplication } from '@/lib/content/applications';
 import { systems } from '@/lib/content/systems';
 import { getProject, projectName } from '@/lib/content/projects';
-import { localized } from '@/lib/site';
+import { localized, localizedList } from '@/lib/site';
 
 export const dynamicParams = false;
 
@@ -101,7 +101,7 @@ export default async function ApplicationPage({
       <Section>
         <h2 className="font-display text-h2 font-semibold text-white">{t('useCasesTitle')}</h2>
         <ul className="mt-8 grid gap-px overflow-hidden rounded-lg border border-white/10 sm:grid-cols-2">
-          {app.useCases[locale].map((u) => (
+          {localizedList(app.useCases, locale).map((u) => (
             <li key={u} className="flex items-center gap-3 bg-ink-900 px-5 py-5">
               <SystemIcon name="architecture" className="h-5 w-5 shrink-0 text-gold" />
               <span className="text-body-s font-medium text-ink-200">{u}</span>
@@ -127,7 +127,7 @@ export default async function ApplicationPage({
       <Section>
         <h2 className="font-display text-h2 font-semibold text-white">{t('requirementsTitle')}</h2>
         <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {app.requirements[locale].map((r) => (
+          {localizedList(app.requirements, locale).map((r) => (
             <li key={r} className="flex items-start gap-3 rounded-sm border border-white/10 bg-white/[0.03] px-5 py-4">
               <svg viewBox="0 0 24 24" className="mt-0.5 h-4 w-4 shrink-0 text-gold" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />

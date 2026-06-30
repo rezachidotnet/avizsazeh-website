@@ -1,18 +1,19 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/routing';
+import { routing, usePathname, useRouter } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 
-const labels: Record<Locale, string> = { fa: 'FA', en: 'EN' };
+const labels: Record<Locale, string> = { fa: 'FA', en: 'EN', ar: 'AR', ru: 'RU' };
 
-/** Compact locale control — shows the active locale; toggles to the other. */
+/** Compact locale control — shows the active locale; cycles through locales. */
 export function LocaleSwitcher({ className }: { className?: string }) {
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
-  const next: Locale = locale === 'en' ? 'fa' : 'en';
+  const currentIndex = routing.locales.indexOf(locale);
+  const next = routing.locales[(currentIndex + 1) % routing.locales.length];
 
   return (
     <button

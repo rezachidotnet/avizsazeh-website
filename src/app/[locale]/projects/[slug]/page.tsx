@@ -24,7 +24,7 @@ import {
 } from '@/lib/content/projects';
 import { systems } from '@/lib/content/systems';
 import { applications } from '@/lib/content/applications';
-import { localized } from '@/lib/site';
+import { localized, localizedList } from '@/lib/site';
 
 export const dynamicParams = false;
 
@@ -172,7 +172,7 @@ export default async function ProjectDetailPage({
         <Section dark>
           <SectionHeader title={t('pendingVisualsTitle')} description={localized(cs.dataNote, locale)} />
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {cs.visualPlaceholders[locale].map((v) => (
+            {localizedList(cs.visualPlaceholders, locale).map((v) => (
               <li
                 key={v}
                 className="flex aspect-[4/3] items-center justify-center rounded-lg border border-dashed border-white/15 bg-white/[0.02] p-6 text-center text-body-s text-ink-500"

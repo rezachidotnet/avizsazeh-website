@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { localeUrl } from '@/lib/seo';
+import { SEO_LOCALES, languageAlternates, localeUrl } from '@/lib/seo';
 import { systemSlugs } from '@/lib/content/systems';
 import { applicationSlugs } from '@/lib/content/applications';
 import { projects, hasCaseStudy } from '@/lib/content/projects';
@@ -41,15 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return 0.7;
   };
 
-  return paths.map((path) => ({
-    url: localeUrl('fa', path),
-    changeFrequency: path === '/' ? 'weekly' : 'monthly',
-    priority: priorityFor(path),
-    alternates: {
-      languages: {
-        fa: localeUrl('fa', path),
-        en: localeUrl('en', path),
+  return SEO_LOCALES.flatMap((locale) =>
+    paths.map((path) => ({
+      url: localeUrl(locale, path),
+      changeFrequency: path === '/' ? 'weekly' : 'monthly',
+      priority: priorityFor(path),
+      alternates: {
+        languages: languageAlternates(path),
       },
-    },
-  }));
+    })),
+  );
 }

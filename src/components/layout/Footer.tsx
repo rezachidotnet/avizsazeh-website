@@ -69,14 +69,29 @@ export async function Footer() {
     { label: tNav('contact'), href: '/contact' },
   ];
 
-  const hubLabel = locale === 'fa' ? 'سقف کاذب فلزی' : 'Metal suspended ceiling';
+  const hubLabel =
+    locale === 'fa'
+      ? 'سقف کاذب فلزی'
+      : locale === 'ar'
+        ? 'السقف المعدني المعلّق'
+        : 'Metal suspended ceiling';
   const applicationLinks = [
     {
-      label: locale === 'fa' ? 'سقف کاذب فرودگاه' : 'Airport metal ceiling',
+      label:
+        locale === 'fa'
+          ? 'سقف کاذب فرودگاه'
+          : locale === 'ar'
+            ? 'سقف معدني للمطارات'
+            : 'Airport metal ceiling',
       href: '/applications/airport-ceiling',
     },
     {
-      label: locale === 'fa' ? 'سقف کاذب تجاری' : 'Commercial metal ceiling',
+      label:
+        locale === 'fa'
+          ? 'سقف کاذب تجاری'
+          : locale === 'ar'
+            ? 'سقف معدني للمساحات التجارية'
+            : 'Commercial metal ceiling',
       href: '/applications/commercial-ceiling',
     },
   ];

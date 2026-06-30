@@ -22,7 +22,7 @@ import { JsonLd } from '@/components/shared/JsonLd';
 import { SystemIcon } from '@/components/icons/SystemIcon';
 import { hub } from '@/lib/content/hub';
 import { systems } from '@/lib/content/systems';
-import { localized } from '@/lib/site';
+import { localized, localizedList } from '@/lib/site';
 
 export async function generateMetadata({
   params,
@@ -89,7 +89,7 @@ export default async function MetalSuspendedCeilingHub({
             <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.whyEngineering.title, locale)}</h2>
             <p className="mt-4 text-body-l leading-relaxed text-ink-300">{localized(hub.whyEngineering.body, locale)}</p>
             <ul className="mt-6 space-y-3">
-              {hub.whyEngineering.bullets[locale].map((b) => (
+              {localizedList(hub.whyEngineering.bullets, locale).map((b) => (
                 <li key={b} className="flex items-start gap-3">
                   <SystemIcon name="engineering" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <span className="text-body-s text-ink-200">{b}</span>
@@ -184,7 +184,7 @@ export default async function MetalSuspendedCeilingHub({
       <Section ivory>
         <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.mistakesTitle, locale)}</h2>
         <ul className="mt-8 grid gap-px overflow-hidden rounded-lg border border-white/10 md:grid-cols-2">
-          {hub.mistakes[locale].map((m, i) => (
+          {localizedList(hub.mistakes, locale).map((m, i) => (
             <li key={i} className="flex items-start gap-4 bg-ink-900 p-6">
               <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-ink-500" fill="none" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
                 <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />

@@ -1,20 +1,20 @@
-import type { Locale } from '@/i18n/routing';
+import type { LocalizedString } from '@/lib/site';
 
 export type Client = {
   file: string;
-  name: Record<Locale, string>;
+  name: LocalizedString;
 };
 
 /** 28 real clients/projects (logos sourced from avizsazeh.ir). No fabricated entries. */
 export const clients: Client[] = [
-  { file: 'imam-khomeini-airport.png', name: { fa: 'فرودگاه بین‌المللی امام خمینی (ره)', en: 'Imam Khomeini Int’l Airport' } },
-  { file: 'chadormalu.jpeg', name: { fa: 'چادرملو', en: 'Chadormalu' } },
-  { file: 'arya-sasol.jpeg', name: { fa: 'پتروشیمی آریاساسول', en: 'Arya Sasol Polymer' } },
-  { file: 'sairan.png', name: { fa: 'صاایران', en: 'SAIRAN' } },
-  { file: 'bushehr-mall.jpeg', name: { fa: 'بوشهر مال', en: 'Bushehr Mall' } },
-  { file: 'pamidco.png', name: { fa: 'پامیدکو', en: 'PAMIDCO' } },
-  { file: 'jahad-nasr-arak.png', name: { fa: 'جهاد نصر اراک', en: 'Jahad Nasr Arak' } },
-  { file: 'nezam-mohandesi-qazvin.jpeg', name: { fa: 'نظام مهندسی قزوین', en: 'Qazvin Construction Eng. Org.' } },
+  { file: 'imam-khomeini-airport.png', name: { fa: 'فرودگاه بین‌المللی امام خمینی (ره)', en: 'Imam Khomeini Int’l Airport', ar: 'مطار الإمام الخميني الدولي' } },
+  { file: 'chadormalu.jpeg', name: { fa: 'چادرملو', en: 'Chadormalu', ar: 'چادرملو' } },
+  { file: 'arya-sasol.jpeg', name: { fa: 'پتروشیمی آریاساسول', en: 'Arya Sasol Polymer', ar: 'آريا ساسول للبتروكيماويات' } },
+  { file: 'sairan.png', name: { fa: 'صاایران', en: 'SAIRAN', ar: 'صا إيران' } },
+  { file: 'bushehr-mall.jpeg', name: { fa: 'بوشهر مال', en: 'Bushehr Mall', ar: 'بوشهر مول' } },
+  { file: 'pamidco.png', name: { fa: 'پامیدکو', en: 'PAMIDCO', ar: 'باميدكو' } },
+  { file: 'jahad-nasr-arak.png', name: { fa: 'جهاد نصر اراک', en: 'Jahad Nasr Arak', ar: 'جهاد نصر أراك' } },
+  { file: 'nezam-mohandesi-qazvin.jpeg', name: { fa: 'نظام مهندسی قزوین', en: 'Qazvin Construction Eng. Org.', ar: 'منظمة هندسة البناء في قزوين' } },
   { file: 'bushehr-heritage.png', name: { fa: 'میراث فرهنگی بوشهر', en: 'Bushehr Cultural Heritage' } },
   { file: 'armatur-pardis.jpeg', name: { fa: 'آرماتور پردیس', en: 'Armatur Pardis' } },
   { file: 'aria-omran-pars.jpeg', name: { fa: 'آریا عمران پارس', en: 'Aria Omran Pars' } },

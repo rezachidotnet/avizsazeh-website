@@ -1,4 +1,5 @@
 import type { Locale } from '@/i18n/routing';
+import type { LocalizedList, LocalizedString } from '@/lib/site';
 
 /**
  * Structured project / client records.
@@ -32,19 +33,19 @@ export type ProofStatus = 'documented' | 'partial' | 'logo-only';
  * in the `null`-able fields above until verified by the engineering team.
  */
 export type CaseStudy = {
-  seo: { title: Record<Locale, string>; description: Record<Locale, string> };
+  seo: { title: LocalizedString; description: LocalizedString };
   /** project type / facility line shown under the title */
-  projectType: Record<Locale, string>;
-  lead: Record<Locale, string>;
-  challenge: Record<Locale, string>;
-  systemLogic: Record<Locale, string>;
-  constraints: Record<Locale, string>;
+  projectType: LocalizedString;
+  lead: LocalizedString;
+  challenge: LocalizedString;
+  systemLogic: LocalizedString;
+  constraints: LocalizedString;
   /** AvizSazeh's role on a project of this type */
-  role: Record<Locale, string>;
+  role: LocalizedString;
   /** honest note that exact technical data is pending verification */
-  dataNote: Record<Locale, string>;
+  dataNote: LocalizedString;
   /** placeholder labels for visuals still to be supplied */
-  visualPlaceholders: Record<Locale, string[]>;
+  visualPlaceholders: LocalizedList;
   relatedSystems: string[];
   relatedApplications: string[];
 };
@@ -53,6 +54,7 @@ export type Project = {
   slug: string;
   titleFa: string;
   titleEn?: string;
+  titleAr?: string;
   category: ProjectCategory;
   clientNameFa: string;
   clientNameEn?: string;
@@ -60,6 +62,7 @@ export type Project = {
   /** High-level sector derived from the client's known identity (not project data). */
   sectorFa?: string | null;
   sectorEn?: string | null;
+  sectorAr?: string | null;
   locationFa?: string | null;
   countryFa?: string | null;
   year?: string | null;
@@ -85,12 +88,14 @@ export const projects: Project[] = [
     slug: 'imam-khomeini-airport',
     titleFa: 'فرودگاه بین‌المللی امام خمینی (ره)',
     titleEn: 'Imam Khomeini Int’l Airport',
+    titleAr: 'مطار الإمام الخميني الدولي',
     category: 'flagship',
     clientNameFa: 'فرودگاه بین‌المللی امام خمینی (ره)',
     clientNameEn: 'Imam Khomeini Int’l Airport',
     logo: 'imam-khomeini-airport.png',
     sectorFa: 'زیرساخت فرودگاهی',
     sectorEn: 'Airport infrastructure',
+    sectorAr: 'بنية تحتية للمطارات',
     locationFa: null,
     countryFa: null,
     year: null,
@@ -150,11 +155,13 @@ export const projects: Project[] = [
     slug: 'arya-sasol',
     titleFa: 'پتروشیمی آریاساسول',
     titleEn: 'Arya Sasol Polymer',
+    titleAr: 'آريا ساسول للبتروكيماويات',
     category: 'industrial',
     clientNameFa: 'پتروشیمی آریاساسول',
     clientNameEn: 'Arya Sasol Polymer',
     logo: 'arya-sasol.jpeg',
     sectorFa: 'صنعتی · پتروشیمی',
+    sectorAr: 'صناعي · بتروكيماويات',
     locationFa: null,
     countryFa: null,
     year: null,
@@ -171,12 +178,14 @@ export const projects: Project[] = [
     slug: 'bushehr-mall',
     titleFa: 'بوشهر مال',
     titleEn: 'Bushehr Mall',
+    titleAr: 'بوشهر مول',
     category: 'commercial',
     clientNameFa: 'بوشهر مال',
     clientNameEn: 'Bushehr Mall',
     logo: 'bushehr-mall.jpeg',
     sectorFa: 'مرکز تجاری',
     sectorEn: 'Commercial centre',
+    sectorAr: 'مركز تجاري',
     locationFa: null,
     countryFa: null,
     year: null,
@@ -236,11 +245,13 @@ export const projects: Project[] = [
     slug: 'sairan',
     titleFa: 'صاایران',
     titleEn: 'SAIRAN',
+    titleAr: 'صا إيران',
     category: 'flagship',
     clientNameFa: 'صاایران',
     clientNameEn: 'SAIRAN',
     logo: 'sairan.png',
     sectorFa: 'صنعتی · الکترونیک',
+    sectorAr: 'صناعي · إلكترونيات',
     locationFa: null,
     countryFa: null,
     year: null,
@@ -257,11 +268,13 @@ export const projects: Project[] = [
     slug: 'chadormalu',
     titleFa: 'چادرملو',
     titleEn: 'Chadormalu',
+    titleAr: 'چادرملو',
     category: 'industrial',
     clientNameFa: 'چادرملو',
     clientNameEn: 'Chadormalu',
     logo: 'chadormalu.jpeg',
     sectorFa: 'صنعتی · معدن و فولاد',
+    sectorAr: 'صناعي · تعدين وفولاذ',
     locationFa: null,
     countryFa: null,
     year: null,
@@ -278,11 +291,13 @@ export const projects: Project[] = [
     slug: 'pamidco',
     titleFa: 'پامیدکو',
     titleEn: 'PAMIDCO',
+    titleAr: 'باميدكو',
     category: 'industrial',
     clientNameFa: 'پامیدکو',
     clientNameEn: 'PAMIDCO',
     logo: 'pamidco.png',
     sectorFa: 'صنعتی · معدن و فلزات',
+    sectorAr: 'صناعي · تعدين ومعادن',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -292,11 +307,13 @@ export const projects: Project[] = [
     slug: 'nezam-mohandesi-qazvin',
     titleFa: 'نظام مهندسی قزوین',
     titleEn: 'Qazvin Construction Eng. Org.',
+    titleAr: 'منظمة هندسة البناء في قزوين',
     category: 'public',
     clientNameFa: 'سازمان نظام مهندسی ساختمان قزوین',
     clientNameEn: 'Qazvin Construction Eng. Org.',
     logo: 'nezam-mohandesi-qazvin.jpeg',
     sectorFa: 'سازمان حرفه‌ای',
+    sectorAr: 'منظمة مهنية',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -304,11 +321,13 @@ export const projects: Project[] = [
     slug: 'bushehr-heritage',
     titleFa: 'میراث فرهنگی بوشهر',
     titleEn: 'Bushehr Cultural Heritage',
+    titleAr: 'التراث الثقافي في بوشهر',
     category: 'public',
     clientNameFa: 'میراث فرهنگی بوشهر',
     clientNameEn: 'Bushehr Cultural Heritage',
     logo: 'bushehr-heritage.png',
     sectorFa: 'سازمان عمومی · فرهنگی',
+    sectorAr: 'جهة عامة · ثقافية',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -316,11 +335,13 @@ export const projects: Project[] = [
     slug: 'shahrdari-parand',
     titleFa: 'شهرداری پرند',
     titleEn: 'Parand Municipality',
+    titleAr: 'بلدية پرند',
     category: 'municipal',
     clientNameFa: 'شهرداری پرند',
     clientNameEn: 'Parand Municipality',
     logo: 'shahrdari-parand.jpg',
     sectorFa: 'شهرداری',
+    sectorAr: 'بلدية',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -328,11 +349,13 @@ export const projects: Project[] = [
     slug: 'shahrdari-zarrinshahr',
     titleFa: 'شهرداری زرین‌شهر',
     titleEn: 'Zarrin Shahr Municipality',
+    titleAr: 'بلدية زرين شهر',
     category: 'municipal',
     clientNameFa: 'شهرداری زرین‌شهر',
     clientNameEn: 'Zarrin Shahr Municipality',
     logo: 'shahrdari-zarrinshahr.png',
     sectorFa: 'شهرداری',
+    sectorAr: 'بلدية',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -340,11 +363,13 @@ export const projects: Project[] = [
     slug: 'shahrdari-sejzi',
     titleFa: 'شهرداری سجزی',
     titleEn: 'Sejzi Municipality',
+    titleAr: 'بلدية سجزي',
     category: 'municipal',
     clientNameFa: 'شهرداری سجزی',
     clientNameEn: 'Sejzi Municipality',
     logo: 'shahrdari-sejzi.jpeg',
     sectorFa: 'شهرداری',
+    sectorAr: 'بلدية',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -352,11 +377,13 @@ export const projects: Project[] = [
     slug: 'shahrdari-lenjan',
     titleFa: 'شهرداری لنجان',
     titleEn: 'Lenjan Municipality',
+    titleAr: 'بلدية لنجان',
     category: 'municipal',
     clientNameFa: 'شهرداری لنجان',
     clientNameEn: 'Lenjan Municipality',
     logo: 'shahrdari-lenjan.jpeg',
     sectorFa: 'شهرداری',
+    sectorAr: 'بلدية',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -366,11 +393,13 @@ export const projects: Project[] = [
     slug: 'jahad-nasr-arak',
     titleFa: 'جهاد نصر اراک',
     titleEn: 'Jahad Nasr Arak',
+    titleAr: 'جهاد نصر أراك',
     category: 'contractor',
     clientNameFa: 'جهاد نصر اراک',
     clientNameEn: 'Jahad Nasr Arak',
     logo: 'jahad-nasr-arak.png',
     sectorFa: 'پیمانکار عمرانی',
+    sectorAr: 'مقاول مدني',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -378,11 +407,13 @@ export const projects: Project[] = [
     slug: 'armatur-pardis',
     titleFa: 'آرماتور پردیس',
     titleEn: 'Armatur Pardis',
+    titleAr: 'آرماتور پرديس',
     category: 'contractor',
     clientNameFa: 'آرماتور پردیس',
     clientNameEn: 'Armatur Pardis',
     logo: 'armatur-pardis.jpeg',
     sectorFa: 'پیمانکار ساختمانی',
+    sectorAr: 'مقاول مبانٍ',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -390,11 +421,13 @@ export const projects: Project[] = [
     slug: 'aria-omran-pars',
     titleFa: 'آریا عمران پارس',
     titleEn: 'Aria Omran Pars',
+    titleAr: 'آريا عمران پارس',
     category: 'contractor',
     clientNameFa: 'آریا عمران پارس',
     clientNameEn: 'Aria Omran Pars',
     logo: 'aria-omran-pars.jpeg',
     sectorFa: 'پیمانکار عمرانی',
+    sectorAr: 'مقاول مدني',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -402,11 +435,13 @@ export const projects: Project[] = [
     slug: 'alphabet-qeshm',
     titleFa: 'آلفابت قشم',
     titleEn: 'Alphabet Qeshm',
+    titleAr: 'ألفابت قشم',
     category: 'partner',
     clientNameFa: 'آلفابت قشم',
     clientNameEn: 'Alphabet Qeshm',
     logo: 'alphabet-qeshm.jpg',
     sectorFa: 'شرکت همکار',
+    sectorAr: 'شركة شريكة',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -414,11 +449,13 @@ export const projects: Project[] = [
     slug: 'anamis-sazan',
     titleFa: 'آنامیس سازان جرون',
     titleEn: 'Anamis Sazan Jaroon',
+    titleAr: 'أناميس سازان جرون',
     category: 'contractor',
     clientNameFa: 'آنامیس سازان جرون',
     clientNameEn: 'Anamis Sazan Jaroon',
     logo: 'anamis-sazan.jpg',
     sectorFa: 'پیمانکار ساختمانی',
+    sectorAr: 'مقاول مبانٍ',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -426,11 +463,13 @@ export const projects: Project[] = [
     slug: 'esalat',
     titleFa: 'اصالت',
     titleEn: 'Esalat',
+    titleAr: 'أصالت',
     category: 'partner',
     clientNameFa: 'اصالت',
     clientNameEn: 'Esalat',
     logo: 'esalat.jpg',
     sectorFa: 'شرکت همکار',
+    sectorAr: 'شركة شريكة',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -438,11 +477,13 @@ export const projects: Project[] = [
     slug: 'zagros-zarrin-pars',
     titleFa: 'زاگرس زرین پارس',
     titleEn: 'Zagros Zarrin Pars',
+    titleAr: 'زاگرس زرين پارس',
     category: 'contractor',
     clientNameFa: 'زاگرس زرین پارس',
     clientNameEn: 'Zagros Zarrin Pars',
     logo: 'zagros-zarrin-pars.jpeg',
     sectorFa: 'پیمانکار ساختمانی',
+    sectorAr: 'مقاول مبانٍ',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -450,11 +491,13 @@ export const projects: Project[] = [
     slug: 'saman-andishan',
     titleFa: 'سامان اندیشان امرتات',
     titleEn: 'Saman Andishan Amrtat',
+    titleAr: 'سامان أنديشان أمرتات',
     category: 'contractor',
     clientNameFa: 'سامان اندیشان امرتات',
     clientNameEn: 'Saman Andishan Amrtat',
     logo: 'saman-andishan.jpeg',
     sectorFa: 'پیمانکار ساختمانی',
+    sectorAr: 'مقاول مبانٍ',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -462,11 +505,13 @@ export const projects: Project[] = [
     slug: 'armeh-sazeh-novin',
     titleFa: 'آرمه سازه نوین',
     titleEn: 'Armeh Sazeh Novin',
+    titleAr: 'آرمه سازه نوين',
     category: 'contractor',
     clientNameFa: 'آرمه سازه نوین',
     clientNameEn: 'Armeh Sazeh Novin',
     logo: 'armeh-sazeh-novin.png',
     sectorFa: 'پیمانکار سازه',
+    sectorAr: 'مقاول هياكل',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -474,11 +519,13 @@ export const projects: Project[] = [
     slug: 'anbouh-gostar-nasr',
     titleFa: 'انبوه‌گستر نصر',
     titleEn: 'Anbouh Gostar Nasr',
+    titleAr: 'انبوه گستر نصر',
     category: 'contractor',
     clientNameFa: 'انبوه‌گستر نصر',
     clientNameEn: 'Anbouh Gostar Nasr',
     logo: 'anbouh-gostar-nasr.jpeg',
     sectorFa: 'انبوه‌ساز',
+    sectorAr: 'مطوّر / بناء واسع النطاق',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -486,11 +533,13 @@ export const projects: Project[] = [
     slug: 'pars-gostar',
     titleFa: 'پارس گستر',
     titleEn: 'Pars Gostar',
+    titleAr: 'پارس گستر',
     category: 'contractor',
     clientNameFa: 'پارس گستر',
     clientNameEn: 'Pars Gostar',
     logo: 'pars-gostar.jpeg',
     sectorFa: 'پیمانکار ساختمانی',
+    sectorAr: 'مقاول مبانٍ',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -498,11 +547,13 @@ export const projects: Project[] = [
     slug: 'meshkin-part-kish',
     titleFa: 'مشکین‌پارت کیش',
     titleEn: 'Meshkin Part Kish',
+    titleAr: 'مشكين پارت كيش',
     category: 'partner',
     clientNameFa: 'مشکین‌پارت کیش',
     clientNameEn: 'Meshkin Part Kish',
     logo: 'meshkin-part-kish.jpg',
     sectorFa: 'شرکت همکار',
+    sectorAr: 'شركة شريكة',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -510,11 +561,13 @@ export const projects: Project[] = [
     slug: 'moghavem-kar',
     titleFa: 'مقاوم‌کار',
     titleEn: 'Moghavem Kar',
+    titleAr: 'مقاوم كار',
     category: 'contractor',
     clientNameFa: 'مقاوم‌کار',
     clientNameEn: 'Moghavem Kar',
     logo: 'moghavem-kar.jpg',
     sectorFa: 'پیمانکار ساختمانی',
+    sectorAr: 'مقاول مبانٍ',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -522,11 +575,13 @@ export const projects: Project[] = [
     slug: 'fazapooshan-kerman',
     titleFa: 'فضاپوشان کرمان',
     titleEn: 'Fazapooshan Kerman',
+    titleAr: 'فضاپوشان كرمان',
     category: 'contractor',
     clientNameFa: 'فضاپوشان کرمان',
     clientNameEn: 'Fazapooshan Kerman',
     logo: 'fazapooshan-kerman.jpeg',
     sectorFa: 'پیمانکار پوشش سقف',
+    sectorAr: 'مقاول تغطية أسقف',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -534,11 +589,13 @@ export const projects: Project[] = [
     slug: 'vodja',
     titleFa: 'ودجا',
     titleEn: 'VODJA',
+    titleAr: 'ودجا',
     category: 'partner',
     clientNameFa: 'ودجا',
     clientNameEn: 'VODJA',
     logo: 'vodja.jpg',
     sectorFa: 'شرکت همکار',
+    sectorAr: 'شركة شريكة',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -546,11 +603,13 @@ export const projects: Project[] = [
     slug: 'vira-tejarat',
     titleFa: 'ویرا تجارت لیدوما',
     titleEn: 'Vira Tejarat Liduma',
+    titleAr: 'ويرا تجارت ليدوما',
     category: 'partner',
     clientNameFa: 'ویرا تجارت لیدوما',
     clientNameEn: 'Vira Tejarat Liduma',
     logo: 'vira-tejarat.jpg',
     sectorFa: 'شرکت همکار',
+    sectorAr: 'شركة شريكة',
     proofStatus: 'logo-only',
     isFeatured: false,
   },
@@ -606,11 +665,13 @@ export function getProject(slug: string): Project | undefined {
 
 /** Localised display name for a project. */
 export function projectName(p: Project, locale: Locale): string {
+  if (locale === 'ar') return p.titleAr ?? p.titleEn ?? p.titleFa;
   return locale === 'en' && p.titleEn ? p.titleEn : p.titleFa;
 }
 
 /** Localised sector line (falls back to Persian when no English value exists). */
 export function projectSector(p: Project, locale: Locale): string | null {
   if (locale === 'en') return p.sectorEn ?? p.sectorFa ?? null;
+  if (locale === 'ar') return p.sectorAr ?? p.sectorEn ?? null;
   return p.sectorFa ?? null;
 }

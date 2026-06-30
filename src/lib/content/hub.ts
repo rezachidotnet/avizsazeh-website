@@ -1,4 +1,4 @@
-import type { Locale } from '@/i18n/routing';
+import type { LocalizedString } from '@/lib/site';
 import type { Faq } from './systems';
 
 /**
@@ -8,7 +8,7 @@ import type { Faq } from './systems';
  * comparison matrix and the RFQ. Engineering-led voice, no fabricated values.
  */
 
-type TitledBody = { title: Record<Locale, string>; body: Record<Locale, string> };
+type TitledBody = { title: LocalizedString; body: LocalizedString };
 
 export const hub = {
   seo: {
@@ -76,7 +76,7 @@ export const hub = {
     { label: { fa: 'سقف کاذب مرکز خرید (مال)', en: 'Shopping mall ceiling' }, href: '/applications/commercial-ceiling' },
     { label: { fa: 'فضاهای اداری', en: 'Office spaces' }, href: null },
     { label: { fa: 'پایانه‌های حمل‌ونقل', en: 'Transport terminals' }, href: '/applications/airport-ceiling' },
-  ] as { label: Record<Locale, string>; href: string | null }[],
+  ] as { label: LocalizedString; href: string | null }[],
   processTitle: { fa: 'فرآیند مهندسی و اجرا', en: 'Engineering and execution process' },
   process: [
     {

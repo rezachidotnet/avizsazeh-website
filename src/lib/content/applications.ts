@@ -1,4 +1,4 @@
-import type { Locale } from '@/i18n/routing';
+import type { LocalizedList, LocalizedString } from '@/lib/site';
 import type { Faq } from './systems';
 
 /**
@@ -9,29 +9,29 @@ import type { Faq } from './systems';
  * verified case studies.
  */
 
-export type ApplicationChallenge = { title: Record<Locale, string>; text: Record<Locale, string> };
+export type ApplicationChallenge = { title: LocalizedString; text: LocalizedString };
 
 export type Application = {
   slug: string;
   /** primary commercial keyword (also the internal-link anchor) */
-  keyword: Record<Locale, string>;
-  eyebrow: Record<Locale, string>;
-  seo: { title: Record<Locale, string>; description: Record<Locale, string> };
-  h1: Record<Locale, string>;
-  lead: Record<Locale, string>;
+  keyword: LocalizedString;
+  eyebrow: LocalizedString;
+  seo: { title: LocalizedString; description: LocalizedString };
+  h1: LocalizedString;
+  lead: LocalizedString;
   /** the spaces / facilities this application covers */
-  useCases: Record<Locale, string[]>;
+  useCases: LocalizedList;
   /** the engineering / architectural challenges of the application */
   challenges: ApplicationChallenge[];
   /** what the ceiling must satisfy here (engineering requirements) */
-  requirements: Record<Locale, string[]>;
+  requirements: LocalizedList;
   /** system slugs that fit this application, best-first */
   suitableSystems: string[];
   /** project case-study slugs to surface as proof */
   relatedProjects: string[];
   faq: Faq[];
   cover: string;
-  coverAlt: Record<Locale, string>;
+  coverAlt: LocalizedString;
 };
 
 export const applications: Application[] = [
