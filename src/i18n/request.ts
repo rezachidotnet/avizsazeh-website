@@ -8,7 +8,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
   const messagesLocale =
-    locale === 'en' || locale === 'ar' ? locale : routing.defaultLocale;
+    locale === 'en' || locale === 'ar' || locale === 'ru'
+      ? locale
+      : routing.defaultLocale;
 
   return {
     locale,

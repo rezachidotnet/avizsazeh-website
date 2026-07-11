@@ -1,0 +1,377 @@
+{
+  "project": "avizsazeh.ir",
+  "audit_date": "2026-07-11",
+  "framework": "Next.js 14.2.15, React 18.3.1, TypeScript",
+  "router": "Next.js App Router with src/app, next-intl locale routing, default Persian route group",
+  "current_integrations": [
+    {
+      "name": "Google Tag Manager",
+      "status": "optional_env_configured_code_present",
+      "source_files": ["src/components/analytics/Analytics.tsx:19-33", "src/app/[locale]/layout.tsx:123-134", ".env.example:37-40"],
+      "method": "next/script inline GTM bootstrap afterInteractive plus noscript iframe in locale layout",
+      "environment_variables": ["NEXT_PUBLIC_GTM_ID"],
+      "scope": "global_all_locales_when_env_set",
+      "client_or_server": "client",
+      "can_move_to_gtm": false,
+      "recommendation": "Keep exactly one GTM container loader in application if GTM is adopted; use GTM to manage vendor tags."
+    },
+    {
+      "name": "Google Analytics 4 direct gtag.js",
+      "status": "optional_env_configured_code_present",
+      "source_files": ["src/components/analytics/Analytics.tsx:19", "src/components/analytics/Analytics.tsx:36-44", ".env.example:37"],
+      "method": "next/script external gtag.js afterInteractive and inline config",
+      "environment_variables": ["NEXT_PUBLIC_GA4_ID"],
+      "scope": "global_all_locales_when_env_set",
+      "client_or_server": "client",
+      "can_move_to_gtm": true,
+      "recommendation": "Move GA4 config and event tags to GTM, then remove direct gtag.js after verification."
+    },
+    {
+      "name": "Plausible Analytics",
+      "status": "optional_env_configured_code_present",
+      "source_files": ["src/components/analytics/Analytics.tsx:21", "src/components/analytics/Analytics.tsx:48-55", ".env.example:39"],
+      "method": "next/script external plausible.io script afterInteractive",
+      "environment_variables": ["NEXT_PUBLIC_PLAUSIBLE_DOMAIN"],
+      "scope": "global_all_locales_when_env_set",
+      "client_or_server": "client",
+      "can_move_to_gtm": true,
+      "recommendation": "If Plausible remains a required analytics vendor, load it from GTM or keep direct only if GTM is not adopted."
+    },
+    {
+      "name": "Microsoft Clarity",
+      "status": "optional_env_configured_code_present",
+      "source_files": ["src/components/analytics/Analytics.tsx:22", "src/components/analytics/Analytics.tsx:58-61", ".env.example:40"],
+      "method": "next/script inline loader afterInteractive",
+      "environment_variables": ["NEXT_PUBLIC_CLARITY_ID"],
+      "scope": "global_all_locales_when_env_set",
+      "client_or_server": "client",
+      "can_move_to_gtm": true,
+      "recommendation": "Move Clarity loader to GTM and gate it on analytics consent."
+    },
+    {
+      "name": "Odoo CRM lead delivery",
+      "status": "implemented_server_side",
+      "source_files": ["src/app/api/rfq/submit/route.ts:191-255", "src/lib/odoo/client.ts:90-160", ".env.example:6-27"],
+      "method": "server-side JSON-RPC after RFQ validation",
+      "environment_variables": ["ODOO_URL", "ODOO_DB", "ODOO_USERNAME", "ODOO_PASSWORD", "ODOO_CRM_TEAM_ID", "ODOO_CRM_SOURCE_ID", "ODOO_SALESPERSON_ID", "ODOO_SALESPERSON_LOGIN", "ODOO_USE_CUSTOM_FIELDS"],
+      "scope": "RFQ API only",
+      "client_or_server": "server",
+      "can_move_to_gtm": false,
+      "recommendation": "Keep in application; this is business lead delivery and uses secrets."
+    }
+  ],
+  "third_party_scripts": [
+    {
+      "name": "GTM JavaScript container",
+      "url": "https://www.googletagmanager.com/gtm.js",
+      "source_files": ["src/components/analytics/Analytics.tsx:30-33"],
+      "loading": "afterInteractive async inline bootstrap",
+      "scope": "global_when_NEXT_PUBLIC_GTM_ID_set",
+      "classification": "keep_loader_only"
+    },
+    {
+      "name": "GTM noscript iframe",
+      "url": "https://www.googletagmanager.com/ns.html",
+      "source_files": ["src/app/[locale]/layout.tsx:124-134"],
+      "loading": "noscript iframe",
+      "scope": "global_when_NEXT_PUBLIC_GTM_ID_set",
+      "classification": "keep_loader_only"
+    },
+    {
+      "name": "GA4 gtag.js",
+      "url": "https://www.googletagmanager.com/gtag/js",
+      "source_files": ["src/components/analytics/Analytics.tsx:36-44"],
+      "loading": "afterInteractive",
+      "scope": "global_when_NEXT_PUBLIC_GA4_ID_set",
+      "classification": "move_to_gtm"
+    },
+    {
+      "name": "Plausible script",
+      "url": "https://plausible.io/js/script.js",
+      "source_files": ["src/components/analytics/Analytics.tsx:48-55"],
+      "loading": "afterInteractive defer",
+      "scope": "global_when_NEXT_PUBLIC_PLAUSIBLE_DOMAIN_set",
+      "classification": "move_to_gtm_if_retained"
+    },
+    {
+      "name": "Microsoft Clarity script",
+      "url": "https://www.clarity.ms/tag/",
+      "source_files": ["src/components/analytics/Analytics.tsx:58-61"],
+      "loading": "afterInteractive async injected script",
+      "scope": "global_when_NEXT_PUBLIC_CLARITY_ID_set",
+      "classification": "move_to_gtm"
+    }
+  ],
+  "existing_events": [
+    {"name": "rfq_start", "source_files": ["src/components/rfq/RfqEngine.tsx:104-108"], "current_vendor_dispatch": "trackEvent to dataLayer, gtag, Plausible, Clarity if available"},
+    {"name": "rfq_step_complete", "source_files": ["src/lib/analytics.ts:122-133", "src/components/rfq/RfqEngine.tsx:150-155"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "rfq_field_error", "source_files": ["src/components/rfq/RfqEngine.tsx:140-145"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "rfq_file_upload_started", "source_files": ["src/components/rfq/RfqEngine.tsx:158-162"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "rfq_file_upload_completed", "source_files": ["src/components/rfq/RfqEngine.tsx:158-162"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "rfq_submit_success", "source_files": ["src/components/rfq/RfqEngine.tsx:187-199"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "generate_lead", "source_files": ["src/components/rfq/RfqEngine.tsx:193-199"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "odoo_sync_success", "source_files": ["src/components/rfq/RfqEngine.tsx:200-204"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "odoo_sync_failed", "source_files": ["src/components/rfq/RfqEngine.tsx:200-204"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "rfq_submit_error", "source_files": ["src/components/rfq/RfqEngine.tsx:205-208"], "current_vendor_dispatch": "trackEvent"},
+    {"name": "phone_click", "source_files": ["src/components/analytics/TrackedTel.tsx:25-31"], "current_vendor_dispatch": "trackContactClick"},
+    {"name": "whatsapp_click", "source_files": ["src/components/contact/ContactRouting.tsx:39-54", "src/components/layout/MobileActionBar.tsx:35-41", "src/components/rfq/RfqEngine.tsx:248-260", "src/components/rfq/RfqEngine.tsx:531-537"], "current_vendor_dispatch": "trackContactClick"},
+    {"name": "email_click", "source_files": ["src/components/contact/ContactRouting.tsx:64-77", "src/components/rfq/RfqEngine.tsx:257-260"], "current_vendor_dispatch": "trackContactClick"},
+    {"name": "cta_click", "source_files": ["src/lib/analytics.ts:135-138", "src/components/contact/ContactRouting.tsx:25-29", "src/components/layout/MobileActionBar.tsx:28-32"], "current_vendor_dispatch": "trackCtaClick"},
+    {"name": "system_page_view", "source_files": ["src/components/analytics/TrackView.tsx:17-20", "src/app/[locale]/systems/[slug]/page.tsx:122-125", "src/app/[locale]/systems/[slug]/page.tsx:407-410"], "current_vendor_dispatch": "trackEvent"}
+  ],
+  "recommended_events": [
+    {"name": "page_view", "method": "GTM history trigger or application dataLayer for canonical locale paths", "key_event": false},
+    {"name": "rfq_start", "method": "application dataLayer.push", "key_event": false},
+    {"name": "rfq_step_complete", "method": "application dataLayer.push", "key_event": false},
+    {"name": "rfq_submit", "method": "application dataLayer.push after API success", "key_event": true},
+    {"name": "rfq_submit_error", "method": "application dataLayer.push after API failure", "key_event": false},
+    {"name": "generate_lead", "method": "GA4 event in GTM from rfq_submit or retained event", "key_event": true},
+    {"name": "phone_click", "method": "GTM click trigger on tel: links or data attribute", "key_event": true},
+    {"name": "whatsapp_click", "method": "GTM click trigger on wa.me URLs or data attribute", "key_event": true},
+    {"name": "email_click", "method": "GTM click trigger on mailto: links or data attribute", "key_event": false},
+    {"name": "cta_click", "method": "custom data attributes or application dataLayer for contextual CTA names", "key_event": false},
+    {"name": "language_change", "method": "application dataLayer.push from LocaleSwitcher", "key_event": false},
+    {"name": "file_download", "method": "GTM download trigger once real href assets exist", "key_event": false}
+  ],
+  "migration_items": [
+    {
+      "id": "A01",
+      "name": "Direct GA4 gtag.js configuration",
+      "source_files": ["src/components/analytics/Analytics.tsx:36-44"],
+      "current_method": "Direct gtag.js script and config when NEXT_PUBLIC_GA4_ID is set",
+      "classification": "move_to_gtm",
+      "recommendation": "Create GA4 Google tag/config in GTM, map dataLayer events to GA4 event tags, then remove direct GA4 loader.",
+      "priority": "critical",
+      "risk": "High duplicate page_view and event risk if GA4 remains direct while GTM also sends GA4.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "A02",
+      "name": "Microsoft Clarity loader",
+      "source_files": ["src/components/analytics/Analytics.tsx:58-61"],
+      "current_method": "Inline afterInteractive loader when NEXT_PUBLIC_CLARITY_ID is set",
+      "classification": "move_to_gtm",
+      "recommendation": "Use a GTM Clarity template/custom HTML tag gated by analytics consent.",
+      "priority": "medium",
+      "risk": "Session recording/UX tool should not load before consent where consent is required.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "A03",
+      "name": "Plausible loader",
+      "source_files": ["src/components/analytics/Analytics.tsx:48-55"],
+      "current_method": "External script when NEXT_PUBLIC_PLAUSIBLE_DOMAIN is set",
+      "classification": "move_to_gtm",
+      "recommendation": "If retained, load Plausible from GTM or choose GA4/Plausible as the primary analytics source to avoid duplicate measurement.",
+      "priority": "low",
+      "risk": "Analytics overlap with GA4 if both are active.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "A04",
+      "name": "Phone link click tracking",
+      "source_files": ["src/components/analytics/TrackedTel.tsx:25-31", "src/app/[locale]/contact/page.tsx:42-46", "src/components/layout/Footer.tsx:162-171", "src/components/layout/Footer.tsx:233-242"],
+      "current_method": "React onClick sends phone_click through trackContactClick",
+      "classification": "move_to_gtm",
+      "recommendation": "Use GTM click trigger for tel: links or add data-analytics-event=\"phone_click\" later for more context.",
+      "priority": "high",
+      "risk": "Low migration risk; medium attribution-context loss unless cta_location is preserved with data attributes.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "A05",
+      "name": "Email link click tracking",
+      "source_files": ["src/components/contact/ContactRouting.tsx:64-77", "src/components/rfq/RfqEngine.tsx:257-260", "src/components/layout/Footer.tsx:174-182", "src/components/layout/Footer.tsx:224-232"],
+      "current_method": "Some email links tracked by React onClick, footer email links currently untracked",
+      "classification": "move_to_gtm",
+      "recommendation": "Use GTM click trigger on mailto: links and optional data attributes for cta_location.",
+      "priority": "medium",
+      "risk": "Low; current implementation is inconsistent across email links.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "A06",
+      "name": "WhatsApp link click tracking",
+      "source_files": ["src/components/contact/ContactRouting.tsx:39-54", "src/components/layout/MobileActionBar.tsx:35-41", "src/components/rfq/RfqEngine.tsx:248-253", "src/components/rfq/RfqEngine.tsx:531-537", "src/lib/site.ts:36"],
+      "current_method": "React onClick on selected wa.me links",
+      "classification": "move_to_gtm",
+      "recommendation": "Use GTM click trigger for wa.me URLs plus data attributes for section/context.",
+      "priority": "high",
+      "risk": "Medium duplicate risk during migration if both React and GTM click triggers run.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "B01",
+      "name": "RFQ funnel application events",
+      "source_files": ["src/components/rfq/RfqEngine.tsx:92-108", "src/components/rfq/RfqEngine.tsx:150-162", "src/components/rfq/RfqEngine.tsx:187-208"],
+      "current_method": "Application state and API-response based trackEvent calls",
+      "classification": "data_layer_plus_gtm",
+      "recommendation": "Keep vendor-neutral dataLayer pushes in app; move GA4/Ads/Clarity/Plausible dispatch to GTM.",
+      "priority": "critical",
+      "risk": "High if moved to DOM selectors; RFQ success depends on API response and dedupe ID.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "B02",
+      "name": "System page view event",
+      "source_files": ["src/components/analytics/TrackView.tsx:17-20", "src/app/[locale]/systems/[slug]/page.tsx:122-125", "src/app/[locale]/systems/[slug]/page.tsx:407-410"],
+      "current_method": "Client component mount sends system_page_view with ceiling_system",
+      "classification": "data_layer_plus_gtm",
+      "recommendation": "Keep structured dataLayer event or replace with server-provided page_category/page_system variables consumed by GTM.",
+      "priority": "medium",
+      "risk": "React Strict Mode can duplicate mount-time events in development; verify production once.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "B03",
+      "name": "Contextual CTA click tracking",
+      "source_files": ["src/lib/analytics.ts:135-138", "src/components/contact/ContactRouting.tsx:25-29", "src/components/layout/MobileActionBar.tsx:28-32", "src/components/ui/Button.tsx:47-64"],
+      "current_method": "Only selected CTA buttons call trackCtaClick; many Button links are untracked",
+      "classification": "data_layer_plus_gtm",
+      "recommendation": "Add stable data-cta-id/data-section attributes or lightweight dataLayer pushes for business CTAs; GTM handles vendor tags.",
+      "priority": "high",
+      "risk": "Generic DOM selectors cannot reliably distinguish hero/header/footer/system/project CTA context.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "B04",
+      "name": "Language change",
+      "source_files": ["src/components/layout/LocaleSwitcher.tsx:18-22"],
+      "current_method": "router.replace only; no analytics event currently",
+      "classification": "data_layer_plus_gtm",
+      "recommendation": "Add application dataLayer event with from_locale and to_locale; GTM maps to GA4.",
+      "priority": "medium",
+      "risk": "DOM tracking can infer click but not reliably capture next locale/path across all localized routing behavior.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "C01",
+      "name": "GTM container loader",
+      "source_files": ["src/components/analytics/Analytics.tsx:30-33", "src/app/[locale]/layout.tsx:124-134"],
+      "current_method": "Application injects GTM bootstrap and noscript from NEXT_PUBLIC_GTM_ID",
+      "classification": "keep_in_app",
+      "recommendation": "Keep one GTM loader in the app if GTM is used; do not manage the GTM loader through GTM.",
+      "priority": "critical",
+      "risk": "Hard failure if no loader exists; duplicate risk if multiple containers are added.",
+      "requires_code_change_later": false
+    },
+    {
+      "id": "C02",
+      "name": "Odoo CRM lead submission",
+      "source_files": ["src/app/api/rfq/submit/route.ts:191-255", "src/lib/odoo/client.ts:90-160"],
+      "current_method": "Server-side JSON-RPC using private env vars",
+      "classification": "keep_in_app",
+      "recommendation": "Keep in application. GTM must not deliver leads or hold CRM secrets.",
+      "priority": "critical",
+      "risk": "Moving this to GTM would break security, reliability, file handling, and CRM delivery.",
+      "requires_code_change_later": false
+    },
+    {
+      "id": "C03",
+      "name": "RFQ validation, spam controls, file upload limits",
+      "source_files": ["src/app/api/rfq/submit/route.ts:21-87", "src/app/api/rfq/submit/route.ts:98-175", "src/lib/rfq.ts:117-210"],
+      "current_method": "Server-side validation/rate limiting/honeypot/file checks",
+      "classification": "keep_in_app",
+      "recommendation": "Keep in application; measurement can observe outcomes but not enforce business/security rules.",
+      "priority": "critical",
+      "risk": "Security and data integrity risk if moved out of application.",
+      "requires_code_change_later": false
+    },
+    {
+      "id": "C04",
+      "name": "SEO JSON-LD scripts",
+      "source_files": ["src/components/shared/JsonLd.tsx:1-8", "src/app/[locale]/layout.tsx:149", "src/lib/seo.ts"],
+      "current_method": "Server-rendered JSON-LD script tags",
+      "classification": "keep_in_app",
+      "recommendation": "Keep in application for crawler visibility and SEO correctness.",
+      "priority": "high",
+      "risk": "SEO risk if moved to GTM because crawler execution is not guaranteed.",
+      "requires_code_change_later": false
+    },
+    {
+      "id": "D01",
+      "name": "Direct multi-vendor dispatch from trackEvent",
+      "source_files": ["src/lib/analytics.ts:100-116"],
+      "current_method": "Each event is sent to dataLayer, direct gtag, Plausible, and Clarity when globals exist",
+      "classification": "remove",
+      "recommendation": "After GTM migration, remove direct vendor dispatch and keep a single vendor-neutral dataLayer push helper.",
+      "priority": "critical",
+      "risk": "Duplicate events and inconsistent consent handling if direct dispatch remains.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "D02",
+      "name": "Duplicate GA4 potential: direct GA4 plus GA4 in GTM",
+      "source_files": ["src/components/analytics/Analytics.tsx:30-44", "src/lib/analytics.ts:100-108"],
+      "current_method": "GTM and direct GA4 can both be enabled by env vars",
+      "classification": "remove",
+      "recommendation": "Use either direct GA4 or GTM-managed GA4 during validation; final target should use GTM-managed GA4 only.",
+      "priority": "critical",
+      "risk": "Duplicate page_view, generate_lead, and custom event counts.",
+      "requires_code_change_later": true
+    },
+    {
+      "id": "D03",
+      "name": "RFQ success event naming split",
+      "source_files": ["src/components/rfq/RfqEngine.tsx:192-199"],
+      "current_method": "Sends both rfq_submit_success and GA4-recommended generate_lead for the same successful lead",
+      "classification": "remove",
+      "recommendation": "Use one canonical dataLayer event rfq_submit with event_id; let GTM send GA4 generate_lead and Ads conversions from it.",
+      "priority": "high",
+      "risk": "Conversion inflation if both are marked key events or both trigger ad conversions.",
+      "requires_code_change_later": true
+    }
+  ],
+  "duplicate_risks": [
+    "Direct GA4 gtag.js and GTM can be enabled simultaneously.",
+    "trackEvent dispatches to both dataLayer and direct vendor globals, so GTM vendor tags can duplicate direct vendor events.",
+    "RFQ success currently emits both rfq_submit_success and generate_lead for one lead.",
+    "React Strict Mode may duplicate mount-time TrackView events in development; production must still be validated."
+  ],
+  "privacy_risks": [
+    "Analytics, GA4, Plausible, and Clarity load after interaction but before any cookie/analytics consent UI because no consent platform is present.",
+    "UTM values are stored in sessionStorage under aecs_utm.",
+    "RFQ data sent to analytics is mostly non-PII, but project_type, building_use, country, buyer_role, and project_stage can contain user-entered strings; enforce a no-PII dataLayer contract.",
+    "Odoo backup logging can include full lead details server-side; this is not a GTM issue but is sensitive operational logging."
+  ],
+  "performance_findings": [
+    "Moving GA4/Plausible/Clarity loader code to GTM removes small app-side script loader code but does not eliminate third-party network cost.",
+    "GTM enables consent- and route-based delaying, which can reduce scripts loaded before a user consents or interacts.",
+    "GTM can make performance worse if all tags fire on all pages without consent or route conditions.",
+    "Current Content-Security-Policy-Report-Only allows script-src self and unsafe-inline only; an enforced CSP would need explicit GTM/Google/Plausible/Clarity origins."
+  ],
+  "recommended_data_layer": {
+    "common_parameters": ["event", "event_id", "page_path", "page_language", "page_title", "environment", "component_name", "section_name", "cta_id", "cta_text", "form_name", "submission_status", "project_type", "ceiling_system", "area_range", "buyer_role", "project_stage", "lead_source"],
+    "pii_exclusions": ["name", "phone", "email", "message", "notes", "company", "file_name", "uploaded_file_name", "raw project location details"],
+    "example": {
+      "event": "rfq_submit",
+      "event_id": "generated_unique_id",
+      "page_path": "/fa/rfq",
+      "page_language": "fa",
+      "component_name": "rfq_form",
+      "form_name": "project_rfq",
+      "project_type": "metal_ceiling",
+      "submission_status": "success"
+    }
+  },
+  "recommended_gtm_structure": {
+    "folders": ["00 - Consent", "10 - Core Analytics", "20 - Conversions", "30 - Engagement", "40 - Advertising", "50 - UX Tools", "90 - Utilities", "99 - Deprecated"],
+    "variables": ["DLV - event_id", "DLV - page_language", "DLV - page_path", "DLV - component_name", "DLV - section_name", "DLV - cta_id", "DLV - form_name", "DLV - submission_status", "DLV - project_type", "DLV - ceiling_system", "Constant - GA4 Measurement ID", "Constant - Google Ads Conversion ID", "Lookup - Environment"],
+    "triggers": ["Consent Initialization - All Pages", "Initialization - All Pages", "All Pages", "History Change - App Router", "CE - rfq_start", "CE - rfq_submit", "CE - rfq_submit_error", "Click - tel", "Click - mailto", "Click - WhatsApp", "Click - file download", "Click - outbound link"],
+    "tags": ["Consent Mode Default", "Consent Mode Update", "Google Tag - GA4", "GA4 Event - dataLayer events", "Google Ads Conversion Linker", "Google Ads Conversion - RFQ", "Meta Pixel only if required", "Microsoft Clarity only if required"]
+  },
+  "prioritized_actions": [
+    "Decide whether GTM will become the single vendor-tag manager; if yes, avoid enabling direct GA4 at the same time.",
+    "Implement consent defaults and update flow before activating advertising or session-recording tags.",
+    "Convert trackEvent to a vendor-neutral dataLayer-only helper in a later migration.",
+    "Use one canonical RFQ success event with event_id and let GTM fan out to GA4/Ads/Meta.",
+    "Add stable data attributes for CTA/contact/download tracking before replacing React onClick tracking."
+  ],
+  "verification": {
+    "commands": [
+      {"command": "git status --short", "result": "clean before report creation"},
+      {"command": "npm run typecheck", "result": "passed"},
+      {"command": "npm run lint", "result": "passed"}
+    ]
+  }
+}

@@ -1,14 +1,13 @@
-/**
- * Analytics abstraction — provider-agnostic event tracking.
- *
- * Supports GA4 (gtag), Google Tag Manager (dataLayer), Plausible and Microsoft
- * Clarity. Every function is a safe no-op when no provider is configured and is
- * guarded for SSR (`typeof window`), so the site never breaks if analytics IDs
- * are missing. Providers are enabled purely through NEXT_PUBLIC_* env vars — see
- * the <Analytics /> component and .env.example.
- */
+import { analyticsConfig } from './analytics-config';
+import {
+  getConsentSnapshot,
+  type AnalyticsDataLayerItem,
+  type AnalyticsGtagCommand,
+} from './consent';
 
-export type EventParams = Record<string, string | number | boolean | undefined | null>;
+export type AnalyticsParamValue = string | number | boolean | undefined | null;
+export type EventParams = Record<string, AnalyticsParamValue>;
+type CleanEventParams = Record<string, string | number | boolean>;
 
 const UTM_KEYS = [
   'utm_source',
@@ -19,21 +18,27 @@ const UTM_KEYS = [
 ] as const;
 
 const UTM_STORAGE_KEY = 'aecs_utm';
+const MAX_UTM_LENGTH = 120;
+
+const directGa4EventMap: Record<string, string> = {
+  rfq_submit: 'generate_lead',
+};
+const pendingDirectGa4Events: Array<{ name: string; payload: CleanEventParams }> = [];
+let directGa4Ready = false;
 
 declare global {
   interface Window {
-    dataLayer?: Record<string, unknown>[];
-    gtag?: (...args: unknown[]) => void;
-    plausible?: (event: string, opts?: { props?: Record<string, unknown> }) => void;
-    clarity?: (...args: unknown[]) => void;
+    dataLayer?: AnalyticsDataLayerItem[];
+    gtag?: (...args: AnalyticsGtagCommand) => void;
+    __avzGa4Ready?: boolean;
   }
 }
 
 const DEBUG = process.env.NEXT_PUBLIC_ANALYTICS_DEBUG === 'true';
 
 /** Drop null/undefined/empty values so events stay clean. */
-function clean(params: EventParams): Record<string, string | number | boolean> {
-  const out: Record<string, string | number | boolean> = {};
+function clean(params: EventParams): CleanEventParams {
+  const out: CleanEventParams = {};
   for (const [key, value] of Object.entries(params)) {
     if (value === undefined || value === null || value === '') continue;
     out[key] = value;
@@ -53,7 +58,7 @@ export function captureUtm(): void {
     const found: Record<string, string> = {};
     for (const key of UTM_KEYS) {
       const value = search.get(key);
-      if (value) found[key] = value;
+      if (value) found[key] = value.slice(0, MAX_UTM_LENGTH);
     }
     if (Object.keys(found).length > 0) {
       const existing = getUtm();
@@ -72,21 +77,31 @@ export function getUtm(): Record<string, string> {
   if (typeof window === 'undefined') return {};
   try {
     const raw = window.sessionStorage.getItem(UTM_STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as Record<string, string>) : {};
+    if (!raw) return {};
+    const parsed = JSON.parse(raw) as Record<string, unknown>;
+    const out: Record<string, string> = {};
+    for (const key of UTM_KEYS) {
+      const value = parsed[key];
+      if (typeof value === 'string' && value) {
+        out[key] = value.slice(0, MAX_UTM_LENGTH);
+      }
+    }
+    return out;
   } catch {
     return {};
   }
 }
 
 /**
- * Core event dispatcher. Sends the same event to every configured provider.
- * `locale` and `page_path` are added automatically; UTM params are merged in.
+ * Core event dispatcher. Exactly one transport path runs per event so the
+ * direct-GA4-to-GTM migration cannot double-count the same interaction.
  */
 export function trackEvent(name: string, params: EventParams = {}): void {
   if (typeof window === 'undefined') return;
+  if (!getConsentSnapshot().analyticsGranted) return;
 
   const payload = clean({
-    locale: document.documentElement.lang || undefined,
+    page_language: document.documentElement.lang || undefined,
     page_path: window.location.pathname,
     ...getUtm(),
     ...params,
@@ -98,25 +113,53 @@ export function trackEvent(name: string, params: EventParams = {}): void {
   }
 
   try {
-    // Google Tag Manager
-    if (Array.isArray(window.dataLayer)) {
+    if (analyticsConfig.transport === 'gtm') {
+      window.dataLayer = window.dataLayer ?? [];
       window.dataLayer.push({ event: name, ...payload });
+      return;
     }
-    // GA4 (gtag.js)
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', name, payload);
+
+    if (
+      analyticsConfig.transport === 'direct_ga4' &&
+      typeof window.gtag === 'function'
+    ) {
+      if (!directGa4Ready) {
+        pendingDirectGa4Events.push({ name, payload });
+        return;
+      }
+      sendDirectGa4Event(name, payload);
     }
-    // Plausible (custom events with props)
-    if (typeof window.plausible === 'function') {
-      window.plausible(name, { props: payload });
-    }
-    // Microsoft Clarity custom event tags
-    if (typeof window.clarity === 'function') {
-      window.clarity('event', name);
-    }
+    // disabled mode intentionally does nothing.
   } catch {
     /* never let analytics throw into the UI */
   }
+}
+
+function sendDirectGa4Event(name: string, payload: CleanEventParams): void {
+  window.gtag?.('event', directGa4EventMap[name] ?? name, payload);
+}
+
+export function markDirectGa4Ready(): void {
+  if (typeof window === 'undefined') return;
+  if (!getConsentSnapshot().analyticsGranted) {
+    pendingDirectGa4Events.length = 0;
+    return;
+  }
+  directGa4Ready = true;
+  while (pendingDirectGa4Events.length > 0) {
+    const event = pendingDirectGa4Events.shift();
+    if (event) sendDirectGa4Event(event.name, event.payload);
+  }
+}
+
+export function trackPageView(params: {
+  page_path: string;
+  page_language: string;
+  page_title: string;
+  page_location?: string;
+  page_referrer?: string;
+}): void {
+  trackEvent('page_view', params);
 }
 
 /** RFQ funnel step completion. */
@@ -134,7 +177,11 @@ export function trackRfqStep(
 
 /** A primary CTA click (location = where on the site, label = button text/intent). */
 export function trackCtaClick(location: string, label: string): void {
-  trackEvent('cta_click', { cta_location: location, cta_label: label });
+  trackEvent('cta_click', {
+    component_name: 'cta',
+    section_name: location,
+    cta_id: label,
+  });
 }
 
 /** A contact-channel click → whatsapp_click / phone_click / email_click. */
@@ -142,5 +189,9 @@ export function trackContactClick(
   type: 'whatsapp' | 'phone' | 'email',
   params: EventParams = {},
 ): void {
-  trackEvent(`${type}_click`, { contact_type: type, ...params });
+  trackEvent(`${type}_click`, {
+    contact_type: type,
+    destination_type: type,
+    ...params,
+  });
 }

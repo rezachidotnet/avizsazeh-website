@@ -39,24 +39,20 @@ const nextConfig = {
       { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
     ];
     // Content-Security-Policy — report-only first so we can observe violations
-    // in the browser console without breaking images, fonts, RFQ submission or
-    // hydration. All assets are first-party: next/font is self-hosted, images
-    // are served by the same-origin Next optimizer, and the RFQ POST is
-    // same-origin (/api/rfq/submit). Odoo traffic is server-side and not
-    // subject to browser CSP. 'unsafe-inline' covers Next's inline hydration
-    // scripts and Tailwind's inline styles (no nonce pipeline in use).
+    // without breaking the active direct GA4 transport or a future GTM loader.
+    // Additional vendors must get a separate CSP review before activation.
     const csp = [
       "default-src 'self'",
       "base-uri 'self'",
       "object-src 'none'",
       "frame-ancestors 'self'",
-      "frame-src 'none'",
+      "frame-src https://www.googletagmanager.com",
       "form-action 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob:",
+      "img-src 'self' data: blob: https://www.google-analytics.com https://region1.google-analytics.com",
       "font-src 'self' data:",
-      "connect-src 'self'",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
       "manifest-src 'self'",
     ].join('; ');
     return [

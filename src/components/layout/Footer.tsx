@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 import { Logo } from '@/components/brand/Logo';
 import { systems } from '@/lib/content/systems';
 import { TrackedTel } from '@/components/analytics/TrackedTel';
+import { ConsentSettingsButton } from '@/components/consent/ConsentSettingsButton';
 import { company, localized, SITE_URL } from '@/lib/site';
 import type { Locale } from '@/i18n/routing';
 
@@ -263,7 +264,8 @@ export async function Footer() {
         <p>
           © <span className="nums">2026</span> {t('rights')}
         </p>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <ConsentSettingsButton />
           <Link href="/legal/privacy" className="transition-colors hover:text-white">
             {t('privacy')}
           </Link>

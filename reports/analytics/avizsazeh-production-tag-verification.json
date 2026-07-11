@@ -1,0 +1,222 @@
+{
+  "project": "avizsazeh.ir",
+  "verification_date": "2026-07-11",
+  "production_integrations": [
+    {
+      "integration": "Google Tag Manager",
+      "status": "present_in_code_but_not_observed_in_production",
+      "evidence": [
+        "Production HTML route scan found zero googletagmanager.com/gtm.js matches and zero ns.html iframe matches on tested routes.",
+        "Chrome CDP network verification found no gtm.js requests during initial loads or SPA navigation."
+      ]
+    },
+    {
+      "integration": "Direct GA4",
+      "status": "confirmed_active_in_production",
+      "public_ids": ["G-QD70DM5MEJ"],
+      "evidence": [
+        "Production HTML contains https://www.googletagmanager.com/gtag/js?id=G-QD70DM5MEJ.",
+        "Chrome CDP network verification observed one GA4 page_view request to region1.google-analytics.com/g/collect on clean initial route loads."
+      ]
+    },
+    {
+      "integration": "GA4 through GTM",
+      "status": "present_in_code_but_not_observed_in_production",
+      "evidence": [
+        "GA4 collection is active, but no GTM container script was observed in production HTML or network requests."
+      ]
+    },
+    {
+      "integration": "Plausible",
+      "status": "present_in_code_but_not_observed_in_production",
+      "evidence": [
+        "Production HTML and Chrome network verification found no plausible.io script or collection requests."
+      ]
+    },
+    {
+      "integration": "Microsoft Clarity",
+      "status": "present_in_code_but_not_observed_in_production",
+      "evidence": [
+        "Production HTML and Chrome network verification found no clarity.ms script or collection requests."
+      ]
+    },
+    {
+      "integration": "Google Ads",
+      "status": "not_configured",
+      "evidence": [
+        "No googleadservices.com, doubleclick.net, or AW-* evidence was found in production HTML or network requests."
+      ]
+    },
+    {
+      "integration": "Meta Pixel",
+      "status": "not_configured",
+      "evidence": [
+        "No facebook.com/tr, connect.facebook.net, or fbq evidence was found in production HTML or network requests."
+      ]
+    },
+    {
+      "integration": "LinkedIn Insight",
+      "status": "not_configured",
+      "evidence": [
+        "No snap.licdn.com or lintrk evidence was found in production HTML or network requests."
+      ]
+    }
+  ],
+  "environment_matrix": [
+    {
+      "variable": "NEXT_PUBLIC_GTM_ID",
+      "referenced_in_code": true,
+      "declared_in_example": true,
+      "present_locally": false,
+      "non_empty": false,
+      "public_identifier_type": "GTM-* if set",
+      "likely_active_locally": false
+    },
+    {
+      "variable": "NEXT_PUBLIC_GA4_ID",
+      "referenced_in_code": true,
+      "declared_in_example": true,
+      "present_locally": false,
+      "non_empty": false,
+      "public_identifier_type": "G-* if set",
+      "likely_active_locally": false
+    },
+    {
+      "variable": "NEXT_PUBLIC_PLAUSIBLE_DOMAIN",
+      "referenced_in_code": true,
+      "declared_in_example": true,
+      "present_locally": false,
+      "non_empty": false,
+      "public_identifier_type": "domain if set",
+      "likely_active_locally": false
+    },
+    {
+      "variable": "NEXT_PUBLIC_CLARITY_ID",
+      "referenced_in_code": true,
+      "declared_in_example": true,
+      "present_locally": false,
+      "non_empty": false,
+      "public_identifier_type": "Clarity project id if set",
+      "likely_active_locally": false
+    },
+    {
+      "variable": "NEXT_PUBLIC_SITE_URL",
+      "referenced_in_code": false,
+      "declared_in_example": true,
+      "present_locally": false,
+      "non_empty": false,
+      "public_identifier_type": "public URL",
+      "likely_active_locally": false
+    }
+  ],
+  "vercel_environment_matrix": {
+    "verified": false,
+    "reason": "Vercel CLI is installed, but this checkout is not linked to a Vercel project; env names could not be listed without linking."
+  },
+  "route_tests": [
+    {"route": "/", "final_url": "https://www.avizsazeh.ir/", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; direct GA4 only."},
+    {"route": "/fa", "final_url": "https://www.avizsazeh.ir/", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; /fa redirects to default root."},
+    {"route": "/en", "final_url": "https://www.avizsazeh.ir/en", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; direct GA4 only."},
+    {"route": "/ar", "final_url": "https://www.avizsazeh.ir/ar", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; direct GA4 only."},
+    {"route": "/ru", "final_url": "https://www.avizsazeh.ir/ru", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; direct GA4 only."},
+    {"route": "/fa/rfq", "final_url": "https://www.avizsazeh.ir/rfq", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; /fa/rfq redirects to default /rfq."},
+    {"route": "/en/rfq", "final_url": "https://www.avizsazeh.ir/en/rfq", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; direct GA4 only."},
+    {"route": "/fa/contact", "final_url": "https://www.avizsazeh.ir/contact", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; /fa/contact redirects to default /contact."},
+    {"route": "/en/contact", "final_url": "https://www.avizsazeh.ir/en/contact", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; direct GA4 only."},
+    {"route": "/fa/systems", "final_url": "https://www.avizsazeh.ir/systems", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; /fa/systems redirects to default /systems."},
+    {"route": "/en/systems", "final_url": "https://www.avizsazeh.ir/en/systems", "gtm_present": false, "gtm_id_count": 0, "direct_ga4_present": true, "ga4_ids": ["G-QD70DM5MEJ"], "plausible": false, "clarity": false, "duplicate_suspicion": "No duplicate script IDs in HTML; direct GA4 only."}
+  ],
+  "network_requests": [
+    {"vendor": "GA4 direct Google tag", "request_host_path": "www.googletagmanager.com/gtag/js?[redacted]", "trigger_time": "initial page load", "initial_page_load": true, "client_navigation": false, "consent_required": "analytics consent recommended; no consent gate observed", "evidence": "Chrome CDP requestWillBeSent on /, /contact, /en."},
+    {"vendor": "GA4", "request_host_path": "region1.google-analytics.com/g/collect?[redacted]", "trigger_time": "initial page load", "initial_page_load": true, "client_navigation": false, "consent_required": "analytics consent recommended; no consent gate observed", "evidence": "Chrome CDP observed en=page_view and tid=G-QD70DM5MEJ."},
+    {"vendor": "GA4", "request_host_path": "region1.google-analytics.com/g/collect?[redacted]", "trigger_time": "client navigation to system detail/contact", "initial_page_load": false, "client_navigation": true, "consent_required": "analytics consent recommended; no consent gate observed", "evidence": "Chrome CDP observed page_view for systems -> /systems/linear-ceiling and /systems/linear-ceiling -> /contact."},
+    {"vendor": "GA4", "request_host_path": "region1.google-analytics.com/g/collect?[redacted]", "trigger_time": "client navigation to system detail", "initial_page_load": false, "client_navigation": true, "consent_required": "analytics consent recommended; no consent gate observed", "evidence": "Chrome CDP observed custom event system_page_view."}
+  ],
+  "page_view_tests": [
+    {"route": "https://www.avizsazeh.ir/", "page_view_requests": 1, "direct_ga4_source": true, "gtm_source": false, "result": "exactly one page view"},
+    {"route": "https://www.avizsazeh.ir/contact", "page_view_requests": 1, "direct_ga4_source": true, "gtm_source": false, "result": "exactly one page view"},
+    {"route": "https://www.avizsazeh.ir/en", "page_view_requests": 1, "direct_ga4_source": true, "gtm_source": false, "result": "exactly one page view"}
+  ],
+  "spa_navigation_tests": [
+    {"navigation": "homepage -> systems", "full_reload": false, "ga4_page_view_count": 0, "gtm_history_event": true, "duplicate": false, "missing_page_view": true},
+    {"navigation": "systems -> system detail", "full_reload": false, "ga4_page_view_count": 1, "gtm_history_event": true, "duplicate": false, "missing_page_view": false, "other_ga4_events": ["system_page_view"]},
+    {"navigation": "system detail -> contact", "full_reload": false, "ga4_page_view_count": 1, "gtm_history_event": true, "duplicate": false, "missing_page_view": false},
+    {"navigation": "contact -> RFQ", "full_reload": false, "ga4_page_view_count": 0, "gtm_history_event": true, "duplicate": false, "missing_page_view": true},
+    {"navigation": "Persian route -> English equivalent", "full_reload": "inconclusive", "ga4_page_view_count": 0, "gtm_history_event": "not retained after reload", "duplicate": false, "missing_page_view": "inconclusive; no page_view observed within capture window"}
+  ],
+  "data_layer_findings": [
+    {
+      "finding": "window.dataLayer exists in production after direct GA4 initializes.",
+      "evidence": "Chrome CDP Runtime.evaluate on /, /contact, and /en returned dataLayer entries for js, config, gtm.dom, and gtm.load."
+    },
+    {
+      "finding": "gtm.dom, gtm.load, and gtm.historyChange-v2 entries exist even though no GTM container was loaded.",
+      "evidence": "These entries are produced through the direct gtag/dataLayer mechanism and are not evidence of an active GTM container."
+    },
+    {
+      "finding": "No PII was observed in sampled production dataLayer entries.",
+      "evidence": "Sampled initial and SPA dataLayer entries contained js/config/history/system_page_view style events only."
+    },
+    {
+      "finding": "Application event system_page_view was observed on system detail navigation and sent to direct GA4.",
+      "evidence": "Chrome CDP network request to region1.google-analytics.com/g/collect with event system_page_view."
+    }
+  ],
+  "consent_findings": [
+    {
+      "finding": "No cookie/privacy consent UI was detected in production HTML or rendered DOM samples.",
+      "evidence": "No common cookie/consent UI selectors or platform markers were detected on /, /rfq, or /en."
+    },
+    {
+      "finding": "No Consent Mode calls were detected.",
+      "evidence": "Production HTML checks found zero gtag('consent'), analytics_storage, ad_storage, ad_user_data, or ad_personalization markers."
+    },
+    {
+      "finding": "Direct GA4 loads before any observed consent decision.",
+      "evidence": "Chrome CDP observed gtag.js and GA4 page_view collection on initial page load; no consent UI or consent default/update events were observed."
+    }
+  ],
+  "csp_findings": [
+    {
+      "finding": "Production sends Content-Security-Policy-Report-Only, not enforced CSP.",
+      "evidence": "Response headers include Content-Security-Policy-Report-Only with script-src 'self' 'unsafe-inline' and connect-src 'self'."
+    },
+    {
+      "finding": "If enforced as-is, current CSP would break active direct GA4.",
+      "evidence": "Chrome console reported report-only violations for loading googletagmanager.com/gtag/js and connecting to region1.google-analytics.com/g/collect."
+    }
+  ],
+  "duplicate_findings": [
+    {
+      "finding": "No initial page-view duplication observed on sampled clean loads.",
+      "evidence": "One GA4 page_view request each for /, /contact, and /en."
+    },
+    {
+      "finding": "No GTM/direct-GA4 duplicate source observed because GTM is not active in production.",
+      "evidence": "No gtm.js requests in HTML or Chrome network."
+    },
+    {
+      "finding": "Potential RFQ conversion duplication remains in application code.",
+      "evidence": "On successful RFQ, source code sends both rfq_submit_success and generate_lead through trackEvent; no production form submission was performed."
+    },
+    {
+      "finding": "SPA page views are missing on some client-side transitions.",
+      "evidence": "homepage -> systems and contact -> RFQ produced zero GA4 page_view requests in Chrome CDP capture."
+    }
+  ],
+  "rfq_conversion_findings": [
+    {"event": "rfq_submit_success", "current_source": "src/components/rfq/RfqEngine.tsx:192", "dataLayer": "yes if dataLayer exists", "direct_ga4": "yes if gtag exists", "gtm": "not observed active", "key_event_risk": "unknown GA4 property config", "duplicate_risk": "high if generate_lead is also treated as conversion"},
+    {"event": "generate_lead", "current_source": "src/components/rfq/RfqEngine.tsx:195-199", "dataLayer": "yes if dataLayer exists", "direct_ga4": "yes if gtag exists", "gtm": "not observed active", "key_event_risk": "likely candidate key event", "duplicate_risk": "high if rfq_submit_success is also conversion"},
+    {"event": "rfq_submit", "current_source": "not currently implemented as exact event", "dataLayer": "no", "direct_ga4": "no", "gtm": "no", "key_event_risk": "none now", "duplicate_risk": "none now"},
+    {"event": "Google Ads conversion", "current_source": "not detected", "dataLayer": "no", "direct_ga4": "no", "gtm": "no", "key_event_risk": "none now", "duplicate_risk": "none now"},
+    {"event": "Meta conversion", "current_source": "not detected", "dataLayer": "no", "direct_ga4": "no", "gtm": "no", "key_event_risk": "none now", "duplicate_risk": "none now"}
+  ],
+  "access_limitations": [
+    "Vercel environment activation could not be verified from the local repository because the checkout is not linked to a Vercel project.",
+    "GTM internal container configuration could not be inspected because no active production GTM container was observed and no GTM Preview/container access was available.",
+    "GA4 property admin settings and key-event configuration could not be inspected from repository/network evidence.",
+    "No production RFQ was submitted; RFQ conversion behavior is based on source-code evidence and active direct GA4 availability."
+  ],
+  "activation_verdict": "Decision B — Direct GA4 is active but GTM is not active.",
+  "recommended_next_action": "Proceed to Phase 1 only after deciding whether to keep direct GA4 temporarily or switch to GTM-managed GA4; when activating GTM, first prevent duplicate GA4 measurement by not firing a GTM GA4 page_view until the direct GA4 path is disabled or isolated."
+}

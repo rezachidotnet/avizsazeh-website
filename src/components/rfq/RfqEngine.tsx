@@ -33,6 +33,13 @@ const REQ_OPTIONS = ['required', 'not_required', 'not_sure'] as const;
 
 const ACCEPTED_FILES = '.pdf,.dwg,.dxf,.jpg,.jpeg,.png,.zip,.doc,.docx,.xls,.xlsx';
 
+function eventId(): string {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID();
+  }
+  return `rfq-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 /** Map a URL ?system= param (slug or short alias) to a known system slug. */
 function normalizeSystemParam(param: string, options: SystemOption[]): string | null {
   const p = param.trim().toLowerCase();
@@ -167,6 +174,7 @@ export function RfqEngine({
     if (!validateStep(0) || !validateStep(1) || !validateStep(2) || !validateStep(3)) return;
     setSubmitting(true);
     setServerError(false);
+    const submissionEventId = eventId();
 
     const utm = getUtm();
     const payload = {
@@ -189,11 +197,12 @@ export function RfqEngine({
       if (!res.ok) throw new Error('submit failed');
       const data = (await res.json()) as RfqResult;
       setResult(data);
-      trackEvent('rfq_submit_success', { ...eventParams(), project_id: data.projectId });
-      // GA4-recommended conversion event mirroring the successful RFQ. Carries
-      // only safe metadata (no PII) so it can be marked a Key Event in GA4.
-      trackEvent('generate_lead', {
+      trackEvent('rfq_submit', {
         ...eventParams(),
+        event_id: submissionEventId,
+        form_name: 'project_rfq',
+        submission_status: 'success',
+        component_name: 'rfq_form',
         project_id: data.projectId,
         lead_source: 'rfq',
       });
@@ -204,7 +213,13 @@ export function RfqEngine({
       }
     } catch {
       setServerError(true);
-      trackEvent('rfq_submit_error', eventParams());
+      trackEvent('rfq_submit_error', {
+        ...eventParams(),
+        event_id: submissionEventId,
+        form_name: 'project_rfq',
+        submission_status: 'error',
+        component_name: 'rfq_form',
+      });
     } finally {
       setSubmitting(false);
     }

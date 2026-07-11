@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
+import { cookies } from 'next/headers';
 import { NextIntlClientProvider } from 'next-intl';
 import {
   getMessages,
@@ -12,9 +13,16 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileActionBar } from '@/components/layout/MobileActionBar';
 import { Analytics } from '@/components/analytics/Analytics';
+import { PageViewTracker } from '@/components/analytics/PageViewTracker';
+import { ConsentBootstrap } from '@/components/consent/ConsentBootstrap';
+import { ConsentProvider } from '@/components/consent/ConsentProvider';
+import { ConsentBanner } from '@/components/consent/ConsentBanner';
+import { ConsentPreferences } from '@/components/consent/ConsentPreferences';
 import { JsonLd } from '@/components/shared/JsonLd';
 import { languageAlternates, organizationJsonLd, websiteJsonLd, localeUrl } from '@/lib/seo';
 import { SITE_URL } from '@/lib/site';
+import { analyticsConfig } from '@/lib/analytics-config';
+import { readStoredConsent } from '@/lib/consent';
 import '../globals.css';
 
 const vazir = Vazirmatn({
@@ -112,6 +120,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const dir = localeDirection[locale as Locale];
   const t = await getTranslations('common');
+  const initialConsent = readStoredConsent(cookies().get('avizsazeh_consent_v1')?.value ?? null);
 
   return (
     <html
@@ -120,32 +129,38 @@ export default async function LocaleLayout({
       className={`${vazir.variable} ${inter.variable} ${sourceSerif.variable}`}
     >
       <body className="flex min-h-screen flex-col pb-16 lg:pb-0">
-        <Analytics />
-        {process.env.NEXT_PUBLIC_GTM_ID ? (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-              title="gtm"
-            />
-          </noscript>
-        ) : null}
-        <NextIntlClientProvider messages={messages}>
-          <a
-            href="#main"
-            className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-gold focus:px-4 focus:py-2 focus:font-medium focus:text-ink-950"
-          >
-            {t('skipToContent')}
-          </a>
-          <Header />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-          <MobileActionBar />
-        </NextIntlClientProvider>
+        <ConsentBootstrap initialConsent={initialConsent} />
+        <ConsentProvider>
+          <Analytics />
+          {analyticsConfig.transport === 'gtm' && analyticsConfig.gtmId && initialConsent?.analytics ? (
+            <noscript>
+              <iframe
+                src={`https://www.googletagmanager.com/ns.html?id=${analyticsConfig.gtmId}`}
+                height="0"
+                width="0"
+                style={{ display: 'none', visibility: 'hidden' }}
+                title="gtm"
+              />
+            </noscript>
+          ) : null}
+          <NextIntlClientProvider messages={messages}>
+            <PageViewTracker />
+            <a
+              href="#main"
+              className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-gold focus:px-4 focus:py-2 focus:font-medium focus:text-ink-950"
+            >
+              {t('skipToContent')}
+            </a>
+            <Header />
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <Footer />
+            <MobileActionBar />
+            <ConsentBanner />
+            <ConsentPreferences />
+          </NextIntlClientProvider>
+        </ConsentProvider>
         <JsonLd data={[organizationJsonLd(locale as Locale), websiteJsonLd(locale as Locale)]} />
       </body>
     </html>
