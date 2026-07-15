@@ -42,10 +42,7 @@ export type AnalyticsConsentCommand = [
 ];
 
 export type AnalyticsGtagCommand =
-  | ['js', Date]
-  | ['config', string, Record<string, string | number | boolean>]
-  | ['event', string, Record<string, string | number | boolean>]
-  | AnalyticsConsentCommand;
+  AnalyticsConsentCommand;
 
 export type ConsentSnapshot = {
   choice: ConsentChoice | null;

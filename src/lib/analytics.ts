@@ -2,7 +2,6 @@ import { analyticsConfig } from './analytics-config';
 import {
   getConsentSnapshot,
   type AnalyticsDataLayerItem,
-  type AnalyticsGtagCommand,
 } from './consent';
 
 export type AnalyticsParamValue = string | number | boolean | undefined | null;
@@ -20,17 +19,9 @@ const UTM_KEYS = [
 const UTM_STORAGE_KEY = 'aecs_utm';
 const MAX_UTM_LENGTH = 120;
 
-const directGa4EventMap: Record<string, string> = {
-  rfq_submit: 'generate_lead',
-};
-const pendingDirectGa4Events: Array<{ name: string; payload: CleanEventParams }> = [];
-let directGa4Ready = false;
-
 declare global {
   interface Window {
     dataLayer?: AnalyticsDataLayerItem[];
-    gtag?: (...args: AnalyticsGtagCommand) => void;
-    __avzGa4Ready?: boolean;
   }
 }
 
@@ -113,42 +104,11 @@ export function trackEvent(name: string, params: EventParams = {}): void {
   }
 
   try {
-    if (analyticsConfig.transport === 'gtm') {
-      window.dataLayer = window.dataLayer ?? [];
-      window.dataLayer.push({ event: name, ...payload });
-      return;
-    }
-
-    if (
-      analyticsConfig.transport === 'direct_ga4' &&
-      typeof window.gtag === 'function'
-    ) {
-      if (!directGa4Ready) {
-        pendingDirectGa4Events.push({ name, payload });
-        return;
-      }
-      sendDirectGa4Event(name, payload);
-    }
-    // disabled mode intentionally does nothing.
+    if (analyticsConfig.transport !== 'gtm') return;
+    window.dataLayer = window.dataLayer ?? [];
+    window.dataLayer.push({ event: name, ...payload });
   } catch {
     /* never let analytics throw into the UI */
-  }
-}
-
-function sendDirectGa4Event(name: string, payload: CleanEventParams): void {
-  window.gtag?.('event', directGa4EventMap[name] ?? name, payload);
-}
-
-export function markDirectGa4Ready(): void {
-  if (typeof window === 'undefined') return;
-  if (!getConsentSnapshot().analyticsGranted) {
-    pendingDirectGa4Events.length = 0;
-    return;
-  }
-  directGa4Ready = true;
-  while (pendingDirectGa4Events.length > 0) {
-    const event = pendingDirectGa4Events.shift();
-    if (event) sendDirectGa4Event(event.name, event.payload);
   }
 }
 

@@ -1,6 +1,5 @@
 import {
   CONSENT_SCHEMA_VERSION,
-  CONSENT_STORAGE_KEY,
   toGoogleConsentState,
   type ConsentChoice,
 } from '@/lib/consent';
@@ -40,10 +39,6 @@ export function ConsentBootstrap({
           if (initialConsent && initialConsent.version === ${CONSENT_SCHEMA_VERSION}) {
             window.gtag('consent', 'update', initialGoogleConsent);
           }
-          window.__avzConsentBootstrap = {
-            key: '${CONSENT_STORAGE_KEY}',
-            version: ${CONSENT_SCHEMA_VERSION}
-          };
         })();
       `,
       }}
