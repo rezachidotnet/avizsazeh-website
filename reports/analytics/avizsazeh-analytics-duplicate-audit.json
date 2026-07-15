@@ -1,0 +1,280 @@
+{
+  "project": "avizsazeh.ir",
+  "audit_date": "2026-07-15",
+  "vercel_env_findings": [
+    {
+      "variable": "NEXT_PUBLIC_GTM_ID",
+      "production": "present",
+      "preview": "present",
+      "development": "present",
+      "duplicate_risk": "low"
+    },
+    {
+      "variable": "NEXT_PUBLIC_GA4_ID",
+      "production": "absent",
+      "preview": "absent",
+      "development": "absent",
+      "duplicate_risk": "none"
+    }
+  ],
+  "source_loader_findings": [
+    {
+      "source_file": "src/components/analytics/Analytics.tsx",
+      "finding": "One GTM JavaScript loader implementation. It appends one inline bootstrap script with id gtm-loader after analytics consent.",
+      "counts": {
+        "gtm_javascript_loader_implementations": 1,
+        "gtm_js_append_paths": 1
+      },
+      "guards_present": ["script element id: gtm-loader"],
+      "guards_absent": ["script src selector", "module-level loaded flag", "window.google_tag_manager container-state check"],
+      "duplicate_risk": "low for loader duplication"
+    },
+    {
+      "source_file": "src/app/[locale]/layout.tsx",
+      "finding": "One conditional GTM noscript iframe implementation.",
+      "counts": {
+        "gtm_noscript_iframe_implementations": 1
+      },
+      "duplicate_risk": "none as a JavaScript analytics source"
+    },
+    {
+      "source_file": "src/lib/analytics.ts",
+      "finding": "One centralized dataLayer transport; no direct GA4 dispatch remains.",
+      "counts": {
+        "centralized_data_layer_transports": 1,
+        "direct_ga4_transports": 0
+      },
+      "duplicate_risk": "low"
+    }
+  ],
+  "consent_lifecycle_findings": [
+    {
+      "scenario": "first consent grant",
+      "gtm_script_elements": 1,
+      "gtm_network_requests": 1,
+      "gtm_start_entries": 1,
+      "consent_default_commands": 1,
+      "consent_update_commands": 1,
+      "current_page_application_page_view_events": 1,
+      "ga4_page_view_requests": 2,
+      "finding": "Consent lifecycle loads GTM once; duplicate occurs inside GTM/GA4 page-view handling."
+    },
+    {
+      "scenario": "saved consent initial load",
+      "gtm_script_elements": 1,
+      "gtm_network_requests": 1,
+      "gtm_start_entries": 1,
+      "current_page_application_page_view_events": 1,
+      "ga4_page_view_requests": 2,
+      "finding": "Saved consent also reproduces the duplicate without duplicate GTM loading."
+    }
+  ],
+  "page_view_source_findings": [
+    {
+      "source_file": "src/components/analytics/PageViewTracker.tsx",
+      "effect_dependencies": ["consent.analyticsGranted", "consent.revision", "pathname"],
+      "route_key": "history.state.idx + pathname",
+      "dedupe_state": ["lastSentRouteKey", "lastPageLocation"],
+      "finding": "PageViewTracker produced one application dataLayer page_view per tested route; it is not the duplicate source.",
+      "tested_flows": [
+        {
+          "flow": "initial load after saved consent",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 2,
+          "duplicate": true,
+          "suspected_source": "GTM Google Tag automatic page view plus explicit GA4 page_view event tag"
+        },
+        {
+          "flow": "first consent grant",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 2,
+          "duplicate": true,
+          "suspected_source": "GTM Google Tag automatic page view plus explicit GA4 page_view event tag"
+        },
+        {
+          "flow": "homepage -> systems",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 0,
+          "duplicate": false,
+          "suspected_source": "none observed in capture window"
+        },
+        {
+          "flow": "systems -> system detail",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 0,
+          "duplicate": false,
+          "suspected_source": "none observed in capture window"
+        },
+        {
+          "flow": "system detail -> contact",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 0,
+          "duplicate": false,
+          "suspected_source": "none observed in capture window"
+        },
+        {
+          "flow": "contact -> RFQ",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 0,
+          "duplicate": false,
+          "suspected_source": "none observed in capture window"
+        },
+        {
+          "flow": "browser back",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 0,
+          "duplicate": false,
+          "suspected_source": "none observed in capture window"
+        },
+        {
+          "flow": "browser forward",
+          "expected_data_layer_page_view_count": 1,
+          "observed_data_layer_page_view_count": 1,
+          "observed_ga4_page_view_request_count": 0,
+          "duplicate": false,
+          "suspected_source": "none observed in capture window"
+        }
+      ]
+    }
+  ],
+  "production_dom_findings": [
+    {
+      "state": "before consent",
+      "script_src_gtm_js_count": 0,
+      "iframe_src_ns_html_count": 0,
+      "performance_gtm_js_resource_count": 0,
+      "data_layer_gtm_js_event_count": 0,
+      "data_layer_gtm_start_entry_count": 0
+    },
+    {
+      "state": "after analytics consent",
+      "script_src_gtm_js_count": 1,
+      "iframe_src_ns_html_count": 0,
+      "performance_gtm_js_resource_count": 1,
+      "data_layer_gtm_js_event_count": 1,
+      "data_layer_gtm_start_entry_count": 1,
+      "note": "In JavaScript-enabled DOM, noscript iframe markup is inert. Server HTML with saved consent contains one noscript iframe."
+    }
+  ],
+  "network_findings": [
+    {
+      "action": "first consent grant on homepage",
+      "dataLayer_page_view_count": 1,
+      "ga4_page_view_request_count": 2,
+      "duplicate": true,
+      "suspected_source": "Google Tag automatic page_view plus explicit GA4 Event tag for page_view",
+      "safe_requests": [
+        {
+          "tid": "G-QD70DM5MEJ",
+          "en": "page_view",
+          "dl": "https://www.avizsazeh.ir/",
+          "dt": "homepage title",
+          "ep.page_path": "",
+          "ep.page_language": ""
+        },
+        {
+          "tid": "G-QD70DM5MEJ",
+          "en": "page_view",
+          "dl": "https://www.avizsazeh.ir/",
+          "dt": "homepage title",
+          "ep.page_path": "",
+          "ep.page_language": "fa"
+        }
+      ]
+    },
+    {
+      "action": "saved consent homepage load",
+      "dataLayer_page_view_count": 1,
+      "ga4_page_view_request_count": 2,
+      "duplicate": true,
+      "suspected_source": "Google Tag automatic page_view plus explicit GA4 Event tag for page_view"
+    }
+  ],
+  "gtm_container_findings": [
+    {
+      "inspection_method": "read-only public published gtm.js resource",
+      "container_id": "GTM-KKXLZFLG",
+      "active_published_tags_visible": [
+        {
+          "tag": "tag_id:3",
+          "type": "Google Tag (__googtag)",
+          "measurement_id": "G-QD70DM5MEJ",
+          "trigger": "gtm.init",
+          "send_page_view": "not set to false; automatic page_view observed",
+          "duplicate_risk": "high"
+        },
+        {
+          "tag": "tag_id:10",
+          "type": "GA4 Event (__gaawe)",
+          "measurement_id": "G-QD70DM5MEJ",
+          "trigger": "Custom Event page_view",
+          "send_page_view": "n/a",
+          "duplicate_risk": "high when base Google Tag auto page_view is enabled"
+        },
+        {
+          "tag": "tag_id:22",
+          "type": "GA4 Event (__gaawe)",
+          "measurement_id": "G-QD70DM5MEJ",
+          "trigger": "Custom Event rfq_submit",
+          "event_name": "generate_lead",
+          "send_page_view": "n/a",
+          "duplicate_risk": "low"
+        }
+      ],
+      "active_google_or_ga4_page_view_capable_tag_count": 2,
+      "published_triggers_visible": ["gtm.init", "page_view", "rfq_submit"],
+      "history_change_trigger_visible": false,
+      "limitations": "Paused tags, draft workspace changes, tag names, and full consent settings require authenticated GTM UI/API access."
+    }
+  ],
+  "ga4_enhanced_measurement_findings": [
+    {
+      "status": "admin_access_unavailable",
+      "history_page_view_status": "unverified",
+      "production_evidence": "No Enhanced Measurement history-page-view duplicate was identified in tested SPA navigation. The reproduced duplicate occurs on initial consent-granted load and is explained by GTM category C.",
+      "manual_check_required": "Enhanced Measurement -> Page views -> Page changes based on browser history events"
+    }
+  ],
+  "tag_assistant_findings": [
+    {
+      "normal_production_without_preview": "duplicate reproduced",
+      "gtm_preview_or_tag_assistant": "not required to reproduce; authenticated Preview not inspected",
+      "conclusion": "Preview/session-only behavior is not the primary root cause."
+    }
+  ],
+  "duplicate_categories": [
+    {
+      "category": "C",
+      "label": "automatic Google Tag page view plus explicit page_view",
+      "confirmed": true,
+      "evidence": [
+        "One application dataLayer page_view on initial consent-granted load.",
+        "Two GA4 page_view requests with tid G-QD70DM5MEJ and dl https://www.avizsazeh.ir/.",
+        "Published GTM contains Google Tag on gtm.init and GA4 Event tag on Custom Event page_view.",
+        "send_page_view=false is not effective in the published Google Tag."
+      ]
+    }
+  ],
+  "confirmed_root_cause": "The published GTM Google Tag for G-QD70DM5MEJ sends an automatic initial page_view while a separate GA4 Event tag also sends the explicit application page_view event.",
+  "secondary_risks": [
+    "GA4 Enhanced Measurement history-page-view setting is unverified and should be checked manually.",
+    "The app GTM loader only checks id=gtm-loader, not an existing gtm.js src or window.google_tag_manager container state; this did not cause the current duplicate but is a hardening opportunity.",
+    "SPA page_view GA4 requests were not consistently observed for route changes in the headless capture despite dataLayer page_view events; retest after fixing the initial duplicate."
+  ],
+  "should_restore_next_public_ga4_id": false,
+  "recommended_fix_order": [
+    "In GTM, set the Google Tag for G-QD70DM5MEJ to suppress the automatic initial page view, using send_page_view=false or the equivalent Google Tag setting.",
+    "Keep the explicit TAG - GA4 - page_view event tag triggered by the application page_view event.",
+    "Publish the GTM change and retest first consent grant and saved-consent initial load.",
+    "Verify GA4 Enhanced Measurement history-based page views are disabled if the app remains the SPA page-view source.",
+    "Recheck Tag Assistant only after normal production network count is one GA4 page_view.",
+    "Keep NEXT_PUBLIC_GA4_ID removed from Vercel."
+  ]
+}
