@@ -216,7 +216,7 @@
       "challengeLabel": "Project challenge",
       "solutionLabel": "Engineering solution",
       "outcomeLabel": "Outcome",
-      "pending": "Full details of this project will be published once technical documentation is complete.",
+      "evidenceNote": "The public page shows only repository-supported project facts.",
       "name": "Imam Khomeini Int’l Airport",
       "system": "Engineered metal ceiling system"
     }
@@ -341,13 +341,13 @@
       { "value": "Up to 50 m", "label": "Execution height" },
       { "value": "Iran · Iraq · Oman", "label": "Area served" }
     ],
-    "statsNote": "Part of the project documentation is being structured and published in stages.",
+    "statsNote": "Project detail pages show only fields supported by current repository evidence.",
     "featuredTitle": "Flagship projects",
     "featuredIntro": "Recorded execution references of AvizSazeh, based on real clients and projects.",
     "badgeFile": "Project record",
-    "badgeNeedsPhoto": "Execution photos pending",
-    "badgeTechPending": "Technical docs in progress",
-    "featuredCardText": "This project is recorded as one of AvizSazeh's execution references; its full file is to be completed with installation photos, system specifications, and technical data.",
+    "badgeNeedsPhoto": "Reference record",
+    "badgeReference": "Reference record",
+    "featuredCardText": "This project is recorded as one of AvizSazeh's execution references. The public page shows only repository-supported facts.",
     "clientsTitle": "Clients & partners",
     "clientsIntro": "Clients are grouped by their role in the project so the standing of each reference is clear: project owner, public organisation, industrial client, or partner contractor.",
     "groups": {
@@ -365,7 +365,7 @@
       "Technical data such as area, height, execution time, and material specifications"
     ],
     "caseStructureTitle": "Project case-study structure",
-    "caseStructureIntro": "Every AvizSazeh project file is completed and published against this standard structure.",
+    "caseStructureIntro": "AvizSazeh uses this structure when a project file has enough verified evidence for indexing.",
     "caseFields": [
       "Project name",
       "Client / operator",
@@ -391,7 +391,7 @@
     "roleTitle": "AvizSazeh’s role",
     "relatedSystemsTitle": "Related systems",
     "relatedApplicationsTitle": "Related applications",
-    "pendingVisualsTitle": "Visual documentation (pending)",
+    "evidenceScopeTitle": "Evidence scope",
     "galleryTitle": "Execution photos",
     "techTitle": "Technical specifications",
     "labels": {

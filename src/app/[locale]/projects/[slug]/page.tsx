@@ -18,13 +18,14 @@ import {
   projects,
   getProject,
   hasCaseStudy,
+  projectQualityTier,
   projectName,
   projectSector,
   type Project,
 } from '@/lib/content/projects';
 import { systems } from '@/lib/content/systems';
 import { applications } from '@/lib/content/applications';
-import { localized, localizedList } from '@/lib/site';
+import { localized } from '@/lib/site';
 
 export const dynamicParams = false;
 
@@ -45,6 +46,7 @@ export async function generateMetadata({
   const project = getProject(params.slug);
   if (!project || !hasCaseStudy(project)) return {};
   const cs = project.caseStudy;
+  const isIndexable = projectQualityTier(project) === 'A';
   return buildMetadata({
     locale: params.locale,
     path: `/projects/${project.slug}`,
@@ -53,6 +55,7 @@ export async function generateMetadata({
       ? localized(cs.seo.description, params.locale)
       : project.challengeFa ?? project.solutionFa ?? projectName(project, params.locale),
     images: project.images && project.images.length > 0 ? [project.images[0]] : undefined,
+    robots: isIndexable ? { index: true, follow: true } : { index: false, follow: true },
     titleAbsolute: Boolean(cs),
   });
 }
@@ -153,7 +156,7 @@ export default async function ProjectDetailPage({
         </>
       )}
 
-      {/* Execution photos when verified; otherwise the visual checklist (no fake imagery). */}
+      {/* Execution photos when verified; otherwise state the evidence boundary. */}
       {images.length > 0 ? (
         <Section dark>
           <SectionHeader title={t('galleryTitle')} />
@@ -170,17 +173,7 @@ export default async function ProjectDetailPage({
         </Section>
       ) : cs ? (
         <Section dark>
-          <SectionHeader title={t('pendingVisualsTitle')} description={localized(cs.dataNote, locale)} />
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {localizedList(cs.visualPlaceholders, locale).map((v) => (
-              <li
-                key={v}
-                className="flex aspect-[4/3] items-center justify-center rounded-lg border border-dashed border-white/15 bg-white/[0.02] p-6 text-center text-body-s text-ink-500"
-              >
-                {v}
-              </li>
-            ))}
-          </ul>
+          <SectionHeader title={t('evidenceScopeTitle')} description={localized(cs.dataNote, locale)} />
         </Section>
       ) : null}
 

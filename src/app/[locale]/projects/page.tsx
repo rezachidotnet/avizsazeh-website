@@ -47,7 +47,7 @@ export default async function ProjectsPage({
   const tc = await getTranslations('cta');
 
   const badgeFor = (status: ProofStatus) =>
-    status === 'documented' ? t('badgeFile') : status === 'partial' ? t('badgeTechPending') : t('badgeNeedsPhoto');
+    status === 'documented' ? t('badgeFile') : status === 'partial' ? t('badgeReference') : t('badgeNeedsPhoto');
 
   const toCard = (p: Project) => ({
     name: projectName(p, locale),

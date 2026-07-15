@@ -16,7 +16,7 @@ export function ProofClients() {
     status === 'documented'
       ? tp('badgeFile')
       : status === 'partial'
-        ? tp('badgeTechPending')
+        ? tp('badgeReference')
         : tp('badgeNeedsPhoto');
 
   // The strongest three records — the "we have built this" proof module.

@@ -26,6 +26,7 @@ export type ProjectCategory =
   | 'partner';
 
 export type ProofStatus = 'documented' | 'partial' | 'logo-only';
+export type ProjectQualityTier = 'A' | 'B' | 'C';
 
 /**
  * Bilingual case-study content. Qualitative engineering narrative tied to the
@@ -42,7 +43,7 @@ export type CaseStudy = {
   constraints: LocalizedString;
   /** AvizSazeh's role on a project of this type */
   role: LocalizedString;
-  /** honest note that exact technical data is pending verification */
+  /** honest note that the public page only shows repository-supported facts */
   dataNote: LocalizedString;
   /** placeholder labels for visuals still to be supplied */
   visualPlaceholders: LocalizedList;
@@ -112,14 +113,14 @@ export const projects: Project[] = [
           en: 'Imam Khomeini Airport Metal Ceiling | AvizSazeh Project',
         },
         description: {
-          fa: 'پرونده پروژه سقف کاذب فرودگاه بین‌المللی امام خمینی؛ چالش سقف فلزی فرودگاهی، منطق سیستم و نقش مهندسی آویزسازه. داده‌های فنی دقیق نیازمند تأیید واحد مهندسی است.',
-          en: 'Project record for the Imam Khomeini International Airport metal ceiling — the airport ceiling challenge, system logic and AvizSazeh’s engineering role. Exact technical data is to be confirmed by the engineering team.',
+          fa: 'پرونده پروژه سقف کاذب فرودگاه بین‌المللی امام خمینی؛ چالش سقف فلزی فرودگاهی، منطق سیستم و نقش مهندسی آویزسازه.',
+          en: 'Project record for the Imam Khomeini International Airport metal ceiling — the airport ceiling challenge, system logic and AvizSazeh’s engineering role. ',
         },
       },
       projectType: { fa: 'پایانه فرودگاهی · زیرساخت حمل‌ونقل', en: 'Airport terminal · transport infrastructure' },
       lead: {
-        fa: 'فرودگاه بین‌المللی امام خمینی یکی از مراجع اجرایی ثبت‌شده آویزسازه در حوزه سقف کاذب فرودگاه است. این پرونده، چالش و منطق مهندسی سقف فلزی فرودگاهی را توضیح می‌دهد؛ داده‌های فنی دقیق پس از تأیید واحد مهندسی منتشر می‌شود.',
-        en: 'Imam Khomeini International Airport is one of AvizSazeh’s recorded execution references in airport metal ceilings. This record explains the challenge and engineering logic of an airport metal ceiling; exact technical data is published once confirmed by the engineering team.',
+        fa: 'فرودگاه بین‌المللی امام خمینی یکی از مراجع اجرایی ثبت‌شده آویزسازه در حوزه سقف کاذب فرودگاه است. این پرونده، چالش و منطق مهندسی سقف فلزی فرودگاهی را توضیح می‌دهد.',
+        en: 'Imam Khomeini International Airport is one of AvizSazeh’s recorded execution references in airport metal ceilings. This record explains the challenge and engineering logic of an airport metal ceiling.',
       },
       challenge: {
         fa: 'سقف یک پایانه فرودگاهی باید در دهانه‌های بسیار وسیع، ریتم بصری منظم و یکپارچه را حفظ کند و هم‌زمان با روشنایی، تهویه، اعلام و اطفای حریق و علائم مسیریابی هماهنگ شود. نصب در ارتفاع، کنترل تراز و دسترسی بلندمدت به پلنوم، این پروژه را از یک کار نصب ساده به یک مسئله مهندسی تبدیل می‌کند.',
@@ -138,8 +139,8 @@ export const projects: Project[] = [
         en: 'In projects of this kind, AvizSazeh’s role is to define the ceiling as an engineered system: shop drawings, service coordination, custom manufacturing and execution control through to handover of the architectural result.',
       },
       dataNote: {
-        fa: 'مساحت، ارتفاع، سال اجرا و مشخصات دقیق سیستم این پروژه نیازمند تأیید واحد مهندسی آویزسازه است و پس از تأیید منتشر می‌شود.',
-        en: 'The exact area, height, year and system specifications of this project are to be confirmed by the AvizSazeh engineering team and will be published once verified.',
+        fa: 'این رکورد فقط فیلدهای پشتیبانی‌شده در مخزن را نمایش می‌دهد و از نمایش اعداد، تاریخ یا مشخصات تأییدنشده خودداری می‌کند.',
+        en: 'This record shows only repository-supported fields and avoids displaying unverified figures, dates or specifications.',
       },
       visualPlaceholders: {
         fa: ['عکس اجرای سقف فلزی در سالن فرودگاه', 'دیتیل اتصال و سیستم تعلیق در ارتفاع', 'نمای هماهنگی سقف با روشنایی و تأسیسات'],
@@ -202,14 +203,14 @@ export const projects: Project[] = [
           en: 'Bushehr Mall Metal Ceiling | AvizSazeh Commercial Project',
         },
         description: {
-          fa: 'پرونده پروژه سقف کاذب تجاری بوشهر مال؛ چالش سقف فلزی مرکز خرید، منطق سیستم و نقش مهندسی آویزسازه. داده‌های فنی دقیق نیازمند تأیید واحد مهندسی است.',
-          en: 'Project record for the Bushehr Mall commercial metal ceiling — the mall ceiling challenge, system logic and AvizSazeh’s engineering role. Exact technical data is to be confirmed by the engineering team.',
+          fa: 'پرونده پروژه سقف کاذب تجاری بوشهر مال؛ چالش سقف فلزی مرکز خرید، منطق سیستم و نقش مهندسی آویزسازه.',
+          en: 'Project record for the Bushehr Mall commercial metal ceiling — the mall ceiling challenge, system logic and AvizSazeh’s engineering role. ',
         },
       },
       projectType: { fa: 'مرکز خرید · فضای تجاری', en: 'Shopping mall · commercial space' },
       lead: {
-        fa: 'بوشهر مال یکی از مراجع اجرایی ثبت‌شده آویزسازه در حوزه سقف کاذب تجاری است. این پرونده، چالش و منطق مهندسی سقف فلزی مرکز خرید را توضیح می‌دهد؛ داده‌های فنی دقیق پس از تأیید واحد مهندسی منتشر می‌شود.',
-        en: 'Bushehr Mall is one of AvizSazeh’s recorded execution references in commercial metal ceilings. This record explains the challenge and engineering logic of a mall metal ceiling; exact technical data is published once confirmed by the engineering team.',
+        fa: 'بوشهر مال یکی از مراجع اجرایی ثبت‌شده آویزسازه در حوزه سقف کاذب تجاری است. این پرونده، چالش و منطق مهندسی سقف فلزی مرکز خرید را توضیح می‌دهد.',
+        en: 'Bushehr Mall is one of AvizSazeh’s recorded execution references in commercial metal ceilings. This record explains the challenge and engineering logic of a mall metal ceiling.',
       },
       challenge: {
         fa: 'سقف یک مرکز خرید باید هم‌زمان هویت بصری فضای تجاری را بسازد و دسترسی سریع به تأسیسات پرتردد را حفظ کند. اجرای یکنواخت در سطوح وسیع، هماهنگی با نورپردازی فروشگاهی و نگهداری بدون اختلال در بهره‌برداری، چالش‌های اصلی این نوع پروژه است.',
@@ -228,8 +229,8 @@ export const projects: Project[] = [
         en: 'AvizSazeh defines the commercial metal ceiling as a complete system: shop drawings, service coordination, custom manufacturing and execution control through to final handover.',
       },
       dataNote: {
-        fa: 'مساحت، ارتفاع، سال اجرا و مشخصات دقیق سیستم این پروژه نیازمند تأیید واحد مهندسی آویزسازه است و پس از تأیید منتشر می‌شود.',
-        en: 'The exact area, height, year and system specifications of this project are to be confirmed by the AvizSazeh engineering team and will be published once verified.',
+        fa: 'این رکورد فقط فیلدهای پشتیبانی‌شده در مخزن را نمایش می‌دهد و از نمایش اعداد، تاریخ یا مشخصات تأییدنشده خودداری می‌کند.',
+        en: 'This record shows only repository-supported fields and avoids displaying unverified figures, dates or specifications.',
       },
       visualPlaceholders: {
         fa: ['عکس اجرای سقف فلزی در فضای تجاری', 'دیتیل دسترسی به پلنوم و تأسیسات', 'نمای هماهنگی سقف با نورپردازی فروشگاهی'],
@@ -657,6 +658,31 @@ export function hasCaseStudy(p: Project): boolean {
       p.areaM2 ||
       p.executionHeightM,
   );
+}
+
+/**
+ * Search-index quality gate for project detail pages.
+ *
+ * Tier A requires verified, unique project evidence. The current published
+ * project records are real references, but the repository still lacks verified
+ * area, year, system specification, execution scope and real project images.
+ * Keep those detail pages available to users while excluding them from search
+ * until the missing evidence is supplied.
+ */
+export function projectQualityTier(p: Project): ProjectQualityTier {
+  if (!hasCaseStudy(p)) return 'B';
+  const hasVerifiedEvidence =
+    p.proofStatus === 'documented' &&
+    Boolean(p.locationFa) &&
+    Boolean(p.systemTypeFa) &&
+    Boolean(p.challengeFa || p.caseStudy?.challenge) &&
+    Boolean(p.solutionFa || p.caseStudy?.role) &&
+    Boolean(p.images && p.images.length > 0);
+  return hasVerifiedEvidence ? 'A' : 'B';
+}
+
+export function isIndexableProject(p: Project): boolean {
+  return projectQualityTier(p) === 'A';
 }
 
 export function getProject(slug: string): Project | undefined {

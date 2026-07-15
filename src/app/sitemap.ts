@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SEO_LOCALES, languageAlternates, localeUrl } from '@/lib/seo';
 import { systemSlugs } from '@/lib/content/systems';
 import { applicationSlugs } from '@/lib/content/applications';
-import { projects, hasCaseStudy } from '@/lib/content/projects';
+import { projects, hasCaseStudy, isIndexableProject } from '@/lib/content/projects';
 
 const STATIC_PATHS = [
   '/',
@@ -21,7 +21,7 @@ const STATIC_PATHS = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const caseStudyPaths = projects
-    .filter(hasCaseStudy)
+    .filter((project) => hasCaseStudy(project) && isIndexableProject(project))
     .map((p) => `/projects/${p.slug}`);
 
   const paths = [

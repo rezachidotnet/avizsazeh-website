@@ -3,7 +3,7 @@ import { routing, type Locale } from '@/i18n/routing';
 import { SITE_URL, company, localized } from './site';
 
 const OG_IMAGE = '/og';
-export const SEO_LOCALES = ['fa', 'en', 'ar'] as const;
+export const SEO_LOCALES = ['fa', 'en', 'ar', 'ru'] as const;
 const OPEN_GRAPH_LOCALE: Record<Locale, string> = {
   fa: 'fa_IR',
   en: 'en_US',
@@ -37,6 +37,7 @@ type BuildMetaArgs = {
   description: string;
   images?: string[];
   type?: 'website' | 'article';
+  robots?: Metadata['robots'];
   /**
    * When true the title is used verbatim (no parent " · AvizSazeh" template
    * suffix). Use for pages whose SEO title already carries the brand + the
@@ -55,6 +56,7 @@ export function buildMetadata({
   description,
   images,
   type = 'website',
+  robots,
   titleAbsolute = false,
 }: BuildMetaArgs): Metadata {
   const canonical = localeUrl(locale, path);
@@ -66,6 +68,7 @@ export function buildMetadata({
     metadataBase: new URL(SITE_URL),
     title: titleAbsolute ? { absolute: title } : title,
     description,
+    robots,
     alternates: {
       canonical,
       languages: languageAlternates(path),
