@@ -88,9 +88,9 @@ export function ConsentPreferences() {
         aria-modal="true"
         aria-labelledby="consent-preferences-title"
         aria-describedby="consent-preferences-description"
-        className="w-full max-w-2xl overflow-hidden rounded-sm border border-white/10 bg-ink-950 shadow-2xl"
+        className="flex max-h-[calc(100dvh-1.5rem)] w-full max-w-2xl flex-col overflow-hidden rounded-sm border border-white/10 bg-ink-950 shadow-2xl sm:max-h-[calc(100dvh-3rem)]"
       >
-        <div className="border-b border-white/10 px-5 py-4 sm:px-6">
+        <div className="shrink-0 border-b border-white/10 px-5 py-4 sm:px-6">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-caption font-semibold uppercase tracking-[0.16em] text-gold">
@@ -117,48 +117,50 @@ export function ConsentPreferences() {
           <p className="mt-3 text-caption text-ink-500">{statusLabel}</p>
         </div>
 
-        <div className="grid gap-5 px-5 py-5 sm:px-6">
-          <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
-            <input
-              type="checkbox"
-              checked
-              disabled
-              className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
-            />
-            <span className="flex flex-col">
-              <span className="font-medium text-white">{t('necessaryLabel')}</span>
-              <span className="mt-1 text-body-s text-ink-400">{t('necessaryDescription')}</span>
-            </span>
-          </label>
+        <div className="grid overflow-y-auto px-5 py-5 sm:px-6">
+          <div className="grid gap-5">
+            <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
+              <input
+                type="checkbox"
+                checked
+                disabled
+                className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
+              />
+              <span className="flex flex-col">
+                <span className="font-medium text-white">{t('necessaryLabel')}</span>
+                <span className="mt-1 text-body-s text-ink-400">{t('necessaryDescription')}</span>
+              </span>
+            </label>
 
-          <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
-            <input
-              type="checkbox"
-              checked={analytics}
-              onChange={(event) => setAnalytics(event.target.checked)}
-              className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
-            />
-            <span className="flex flex-col">
-              <span className="font-medium text-white">{t('analyticsLabel')}</span>
-              <span className="mt-1 text-body-s text-ink-400">{t('analyticsDescription')}</span>
-            </span>
-          </label>
+            <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
+              <input
+                type="checkbox"
+                checked={analytics}
+                onChange={(event) => setAnalytics(event.target.checked)}
+                className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
+              />
+              <span className="flex flex-col">
+                <span className="font-medium text-white">{t('analyticsLabel')}</span>
+                <span className="mt-1 text-body-s text-ink-400">{t('analyticsDescription')}</span>
+              </span>
+            </label>
 
-          <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
-            <input
-              type="checkbox"
-              checked={marketing}
-              onChange={(event) => setMarketing(event.target.checked)}
-              className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
-            />
-            <span className="flex flex-col">
-              <span className="font-medium text-white">{t('marketingLabel')}</span>
-              <span className="mt-1 text-body-s text-ink-400">{t('marketingDescription')}</span>
-            </span>
-          </label>
+            <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
+              <input
+                type="checkbox"
+                checked={marketing}
+                onChange={(event) => setMarketing(event.target.checked)}
+                className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
+              />
+              <span className="flex flex-col">
+                <span className="font-medium text-white">{t('marketingLabel')}</span>
+                <span className="mt-1 text-body-s text-ink-400">{t('marketingDescription')}</span>
+              </span>
+            </label>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-white/10 px-5 py-4 sm:flex-row sm:justify-end sm:px-6">
+        <div className="flex shrink-0 flex-col gap-2 border-t border-white/10 px-5 py-4 sm:flex-row sm:justify-end sm:px-6">
           <Button
             type="button"
             variant="ghost"

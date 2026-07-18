@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { updateConsent } from '@/lib/consent';
 import { useConsentUi, useConsentSnapshot } from './ConsentProvider';
@@ -10,9 +10,14 @@ import { cn } from '@/lib/utils';
 export function ConsentBanner() {
   const t = useTranslations('consent');
   const snapshot = useConsentSnapshot();
-  const { openPreferences } = useConsentUi();
+  const { isPreferencesOpen, openPreferences } = useConsentUi();
+  const [mounted, setMounted] = useState(false);
 
-  const visible = snapshot.status === 'unknown';
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const visible = mounted && snapshot.status === 'unknown' && !isPreferencesOpen;
   const summary = useMemo(
     () =>
       snapshot.status === 'unknown'

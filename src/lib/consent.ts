@@ -198,13 +198,17 @@ function notify(): void {
 
 function writeCookie(choice: ConsentChoice | null): void {
   if (typeof document === 'undefined') return;
-  if (!choice) {
-    document.cookie = `${CONSENT_STORAGE_KEY}=; Path=/; Max-Age=0; SameSite=Lax`;
-    return;
+  try {
+    if (!choice) {
+      document.cookie = `${CONSENT_STORAGE_KEY}=; Path=/; Max-Age=0; SameSite=Lax`;
+      return;
+    }
+    const payload = safeEncode(JSON.stringify(choice));
+    const secure = window.location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = `${CONSENT_STORAGE_KEY}=${payload}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax${secure}`;
+  } catch {
+    /* keep in-memory consent state usable when cookie storage is unavailable */
   }
-  const payload = safeEncode(JSON.stringify(choice));
-  const secure = window.location.protocol === 'https:' ? '; Secure' : '';
-  document.cookie = `${CONSENT_STORAGE_KEY}=${payload}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax${secure}`;
 }
 
 function syncBootstrap(choice: ConsentChoice | null): void {
@@ -275,12 +279,11 @@ export function subscribeConsent(listener: () => void): () => void {
 
 export function toGoogleConsentState(choice: ConsentChoice | null): GoogleConsentState {
   const analyticsGranted = Boolean(choice?.analytics);
-  const marketingGranted = Boolean(choice?.marketing);
   return {
     analytics_storage: analyticsGranted ? 'granted' : 'denied',
-    ad_storage: marketingGranted ? 'granted' : 'denied',
-    ad_user_data: marketingGranted ? 'granted' : 'denied',
-    ad_personalization: marketingGranted ? 'granted' : 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
     security_storage: 'granted',
   };
 }
@@ -298,7 +301,6 @@ export function clearConsent(): void {
 }
 
 export function updateConsent(update: ConsentUpdate): ConsentChoice {
-  const current = getCurrentChoice();
   const nextChoice: ConsentChoice = {
     necessary: true,
     analytics: update.analytics,
@@ -306,14 +308,6 @@ export function updateConsent(update: ConsentUpdate): ConsentChoice {
     updatedAt: nowIso(),
     version: CONSENT_SCHEMA_VERSION,
   };
-
-  if (
-    current &&
-    current.analytics === nextChoice.analytics &&
-    current.marketing === nextChoice.marketing
-  ) {
-    return cloneConsent(current)!;
-  }
 
   updateSnapshot(nextChoice);
   return cloneConsent(nextChoice)!;
