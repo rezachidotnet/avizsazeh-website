@@ -21,6 +21,46 @@ const nextConfig = {
     // canonical/sitemap/hreflang origin (SITE_URL) and the production DNS setup.
     return [
       {
+        source: '/ru',
+        has: [{ type: 'host', value: 'avizsazeh.ir' }],
+        destination: 'https://www.avizsazeh.ir/en',
+        permanent: true,
+      },
+      {
+        source: '/ru/:path*',
+        has: [{ type: 'host', value: 'avizsazeh.ir' }],
+        destination: 'https://www.avizsazeh.ir/en/:path*',
+        permanent: true,
+      },
+      {
+        source: '/ru',
+        has: [{ type: 'host', value: '(?<subdomain>.*)\\.vercel\\.app' }],
+        destination: 'https://www.avizsazeh.ir/en',
+        permanent: true,
+      },
+      {
+        source: '/ru/:path*',
+        has: [{ type: 'host', value: '(?<subdomain>.*)\\.vercel\\.app' }],
+        destination: 'https://www.avizsazeh.ir/en/:path*',
+        permanent: true,
+      },
+      {
+        source: '/ru',
+        destination: '/en',
+        permanent: true,
+      },
+      {
+        source: '/ru/:path*',
+        destination: '/en/:path*',
+        permanent: true,
+      },
+      {
+        source: '/',
+        has: [{ type: 'host', value: 'avizsazeh.ir' }],
+        destination: 'https://www.avizsazeh.ir/',
+        permanent: true,
+      },
+      {
         source: '/:path*',
         has: [{ type: 'host', value: 'avizsazeh.ir' }],
         destination: 'https://www.avizsazeh.ir/:path*',

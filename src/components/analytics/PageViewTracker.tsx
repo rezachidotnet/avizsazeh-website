@@ -10,7 +10,7 @@ let lastPageLocation: string | null = null;
 
 function languageFromPath(pathname: string): string {
   const segment = pathname.split('/').filter(Boolean)[0];
-  return segment === 'en' || segment === 'ar' || segment === 'ru' ? segment : 'fa';
+  return segment === 'en' || segment === 'ar' ? segment : 'fa';
 }
 
 function routeKey(pathname: string): string {

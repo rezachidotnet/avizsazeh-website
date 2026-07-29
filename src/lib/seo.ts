@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
-import { routing, type Locale } from '@/i18n/routing';
+import { publicLocales, routing, type Locale } from '@/i18n/routing';
 import { SITE_URL, company, localized } from './site';
 
 const OG_IMAGE = '/og';
-export const SEO_LOCALES = ['fa', 'en', 'ar', 'ru'] as const;
+export const SEO_LOCALES = publicLocales;
 const OPEN_GRAPH_LOCALE: Record<Locale, string> = {
   fa: 'fa_IR',
   en: 'en_US',
   ar: 'ar',
-  ru: 'ru_RU',
 };
 
 /** Build an absolute canonical URL for a locale + in-app path. */
@@ -16,7 +15,7 @@ export function localeUrl(locale: Locale, path = '/'): string {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   const clean = normalizedPath === '/' ? '' : normalizedPath.replace(/\/$/, '');
   if (locale === routing.defaultLocale) {
-    return `${SITE_URL}${clean || '/'}`;
+    return `${SITE_URL}${clean}`;
   }
   return `${SITE_URL}/${locale}${clean}`;
 }

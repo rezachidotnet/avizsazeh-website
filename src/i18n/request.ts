@@ -7,10 +7,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   if (!locale || !routing.locales.includes(locale as (typeof routing.locales)[number])) {
     locale = routing.defaultLocale;
   }
-  const messagesLocale =
-    locale === 'en' || locale === 'ar' || locale === 'ru'
-      ? locale
-      : routing.defaultLocale;
+  const messagesLocale = locale === 'en' || locale === 'ar' ? locale : routing.defaultLocale;
 
   return {
     locale,

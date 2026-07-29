@@ -5,8 +5,12 @@ import { createNavigation } from 'next-intl/navigation';
  * Locale routing. Persian is the default root locale; non-default locales use
  * prefixed URLs.
  */
+export const RUSSIAN_LOCALE_ENABLED = false;
+
+export const publicLocales = ['fa', 'en', 'ar'] as const;
+
 export const routing = defineRouting({
-  locales: ['fa', 'en', 'ar', 'ru'],
+  locales: publicLocales,
   defaultLocale: 'fa',
   localePrefix: 'as-needed',
   // Persian is the primary commercial SEO language: the root path must always
@@ -22,7 +26,6 @@ export const localeDirection: Record<Locale, 'rtl' | 'ltr'> = {
   fa: 'rtl',
   en: 'ltr',
   ar: 'rtl',
-  ru: 'ltr',
 };
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =
