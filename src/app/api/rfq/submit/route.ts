@@ -35,6 +35,20 @@ function extOf(filename: string): string {
   return filename.split('.').pop()?.toLowerCase() ?? '';
 }
 
+function looksLikeAllowedFile(ext: string, buffer: Buffer): boolean {
+  if (buffer.length === 0) return false;
+  const ascii = buffer.subarray(0, 64).toString('ascii');
+  const hex = buffer.subarray(0, 8).toString('hex');
+  if (ext === 'pdf') return ascii.startsWith('%PDF-');
+  if (ext === 'jpg' || ext === 'jpeg') return hex.startsWith('ffd8ff');
+  if (ext === 'png') return hex.startsWith('89504e470d0a1a0a');
+  if (ext === 'zip' || ext === 'docx' || ext === 'xlsx') return ascii.startsWith('PK\u0003\u0004');
+  if (ext === 'doc' || ext === 'xls') return hex.startsWith('d0cf11e0a1b11ae1');
+  if (ext === 'dwg') return /^AC10\d{2}/.test(ascii);
+  if (ext === 'dxf') return ascii.includes('SECTION') || ascii.includes('HEADER');
+  return false;
+}
+
 /** Parse the request body — JSON, or multipart/form-data with a `data` field + files. */
 async function parseBody(request: Request): Promise<{
   body: Partial<RfqInput> & { website?: string };
@@ -65,7 +79,8 @@ async function parseBody(request: Request): Promise<{
 
   for (const file of files) {
     if (file.size === 0) continue;
-    if (!ALLOWED_EXT.has(extOf(file.name))) {
+    const ext = extOf(file.name);
+    if (!ALLOWED_EXT.has(ext)) {
       return { body, attachments: [], fileError: 'file_type' };
     }
     if (file.size > MAX_FILE_BYTES) {
@@ -76,6 +91,9 @@ async function parseBody(request: Request): Promise<{
       return { body, attachments: [], fileError: 'files_too_large' };
     }
     const buffer = Buffer.from(await file.arrayBuffer());
+    if (!looksLikeAllowedFile(ext, buffer)) {
+      return { body, attachments: [], fileError: 'file_type' };
+    }
     attachments.push({
       filename: file.name,
       dataBase64: buffer.toString('base64'),
@@ -89,11 +107,11 @@ async function parseBody(request: Request): Promise<{
 /**
  * RFQ Engine — structured engineering project definition + CRM lead.
  * Pipeline: validate → classify system → score complexity → generate ID →
- * push lead + attachments to Odoo CRM (best-effort) → return engineering result.
+ * push lead + attachments to Odoo CRM → return engineering result.
  *
- * CRM delivery is non-blocking: a transient Odoo failure must not discard the
- * user's submission or break the success screen. The outcome is reported in
- * `result.lead`; on failure the full lead is logged as a recoverable backup.
+ * CRM delivery is part of acceptance for real submissions. If Odoo is missing
+ * or fails before `crm.lead.create`, the API returns a non-2xx response so the
+ * UI cannot present a false CRM registration success.
  */
 export async function POST(request: Request) {
   // ── Rate limit by client IP (basic spam protection) ──────────────────────
@@ -178,8 +196,11 @@ export async function POST(request: Request) {
   const { complexity, engineeringScore } = scoreComplexity(input);
   const now = Date.now();
   const projectId = makeProjectId(now, Math.floor(now % 997));
+  const requestId = request.headers.get('x-rfq-request-id')?.slice(0, 80) || projectId;
 
   const result: RfqResult = {
+    ok: true,
+    requestId,
     projectId,
     status: 'received',
     assignedSystem,
@@ -228,24 +249,51 @@ export async function POST(request: Request) {
   };
 
   if (honeypotTripped) {
-    // Spam: skip CRM entirely, return a normal-looking result.
-    console.warn(`[RFQ] ${projectId} · honeypot tripped (ip ${ip}) — lead suppressed`);
-  } else if (isOdooConfigured()) {
-    try {
-      const lead = await sendLeadToOdoo(leadInput);
-      result.lead = { delivered: true, leadId: lead.leadId };
-      console.info(`[RFQ] ${projectId} · lead delivered to Odoo (id ${lead.leadId})`);
-    } catch (error) {
-      const msg = error instanceof Error ? error.message : 'unknown';
-      result.lead = { delivered: false, error: msg };
-      console.error(`[RFQ] ${projectId} · Odoo lead failed: ${msg}`);
-      // Recoverable backup: log the full lead so it is never silently lost.
-      // A follow-up can wire RFQ_NOTIFICATION_EMAIL to an SMTP/webhook sender.
-      logBackupLead(projectId, leadInput);
-    }
-  } else {
-    console.info(`[RFQ] ${projectId} · Odoo not configured (log-only)`);
-    logBackupLead(projectId, leadInput);
+    console.warn(`[RFQ] project=${projectId} request=${requestId} stage=honeypot outcome=suppressed`);
+    return NextResponse.json(result, { status: 200 });
+  }
+
+  if (!isOdooConfigured()) {
+    console.error(`[RFQ] project=${projectId} request=${requestId} stage=config outcome=missing_odoo_config`);
+    return NextResponse.json(
+      {
+        ok: false,
+        requestId,
+        error: 'crm_unavailable',
+        message: 'RFQ submission is temporarily unavailable. Please try again or contact AvizSazeh directly.',
+        odoo: { delivered: false },
+      },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const lead = await sendLeadToOdoo(leadInput);
+    result.lead = {
+      delivered: true,
+      leadId: lead.leadId,
+      attachmentFailures: lead.attachmentFailures,
+      salespersonAssigned: lead.salespersonAssigned,
+    };
+    result.odoo = result.lead;
+    console.info(
+      `[RFQ] project=${projectId} request=${requestId} stage=crm.lead.create outcome=delivered leadId=${lead.leadId} attachmentFailures=${lead.attachmentFailures ?? 0}`,
+    );
+  } catch (error) {
+    const category = error instanceof Error ? error.message : 'unknown';
+    console.error(
+      `[RFQ] project=${projectId} request=${requestId} stage=crm.lead.create outcome=failed category=${category}`,
+    );
+    return NextResponse.json(
+      {
+        ok: false,
+        requestId,
+        error: 'crm_delivery_failed',
+        message: 'RFQ submission could not be registered in CRM. Please try again or contact AvizSazeh directly.',
+        odoo: { delivered: false },
+      },
+      { status: 502 },
+    );
   }
 
   console.info(
@@ -253,18 +301,4 @@ export async function POST(request: Request) {
   );
 
   return NextResponse.json(result, { status: 200 });
-}
-
-/** Structured, recoverable log of a lead that could not be delivered to Odoo. */
-function logBackupLead(projectId: string, lead: OdooLeadInput): void {
-  const notify = process.env.RFQ_NOTIFICATION_EMAIL;
-  // Strip file bytes from the backup log — keep filenames only.
-  const { attachments, ...rest } = lead;
-  const safe = {
-    ...rest,
-    attachmentNames: attachments?.map((a) => a.filename) ?? [],
-  };
-  console.warn(
-    `[RFQ][BACKUP] ${projectId} · notify=${notify ?? 'unset'} · ${JSON.stringify(safe)}`,
-  );
 }

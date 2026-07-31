@@ -1,12 +1,11 @@
 /**
  * Odoo CRM integration — JSON-RPC.
  *
- * Mirrors the proven SIPANELCO implementation (lib/rfq/odoo.ts): authenticate via
- * `common.login`, then create a `crm.lead` via `object.execute_kw`. Targets the same
- * Odoo instance/DB so AvizSazeh leads land in the same CRM, tagged as AvizSazeh.
+ * Authenticates via `common.login`, then creates a `crm.lead` via
+ * `object.execute_kw` in the explicitly configured Odoo database.
  *
  * No hardcoded secrets — all connection values come from the environment:
- *   ODOO_URL, ODOO_DB, ODOO_USERNAME, ODOO_PASSWORD
+ *   ODOO_URL, ODOO_DB, ODOO_USERNAME, ODOO_PASSWORD or ODOO_API_KEY
  *   ODOO_CRM_TEAM_ID, ODOO_CRM_SOURCE_ID (optional)
  */
 
@@ -59,13 +58,18 @@ export type OdooLeadInput = {
   attachments?: OdooAttachment[];
 };
 
-export type OdooLeadResult = { configured: boolean; leadId?: number };
+export type OdooLeadResult = {
+  configured: boolean;
+  leadId?: number;
+  attachmentFailures?: number;
+  salespersonAssigned?: boolean;
+};
 
 type OdooConfig = {
   url: string;
   db: string;
   username: string;
-  password: string;
+  credential: string;
   teamId?: number;
   sourceId?: number;
   /** Salesperson to own AvizSazeh-website leads — numeric res.users id. */
@@ -91,15 +95,15 @@ function getOdooConfig(): OdooConfig | null {
   const url = process.env.ODOO_URL;
   const db = process.env.ODOO_DB;
   const username = process.env.ODOO_USERNAME;
-  const password = process.env.ODOO_PASSWORD;
+  const credential = process.env.ODOO_API_KEY || process.env.ODOO_PASSWORD;
 
-  if (!url || !db || !username || !password) return null;
+  if (!url || !db || !username || !credential) return null;
 
   return {
     url: url.replace(/\/$/, ''),
     db,
     username,
-    password,
+    credential,
     teamId: numberFromEnv(process.env.ODOO_CRM_TEAM_ID),
     sourceId: numberFromEnv(process.env.ODOO_CRM_SOURCE_ID),
     salespersonId: numberFromEnv(process.env.ODOO_SALESPERSON_ID),
@@ -126,7 +130,7 @@ async function resolveSalespersonId(
     const ids = await odooJsonRpc<number[]>(config, 'object', 'execute_kw', [
       config.db,
       uid,
-      config.password,
+      config.credential,
       'res.users',
       'search',
       [[['login', '=', config.salespersonLogin]]],
@@ -284,6 +288,28 @@ function customFieldValues(input: OdooLeadInput): Record<string, unknown> {
   return v;
 }
 
+async function supportedLeadCustomFields(
+  config: OdooConfig,
+  uid: number,
+  fields: string[],
+): Promise<Set<string>> {
+  if (!fields.length) return new Set();
+  try {
+    const definitions = await odooJsonRpc<Record<string, { type?: string }>>(config, 'object', 'execute_kw', [
+      config.db,
+      uid,
+      config.credential,
+      'crm.lead',
+      'fields_get',
+      [fields],
+      { attributes: ['type'] },
+    ]);
+    return new Set(Object.keys(definitions ?? {}));
+  } catch {
+    return new Set();
+  }
+}
+
 /** Create a crm.lead in Odoo for an AvizSazeh RFQ. Throws ODOO_* on transport/auth failure. */
 export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResult> {
   const config = getOdooConfig();
@@ -292,7 +318,7 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
   const uid = await odooJsonRpc<number>(config, 'common', 'login', [
     config.db,
     config.username,
-    config.password,
+    config.credential,
   ]);
   if (!uid) throw new Error('ODOO_AUTH_FAILED');
 
@@ -307,12 +333,18 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
   if (input.company) leadValues.partner_name = input.company;
   if (config.teamId) leadValues.team_id = config.teamId;
   if (config.sourceId) leadValues.source_id = config.sourceId;
-  if (config.useCustomFields) Object.assign(leadValues, customFieldValues(input));
+  if (config.useCustomFields) {
+    const customValues = customFieldValues(input);
+    const supported = await supportedLeadCustomFields(config, uid, Object.keys(customValues));
+    for (const [key, value] of Object.entries(customValues)) {
+      if (supported.has(key)) leadValues[key] = value;
+    }
+  }
 
   const leadId = await odooJsonRpc<number>(config, 'object', 'execute_kw', [
     config.db,
     uid,
-    config.password,
+    config.credential,
     'crm.lead',
     'create',
     [leadValues],
@@ -320,13 +352,14 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
 
   // ── Attach uploaded files (best-effort) ──────────────────────────────────
   // Failures here must not discard the already-created lead.
+  let attachmentFailures = 0;
   if (input.attachments?.length) {
     for (const file of input.attachments) {
       try {
         await odooJsonRpc<number>(config, 'object', 'execute_kw', [
           config.db,
           uid,
-          config.password,
+          config.credential,
           'ir.attachment',
           'create',
           [
@@ -340,6 +373,7 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
           ],
         ]);
       } catch {
+        attachmentFailures += 1;
         // attachment skipped; lead is still delivered
       }
     }
@@ -353,20 +387,22 @@ export async function sendLeadToOdoo(input: OdooLeadInput): Promise<OdooLeadResu
   // be handled Odoo-side (elevated rights on the integration user, or a team
   // automation rule). See ODOO_SALESPERSON_LOGIN in .env.example.
   const salespersonId = await resolveSalespersonId(config, uid);
+  let salespersonAssigned = false;
   if (salespersonId) {
     try {
       await odooJsonRpc<boolean>(config, 'object', 'execute_kw', [
         config.db,
         uid,
-        config.password,
+        config.credential,
         'crm.lead',
         'write',
         [[leadId], { user_id: salespersonId }],
       ]);
+      salespersonAssigned = true;
     } catch {
       // Lead already created & delivered; salesperson assignment deferred.
     }
   }
 
-  return { configured: true, leadId };
+  return { configured: true, leadId, attachmentFailures, salespersonAssigned };
 }

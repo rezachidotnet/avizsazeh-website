@@ -79,6 +79,7 @@ export function RfqEngine({
   const [serverError, setServerError] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
   const startedRef = useRef(false);
+  const submittingRef = useRef(false);
 
   // Preselect the ceiling system from the URL (e.g. /rfq?system=linear-ceiling).
   useEffect(() => {
@@ -145,6 +146,10 @@ export function RfqEngine({
     }
     setErrors(e);
     if (Object.keys(e).length > 0) {
+      trackEvent('rfq_validation_failed', {
+        step_number: current + 1,
+        fields: Object.keys(e).join(','),
+      });
       trackEvent('rfq_field_error', {
         step_number: current + 1,
         fields: Object.keys(e).join(','),
@@ -170,8 +175,10 @@ export function RfqEngine({
   }
 
   async function handleSubmit() {
+    if (submittingRef.current) return;
     markStarted();
     if (!validateStep(0) || !validateStep(1) || !validateStep(2) || !validateStep(3)) return;
+    submittingRef.current = true;
     setSubmitting(true);
     setServerError(false);
     const submissionEventId = eventId();
@@ -193,22 +200,39 @@ export function RfqEngine({
     for (const file of files) form.append('files', file);
 
     try {
-      const res = await fetch('/api/rfq/submit', { method: 'POST', body: form });
-      if (!res.ok) throw new Error('submit failed');
-      const data = (await res.json()) as RfqResult;
-      setResult(data);
+      const res = await fetch('/api/rfq/submit', {
+        method: 'POST',
+        body: form,
+        headers: { 'x-rfq-request-id': submissionEventId },
+      });
+      const data = (await res.json()) as Partial<Omit<RfqResult, 'ok'>> & {
+        ok?: boolean;
+        requestId?: string;
+        odoo?: { delivered: boolean };
+      };
+      if (!res.ok || data.ok === false || data.odoo?.delivered === false) {
+        trackEvent('odoo_sync_failed', {
+          event_id: submissionEventId,
+          request_id: data.requestId,
+        });
+        throw new Error('submit failed');
+      }
+      if (!data.projectId || !data.assignedSystem || !data.complexity) throw new Error('submit failed');
+      const resultData = data as RfqResult;
+      setResult(resultData);
       trackEvent('rfq_submit', {
         ...eventParams(),
         event_id: submissionEventId,
         form_name: 'project_rfq',
         submission_status: 'success',
         component_name: 'rfq_form',
-        project_id: data.projectId,
+        project_id: resultData.projectId,
         lead_source: 'rfq',
       });
-      if (data.lead) {
-        trackEvent(data.lead.delivered ? 'odoo_sync_success' : 'odoo_sync_failed', {
-          project_id: data.projectId,
+      if (resultData.lead) {
+        trackEvent(resultData.lead.delivered ? 'odoo_sync_success' : 'odoo_sync_failed', {
+          project_id: resultData.projectId,
+          request_id: resultData.requestId,
         });
       }
     } catch {
@@ -221,6 +245,7 @@ export function RfqEngine({
         component_name: 'rfq_form',
       });
     } finally {
+      submittingRef.current = false;
       setSubmitting(false);
     }
   }

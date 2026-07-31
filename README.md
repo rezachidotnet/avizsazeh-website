@@ -69,7 +69,7 @@ Per-page metadata, canonical + `hreflang` (fa/en/x-default), JSON-LD
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000
+npm run dev          # http://localhost:3100
 npm run build        # production build
 npm run typecheck    # tsc --noEmit
 npm run lint
@@ -80,15 +80,20 @@ npm run lint
 Copy `.env.example` → `.env.local`:
 
 ```
-NEXT_PUBLIC_SITE_URL=https://avizsazeh.ir   # canonical origin (metadata, sitemap, OG)
-RFQ_NOTIFY_EMAIL=info@avizsazeh.ir          # optional; RFQ runs log-only if unset
+NEXT_PUBLIC_SITE_URL=https://www.avizsazeh.ir
+ODOO_URL=https://odoo.avizsazeh.ir
+ODOO_DB=avizsazeh
+ODOO_USERNAME=__set_in_env_only__
+ODOO_PASSWORD=__set_in_env_only__ # or ODOO_API_KEY
+RFQ_NOTIFICATION_EMAIL=info@avizsazeh.ir # optional fallback reference
 ```
 
 ## Deployment (Vercel)
 
 1. Import the repo into Vercel (framework auto-detected as Next.js).
-2. Set `NEXT_PUBLIC_SITE_URL=https://avizsazeh.ir` (and optional `RFQ_NOTIFY_EMAIL`).
+2. Set `NEXT_PUBLIC_SITE_URL`, the required Odoo CRM variables, and optional `RFQ_NOTIFICATION_EMAIL`.
 3. Add domain `avizsazeh.ir`. Build: `next build` (default). Region: `fra1` (`vercel.json`).
 
-The RFQ engine (`/api/rfq/submit`) currently classifies + acknowledges submissions in
-log-only mode; wire an email/CRM transport where marked in the route to enable delivery.
+The RFQ engine (`/api/rfq/submit`) classifies submissions and creates an Odoo `crm.lead`.
+For real user submissions, missing Odoo configuration or failed CRM delivery returns a
+non-2xx response so the UI cannot show a false CRM registration success.

@@ -40,15 +40,25 @@ export type RfqInput = {
   utmCampaign?: string;
 };
 
+export type RfqOdooStatus = {
+  delivered: boolean;
+  leadId?: number;
+  attachmentFailures?: number;
+  salespersonAssigned?: boolean;
+};
+
 export type RfqResult = {
+  ok: true;
+  requestId: string;
   projectId: string;
   status: 'received';
   assignedSystem: string; // slug
   complexity: ComplexityLevel;
   engineeringScore: number; // 0–100
   nextStep: 'Engineering Review';
-  /** CRM delivery status (Odoo). Absent when no transport is configured. */
-  lead?: { delivered: boolean; leadId?: number; error?: string };
+  /** CRM delivery status (Odoo). Successful RFQs include a delivered lead. */
+  lead?: RfqOdooStatus;
+  odoo?: RfqOdooStatus;
 };
 
 const KEYWORD_MAP: { match: RegExp; slug: string }[] = [
