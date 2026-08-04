@@ -23,6 +23,15 @@ test('Odoo credential supports API key fallback without exposing credentials', a
   assert.doesNotMatch(client, /console\.(log|info|warn|error)[^\n]*(password|credential|api[_-]?key)/i);
 });
 
+test('optional Odoo origin-IP transport preserves HTTPS identity', async () => {
+  const client = await source('src/lib/odoo/client.ts');
+  assert.match(client, /process\.env\.ODOO_ORIGIN_IP/);
+  assert.match(client, /servername:\s*url\.hostname/);
+  assert.match(client, /host:\s*url\.host/);
+  assert.match(client, /url\.protocol !== 'https:'/);
+  assert.doesNotMatch(client, /rejectUnauthorized:\s*false|NODE_TLS_REJECT_UNAUTHORIZED/);
+});
+
 test('RFQ API fails closed when Odoo configuration or delivery fails', async () => {
   const route = await source('src/app/api/rfq/submit/route.ts');
   assert.match(route, /if \(!isOdooConfigured\(\)\)/);

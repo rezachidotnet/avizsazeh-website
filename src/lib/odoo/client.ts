@@ -1,3 +1,5 @@
+import { request as httpsRequest } from 'node:https';
+
 /**
  * Odoo CRM integration — JSON-RPC.
  *
@@ -6,6 +8,7 @@
  *
  * No hardcoded secrets — all connection values come from the environment:
  *   ODOO_URL, ODOO_DB, ODOO_USERNAME, ODOO_PASSWORD or ODOO_API_KEY
+ *   ODOO_ORIGIN_IP (optional Cloudflare-bypass origin IP)
  *   ODOO_CRM_TEAM_ID, ODOO_CRM_SOURCE_ID (optional)
  */
 
@@ -70,6 +73,7 @@ type OdooConfig = {
   db: string;
   username: string;
   credential: string;
+  originIp?: string;
   teamId?: number;
   sourceId?: number;
   /** Salesperson to own AvizSazeh-website leads — numeric res.users id. */
@@ -104,6 +108,7 @@ function getOdooConfig(): OdooConfig | null {
     db,
     username,
     credential,
+    originIp: process.env.ODOO_ORIGIN_IP?.trim() || undefined,
     teamId: numberFromEnv(process.env.ODOO_CRM_TEAM_ID),
     sourceId: numberFromEnv(process.env.ODOO_CRM_SOURCE_ID),
     salespersonId: numberFromEnv(process.env.ODOO_SALESPERSON_ID),
@@ -153,20 +158,30 @@ async function odooJsonRpc<T>(
   method: string,
   args: unknown[],
 ): Promise<T> {
-  const response = await fetch(`${config.url}/jsonrpc`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({
-      jsonrpc: '2.0',
-      method: 'call',
-      params: { service, method, args },
-      id: Date.now(),
-    }),
-    signal: AbortSignal.timeout(12_000),
+  const endpoint = `${config.url}/jsonrpc`;
+  const body = JSON.stringify({
+    jsonrpc: '2.0',
+    method: 'call',
+    params: { service, method, args },
+    id: Date.now(),
   });
+  const headers = {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    'user-agent': 'AvizSazeh Website RFQ/1.0',
+  };
+  const response = config.originIp
+    ? await odooJsonRpcViaOrigin(endpoint, config.originIp, headers, body)
+    : await fetch(endpoint, {
+        method: 'POST',
+        headers,
+        body,
+        signal: AbortSignal.timeout(12_000),
+      });
 
   if (!response.ok) {
-    throw new Error('ODOO_HTTP_FAILED');
+    const { host, pathname } = new URL(endpoint);
+    throw new Error(`ODOO_HTTP_FAILED status=${response.status} host=${host} path=${pathname}`);
   }
 
   const payload = (await response.json()) as OdooJsonRpcResponse<T>;
@@ -175,6 +190,54 @@ async function odooJsonRpc<T>(
   }
 
   return payload.result as T;
+}
+
+async function odooJsonRpcViaOrigin(
+  endpoint: string,
+  originIp: string,
+  headers: Record<string, string>,
+  body: string,
+): Promise<Response> {
+  const url = new URL(endpoint);
+  if (url.protocol !== 'https:') {
+    throw new Error('ODOO_ORIGIN_IP_REQUIRES_HTTPS');
+  }
+
+  const raw = await new Promise<{ status: number; body: string }>((resolve, reject) => {
+    const req = httpsRequest(
+      {
+        hostname: originIp,
+        servername: url.hostname,
+        port: url.port ? Number(url.port) : 443,
+        path: `${url.pathname}${url.search}`,
+        method: 'POST',
+        timeout: 12_000,
+        headers: {
+          ...headers,
+          host: url.host,
+          'content-length': Buffer.byteLength(body),
+        },
+      },
+      (res) => {
+        const chunks: Buffer[] = [];
+        res.on('data', (chunk) => chunks.push(Buffer.from(chunk)));
+        res.on('end', () => {
+          resolve({
+            status: res.statusCode ?? 0,
+            body: Buffer.concat(chunks).toString('utf8'),
+          });
+        });
+      },
+    );
+    req.on('timeout', () => req.destroy(new Error('ODOO_HTTP_TIMEOUT')));
+    req.on('error', reject);
+    req.end(body);
+  });
+
+  return new Response(raw.body, {
+    status: raw.status,
+    headers: { 'content-type': 'application/json' },
+  });
 }
 
 /** Human-readable lead title: "[Country] [City] — [Building Use] — [System] — [Area m²]". */
