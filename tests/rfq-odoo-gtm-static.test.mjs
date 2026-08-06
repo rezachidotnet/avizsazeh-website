@@ -52,6 +52,17 @@ test('RFQ response contract distinguishes success from Odoo failure', async () =
   assert.match(route, /result\.odoo = result\.lead/);
 });
 
+test('RFQ honeypot response remains quiet and distinguishable from Odoo delivery', async () => {
+  const route = await source('src/app/api/rfq/submit/route.ts');
+  const honeypotBranch = route.slice(
+    route.indexOf('if (honeypotTripped)'),
+    route.indexOf('if (!isOdooConfigured())'),
+  );
+  assert.match(honeypotBranch, /return NextResponse\.json\(result,\s*\{\s*status:\s*200\s*\}\)/);
+  assert.doesNotMatch(honeypotBranch, /sendLeadToOdoo|result\.odoo|result\.lead|delivered:\s*true/);
+  assert.ok(route.indexOf('if (honeypotTripped)') < route.indexOf('sendLeadToOdoo(leadInput)'));
+});
+
 test('optional Odoo custom fields are discovered before crm.lead.create', async () => {
   const client = await source('src/lib/odoo/client.ts');
   assert.match(client, /supportedLeadCustomFields/);
@@ -74,7 +85,27 @@ test('RFQ client prevents duplicate submit and does not track success on failed 
   assert.match(engine, /if \(submittingRef\.current\) return/);
   assert.match(engine, /headers:\s*\{\s*'x-rfq-request-id': submissionEventId\s*\}/);
   assert.match(engine, /data\.odoo\?\.delivered === false/);
-  assert.ok(engine.indexOf("trackEvent('rfq_submit'") > engine.indexOf('if (!res.ok'));
+  assert.match(engine, /function hasConfirmedOdooDelivery\([\s\S]*return data\.odoo\?\.delivered === true;/);
+  assert.ok(engine.indexOf("trackEvent('rfq_submit'") > engine.indexOf('if (hasConfirmedOdooDelivery(data))'));
+});
+
+test('RFQ client conversion guard requires explicit Odoo delivery', async () => {
+  const engine = await source('src/components/rfq/RfqEngine.tsx');
+  const hasConfirmedOdooDelivery = (data) => data.odoo?.delivered === true;
+  const cases = [
+    [{ odoo: { delivered: true } }, true, 'normal successful Odoo delivery'],
+    [{ ok: false, odoo: { delivered: false } }, false, 'Odoo delivery failure'],
+    [{ ok: true, projectId: 'AVZ-2026-0001' }, false, 'honeypot response without Odoo status'],
+    [{ ok: true, odoo: undefined }, false, 'missing Odoo success field'],
+    [{ ok: true, odoo: { delivered: false } }, false, 'explicit delivered:false'],
+  ];
+
+  for (const [response, expected, label] of cases) {
+    assert.equal(hasConfirmedOdooDelivery(response), expected, label);
+  }
+
+  assert.match(engine, /if \(hasConfirmedOdooDelivery\(data\)\) \{[\s\S]*trackEvent\('rfq_submit'/);
+  assert.doesNotMatch(engine, /data\.odoo\?\.delivered !== false/);
 });
 
 test('GTM is configured once in the shared locale layout and remains consent gated', async () => {

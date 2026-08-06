@@ -16,6 +16,11 @@ import {
 import type { RfqResult } from '@/lib/rfq';
 
 type SystemOption = { slug: string; name: string };
+type RfqSubmitResponse = Partial<Omit<RfqResult, 'ok'>> & {
+  ok?: boolean;
+  requestId?: string;
+  odoo?: { delivered?: boolean };
+};
 
 // Canonical (CRM-stable) option VALUES; labels come from translations by index.
 const BUYER_ROLES = [
@@ -58,6 +63,10 @@ function areaRange(area?: number): string {
   if (area < 2000) return '500-2000';
   if (area < 8000) return '2000-8000';
   return '8000+';
+}
+
+function hasConfirmedOdooDelivery(data: RfqSubmitResponse): boolean {
+  return data.odoo?.delivered === true;
 }
 
 export function RfqEngine({
@@ -205,11 +214,7 @@ export function RfqEngine({
         body: form,
         headers: { 'x-rfq-request-id': submissionEventId },
       });
-      const data = (await res.json()) as Partial<Omit<RfqResult, 'ok'>> & {
-        ok?: boolean;
-        requestId?: string;
-        odoo?: { delivered: boolean };
-      };
+      const data = (await res.json()) as RfqSubmitResponse;
       if (!res.ok || data.ok === false || data.odoo?.delivered === false) {
         trackEvent('odoo_sync_failed', {
           event_id: submissionEventId,
@@ -220,17 +225,17 @@ export function RfqEngine({
       if (!data.projectId || !data.assignedSystem || !data.complexity) throw new Error('submit failed');
       const resultData = data as RfqResult;
       setResult(resultData);
-      trackEvent('rfq_submit', {
-        ...eventParams(),
-        event_id: submissionEventId,
-        form_name: 'project_rfq',
-        submission_status: 'success',
-        component_name: 'rfq_form',
-        project_id: resultData.projectId,
-        lead_source: 'rfq',
-      });
-      if (resultData.lead) {
-        trackEvent(resultData.lead.delivered ? 'odoo_sync_success' : 'odoo_sync_failed', {
+      if (hasConfirmedOdooDelivery(data)) {
+        trackEvent('rfq_submit', {
+          ...eventParams(),
+          event_id: submissionEventId,
+          form_name: 'project_rfq',
+          submission_status: 'success',
+          component_name: 'rfq_form',
+          project_id: resultData.projectId,
+          lead_source: 'rfq',
+        });
+        trackEvent('odoo_sync_success', {
           project_id: resultData.projectId,
           request_id: resultData.requestId,
         });
