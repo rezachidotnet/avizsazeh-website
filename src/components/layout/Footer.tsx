@@ -2,6 +2,7 @@ import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Logo } from '@/components/brand/Logo';
 import { systems } from '@/lib/content/systems';
+import { TrackedMailto } from '@/components/analytics/TrackedMailto';
 import { TrackedTel } from '@/components/analytics/TrackedTel';
 import { ConsentSettingsButton } from '@/components/consent/ConsentSettingsButton';
 import { company, localized, SITE_URL } from '@/lib/site';
@@ -172,15 +173,16 @@ export async function Footer() {
                   </TrackedTel>
                 </li>
                 <li>
-                  <a
-                    href={`mailto:${company.email}`}
+                  <TrackedMailto
+                    email={company.email}
+                    location="footer_contact"
                     className="flex gap-3 transition-colors hover:text-white"
                   >
                     <svg {...iconProps}>
                       <path d="M3 6h18v12H3zM3 7l9 6 9-6" strokeLinejoin="round" />
                     </svg>
                     <span>{company.email}</span>
-                  </a>
+                  </TrackedMailto>
                 </li>
                 <li>
                   <a
@@ -222,15 +224,16 @@ export async function Footer() {
                 <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" />
               </svg>
             </a>
-            <a
-              href={`mailto:${company.email}`}
+            <TrackedMailto
+              email={company.email}
+              location="footer_social"
               aria-label="Email"
               className="text-ink-400 transition-colors hover:text-gold"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.6} aria-hidden="true">
                 <path d="M3 6h18v12H3zM3 7l9 6 9-6" strokeLinejoin="round" />
               </svg>
-            </a>
+            </TrackedMailto>
             <TrackedTel
               phone={company.mobile}
               location="footer_social"

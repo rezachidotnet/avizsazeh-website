@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/Button';
 import { JsonLd } from '@/components/shared/JsonLd';
 import { SystemIcon, type IconKey } from '@/components/icons/SystemIcon';
 import { ContactRouting } from '@/components/contact/ContactRouting';
+import { TrackedMailto } from '@/components/analytics/TrackedMailto';
 import { TrackedTel } from '@/components/analytics/TrackedTel';
 import { company, localized } from '@/lib/site';
 
@@ -39,10 +40,10 @@ export default async function ContactPage({
 
   const mapsUrl = `https://www.google.com/maps?q=${company.geo.lat},${company.geo.lng}`;
 
-  const rows: { icon: IconKey; label: string; value: string; href?: string; mono?: boolean; tel?: string; track?: string }[] = [
+  const rows: { icon: IconKey; label: string; value: string; href?: string; mono?: boolean; tel?: string; email?: string; track?: string }[] = [
     { icon: 'control', label: t('phone'), value: company.phoneConsultDisplay, href: `tel:${company.phoneConsult}`, mono: true, tel: company.phoneConsult, track: 'contact_page_phone' },
     { icon: 'team', label: t('mobile'), value: company.mobileDisplay, href: `tel:${company.mobile}`, mono: true, tel: company.mobile, track: 'contact_page_mobile' },
-    { icon: 'office', label: t('email'), value: company.email, href: `mailto:${company.email}` },
+    { icon: 'office', label: t('email'), value: company.email, href: `mailto:${company.email}`, email: company.email, track: 'contact_page_email' },
     { icon: 'system', label: t('instagram'), value: `@${company.instagram}`, href: company.instagramUrl },
     { icon: 'architecture', label: t('address'), value: localized(company.address, locale) },
     { icon: 'quality', label: t('hours'), value: localized(company.hours, locale) },
@@ -90,6 +91,14 @@ export default async function ContactPage({
                       >
                         {content}
                       </TrackedTel>
+                    ) : row.email && row.track ? (
+                      <TrackedMailto
+                        email={row.email}
+                        location={row.track}
+                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-white/[0.03]"
+                      >
+                        {content}
+                      </TrackedMailto>
                     ) : row.href ? (
                       <a
                         href={row.href}

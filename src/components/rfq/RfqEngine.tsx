@@ -329,6 +329,9 @@ export function RfqEngine({
             variant="ghost"
             href={company.whatsappUrl}
             external
+            onClick={() =>
+              trackContactClick('whatsapp', { cta_location: 'rfq_success_secondary' })
+            }
           >
             {t('successWhatsapp')}
           </Button>
