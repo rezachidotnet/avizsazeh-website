@@ -187,7 +187,12 @@ export default async function ApplicationPage({
 
       {/* FAQ */}
       <Section>
-        <SystemFAQ locale={locale} title={t('faqTitle')} items={app.faq} />
+        <SystemFAQ
+          locale={locale}
+          title={t('faqTitle')}
+          items={app.faq}
+          category={app.slug}
+        />
       </Section>
 
       {/* conversion */}

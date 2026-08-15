@@ -197,7 +197,12 @@ export default async function MetalSuspendedCeilingHub({
 
       {/* FAQ */}
       <Section>
-        <SystemFAQ locale={locale} title={localized(hub.faqTitle, locale)} items={hub.faq} />
+        <SystemFAQ
+          locale={locale}
+          title={localized(hub.faqTitle, locale)}
+          items={hub.faq}
+          category="metal-suspended-ceiling"
+        />
       </Section>
 
       {/* conversion */}

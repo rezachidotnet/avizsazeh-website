@@ -13,7 +13,7 @@ export type ApplicationFit = { type: LocalizedString; why: LocalizedString };
 export type SystemSubsection = { title: LocalizedString; body: LocalizedString };
 
 /** A single FAQ entry. */
-export type Faq = { q: LocalizedString; a: LocalizedString };
+export type Faq = { id: string; q: LocalizedString; a: LocalizedString };
 
 export type CeilingSystem = {
   slug: string;
@@ -241,18 +241,22 @@ export const systems: CeilingSystem[] = [
     },
     faq: [
       {
+        id: 'linear-ceiling-suitable-spaces',
         q: { fa: 'سقف خطی برای چه فضاهایی مناسب است؟', en: 'What spaces is a linear ceiling suited to?' },
         a: { fa: 'سقف خطی برای فضاهای کشیده و بزرگ‌مقیاس مانند فرودگاه‌ها، راهروها، مراکز تجاری و فضاهای صنعتی کنترل‌شده مناسب است؛ هرجا که ریتم خطی جهت‌دار، یکپارچگی با روشنایی و دسترسی دوره‌ای به پلنوم اهمیت داشته باشد.', en: 'It suits elongated, large-scale spaces such as airports, corridors, commercial centres and controlled industrial areas — wherever directional linear rhythm, lighting integration and periodic plenum access matter.' },
       },
       {
+        id: 'linear-ceiling-plenum-access',
         q: { fa: 'آیا سقف خطی امکان دسترسی به تأسیسات پشت سقف را دارد؟', en: 'Does a linear ceiling allow access to services behind it?' },
         a: { fa: 'بله. فاصله بین نوارها و نواحی تعریف‌شده، دسترسی به فضای پلنوم را برای روشنایی، تهویه و سیستم‌های اعلام و اطفای حریق فراهم می‌کند. جزئیات دسترسی در نقشه اجرایی تعیین می‌شود.', en: 'Yes. The gaps between strips and defined zones provide plenum access for lighting, HVAC and fire detection/suppression. Access detailing is set in the shop drawings.' },
       },
       {
+        id: 'linear-ceiling-diagonal-radial-layouts',
         q: { fa: 'آیا سقف خطی قابلیت اجرای مورب یا شعاعی دارد؟', en: 'Can a linear ceiling be run diagonally or radially?' },
         a: { fa: 'بله. علاوه بر الگوی خطی، اجرای مورب، شعاعی و منحنی با بررسی مهندسی امکان‌پذیر است؛ هندسه نهایی به شعاع، چیدمان کریر و طول ماژول وابسته است.', en: 'Yes. Besides the linear pattern, diagonal, radial and curved layouts are possible subject to engineering review; the final geometry depends on radius, carrier layout and module length.' },
       },
       {
+        id: 'linear-ceiling-linear-lighting',
         q: { fa: 'آیا می‌توان سقف خطی را با نور خطی ترکیب کرد؟', en: 'Can a linear ceiling be combined with linear lighting?' },
         a: { fa: 'بله. این سیستم برای یکپارچگی با نور خطی و نور مخفی طراحی می‌شود و هماهنگی جانمایی روشنایی در نقشه اجرایی انجام می‌گیرد.', en: 'Yes. The system is designed to integrate with linear and concealed lighting, with luminaire placement coordinated in the shop drawings.' },
       },
@@ -424,18 +428,22 @@ export const systems: CeilingSystem[] = [
     },
     faq: [
       {
+        id: 'open-cell-vs-closed-ceiling',
         q: { fa: 'سقف گریلیوم چه تفاوتی با سقف بسته دارد؟', en: 'How does a grilliom ceiling differ from a closed ceiling?' },
         a: { fa: 'گریلیوم سطحی شبکه‌ای و باز است که نور و هوا را عبور می‌دهد و دید به پلنوم را حفظ می‌کند؛ در حالی‌که سقف بسته سطحی پیوسته و پوشیده می‌سازد. نتیجه، عمق بصری بیشتر و دسترسی فوری به تأسیسات است.', en: 'A grilliom is an open grid that passes light and air and keeps the plenum visible, whereas a closed ceiling forms a continuous covered surface. The result is greater visual depth and immediate access to services.' },
       },
       {
+        id: 'open-cell-mep-services',
         q: { fa: 'آیا سقف سلول‌باز برای تأسیسات MEP مناسب است؟', en: 'Is an open cell ceiling suitable for MEP services?' },
         a: { fa: 'بله. سطح باز شبکه امکان هماهنگی و دسترسی سریع به روشنایی، HVAC و سیستم‌های اعلام و اطفای حریق را فراهم می‌کند و یکی از مناسب‌ترین گزینه‌ها برای پلنوم فعال است.', en: 'Yes. The open grid allows coordination with, and fast access to, lighting, HVAC and fire detection/suppression, making it one of the best options for an active plenum.' },
       },
       {
+        id: 'open-cell-cell-size-selection',
         q: { fa: 'اندازه سلول‌ها چگونه انتخاب می‌شود؟', en: 'How is the cell size selected?' },
         a: { fa: 'اندازه سلول و ارتفاع پروفیل U براساس عمق بصری مدنظر، درصد سطح باز، شرایط روشنایی و الزامات تأسیساتی تعیین و توسط واحد مهندسی آویزسازه تأیید می‌شود.', en: 'Cell size and U-profile height are set by the desired visual depth, open-area ratio, lighting conditions and service requirements, and are confirmed by the AvizSazeh engineering team.' },
       },
       {
+        id: 'open-cell-not-recommended-conditions',
         q: { fa: 'چه زمانی سقف گریلیوم پیشنهاد نمی‌شود؟', en: 'When is a grilliom ceiling not recommended?' },
         a: { fa: 'زمانی که پلنوم باید کاملاً پنهان بماند، فضا بسیار پرگردوغبار و بدون برنامه نگهداری باشد، یا فضای استریل به سطح بسته و قابل شست‌وشوی کامل نیاز داشته باشد.', en: 'When the plenum must stay fully concealed, the space is very dusty without a maintenance plan, or a sterile area needs a fully closed, washable surface.' },
       },
@@ -615,18 +623,22 @@ export const systems: CeilingSystem[] = [
     },
     faq: [
       {
+        id: 'metal-tile-plain-vs-acoustic',
         q: { fa: 'تفاوت تایل فلزی ساده و آکوستیک چیست؟', en: 'What is the difference between plain and acoustic metal tiles?' },
         a: { fa: 'تایل ساده سطحی بدون پانچ است و عملکرد آکوستیک ویژه‌ای ندارد؛ تایل آکوستیک با پانچ و لایه پشم‌سنگ یا جاذب صوتی، انعکاس صدا را کاهش می‌دهد. مقدار دقیق جذب (NRC) نیازمند تأیید واحد مهندسی آویزسازه است.', en: 'A plain tile has no perforation and no special acoustic performance; an acoustic tile uses perforation plus a rock-wool or absorber layer to reduce sound reflection. The exact absorption (NRC) is to be confirmed by the AvizSazeh engineering team.' },
       },
       {
+        id: 'metal-tile-hospital-suitability',
         q: { fa: 'آیا تایل فلزی برای بیمارستان مناسب است؟', en: 'Is metal tile suitable for hospitals?' },
         a: { fa: 'تایل فلزی به دلیل سطح منظم و دسترسی کنترل‌شده گزینه‌ای متداول برای فضاهای درمانی است؛ اما مناسب‌بودن برای فضای استریل به تأیید مشخصات بهداشتی، نوع پوشش و قابلیت شست‌وشوی پروژه وابسته است.', en: 'Metal tile is a common option for healthcare thanks to its ordered surface and controlled access; suitability for a sterile space, however, depends on confirmation of hygiene specs, finish type and project washability.' },
       },
       {
+        id: 'metal-tile-plenum-access',
         q: { fa: 'تایل فلزی چگونه دسترسی به پلنوم را فراهم می‌کند؟', en: 'How does metal tile provide plenum access?' },
         a: { fa: 'هر تایل به‌صورت مستقل با بازشدن یا جابه‌جایی قابل برداشتن است و دسترسی موضعی به تأسیسات پشت سقف را فراهم می‌کند، بدون آن‌که کل سطح مختل شود.', en: 'Each tile can be lifted or removed individually, giving local access to the services behind the ceiling without disturbing the whole surface.' },
       },
       {
+        id: 'metal-tile-radiant-system-coordination',
         q: { fa: 'آیا تایل فلزی با سیستم‌های تابشی قابل هماهنگی است؟', en: 'Can metal tile be coordinated with radiant systems?' },
         a: { fa: 'بله، قابلیت بررسی برای هماهنگی با سیستم‌های تابشی و CBI Europe وجود دارد؛ اما این هماهنگی به طراحی مکانیکی، عملکرد حرارتی، نوع پنل و نقشه‌های هماهنگی وابسته است و باید توسط واحد مهندسی تأیید شود.', en: 'Yes, it can be reviewed for coordination with radiant systems and CBI Europe; this coordination depends on mechanical design, thermal performance, panel type and coordination drawings and must be confirmed by the engineering team.' },
       },
@@ -815,18 +827,22 @@ export const systems: CeilingSystem[] = [
     },
     faq: [
       {
+        id: 'baffle-ceiling-use-cases',
         q: { fa: 'سقف بافل چه کاربردی دارد؟', en: 'What is a baffle ceiling used for?' },
         a: { fa: 'سقف بافل برای ایجاد عمق معماری و ریتم عمودی، کنترل آکوستیک و حفظ دسترسی به پلنوم به کار می‌رود و در مدارس، کتابخانه‌ها، لابی‌ها، هتل‌ها و فضاهای اداری و تجاری کاربرد دارد.', en: 'A baffle ceiling is used to create architectural depth and vertical rhythm, control acoustics and keep plenum access; it suits schools, libraries, lobbies, hotels and office or retail spaces.' },
       },
       {
+        id: 'baffle-ceiling-sound-control',
         q: { fa: 'آیا بافل برای کنترل صدا مناسب است؟', en: 'Is a baffle suitable for sound control?' },
         a: { fa: 'بله. بافل آکوستیک با جاذب صوتی یا پشم‌سنگ و تنظیم ارتفاع و فاصله، انعکاس صدا را کاهش می‌دهد. مقدار دقیق جذب (NRC) نیازمند تأیید واحد مهندسی آویزسازه است.', en: 'Yes. An acoustic baffle with an absorber or rock wool and tuned height and spacing reduces sound reflection. The exact absorption (NRC) is to be confirmed by the AvizSazeh engineering team.' },
       },
       {
+        id: 'baffle-ceiling-spacing-height-selection',
         q: { fa: 'فاصله و ارتفاع بافل چگونه انتخاب می‌شود؟', en: 'How are baffle spacing and height chosen?' },
         a: { fa: 'فاصله و ارتفاع بافل براساس هدف آکوستیک، عمق بصری مدنظر، شرایط روشنایی و دسترسی به پلنوم تعیین و توسط واحد مهندسی تأیید می‌شود.', en: 'Baffle spacing and height are set by the acoustic goal, desired visual depth, lighting conditions and plenum access, and are confirmed by the engineering team.' },
       },
       {
+        id: 'baffle-ceiling-curved-wavy-execution',
         q: { fa: 'آیا بافل منحنی یا موج‌دار قابل اجراست؟', en: 'Can baffles be run curved or wavy?' },
         a: { fa: 'بله، اجرای منحنی و موج‌دار امکان‌پذیر است؛ اما به شعاع انحنا، چیدمان کریر، طول ماژول و هندسه سیستم تعلیق وابسته است و نیازمند بررسی مهندسی است.', en: 'Yes, curved and wavy execution is possible; it depends on the bend radius, carrier layout, module length and suspension geometry and requires engineering review.' },
       },

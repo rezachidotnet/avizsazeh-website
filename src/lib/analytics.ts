@@ -7,6 +7,13 @@ import {
 export type AnalyticsParamValue = string | number | boolean | undefined | null;
 export type EventParams = Record<string, AnalyticsParamValue>;
 type CleanEventParams = Record<string, string | number | boolean>;
+export type FaqExpandParams = {
+  faq_id: string;
+  faq_question: string;
+  faq_category: string;
+  faq_position: number;
+  page_language: 'fa' | 'en' | 'ar';
+};
 
 const UTM_KEYS = [
   'utm_source',
@@ -120,6 +127,33 @@ export function trackPageView(params: {
   page_referrer?: string;
 }): void {
   trackEvent('page_view', params);
+}
+
+export function trackFaqExpand(params: FaqExpandParams): void {
+  if (typeof window === 'undefined') return;
+  if (!getConsentSnapshot().analyticsGranted) return;
+
+  const payload = {
+    event: 'faq_expand',
+    faq_id: params.faq_id,
+    faq_question: params.faq_question.trim(),
+    faq_category: params.faq_category,
+    faq_position: params.faq_position,
+    page_language: params.page_language,
+  };
+
+  if (DEBUG) {
+    // eslint-disable-next-line no-console
+    console.debug('[analytics]', 'faq_expand', payload);
+  }
+
+  try {
+    if (analyticsConfig.transport !== 'gtm') return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+  } catch {
+    /* never let analytics throw into the UI */
+  }
 }
 
 /** RFQ funnel step completion. */

@@ -265,7 +265,12 @@ export default async function SystemDetailPage({
 
       {/* System FAQ */}
       <Section>
-        <SystemFAQ locale={locale} title={t('faqTitle')} items={system.faq} />
+        <SystemFAQ
+          locale={locale}
+          title={t('faqTitle')}
+          items={system.faq}
+          category={system.slug}
+        />
       </Section>
 
       {/* Topic-cluster links — category hub, applications, case studies */}

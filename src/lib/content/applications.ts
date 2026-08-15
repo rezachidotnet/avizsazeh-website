@@ -122,6 +122,7 @@ export const applications: Application[] = [
     relatedProjects: ['imam-khomeini-airport'],
     faq: [
       {
+        id: 'airport-ceiling-best-system',
         q: { fa: 'مناسب‌ترین سیستم سقف کاذب برای فرودگاه چیست؟', en: 'Which ceiling system is best for an airport?' },
         a: {
           fa: 'انتخاب میان سقف خطی فلزی، گریلیوم و تایل فلزی به هندسه فضا، ارتفاع، نیاز به دسترسی به تأسیسات و بیان معماری بستگی دارد. سقف خطی برای ریتم و مسیریابی، گریلیوم برای دسترسی و عمق بصری و تایل برای نظم و نگهداری مناسب است؛ انتخاب نهایی پس از بررسی مهندسی انجام می‌شود.',
@@ -129,6 +130,7 @@ export const applications: Application[] = [
         },
       },
       {
+        id: 'airport-ceiling-installation-height',
         q: { fa: 'سقف فلزی فرودگاه تا چه ارتفاعی قابل اجراست؟', en: 'To what height can an airport metal ceiling be installed?' },
         a: {
           fa: 'آویزسازه تجربه اجرای سقف فلزی در ارتفاع‌های زیاد را دارد و نصب در ارتفاع را به‌صورت یک مسئله مهندسی با منطق تعلیق و کنترل تراز مدیریت می‌کند. ارتفاع و جزئیات اجرایی هر پروژه پس از بررسی نقشه تأیید می‌شود.',
@@ -136,6 +138,7 @@ export const applications: Application[] = [
         },
       },
       {
+        id: 'airport-ceiling-lighting-services-coordination',
         q: { fa: 'آیا سقف فرودگاه با روشنایی و تأسیسات هماهنگ می‌شود؟', en: 'Is the airport ceiling coordinated with lighting and services?' },
         a: {
           fa: 'بله. جانمایی روشنایی، تهویه، دتکتور و اسپرینکلر با ماژول و ریتم سقف در نقشه اجرایی هماهنگ می‌شود تا نتیجه نهایی منظم، متقارن و قابل نگهداری باشد.',
@@ -237,6 +240,7 @@ export const applications: Application[] = [
     relatedProjects: ['bushehr-mall'],
     faq: [
       {
+        id: 'commercial-ceiling-mall-system-selection',
         q: { fa: 'برای سقف کاذب مرکز خرید کدام سیستم مناسب است؟', en: 'Which system suits a mall ceiling?' },
         a: {
           fa: 'سقف گریلیوم برای دسترسی و عمق بصری، سقف بافل برای بیان معماری و آکوستیک، و سقف خطی فلزی برای ریتم و مسیریابی در مراکز خرید مناسب‌اند. انتخاب نهایی بر پایه مفهوم معماری، بودجه و الزامات اجرا و پس از بررسی مهندسی انجام می‌شود.',
@@ -244,6 +248,7 @@ export const applications: Application[] = [
         },
       },
       {
+        id: 'commercial-ceiling-service-access',
         q: { fa: 'آیا سقف کاذب تجاری امکان دسترسی به تأسیسات را حفظ می‌کند؟', en: 'Does a commercial metal ceiling keep services accessible?' },
         a: {
           fa: 'بله. سیستم‌هایی مانند گریلیوم و بافل دسترسی سریع به پلنوم را فراهم می‌کنند و تایل فلزی امکان بازشدن کنترل‌شده تایل را دارد؛ این یعنی نگهداری بدون اختلال در بهره‌برداری تجاری.',
@@ -251,6 +256,7 @@ export const applications: Application[] = [
         },
       },
       {
+        id: 'commercial-ceiling-design-and-execution',
         q: { fa: 'آیا آویزسازه طراحی و اجرا را با هم انجام می‌دهد؟', en: 'Does AvizSazeh handle both design and execution?' },
         a: {
           fa: 'بله. آویزسازه سقف کاذب تجاری را به‌صورت سیستم کامل — طراحی، نقشه اجرایی، تولید و نصب — تحویل می‌دهد، نه صرفاً فروش مصالح.',

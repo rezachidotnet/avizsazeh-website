@@ -114,6 +114,7 @@ export const hub = {
   faqTitle: { fa: 'پرسش‌های متداول', en: 'Frequently asked questions' },
   faq: [
     {
+      id: 'metal-suspended-ceiling-vs-plasterboard',
       q: { fa: 'سقف کاذب فلزی بهتر است یا سقف گچی؟', en: 'Is a metal suspended ceiling better than plasterboard?' },
       a: {
         fa: 'سقف فلزی در دوام، قابلیت بازرسی، تعویض‌پذیری و یکپارچگی با تأسیسات برتری دارد و برای فضاهای بزرگ‌مقیاس، پرتردد و معماری مناسب‌تر است. سقف گچی برای سطوح کاملاً بسته و یکدست ساده‌تر است. انتخاب نهایی به کاربری و الزامات پروژه بستگی دارد.',
@@ -121,6 +122,7 @@ export const hub = {
       },
     },
     {
+      id: 'metal-suspended-ceiling-system-selection',
       q: { fa: 'کدام سیستم سقف فلزی برای پروژه من مناسب است؟', en: 'Which metal ceiling system suits my project?' },
       a: {
         fa: 'سقف خطی فلزی برای ریتم و فضاهای کشیده، گریلیوم برای دسترسی و عمق بصری، تایل سقفی فلزی برای نظم و نگهداری، و سقف بافل برای آکوستیک و بیان معماری مناسب است. ماتریس مقایسه و بررسی مهندسی، انتخاب را قطعی می‌کند.',
@@ -128,6 +130,7 @@ export const hub = {
       },
     },
     {
+      id: 'metal-suspended-ceiling-design-manufacturing-installation',
       q: { fa: 'آیا آویزسازه طراحی، تولید و اجرا را با هم انجام می‌دهد؟', en: 'Does AvizSazeh handle design, manufacturing and installation together?' },
       a: {
         fa: 'بله. آویزسازه سقف کاذب فلزی را به‌صورت سیستم کامل از طراحی و نقشه اجرایی تا تولید سفارشی و نصب کنترل‌شده تحویل می‌دهد و مسئولیت نتیجه نهایی را بر عهده می‌گیرد.',
@@ -135,6 +138,7 @@ export const hub = {
       },
     },
     {
+      id: 'metal-suspended-ceiling-installation-height',
       q: { fa: 'سقف فلزی تا چه ارتفاعی قابل اجراست؟', en: 'To what height can a metal ceiling be installed?' },
       a: {
         fa: 'آویزسازه تجربه اجرای سقف فلزی در ارتفاع‌های زیاد را دارد و نصب در ارتفاع را با منطق تعلیق و کنترل تراز مدیریت می‌کند. ارتفاع دقیق هر پروژه پس از بررسی نقشه تأیید می‌شود.',
