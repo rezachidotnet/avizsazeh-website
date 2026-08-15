@@ -1,5 +1,6 @@
 import type { Locale } from '@/i18n/routing';
 import type { LocalizedList, LocalizedString } from '@/lib/site';
+export { systemSlugs } from './system-slugs';
 
 export type SpecRow = { label: LocalizedString; value: LocalizedString };
 
@@ -858,8 +859,6 @@ export const systems: CeilingSystem[] = [
     cover: '/design-system/baffle.png',
   },
 ];
-
-export const systemSlugs = systems.map((s) => s.slug);
 
 export function getSystem(slug: string): CeilingSystem | undefined {
   return systems.find((s) => s.slug === slug);

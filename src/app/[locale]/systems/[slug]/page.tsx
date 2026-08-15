@@ -23,7 +23,6 @@ import { DesignVariants } from '@/components/system/DesignVariants';
 import { SystemSelectionGuidance } from '@/components/system/SystemSelectionGuidance';
 import { VisualDocumentation } from '@/components/system/VisualDocumentation';
 import { SystemFAQ } from '@/components/system/SystemFAQ';
-import { TrackView } from '@/components/analytics/TrackView';
 import { systems, getSystem } from '@/lib/content/systems';
 import { getArabicSystemDetail, type ArabicSystemDetail } from '@/lib/content/systems-ar';
 import { applications } from '@/lib/content/applications';
@@ -121,7 +120,6 @@ export default async function SystemDetailPage({
 
   return (
     <>
-      <TrackView event="system_page_view" params={{ ceiling_system: system.slug }} />
       {/* SECTION 1 — System hero */}
       <PageHero
         eyebrow={localized(system.category, locale)}
@@ -411,7 +409,6 @@ function ArabicSystemDetailPage({
 
   return (
     <>
-      <TrackView event="system_page_view" params={{ ceiling_system: detail.slug }} />
       <PageHero
         eyebrow={detail.category}
         title={detail.title}

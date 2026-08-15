@@ -90,7 +90,7 @@ test('existing page_view and contact tracking paths remain separate from faq_exp
   const trackedTel = await source('src/components/analytics/TrackedTel.tsx');
   const trackedMailto = await source('src/components/analytics/TrackedMailto.tsx');
 
-  assert.match(analytics, /trackEvent\('page_view', params\)/);
+  assert.match(analytics, /trackEvent\('page_view', params,/);
   assert.match(analytics, /trackEvent\(`\$\{type\}_click`,/);
   assert.match(pageView, /trackPageView\(\{/);
   assert.doesNotMatch(pageView, /faq_expand|trackFaqExpand/);

@@ -6,7 +6,10 @@ import {
 
 export type AnalyticsParamValue = string | number | boolean | undefined | null;
 export type EventParams = Record<string, AnalyticsParamValue>;
-type CleanEventParams = Record<string, string | number | boolean>;
+type CleanEventParams = Record<string, string | number | boolean | undefined>;
+type TrackEventOptions = {
+  preserveUndefinedKeys?: readonly string[];
+};
 export type FaqExpandParams = {
   faq_id: string;
   faq_question: string;
@@ -35,10 +38,18 @@ declare global {
 const DEBUG = process.env.NEXT_PUBLIC_ANALYTICS_DEBUG === 'true';
 
 /** Drop null/undefined/empty values so events stay clean. */
-function clean(params: EventParams): CleanEventParams {
+function clean(
+  params: EventParams,
+  options: TrackEventOptions = {},
+): CleanEventParams {
   const out: CleanEventParams = {};
+  const preserveUndefinedKeys = new Set(options.preserveUndefinedKeys ?? []);
   for (const [key, value] of Object.entries(params)) {
-    if (value === undefined || value === null || value === '') continue;
+    if (value === undefined) {
+      if (preserveUndefinedKeys.has(key)) out[key] = undefined;
+      continue;
+    }
+    if (value === null || value === '') continue;
     out[key] = value;
   }
   return out;
@@ -94,16 +105,23 @@ export function getUtm(): Record<string, string> {
  * Core event dispatcher. Exactly one transport path runs per event so the
  * direct-GA4-to-GTM migration cannot double-count the same interaction.
  */
-export function trackEvent(name: string, params: EventParams = {}): void {
+export function trackEvent(
+  name: string,
+  params: EventParams = {},
+  options: TrackEventOptions = {},
+): void {
   if (typeof window === 'undefined') return;
   if (!getConsentSnapshot().analyticsGranted) return;
 
-  const payload = clean({
-    page_language: document.documentElement.lang || undefined,
-    page_path: window.location.pathname,
-    ...getUtm(),
-    ...params,
-  });
+  const payload = clean(
+    {
+      page_language: document.documentElement.lang || undefined,
+      page_path: window.location.pathname,
+      ...getUtm(),
+      ...params,
+    },
+    options,
+  );
 
   if (DEBUG) {
     // eslint-disable-next-line no-console
@@ -125,8 +143,11 @@ export function trackPageView(params: {
   page_title: string;
   page_location?: string;
   page_referrer?: string;
+  ceiling_system?: string;
 }): void {
-  trackEvent('page_view', params);
+  trackEvent('page_view', params, {
+    preserveUndefinedKeys: ['ceiling_system'],
+  });
 }
 
 export function trackFaqExpand(params: FaqExpandParams): void {

@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { trackPageView } from '@/lib/analytics';
+import { ceilingSystemFromPath } from '@/lib/analytics-system-context';
 import { useConsentSnapshot } from '@/components/consent/ConsentProvider';
 
 let lastSentRouteKey: string | null = null;
@@ -35,6 +36,10 @@ function currentLocation(pathname: string): string {
   return `${window.location.origin}${pathname}`;
 }
 
+function currentPagePath(pathname: string): string {
+  return `${pathname}${window.location.search}`;
+}
+
 /**
  * Sends explicit page_view events for App Router path changes. The last route key
  * is module-scoped so React Strict Mode remounts do not duplicate the same
@@ -55,15 +60,17 @@ export function PageViewTracker() {
     const key = routeKey(pathname);
     if (key === lastSentRouteKey) return;
     lastSentRouteKey = key;
+    const pagePath = currentPagePath(pathname);
     const location = currentLocation(pathname);
     const referrer = lastPageLocation ?? sanitizeLocation(document.referrer);
 
     trackPageView({
-      page_path: pathname,
+      page_path: pagePath,
       page_language: languageFromPath(pathname),
       page_title: document.title,
       page_location: location,
       page_referrer: referrer,
+      ceiling_system: ceilingSystemFromPath(pathname),
     });
     lastPageLocation = location;
   }, [consent.analyticsGranted, consent.revision, pathname]);
