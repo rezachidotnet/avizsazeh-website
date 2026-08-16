@@ -279,11 +279,12 @@ export function subscribeConsent(listener: () => void): () => void {
 
 export function toGoogleConsentState(choice: ConsentChoice | null): GoogleConsentState {
   const analyticsGranted = Boolean(choice?.analytics);
+  const marketingGranted = Boolean(choice?.marketing);
   return {
     analytics_storage: analyticsGranted ? 'granted' : 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
+    ad_storage: marketingGranted ? 'granted' : 'denied',
+    ad_user_data: marketingGranted ? 'granted' : 'denied',
+    ad_personalization: marketingGranted ? 'granted' : 'denied',
     security_storage: 'granted',
   };
 }
