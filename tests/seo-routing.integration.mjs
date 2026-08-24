@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 
 const base = process.env.BASE_URL ?? 'http://127.0.0.1:3100';
-const SITE_URL = 'https://www.avizsazeh.ir';
+const SITE_URL = 'https://www.avizsazeh.com';
 
 const metadataPaths = [
   '/about',

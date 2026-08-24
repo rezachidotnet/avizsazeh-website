@@ -80,7 +80,7 @@ npm run lint
 Copy `.env.example` → `.env.local`:
 
 ```
-NEXT_PUBLIC_SITE_URL=https://www.avizsazeh.ir
+NEXT_PUBLIC_SITE_URL=https://www.avizsazeh.com
 ODOO_URL=https://odoo.avizsazeh.ir
 ODOO_DB=avizsazeh
 ODOO_USERNAME=__set_in_env_only__
@@ -92,7 +92,7 @@ RFQ_NOTIFICATION_EMAIL=info@avizsazeh.ir # optional fallback reference
 
 1. Import the repo into Vercel (framework auto-detected as Next.js).
 2. Set `NEXT_PUBLIC_SITE_URL`, the required Odoo CRM variables, and optional `RFQ_NOTIFICATION_EMAIL`.
-3. Add domain `avizsazeh.ir`. Build: `next build` (default). Region: `fra1` (`vercel.json`).
+3. Add domain `avizsazeh.com`. Build: `next build` (default). Region: `fra1` (`vercel.json`).
 
 The RFQ engine (`/api/rfq/submit`) classifies submissions and creates an Odoo `crm.lead`.
 For real user submissions, missing Odoo configuration or failed CRM delivery returns a

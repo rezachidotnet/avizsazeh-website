@@ -4,7 +4,7 @@ import type { Locale } from '@/i18n/routing';
  * Canonical origin. Keep metadata, sitemap, robots, JSON-LD and redirects on
  * the public www host even when preview/local requests use another host.
  */
-export const SITE_URL = 'https://www.avizsazeh.ir';
+export const SITE_URL = 'https://www.avizsazeh.com';
 
 /**
  * Real company identity (source: avizsazeh.ir + brand-guid).

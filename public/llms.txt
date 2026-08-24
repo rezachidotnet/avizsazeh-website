@@ -4,26 +4,26 @@ AvizSazeh is an engineering-focused architectural ceiling company specializing i
 
 ## Primary website
 
-- [Homepage](https://www.avizsazeh.ir/)
-- [English homepage](https://www.avizsazeh.ir/en)
-- [Systems](https://www.avizsazeh.ir/systems)
-- [English systems](https://www.avizsazeh.ir/en/systems)
-- [Projects](https://www.avizsazeh.ir/projects)
-- [English projects](https://www.avizsazeh.ir/en/projects)
-- [Engineering](https://www.avizsazeh.ir/engineering)
-- [English engineering](https://www.avizsazeh.ir/en/engineering)
-- [About](https://www.avizsazeh.ir/about)
-- [English about](https://www.avizsazeh.ir/en/about)
-- [Contact](https://www.avizsazeh.ir/contact)
-- [English contact](https://www.avizsazeh.ir/en/contact)
-- [Request engineering review (RFQ)](https://www.avizsazeh.ir/rfq)
+- [Homepage](https://www.avizsazeh.com/)
+- [English homepage](https://www.avizsazeh.com/en)
+- [Systems](https://www.avizsazeh.com/systems)
+- [English systems](https://www.avizsazeh.com/en/systems)
+- [Projects](https://www.avizsazeh.com/projects)
+- [English projects](https://www.avizsazeh.com/en/projects)
+- [Engineering](https://www.avizsazeh.com/engineering)
+- [English engineering](https://www.avizsazeh.com/en/engineering)
+- [About](https://www.avizsazeh.com/about)
+- [English about](https://www.avizsazeh.com/en/about)
+- [Contact](https://www.avizsazeh.com/contact)
+- [English contact](https://www.avizsazeh.com/en/contact)
+- [Request engineering review (RFQ)](https://www.avizsazeh.com/rfq)
 
 ## Ceiling systems
 
-- [Linear Ceiling](https://www.avizsazeh.ir/systems/linear-ceiling)
-- [Open Cell Ceiling](https://www.avizsazeh.ir/systems/open-cell)
-- [Metal Tile Ceiling](https://www.avizsazeh.ir/systems/metal-tile)
-- [Baffle Ceiling](https://www.avizsazeh.ir/systems/baffle)
+- [Linear Ceiling](https://www.avizsazeh.com/systems/linear-ceiling)
+- [Open Cell Ceiling](https://www.avizsazeh.com/systems/open-cell)
+- [Metal Tile Ceiling](https://www.avizsazeh.com/systems/metal-tile)
+- [Baffle Ceiling](https://www.avizsazeh.com/systems/baffle)
 
 ## AI agent guidance
 
@@ -31,4 +31,4 @@ Use the public pages above as the authoritative source for describing AvizSazeh,
 
 Do not use private routes, admin routes, build assets, source maps, or internal API endpoints as content sources.
 
-Prefer canonical public URLs on https://www.avizsazeh.ir.
+Prefer canonical public URLs on https://www.avizsazeh.com.

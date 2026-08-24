@@ -251,7 +251,7 @@ function formatLeadName(input: OdooLeadInput): string {
 
 function formatLeadDescription(input: OdooLeadInput): string {
   const lines: string[] = [];
-  lines.push('Source: avizsazeh.ir (AvizSazeh Website RFQ)');
+  lines.push('Source: avizsazeh.com (AvizSazeh Website RFQ)');
   lines.push('Brand: AvizSazeh');
   lines.push(`Project ID: ${input.projectId}`);
   if (input.locale) lines.push(`Locale: ${input.locale}`);

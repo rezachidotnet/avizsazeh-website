@@ -16,32 +16,35 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   async redirects() {
-    // Canonical host is the www host (www.avizsazeh.ir). Permanently redirect
+    // Canonical host is the www host (www.avizsazeh.com). Permanently redirect
     // the bare apex so only one host is ever indexed — this matches the
     // canonical/sitemap/hreflang origin (SITE_URL) and the production DNS setup.
+    // The old avizsazeh.ir public domain is migrated at the Cloudflare edge
+    // (301 -> www.avizsazeh.com, path preserved) and is intentionally not
+    // handled here.
     return [
       {
         source: '/ru',
-        has: [{ type: 'host', value: 'avizsazeh.ir' }],
-        destination: 'https://www.avizsazeh.ir/en',
+        has: [{ type: 'host', value: 'avizsazeh.com' }],
+        destination: 'https://www.avizsazeh.com/en',
         permanent: true,
       },
       {
         source: '/ru/:path*',
-        has: [{ type: 'host', value: 'avizsazeh.ir' }],
-        destination: 'https://www.avizsazeh.ir/en/:path*',
+        has: [{ type: 'host', value: 'avizsazeh.com' }],
+        destination: 'https://www.avizsazeh.com/en/:path*',
         permanent: true,
       },
       {
         source: '/ru',
         has: [{ type: 'host', value: '(?<subdomain>.*)\\.vercel\\.app' }],
-        destination: 'https://www.avizsazeh.ir/en',
+        destination: 'https://www.avizsazeh.com/en',
         permanent: true,
       },
       {
         source: '/ru/:path*',
         has: [{ type: 'host', value: '(?<subdomain>.*)\\.vercel\\.app' }],
-        destination: 'https://www.avizsazeh.ir/en/:path*',
+        destination: 'https://www.avizsazeh.com/en/:path*',
         permanent: true,
       },
       {
@@ -56,20 +59,20 @@ const nextConfig = {
       },
       {
         source: '/',
-        has: [{ type: 'host', value: 'avizsazeh.ir' }],
-        destination: 'https://www.avizsazeh.ir/',
+        has: [{ type: 'host', value: 'avizsazeh.com' }],
+        destination: 'https://www.avizsazeh.com/',
         permanent: true,
       },
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'avizsazeh.ir' }],
-        destination: 'https://www.avizsazeh.ir/:path*',
+        has: [{ type: 'host', value: 'avizsazeh.com' }],
+        destination: 'https://www.avizsazeh.com/:path*',
         permanent: true,
       },
       {
         source: '/:path*',
         has: [{ type: 'host', value: '(?<subdomain>.*)\\.vercel\\.app' }],
-        destination: 'https://www.avizsazeh.ir/:path*',
+        destination: 'https://www.avizsazeh.com/:path*',
         permanent: true,
       },
     ];

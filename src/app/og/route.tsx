@@ -75,7 +75,7 @@ export async function GET(request: Request) {
             fontSize: 24,
           }}
         >
-          avizsazeh.ir
+          avizsazeh.com
         </div>
       </div>
     ),

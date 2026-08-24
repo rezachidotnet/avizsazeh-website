@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const CANONICAL_HOST = 'www.avizsazeh.ir';
+const CANONICAL_HOST = 'www.avizsazeh.com';
 
 export default function middleware(request: NextRequest) {
   const host = request.headers.get('host')?.split(':')[0].toLowerCase();
@@ -10,7 +10,7 @@ export default function middleware(request: NextRequest) {
     host !== 'localhost' &&
     host !== '127.0.0.1' &&
     host !== CANONICAL_HOST &&
-    (host === 'avizsazeh.ir' || host.endsWith('.vercel.app'));
+    (host === 'avizsazeh.com' || host.endsWith('.vercel.app'));
   const shouldCanonicalizeProtocol =
     host === CANONICAL_HOST && request.nextUrl.protocol !== 'https:';
   const isRussianPath = pathname === '/ru' || pathname.startsWith('/ru/');
