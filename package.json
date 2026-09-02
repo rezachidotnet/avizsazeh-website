@@ -14,8 +14,10 @@
   },
   "dependencies": {
     "clsx": "2.1.1",
+    "entities": "^6.0.1",
     "next": "14.2.15",
     "next-intl": "^3.26.5",
+    "node-html-parser": "^9.0.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "tailwind-merge": "2.5.4",
