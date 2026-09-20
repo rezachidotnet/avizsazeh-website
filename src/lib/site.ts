@@ -28,6 +28,7 @@ export const company = {
   founded: 1997,
   phoneConsult: '03135134',
   phoneConsultDisplay: '031-35134',
+  phoneConsultIntlDisplay: '+98 31-35134',
   mobile: '09120656528',
   mobileDisplay: '0912-065-6528',
   /** International (E.164-style) forms for WhatsApp / cross-border contact. */
@@ -88,4 +89,16 @@ export function localizedList<T extends LocalizedList>(
   locale: Locale,
 ): string[] {
   return field[locale] ?? field.fa;
+}
+
+/**
+ * Persian readers know these are domestic numbers, so the +98 country code is
+ * dropped there; Arabic/English readers get the dialable international form.
+ */
+export function localizedPhoneDisplay(
+  locale: Locale,
+  localDisplay: string,
+  intlDisplay: string,
+): string {
+  return locale === 'fa' ? localDisplay : intlDisplay;
 }

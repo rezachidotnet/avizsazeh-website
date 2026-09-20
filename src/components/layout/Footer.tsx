@@ -5,7 +5,7 @@ import { systems } from '@/lib/content/systems';
 import { TrackedMailto } from '@/components/analytics/TrackedMailto';
 import { TrackedTel } from '@/components/analytics/TrackedTel';
 import { ConsentSettingsButton } from '@/components/consent/ConsentSettingsButton';
-import { company, localized, SITE_URL } from '@/lib/site';
+import { company, localized, localizedPhoneDisplay, SITE_URL } from '@/lib/site';
 import type { Locale } from '@/i18n/routing';
 
 /** Gold directional arrow used on every footer link. */
@@ -166,7 +166,9 @@ export async function Footer() {
                     <svg {...iconProps}>
                       <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
                     </svg>
-                    <span className="nums">{company.mobileDisplay}</span>
+                    <span className="nums">
+                      {localizedPhoneDisplay(locale, company.mobileDisplay, company.mobileIntlDisplay)}
+                    </span>
                   </TrackedTel>
                 </li>
                 <li>
@@ -178,7 +180,9 @@ export async function Footer() {
                     <svg {...iconProps}>
                       <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
                     </svg>
-                    <span className="nums">{company.phoneConsultDisplay}</span>
+                    <span className="nums">
+                      {localizedPhoneDisplay(locale, company.phoneConsultDisplay, company.phoneConsultIntlDisplay)}
+                    </span>
                   </TrackedTel>
                 </li>
                 <li>
