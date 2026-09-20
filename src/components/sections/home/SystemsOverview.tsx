@@ -23,7 +23,7 @@ export function SystemsOverview() {
           <p className="mt-4 text-body-l text-ink-300">{t('description')}</p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
+        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {systems.map((system, i) => (
             <Reveal key={system.slug} delay={i * 70}>
               <SystemCard

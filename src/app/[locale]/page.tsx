@@ -6,7 +6,6 @@ import { JsonLd } from '@/components/shared/JsonLd';
 import { Hero } from '@/components/sections/home/Hero';
 import { TrustMetrics } from '@/components/sections/home/TrustMetrics';
 import { DifferentiationTable } from '@/components/sections/home/DifferentiationTable';
-import { AudienceSection } from '@/components/sections/home/AudienceSection';
 import { SystemsOverview } from '@/components/sections/home/SystemsOverview';
 import { EngineeringFlow } from '@/components/sections/home/EngineeringFlow';
 
@@ -34,7 +33,6 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
       <TrustMetrics />
       <DifferentiationTable />
       <SystemsOverview />
-      <AudienceSection />
       <EngineeringFlow />
     </>
   );
