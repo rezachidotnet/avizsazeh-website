@@ -9,10 +9,6 @@ import { DifferentiationTable } from '@/components/sections/home/Differentiation
 import { AudienceSection } from '@/components/sections/home/AudienceSection';
 import { SystemsOverview } from '@/components/sections/home/SystemsOverview';
 import { EngineeringFlow } from '@/components/sections/home/EngineeringFlow';
-import { ExecutionCapabilities } from '@/components/sections/home/ExecutionCapabilities';
-import { ProofClients } from '@/components/sections/home/ProofClients';
-import { RFQExplainer } from '@/components/sections/home/RFQExplainer';
-import { RfqCta } from '@/components/sections/home/RfqCta';
 
 export async function generateMetadata({
   params,
@@ -37,13 +33,9 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
       <Hero />
       <TrustMetrics />
       <DifferentiationTable />
-      <AudienceSection />
       <SystemsOverview />
+      <AudienceSection />
       <EngineeringFlow />
-      <ExecutionCapabilities />
-      <ProofClients />
-      <RFQExplainer />
-      <RfqCta />
     </>
   );
 }

@@ -110,8 +110,8 @@ const config: Config = {
       },
       spacing: {
         // 8px baseline system
-        section: '6rem',
-        'section-lg': '8rem',
+        section: '4.5rem',
+        'section-lg': '6rem',
       },
       maxWidth: {
         grid: '1440px',
