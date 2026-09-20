@@ -130,7 +130,7 @@ export default async function SystemDetailPage({
 
       {/* hero visual */}
       <Section className="!pb-0">
-        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-white/10 bg-ink-100">
+        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-ink/10 bg-ink-100">
           <Image
             src={system.cover}
             alt={heroAlt}
@@ -156,7 +156,7 @@ export default async function SystemDetailPage({
       <Section ivory>
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <h2 className="font-display text-h2 font-semibold text-white">{t('specs')}</h2>
+            <h2 className="font-display text-h2 font-semibold text-ink">{t('specs')}</h2>
             <p className="mt-4 max-w-prose text-body-l text-ink-300">{t('specsCaption')}</p>
             <div className="mt-8">
               <DatasheetCta locale={locale} />
@@ -170,7 +170,7 @@ export default async function SystemDetailPage({
 
       {/* SECTION 4 — Applications */}
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">
+        <h2 className="font-display text-h2 font-semibold text-ink">
           {t('applicationsTitle')}
         </h2>
         <div className="mt-8">
@@ -185,12 +185,12 @@ export default async function SystemDetailPage({
 
       {/* SECTION 5 — Execution gallery */}
       <Section ivory>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('gallery')}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('gallery')}</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {system.gallery.map((item, i) => (
             <figure
               key={item.src}
-              className="overflow-hidden rounded-lg border border-white/10 bg-ink-100"
+              className="overflow-hidden rounded-lg border border-ink/10 bg-ink-100"
             >
               <div className="relative aspect-[16/10]">
                 <Image
@@ -202,7 +202,7 @@ export default async function SystemDetailPage({
                   className="object-cover"
                 />
               </div>
-              <figcaption className="border-t border-white/10 px-5 py-4 text-body-s text-ink-700">
+              <figcaption className="border-t border-ink/10 px-5 py-4 text-body-s text-ink-700">
                 {localized(item.caption, locale)}
               </figcaption>
             </figure>
@@ -212,7 +212,7 @@ export default async function SystemDetailPage({
 
       {/* SECTION 6 — Design variants & customisation */}
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('variantsTitle')}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('variantsTitle')}</h2>
         <div className="mt-8">
           <DesignVariants locale={locale} variants={system.variants} />
         </div>
@@ -226,9 +226,9 @@ export default async function SystemDetailPage({
             {system.subsections.map((sub) => (
               <div
                 key={sub.title.en}
-                className="rounded-lg border border-white/10 bg-white/[0.03] p-7"
+                className="rounded-lg border border-ink/10 bg-ink/[0.03] p-7"
               >
-                <h3 className="font-display text-h3 font-semibold text-white">
+                <h3 className="font-display text-h3 font-semibold text-ink">
                   {localized(sub.title, locale)}
                 </h3>
                 <p className="mt-4 text-body-s leading-relaxed text-ink-700">
@@ -242,7 +242,7 @@ export default async function SystemDetailPage({
 
       {/* SECTION 7 — System selection guidance */}
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('selectionTitle')}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('selectionTitle')}</h2>
         <div className="mt-8">
           <SystemSelectionGuidance
             locale={locale}
@@ -275,7 +275,7 @@ export default async function SystemDetailPage({
       <Section ivory>
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
-            <h2 className="font-display text-h3 font-semibold text-white">
+            <h2 className="font-display text-h3 font-semibold text-ink">
               {locale === 'fa' ? 'مرجع سقف کاذب فلزی' : 'Metal suspended ceiling hub'}
             </h2>
             <ul className="mt-5 space-y-3">
@@ -285,7 +285,7 @@ export default async function SystemDetailPage({
                 </Link>
               </li>
               <li>
-                <Link href="/systems/compare" className="text-body-s text-ink-300 transition-colors hover:text-white">
+                <Link href="/systems/compare" className="text-body-s text-ink-300 transition-colors hover:text-ink">
                   {t('compareCta')}
                 </Link>
               </li>
@@ -294,13 +294,13 @@ export default async function SystemDetailPage({
 
           {relatedApplications.length > 0 ? (
             <div>
-              <h2 className="font-display text-h3 font-semibold text-white">
+              <h2 className="font-display text-h3 font-semibold text-ink">
                 {locale === 'fa' ? 'کاربردهای مرتبط' : 'Related applications'}
               </h2>
               <ul className="mt-5 space-y-3">
                 {relatedApplications.map((a) => (
                   <li key={a.slug}>
-                    <Link href={`/applications/${a.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-white">
+                    <Link href={`/applications/${a.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-ink">
                       {localized(a.keyword, locale)}
                     </Link>
                   </li>
@@ -311,13 +311,13 @@ export default async function SystemDetailPage({
 
           {relatedCaseStudies.length > 0 ? (
             <div>
-              <h2 className="font-display text-h3 font-semibold text-white">
+              <h2 className="font-display text-h3 font-semibold text-ink">
                 {locale === 'fa' ? 'پروژه‌های مرتبط' : 'Related projects'}
               </h2>
               <ul className="mt-5 space-y-3">
                 {relatedCaseStudies.map((p) => (
                   <li key={p.slug}>
-                    <Link href={`/projects/${p.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-white">
+                    <Link href={`/projects/${p.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-ink">
                       {projectName(p, locale)}
                     </Link>
                   </li>
@@ -417,7 +417,7 @@ function ArabicSystemDetailPage({
       />
 
       <Section className="!pb-0">
-        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-white/10 bg-ink-100">
+        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-ink/10 bg-ink-100">
           <Image
             src={system.cover}
             alt={`${detail.name} - نظام سقف معدني معلّق من آویزسازه`}
@@ -433,7 +433,7 @@ function ArabicSystemDetailPage({
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <span className="eyebrow">الوصف التقني</span>
-            <h2 className="mt-4 font-display text-h2 font-semibold text-white">
+            <h2 className="mt-4 font-display text-h2 font-semibold text-ink">
               نظام سقف معماري قابل للتصنيع والتركيب
             </h2>
           </div>
@@ -510,8 +510,8 @@ function ArabicSystemDetailPage({
 
 function ArabicListBlock({ title, items }: { title: string; items: string[] }) {
   return (
-    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-7">
-      <h2 className="font-display text-h3 font-semibold text-white">{title}</h2>
+    <div className="rounded-lg border border-ink/10 bg-ink/[0.03] p-7">
+      <h2 className="font-display text-h3 font-semibold text-ink">{title}</h2>
       <ul className="mt-5 space-y-4">
         {items.map((item) => (
           <li key={item} className="flex gap-3 text-body-s leading-relaxed text-ink-700">

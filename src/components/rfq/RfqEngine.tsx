@@ -261,18 +261,18 @@ export function RfqEngine({
       systemOptions.find((s) => s.slug === result.assignedSystem)?.name ?? result.assignedSystem;
     const place = [draft.projectCity, draft.projectCountry].filter(Boolean).join(', ');
     return (
-      <div className="rounded-lg border border-white/10 bg-white/[0.03] p-8 lg:p-12">
+      <div className="rounded-lg border border-ink/10 bg-ink/[0.03] p-8 lg:p-12">
         <div className="flex items-center gap-3">
           <span className="flex h-12 w-12 items-center justify-center rounded-full bg-success/15 text-success">
             <SystemIcon name="quality" className="h-6 w-6 text-success" />
           </span>
-          <h2 className="font-display text-h3 font-semibold text-white">{t('successTitle')}</h2>
+          <h2 className="font-display text-h3 font-semibold text-ink">{t('successTitle')}</h2>
         </div>
         <p className="mt-4 max-w-prose whitespace-pre-line text-body text-ink-600">
           {t('successText')}
         </p>
 
-        <dl className="mt-8 grid gap-px overflow-hidden rounded border border-white/10 bg-white/10 sm:grid-cols-2">
+        <dl className="mt-8 grid gap-px overflow-hidden rounded border border-ink/10 bg-ink/10 sm:grid-cols-2">
           <ResultRow label={t('projectId')} value={result.projectId} mono />
           <ResultRow label={t('assignedSystem')} value={systemName} />
           <ResultRow label={t('fields.projectType')} value={draft.projectType || '—'} />
@@ -294,14 +294,14 @@ export function RfqEngine({
               href={company.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="nums font-medium text-white hover:text-gold"
+              className="nums font-medium text-ink hover:text-gold"
               onClick={() => trackContactClick('whatsapp', { cta_location: 'rfq_success' })}
             >
               {tCommon('whatsapp')} / {tCommon('call')}: {company.mobileIntlDisplay}
             </a>
             <a
               href={`mailto:${company.email}`}
-              className="font-medium text-white hover:text-gold"
+              className="font-medium text-ink hover:text-gold"
               onClick={() => trackContactClick('email', { cta_location: 'rfq_success' })}
             >
               {t('fields.email')}: {company.email}
@@ -342,7 +342,7 @@ export function RfqEngine({
 
   // ── Wizard ─────────────────────────────────────────────────────────────────
   return (
-    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:p-10">
+    <div className="rounded-lg border border-ink/10 bg-ink/[0.03] p-6 sm:p-8 lg:p-10">
       {/* Honeypot — hidden from humans, ignored by assistive tech. */}
       <div aria-hidden className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
         <label>
@@ -364,7 +364,7 @@ export function RfqEngine({
             <span
               className={cn(
                 'h-1 rounded-full transition-colors duration-medium',
-                i <= step ? 'bg-gold' : 'bg-white/10',
+                i <= step ? 'bg-gold' : 'bg-ink/10',
               )}
             />
             <span className={cn('text-caption', i === step ? 'font-medium text-ink' : 'text-ink-400')}>
@@ -638,7 +638,7 @@ function EnumSelect({
 
 function ResultRow({ label, value, mono }: { label: string; value: string; mono?: boolean }) {
   return (
-    <div className="bg-ink-900 px-5 py-4">
+    <div className="bg-ivory px-5 py-4">
       <dt className="text-caption uppercase tracking-wide text-ink-500">{label}</dt>
       <dd className={cn('mt-1 text-body font-medium text-ink', mono && 'font-latin nums')}>{value}</dd>
     </div>

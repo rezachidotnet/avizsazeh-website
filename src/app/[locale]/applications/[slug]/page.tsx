@@ -85,7 +85,7 @@ export default async function ApplicationPage({
 
       {/* hero visual */}
       <Section className="!pb-0">
-        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-white/10 bg-ink-100">
+        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-ink/10 bg-ink-100">
           <Image
             src={app.cover}
             alt={localized(app.coverAlt, locale)}
@@ -99,12 +99,12 @@ export default async function ApplicationPage({
 
       {/* use cases */}
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('useCasesTitle')}</h2>
-        <ul className="mt-8 grid gap-px overflow-hidden rounded-lg border border-white/10 sm:grid-cols-2">
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('useCasesTitle')}</h2>
+        <ul className="mt-8 grid gap-px overflow-hidden rounded-lg border border-ink/10 sm:grid-cols-2">
           {localizedList(app.useCases, locale).map((u) => (
-            <li key={u} className="flex items-center gap-3 bg-ink-900 px-5 py-5">
+            <li key={u} className="flex items-center gap-3 bg-ivory px-5 py-5">
               <SystemIcon name="architecture" className="h-5 w-5 shrink-0 text-gold" />
-              <span className="text-body-s font-medium text-ink-200">{u}</span>
+              <span className="text-body-s font-medium text-ink-600">{u}</span>
             </li>
           ))}
         </ul>
@@ -112,11 +112,11 @@ export default async function ApplicationPage({
 
       {/* challenges */}
       <Section ivory>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('challengesTitle')}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('challengesTitle')}</h2>
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {app.challenges.map((c) => (
-            <div key={c.title.en} className="rounded-lg border border-white/10 bg-white/[0.03] p-7">
-              <h3 className="font-display text-h4 font-semibold text-white">{localized(c.title, locale)}</h3>
+            <div key={c.title.en} className="rounded-lg border border-ink/10 bg-ink/[0.03] p-7">
+              <h3 className="font-display text-h4 font-semibold text-ink">{localized(c.title, locale)}</h3>
               <p className="mt-3 text-body-s leading-relaxed text-ink-700">{localized(c.text, locale)}</p>
             </div>
           ))}
@@ -125,14 +125,14 @@ export default async function ApplicationPage({
 
       {/* engineering requirements */}
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('requirementsTitle')}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('requirementsTitle')}</h2>
         <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {localizedList(app.requirements, locale).map((r) => (
-            <li key={r} className="flex items-start gap-3 rounded-sm border border-white/10 bg-white/[0.03] px-5 py-4">
+            <li key={r} className="flex items-start gap-3 rounded-sm border border-ink/10 bg-ink/[0.03] px-5 py-4">
               <svg viewBox="0 0 24 24" className="mt-0.5 h-4 w-4 shrink-0 text-gold" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span className="text-body-s text-ink-200">{r}</span>
+              <span className="text-body-s text-ink-600">{r}</span>
             </li>
           ))}
         </ul>
@@ -140,7 +140,7 @@ export default async function ApplicationPage({
 
       {/* suitable systems — internal links */}
       <Section ivory>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('systemsTitle')}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('systemsTitle')}</h2>
         <p className="mt-4 max-w-prose text-body-l text-ink-300">{t('systemsIntro')}</p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {suitable.map((s, i) => (
@@ -151,9 +151,9 @@ export default async function ApplicationPage({
 
       {/* category-hub link */}
       <Section className="!pt-0 lg:!pt-0">
-        <div className="flex flex-col items-start gap-4 rounded-lg border border-gold/25 bg-white/[0.03] p-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col items-start gap-4 rounded-lg border border-gold/25 bg-ink/[0.03] p-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-xl">
-            <h2 className="font-display text-h3 font-semibold text-white">{t('hubTitle')}</h2>
+            <h2 className="font-display text-h3 font-semibold text-ink">{t('hubTitle')}</h2>
             <p className="mt-2 text-body-s text-ink-400">{t('hubText')}</p>
           </div>
           <Button href="/metal-suspended-ceiling" variant="outline" size="lg" className="shrink-0">
@@ -165,16 +165,16 @@ export default async function ApplicationPage({
       {/* project proof — internal links */}
       {relatedProjects.length > 0 ? (
         <Section ivory>
-          <h2 className="font-display text-h2 font-semibold text-white">{t('projectsTitle')}</h2>
+          <h2 className="font-display text-h2 font-semibold text-ink">{t('projectsTitle')}</h2>
           <p className="mt-4 max-w-prose text-body-l text-ink-300">{t('projectsIntro')}</p>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {relatedProjects.map((p) => (
               <li key={p.slug}>
                 <Link
                   href={`/projects/${p.slug}`}
-                  className="group flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/[0.03] px-6 py-5 transition-colors hover:border-gold/40"
+                  className="group flex items-center justify-between gap-4 rounded-lg border border-ink/10 bg-ink/[0.03] px-6 py-5 transition-colors hover:border-gold/40"
                 >
-                  <span className="font-display text-h4 font-semibold text-white">{projectName(p, locale)}</span>
+                  <span className="font-display text-h4 font-semibold text-ink">{projectName(p, locale)}</span>
                   <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-gold transition-transform duration-fast group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" fill="none" stroke="currentColor" strokeWidth={1.6} aria-hidden="true">
                     <path d="M4 12h15M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

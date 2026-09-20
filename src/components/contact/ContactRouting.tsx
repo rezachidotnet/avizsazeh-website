@@ -18,8 +18,8 @@ export function ContactRouting() {
   return (
     <div className="grid gap-6 lg:grid-cols-3">
       {/* For project inquiries */}
-      <div className="flex flex-col rounded-lg border border-white/10 bg-white/[0.03] p-6">
-        <h3 className="font-display text-h4 font-semibold text-white">{t('inquiriesTitle')}</h3>
+      <div className="flex flex-col rounded-lg border border-ink/10 bg-ink/[0.03] p-6">
+        <h3 className="font-display text-h4 font-semibold text-ink">{t('inquiriesTitle')}</h3>
         <p className="mt-3 flex-1 text-body-s text-ink-400">{t('inquiriesText')}</p>
         <div className="mt-5">
           <Button
@@ -33,14 +33,14 @@ export function ContactRouting() {
       </div>
 
       {/* For urgent coordination */}
-      <div className="flex flex-col rounded-lg border border-white/10 bg-white/[0.03] p-6">
-        <h3 className="font-display text-h4 font-semibold text-white">{t('urgentTitle')}</h3>
+      <div className="flex flex-col rounded-lg border border-ink/10 bg-ink/[0.03] p-6">
+        <h3 className="font-display text-h4 font-semibold text-ink">{t('urgentTitle')}</h3>
         <p className="mt-3 flex-1 text-body-s text-ink-400">{t('urgentText')}</p>
         <a
           href={company.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="nums mt-4 block text-body font-medium text-white hover:text-gold"
+          className="nums mt-4 block text-body font-medium text-ink hover:text-gold"
           onClick={() => trackContactClick('whatsapp', { cta_location: 'contact_urgent' })}
         >
           {company.mobileIntlDisplay}
@@ -58,12 +58,12 @@ export function ContactRouting() {
       </div>
 
       {/* For drawings and tender documents */}
-      <div className="flex flex-col rounded-lg border border-white/10 bg-white/[0.03] p-6">
-        <h3 className="font-display text-h4 font-semibold text-white">{t('drawingsTitle')}</h3>
+      <div className="flex flex-col rounded-lg border border-ink/10 bg-ink/[0.03] p-6">
+        <h3 className="font-display text-h4 font-semibold text-ink">{t('drawingsTitle')}</h3>
         <p className="mt-3 flex-1 text-body-s text-ink-400">{t('drawingsText')}</p>
         <a
           href={`mailto:${company.email}`}
-          className="mt-4 block text-body font-medium text-white hover:text-gold"
+          className="mt-4 block text-body font-medium text-ink hover:text-gold"
           onClick={() => trackContactClick('email', { cta_location: 'contact_drawings' })}
         >
           {company.email}
@@ -81,8 +81,8 @@ export function ContactRouting() {
       </div>
 
       {/* What happens after you contact us? */}
-      <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6 lg:col-span-2">
-        <h3 className="font-display text-h4 font-semibold text-white">{t('afterTitle')}</h3>
+      <div className="rounded-lg border border-ink/10 bg-ink/[0.03] p-6 lg:col-span-2">
+        <h3 className="font-display text-h4 font-semibold text-ink">{t('afterTitle')}</h3>
         <ol className="mt-5 space-y-4">
           {steps.map((stepText, i) => (
             <li key={stepText} className="flex items-start gap-3 text-body-s text-ink-300">
@@ -100,7 +100,7 @@ export function ContactRouting() {
         <p className="text-caption font-semibold uppercase tracking-[0.16em] text-gold">
           {t('responseTitle')}
         </p>
-        <p className="mt-3 text-body-l font-medium text-white">{t('responseText')}</p>
+        <p className="mt-3 text-body-l font-medium text-ink">{t('responseText')}</p>
       </div>
     </div>
   );

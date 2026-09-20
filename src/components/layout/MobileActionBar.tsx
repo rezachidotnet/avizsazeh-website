@@ -21,7 +21,7 @@ export function MobileActionBar() {
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-ink-950/95 backdrop-blur-md lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-ink/10 bg-surface/95 backdrop-blur-md lg:hidden"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
       <div className="grid grid-cols-2 gap-2 p-2">
@@ -36,7 +36,7 @@ export function MobileActionBar() {
           href={whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-12 items-center justify-center gap-2 rounded-sm border border-white/20 px-4 text-label-lg font-semibold uppercase tracking-[0.06em] text-white"
+          className="flex h-12 items-center justify-center gap-2 rounded-sm border border-ink/20 px-4 text-label-lg font-semibold uppercase tracking-[0.06em] text-ink"
           onClick={() => trackContactClick('whatsapp', { cta_location: 'mobile_action_bar' })}
         >
           <svg viewBox="0 0 24 24" className="h-4 w-4 text-gold" fill="currentColor" aria-hidden="true">

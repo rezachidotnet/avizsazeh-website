@@ -11,9 +11,9 @@ import { localized } from '@/lib/site';
 
 const fitStyle: Record<FitLevel, { dot: string; text: string }> = {
   excellent: { dot: 'bg-gold', text: 'text-gold' },
-  suitable: { dot: 'bg-white', text: 'text-white' },
-  review: { dot: 'bg-amber-400', text: 'text-amber-400' },
-  no: { dot: 'bg-ink-500', text: 'text-ink-500' },
+  suitable: { dot: 'bg-info', text: 'text-info' },
+  review: { dot: 'bg-amber-500', text: 'text-amber-600' },
+  no: { dot: 'bg-ink-400', text: 'text-ink-400' },
 };
 
 function FitBadge({ level, locale }: { level: FitLevel; locale: Locale }) {
@@ -46,17 +46,17 @@ export function SystemComparisonMatrix({
       <table className="w-full min-w-[720px] border-separate border-spacing-0">
         <thead>
           <tr>
-            <th className="sticky start-0 z-10 border-b border-white/10 bg-ink-950 px-4 py-4 text-start align-bottom">
+            <th className="sticky start-0 z-10 border-b border-ink/10 bg-surface px-4 py-4 text-start align-bottom">
               <span className="eyebrow">{criterionLabel}</span>
             </th>
             {cols.map((s) => (
               <th
                 key={s.slug}
-                className="border-b border-white/10 px-4 py-4 text-start align-bottom"
+                className="border-b border-ink/10 px-4 py-4 text-start align-bottom"
               >
                 <Link
                   href={`/systems/${s.slug}`}
-                  className="text-body-s font-semibold text-white transition-colors hover:text-gold"
+                  className="text-body-s font-semibold text-ink transition-colors hover:text-gold"
                 >
                   {localized(s.name, locale)}
                 </Link>
@@ -66,17 +66,17 @@ export function SystemComparisonMatrix({
         </thead>
         <tbody>
           {compareRows.map((row, i) => (
-            <tr key={row.criterion.en} className={i % 2 ? 'bg-white/[0.02]' : undefined}>
+            <tr key={row.criterion.en} className={i % 2 ? 'bg-ink/[0.02]' : undefined}>
               <th
                 scope="row"
-                className={`sticky start-0 z-10 border-b border-white/10 px-4 py-3.5 text-start text-body-s font-medium text-ink-700 ${
-                  i % 2 ? 'bg-[#0C1117]' : 'bg-ink-950'
+                className={`sticky start-0 z-10 border-b border-ink/10 px-4 py-3.5 text-start text-body-s font-medium text-ink-700 ${
+                  i % 2 ? 'bg-ivory' : 'bg-surface'
                 }`}
               >
                 {localized(row.criterion, locale)}
               </th>
               {cols.map((s) => (
-                <td key={s.slug} className="border-b border-white/10 px-4 py-3.5">
+                <td key={s.slug} className="border-b border-ink/10 px-4 py-3.5">
                   <FitBadge level={row.values[s.slug]} locale={locale} />
                 </td>
               ))}

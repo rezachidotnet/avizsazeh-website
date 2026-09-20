@@ -11,7 +11,7 @@ export function RfqCta() {
     <section className="bg-ink-950 text-white">
       <div className="container-grid py-20 lg:py-28">
         <div className="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-ink-900 to-ink-950 p-10 lg:p-16">
-          <div className="pointer-events-none absolute inset-0 bg-grid-lines [background-size:32px_32px] opacity-50" />
+          <div className="pointer-events-none absolute inset-0 bg-grid-lines-dark [background-size:32px_32px] opacity-50" />
           <div className="relative max-w-2xl">
             <SystemIcon name="execution" node className="h-9 w-9 text-gold-300" />
             <h2 className="mt-6 font-display text-h2 font-bold text-white">

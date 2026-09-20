@@ -55,7 +55,7 @@ export async function LegalArticle({ kind }: { kind: LegalKind }) {
           <div className="mt-10 space-y-10">
             {sections.map((section) => (
               <section key={section.heading}>
-                <h2 className="font-display text-h3 font-semibold text-white">
+                <h2 className="font-display text-h3 font-semibold text-ink">
                   {section.heading}
                 </h2>
                 <p className="mt-4 text-body leading-relaxed text-ink-600">

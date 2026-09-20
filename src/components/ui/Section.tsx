@@ -61,11 +61,11 @@ export function SectionHeader({
       )}
     >
       {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
-      <h2 className="mt-4 font-display text-h2 font-semibold text-white">
+      <h2 className={cn('mt-4 font-display text-h2 font-semibold', dark ? 'text-white' : 'text-ink')}>
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-body-l text-ink-300">{description}</p>
+        <p className={cn('mt-4 text-body-l', dark ? 'text-white/70' : 'text-ink-600')}>{description}</p>
       ) : null}
     </div>
   );

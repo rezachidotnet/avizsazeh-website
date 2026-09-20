@@ -53,9 +53,9 @@ export default async function RfqPage({
       <Section ivory>
         <div className="mx-auto max-w-3xl">
           {/* preamble — set expectations before the wizard */}
-          <div className="mb-8 rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+          <div className="mb-8 rounded-lg border border-ink/10 bg-ink/[0.03] p-6 sm:p-8">
             <p className="text-body-l leading-relaxed text-ink-300">{t('preamble')}</p>
-            <div className="mt-6 border-t border-white/10 pt-6">
+            <div className="mt-6 border-t border-ink/10 pt-6">
               <h2 className="text-caption font-semibold uppercase tracking-[0.16em] text-gold">
                 {t('needTitle')}
               </h2>

@@ -31,13 +31,13 @@ export function DatasheetCta({ locale, href }: { locale: Locale; href?: string }
 
   return (
     <span
-      className={`${base} cursor-not-allowed border-white/10 text-ink-500`}
+      className={`${base} cursor-not-allowed border-ink/10 text-ink-500`}
       aria-disabled="true"
       title={pending}
     >
       <SystemIcon name="quality" className="h-4 w-4" />
       {label}
-      <span className="ms-1 rounded-sm border border-white/10 px-1.5 py-0.5 text-micro tracking-normal text-ink-500">
+      <span className="ms-1 rounded-sm border border-ink/10 px-1.5 py-0.5 text-micro tracking-normal text-ink-500">
         {pending}
       </span>
     </span>

@@ -45,10 +45,10 @@ export function TrackedFAQDetails({
   return (
     <details
       ref={detailsRef}
-      className="group bg-white/[0.03] px-6 py-5 open:bg-white/[0.05]"
+      className="group bg-ink/[0.03] px-6 py-5 open:bg-ink/[0.05]"
     >
       <summary
-        className="flex cursor-pointer list-none items-center justify-between gap-4 text-body-l font-medium text-white marker:hidden"
+        className="flex cursor-pointer list-none items-center justify-between gap-4 text-body-l font-medium text-ink marker:hidden"
         onClick={trackOpening}
         onKeyDown={handleSummaryKeyDown}
       >

@@ -45,7 +45,7 @@ export function Header() {
   const navLinkClass = (href: string) =>
     cn(
       'relative py-1 text-label-lg font-medium tracking-wide transition-colors duration-fast hover:text-gold',
-      isActive(href) ? 'text-white' : 'text-ink-400',
+      isActive(href) ? 'text-ink' : 'text-ink-400',
     );
 
   return (
@@ -53,8 +53,8 @@ export function Header() {
       className={cn(
         'sticky top-0 z-50 border-b transition-colors duration-medium',
         scrolled || open
-          ? 'border-white/10 bg-ink-950/90 backdrop-blur-md'
-          : 'border-white/[0.06] bg-ink-950',
+          ? 'border-ink/10 bg-surface/90 backdrop-blur-md'
+          : 'border-ink/[0.06] bg-surface',
       )}
     >
       <div className="container-grid flex h-20 items-center justify-between gap-6 md:h-24">
@@ -75,21 +75,21 @@ export function Header() {
                 </Link>
                 {/* desktop systems dropdown — revealed on hover / keyboard focus */}
                 <div className="invisible absolute start-0 top-full z-50 w-64 translate-y-1 pt-3 opacity-0 transition-all duration-fast group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                  <ul className="overflow-hidden rounded-lg border border-white/10 bg-ink-900 p-2 shadow-lg">
+                  <ul className="overflow-hidden rounded-lg border border-ink/10 bg-white p-2 shadow-lg">
                     {systems.map((s) => (
                       <li key={s.slug}>
                         <Link
                           href={`/systems/${s.slug}`}
-                          className="block rounded-sm px-3 py-2.5 text-body-s text-ink-300 transition-colors duration-fast hover:bg-white/[0.05] hover:text-white"
+                          className="block rounded-sm px-3 py-2.5 text-body-s text-ink-300 transition-colors duration-fast hover:bg-ink/[0.05] hover:text-ink"
                         >
                           {localized(s.name, locale)}
                         </Link>
                       </li>
                     ))}
-                    <li className="mt-1 border-t border-white/10 pt-1">
+                    <li className="mt-1 border-t border-ink/10 pt-1">
                       <Link
                         href="/systems"
-                        className="block rounded-sm px-3 py-2.5 text-body-s font-medium text-gold transition-colors duration-fast hover:bg-white/[0.05]"
+                        className="block rounded-sm px-3 py-2.5 text-body-s font-medium text-gold transition-colors duration-fast hover:bg-ink/[0.05]"
                       >
                         {tc('exploreAllSystems')}
                       </Link>
@@ -110,22 +110,22 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <LocaleSwitcher className="hidden sm:inline-flex" />
-          <span className="hidden h-6 w-px bg-white/10 lg:block" />
+          <span className="hidden h-6 w-px bg-ink/10 lg:block" />
           <Button href="/rfq" variant="gold" size="sm" className="hidden md:inline-flex">
             {tc('requestAnalysis')}
           </Button>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/15 text-white lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-ink/15 text-ink lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? t('close') : t('menu')}
             onClick={() => setOpen((v) => !v)}
           >
             <span className="relative block h-4 w-5">
-              <span className={cn('absolute inset-x-0 top-0 h-0.5 bg-white transition-transform duration-fast', open && 'top-1.5 rotate-45')} />
-              <span className={cn('absolute inset-x-0 top-1.5 h-0.5 bg-white transition-opacity duration-fast', open && 'opacity-0')} />
-              <span className={cn('absolute inset-x-0 top-3 h-0.5 bg-white transition-transform duration-fast', open && 'top-1.5 -rotate-45')} />
+              <span className={cn('absolute inset-x-0 top-0 h-0.5 bg-ink transition-transform duration-fast', open && 'top-1.5 rotate-45')} />
+              <span className={cn('absolute inset-x-0 top-1.5 h-0.5 bg-ink transition-opacity duration-fast', open && 'opacity-0')} />
+              <span className={cn('absolute inset-x-0 top-3 h-0.5 bg-ink transition-transform duration-fast', open && 'top-1.5 -rotate-45')} />
             </span>
           </button>
         </div>
@@ -136,7 +136,7 @@ export function Header() {
         id="mobile-nav"
         aria-hidden={!open}
         className={cn(
-          'overflow-hidden border-white/10 bg-ink-950 lg:hidden',
+          'overflow-hidden border-ink/10 bg-surface lg:hidden',
           open ? 'max-h-screen border-t' : 'max-h-0',
           'transition-[max-height] duration-medium ease-aecs',
         )}
@@ -149,7 +149,7 @@ export function Header() {
               tabIndex={open ? undefined : -1}
               className={cn(
                 'rounded-sm px-3 py-3 text-body font-medium',
-                isActive(item.href) ? 'bg-white/[0.05] text-white' : 'text-ink-400',
+                isActive(item.href) ? 'bg-ink/[0.05] text-ink' : 'text-ink-400',
               )}
             >
               {t(item.key)}

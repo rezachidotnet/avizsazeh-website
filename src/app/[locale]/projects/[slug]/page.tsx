@@ -159,7 +159,7 @@ export default async function ProjectDetailPage({
       {/* Execution photos when verified; otherwise state the evidence boundary. */}
       {images.length > 0 ? (
         <Section dark>
-          <SectionHeader title={t('galleryTitle')} />
+          <SectionHeader dark title={t('galleryTitle')} />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {images.map((src) => (
               <div
@@ -173,14 +173,14 @@ export default async function ProjectDetailPage({
         </Section>
       ) : cs ? (
         <Section dark>
-          <SectionHeader title={t('evidenceScopeTitle')} description={localized(cs.dataNote, locale)} />
+          <SectionHeader dark title={t('evidenceScopeTitle')} description={localized(cs.dataNote, locale)} />
         </Section>
       ) : null}
 
       {/* related systems — internal links */}
       {relatedSystems.length > 0 ? (
         <Section>
-          <h2 className="font-display text-h2 font-semibold text-white">{t('relatedSystemsTitle')}</h2>
+          <h2 className="font-display text-h2 font-semibold text-ink">{t('relatedSystemsTitle')}</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {relatedSystems.map((s, i) => (
               <SystemCard key={s.slug} system={s} locale={locale} index={i} />
@@ -192,15 +192,15 @@ export default async function ProjectDetailPage({
       {/* related applications — internal links */}
       {relatedApplications.length > 0 ? (
         <Section ivory>
-          <h2 className="font-display text-h2 font-semibold text-white">{t('relatedApplicationsTitle')}</h2>
+          <h2 className="font-display text-h2 font-semibold text-ink">{t('relatedApplicationsTitle')}</h2>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {relatedApplications.map((a) => (
               <li key={a.slug}>
                 <Link
                   href={`/applications/${a.slug}`}
-                  className="group flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/[0.03] px-6 py-5 transition-colors hover:border-gold/40"
+                  className="group flex items-center justify-between gap-4 rounded-lg border border-ink/10 bg-ink/[0.03] px-6 py-5 transition-colors hover:border-gold/40"
                 >
-                  <span className="font-display text-h4 font-semibold text-white">{localized(a.keyword, locale)}</span>
+                  <span className="font-display text-h4 font-semibold text-ink">{localized(a.keyword, locale)}</span>
                   <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-gold transition-transform duration-fast group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" fill="none" stroke="currentColor" strokeWidth={1.6} aria-hidden="true">
                     <path d="M4 12h15M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

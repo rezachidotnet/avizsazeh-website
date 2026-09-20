@@ -21,8 +21,8 @@ export function SystemAnatomy({
     locale === 'fa' ? 'دیاگرام فنی سیستم — در حال آماده‌سازی' : 'Technical system diagram — in preparation';
 
   return (
-    <figure className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
-      <figcaption className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-3">
+    <figure className="overflow-hidden rounded-lg border border-ink/10 bg-ink/[0.03]">
+      <figcaption className="flex items-center justify-between gap-3 border-b border-ink/10 px-5 py-3">
         <span className="eyebrow">{heading}</span>
         <span className="text-caption text-ink-500">{pending}</span>
       </figcaption>

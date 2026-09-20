@@ -24,7 +24,7 @@ export function ProofClients() {
 
   return (
     <Section dark>
-      <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
+      <SectionHeader dark eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
 
       <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {cards.map((p) => (

@@ -22,18 +22,20 @@ export function ProjectCard({ name, sector, logo, image, badge, cardText, href }
   const inner = (
     <article
       className={cn(
-        'flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] transition-colors duration-medium ease-aecs',
+        // A solid card — this component renders on both light pages and the
+        // deliberate dark "proof" band (ProofClients), so it must pop on either.
+        'flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white shadow-sm transition-colors duration-medium ease-aecs',
         href && 'hover:border-gold/40',
       )}
     >
-      <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border-b border-white/10 bg-ink-900">
+      <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border-b border-ink/10 bg-ink-100">
         {image ? (
           <Image src={image} alt={name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
         ) : (
           <>
             <div className="absolute inset-0 bg-grid-lines [background-size:32px_32px] opacity-30" />
             {logo ? (
-              <div className="relative flex h-20 w-40 items-center justify-center rounded-sm bg-white/95 px-4">
+              <div className="relative flex h-20 w-40 items-center justify-center rounded-sm bg-white px-4">
                 <Image
                   src={`/clients/${logo}`}
                   alt={name}
@@ -44,7 +46,7 @@ export function ProjectCard({ name, sector, logo, image, badge, cardText, href }
                 />
               </div>
             ) : (
-              <span className="relative px-6 text-center font-display text-h4 font-semibold text-white">
+              <span className="relative px-6 text-center font-display text-h4 font-semibold text-ink">
                 {name}
               </span>
             )}
@@ -56,7 +58,7 @@ export function ProjectCard({ name, sector, logo, image, badge, cardText, href }
       </div>
 
       <div className="flex flex-1 flex-col p-7">
-        <h3 className="font-display text-h4 font-semibold text-white">{name}</h3>
+        <h3 className="font-display text-h4 font-semibold text-ink">{name}</h3>
         {sector ? (
           <p className="mt-2 text-caption uppercase tracking-[0.12em] text-gold/80">{sector}</p>
         ) : null}

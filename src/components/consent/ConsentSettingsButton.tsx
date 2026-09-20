@@ -10,7 +10,7 @@ export function ConsentSettingsButton() {
   return (
     <button
       type="button"
-      className="whitespace-nowrap transition-colors hover:text-white"
+      className="whitespace-nowrap transition-colors hover:text-ink"
       onClick={openPreferences}
     >
       {t('settingsButton')}

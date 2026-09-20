@@ -39,9 +39,9 @@ export function TrustMetrics() {
   const metrics = t.raw('metrics') as Metric[];
 
   return (
-    <section aria-label={t('title')} className="bg-ink-950">
+    <section aria-label={t('title')} className="bg-surface">
       <div className="container-grid py-16 lg:py-20">
-        <dl className="flex flex-col divide-y divide-white/[0.07] rounded-xl border border-white/10 bg-white/[0.02] lg:flex-row lg:divide-x lg:divide-y-0 lg:divide-gold/20 rtl:lg:divide-x-reverse">
+        <dl className="flex flex-col divide-y divide-ink/[0.07] rounded-xl border border-ink/10 bg-ink/[0.02] lg:flex-row lg:divide-x lg:divide-y-0 lg:divide-gold/20 rtl:lg:divide-x-reverse">
           {metrics.map((m, i) => (
             // A <dl> wrapper <div> may only contain a <dt>/<dd> pair, so the
             // decorative icon lives inside the <dd> (absolutely positioned to

@@ -77,12 +77,12 @@ export default async function ProjectsPage({
       />
 
       {/* proof stats bar */}
-      <section className="bg-ink-950">
+      <section className="bg-surface">
         <div className="container-grid py-12 lg:py-16">
           <p className="max-w-prose text-body-l text-ink-300">{t('support')}</p>
-          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 lg:grid-cols-4">
+          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-ink/10 bg-ink/10 lg:grid-cols-4">
             {stats.map((s, i) => (
-              <div key={i} className="bg-ink-950 px-6 py-7">
+              <div key={i} className="bg-ivory px-6 py-7">
                 <dd className="font-display text-[1.3rem] font-bold leading-tight text-gold">{s.value}</dd>
                 <dt className="mt-1 text-caption uppercase tracking-[0.12em] text-ink-400">{s.label}</dt>
               </div>
@@ -124,7 +124,7 @@ export default async function ProjectsPage({
                   {list.map((p) => (
                     <li
                       key={p.slug}
-                      className="group flex h-24 items-center justify-center rounded-sm border border-white/10 bg-white px-5"
+                      className="group flex h-24 items-center justify-center rounded-sm border border-ink/10 bg-white px-5"
                       title={projectName(p, locale)}
                     >
                       {p.logo ? (
@@ -153,7 +153,7 @@ export default async function ProjectsPage({
 
       {/* what a documented project proves */}
       <Section dark>
-        <SectionHeader eyebrow={t('eyebrow')} title={t('provesTitle')} />
+        <SectionHeader dark eyebrow={t('eyebrow')} title={t('provesTitle')} />
         <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-white/10 md:grid-cols-2">
           {proves.map((item, i) => (
             <li key={i} className="flex items-start gap-4 bg-ink-900 p-6">
@@ -173,7 +173,7 @@ export default async function ProjectsPage({
           {caseFields.map((field, i) => (
             <li
               key={i}
-              className="flex items-center gap-3 rounded-sm border border-white/10 bg-white/[0.05] px-5 py-4"
+              className="flex items-center gap-3 rounded-sm border border-ink/10 bg-ink/[0.05] px-5 py-4"
             >
               <svg
                 viewBox="0 0 24 24"

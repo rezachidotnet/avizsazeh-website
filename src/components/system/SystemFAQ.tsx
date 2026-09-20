@@ -21,10 +21,10 @@ export function SystemFAQ({
   return (
     <div className="grid gap-10 lg:grid-cols-12">
       <div className="lg:col-span-4">
-        <h2 className="font-display text-h2 font-semibold text-white">{title}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{title}</h2>
       </div>
       <div className="lg:col-span-8">
-        <div className="divide-y divide-white/10 overflow-hidden rounded-lg border border-white/10">
+        <div className="divide-y divide-ink/10 overflow-hidden rounded-lg border border-ink/10">
           {items.map((item, index) => {
             const question = localized(item.q, locale).trim();
             return (

@@ -6,14 +6,15 @@ import { cn } from '@/lib/utils';
  * Logo variants. Both share the same 692×273 artwork dimensions so the
  * rendered aspect ratio is identical regardless of which is used.
  *
+ * - `light` — the standard full-colour mark with dark text, for light/plain
+ *   plates. Default, since header/footer chrome is light.
  * - `transparent` — white-text mark on a fully transparent background.
  *   Sits cleanly on dark / gold / gradient / photo backgrounds with no
- *   visible plate or box. Default, since all current chrome is dark.
- * - `light` — the full-colour mark with dark text, for light/plain plates.
+ *   visible plate or box (the Hero, and other deliberate dark bands).
  */
 const VARIANTS = {
   transparent: '/brand/standard-logo-trans.webp',
-  light: '/brand/standard-logo.png',
+  light: '/brand/standard-logo.svg',
 } as const;
 
 export type LogoVariant = keyof typeof VARIANTS;
@@ -27,7 +28,7 @@ export function Logo({
   imgClassName,
   priority = false,
   label = 'AvizSazeh logo',
-  variant = 'transparent',
+  variant = 'light',
   /** retained for API compatibility */
   plate: _plate,
 }: {

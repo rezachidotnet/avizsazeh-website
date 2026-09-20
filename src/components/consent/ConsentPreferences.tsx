@@ -88,21 +88,21 @@ export function ConsentPreferences() {
         aria-modal="true"
         aria-labelledby="consent-preferences-title"
         aria-describedby="consent-preferences-description"
-        className="flex max-h-[calc(100dvh-1.5rem)] w-full max-w-2xl flex-col overflow-hidden rounded-sm border border-white/10 bg-ink-950 shadow-2xl sm:max-h-[calc(100dvh-3rem)]"
+        className="flex max-h-[calc(100dvh-1.5rem)] w-full max-w-2xl flex-col overflow-hidden rounded-sm border border-ink/10 bg-surface shadow-2xl sm:max-h-[calc(100dvh-3rem)]"
       >
-        <div className="shrink-0 border-b border-white/10 px-5 py-4 sm:px-6">
+        <div className="shrink-0 border-b border-ink/10 px-5 py-4 sm:px-6">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-caption font-semibold uppercase tracking-[0.16em] text-gold">
                 {t('preferencesEyebrow')}
               </p>
-              <h2 id="consent-preferences-title" className="mt-2 text-h4 font-semibold text-white">
+              <h2 id="consent-preferences-title" className="mt-2 text-h4 font-semibold text-ink">
                 {t('preferencesTitle')}
               </h2>
             </div>
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/10 text-white transition-colors hover:bg-white/[0.06]"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-ink/10 text-ink transition-colors hover:bg-ink/[0.06]"
               aria-label={t('close')}
               onClick={closePreferences}
             >
@@ -119,48 +119,48 @@ export function ConsentPreferences() {
 
         <div className="grid overflow-y-auto px-5 py-5 sm:px-6">
           <div className="grid gap-5">
-            <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
+            <label className="flex items-start gap-4 rounded-sm border border-ink/10 bg-ink/[0.03] p-4">
               <input
                 type="checkbox"
                 checked
                 disabled
-                className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
+                className="mt-1 h-5 w-5 rounded border-ink/20 bg-ink/5 text-gold accent-gold"
               />
               <span className="flex flex-col">
-                <span className="font-medium text-white">{t('necessaryLabel')}</span>
+                <span className="font-medium text-ink">{t('necessaryLabel')}</span>
                 <span className="mt-1 text-body-s text-ink-400">{t('necessaryDescription')}</span>
               </span>
             </label>
 
-            <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
+            <label className="flex items-start gap-4 rounded-sm border border-ink/10 bg-ink/[0.03] p-4">
               <input
                 type="checkbox"
                 checked={analytics}
                 onChange={(event) => setAnalytics(event.target.checked)}
-                className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
+                className="mt-1 h-5 w-5 rounded border-ink/20 bg-ink/5 text-gold accent-gold"
               />
               <span className="flex flex-col">
-                <span className="font-medium text-white">{t('analyticsLabel')}</span>
+                <span className="font-medium text-ink">{t('analyticsLabel')}</span>
                 <span className="mt-1 text-body-s text-ink-400">{t('analyticsDescription')}</span>
               </span>
             </label>
 
-            <label className="flex items-start gap-4 rounded-sm border border-white/10 bg-white/[0.03] p-4">
+            <label className="flex items-start gap-4 rounded-sm border border-ink/10 bg-ink/[0.03] p-4">
               <input
                 type="checkbox"
                 checked={marketing}
                 onChange={(event) => setMarketing(event.target.checked)}
-                className="mt-1 h-5 w-5 rounded border-white/20 bg-white/5 text-gold accent-gold"
+                className="mt-1 h-5 w-5 rounded border-ink/20 bg-ink/5 text-gold accent-gold"
               />
               <span className="flex flex-col">
-                <span className="font-medium text-white">{t('marketingLabel')}</span>
+                <span className="font-medium text-ink">{t('marketingLabel')}</span>
                 <span className="mt-1 text-body-s text-ink-400">{t('marketingDescription')}</span>
               </span>
             </label>
           </div>
         </div>
 
-        <div className="flex shrink-0 flex-col gap-2 border-t border-white/10 px-5 py-4 sm:flex-row sm:justify-end sm:px-6">
+        <div className="flex shrink-0 flex-col gap-2 border-t border-ink/10 px-5 py-4 sm:flex-row sm:justify-end sm:px-6">
           <Button
             type="button"
             variant="ghost"

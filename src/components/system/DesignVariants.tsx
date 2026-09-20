@@ -15,9 +15,9 @@ export function DesignVariants({
   variants: SpecRow[];
 }) {
   return (
-    <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-px overflow-hidden rounded-lg border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
       {variants.map((v) => (
-        <div key={v.label.en} className="bg-ink-950 p-6">
+        <div key={v.label.en} className="bg-ivory p-6">
           <span className="eyebrow">{localized(v.label, locale)}</span>
           <p className="mt-3 text-body-s font-medium text-ink-700">
             {localized(v.value, locale)}

@@ -53,14 +53,14 @@ export default async function BimPage({
       />
 
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('sectionsTitle')}</h2>
-        <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-3">
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('sectionsTitle')}</h2>
+        <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-ink/10 bg-ink/10 md:grid-cols-2 xl:grid-cols-3">
           {sections.map((s, i) => (
-            <div key={s.title} className="flex h-full flex-col bg-ink-900 p-7">
-              <span className="flex h-12 w-12 items-center justify-center rounded border border-white/10 bg-white/[0.04] text-gold">
+            <div key={s.title} className="flex h-full flex-col bg-ivory p-7">
+              <span className="flex h-12 w-12 items-center justify-center rounded border border-ink/10 bg-ink/[0.04] text-gold">
                 <SystemIcon name={ICONS[i % ICONS.length]} className="h-6 w-6" />
               </span>
-              <h3 className="mt-6 text-h4 font-semibold text-white">{s.title}</h3>
+              <h3 className="mt-6 text-h4 font-semibold text-ink">{s.title}</h3>
               <p className="mt-3 text-body-s leading-relaxed text-ink-600">{s.text}</p>
             </div>
           ))}

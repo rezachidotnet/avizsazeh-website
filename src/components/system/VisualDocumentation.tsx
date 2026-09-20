@@ -26,16 +26,16 @@ export function VisualDocumentation({
   return (
     <div>
       <div className="flex flex-wrap items-end justify-between gap-3">
-        <h2 className="font-display text-h2 font-semibold text-white">{title}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{title}</h2>
         <p className="max-w-sm text-body-s text-ink-500">{note}</p>
       </div>
       <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
           <li
             key={item}
-            className="flex aspect-[16/10] flex-col justify-between rounded-lg border border-dashed border-white/15 bg-grid-lines [background-size:28px_28px] p-5"
+            className="flex aspect-[16/10] flex-col justify-between rounded-lg border border-dashed border-ink/15 bg-grid-lines [background-size:28px_28px] p-5"
           >
-            <span className="inline-flex w-fit items-center gap-1.5 rounded-sm border border-white/10 bg-ink-950/60 px-2 py-1 text-micro uppercase tracking-[0.12em] text-ink-500">
+            <span className="inline-flex w-fit items-center gap-1.5 rounded-sm border border-ink/10 bg-white px-2 py-1 text-micro uppercase tracking-[0.12em] text-ink-500">
               <span className="h-1.5 w-1.5 rounded-full bg-gold/70" />
               {badge}
             </span>

@@ -21,7 +21,7 @@ export function SystemSelectionGuidance({
       : 'Choose this system when:';
 
   return (
-    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-8 lg:p-10">
+    <div className="rounded-lg border border-ink/10 bg-ink/[0.03] p-8 lg:p-10">
       <p className="text-body-l text-ink-300">{lead}</p>
       <ul className="mt-6 grid gap-4 sm:grid-cols-2">
         {criteria.map((c) => (
@@ -31,7 +31,7 @@ export function SystemSelectionGuidance({
           </li>
         ))}
       </ul>
-      <div className="mt-8 border-t border-white/10 pt-6">
+      <div className="mt-8 border-t border-ink/10 pt-6">
         <Button href="/systems/compare" variant="outline" size="md">
           {compareLabel}
         </Button>

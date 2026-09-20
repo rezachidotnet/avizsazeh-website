@@ -29,8 +29,8 @@ function Column({
     <div
       className={
         aviz
-          ? 'relative rounded-lg border border-gold/30 bg-white/[0.04] p-7 shadow-gold lg:p-8'
-          : 'rounded-lg border border-white/10 bg-white/[0.015] p-7 lg:p-8'
+          ? 'relative rounded-lg border border-gold/30 bg-ink/[0.04] p-7 shadow-gold lg:p-8'
+          : 'rounded-lg border border-ink/10 bg-ink/[0.015] p-7 lg:p-8'
       }
     >
       {aviz ? (
@@ -51,7 +51,7 @@ function Column({
             key={item}
             className={
               aviz
-                ? 'flex gap-3 text-body-s text-white'
+                ? 'flex gap-3 text-body-s text-ink'
                 : 'flex gap-3 text-body-s text-ink-500'
             }
           >
@@ -71,11 +71,11 @@ export function DifferentiationTable() {
   const rows = t.raw('rows') as Row[];
 
   return (
-    <section className="bg-ink-950 py-section lg:py-section-lg">
+    <section className="bg-surface py-section lg:py-section-lg">
       <div className="container-grid">
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow-center">{t('eyebrow')}</span>
-          <h2 className="mt-5 font-display text-h2 font-semibold text-white">{t('title')}</h2>
+          <h2 className="mt-5 font-display text-h2 font-semibold text-ink">{t('title')}</h2>
           <p className="mt-4 text-body-l text-ink-300">{t('subtitle')}</p>
         </div>
 
@@ -85,7 +85,7 @@ export function DifferentiationTable() {
           <Column title={t('avizTitle')} items={rows.map((r) => r.aviz)} variant="aviz" />
         </div>
 
-        <p className="mx-auto mt-14 max-w-3xl text-center font-display text-h4 font-medium leading-snug text-white">
+        <p className="mx-auto mt-14 max-w-3xl text-center font-display text-h4 font-medium leading-snug text-ink">
           {t('closing')}
         </p>
 

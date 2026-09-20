@@ -52,7 +52,7 @@ export default async function SystemComparePage({
 
       <Section>
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 className="font-display text-h2 font-semibold text-white">{t('matrixTitle')}</h2>
+          <h2 className="font-display text-h2 font-semibold text-ink">{t('matrixTitle')}</h2>
           <FitLegend locale={locale} />
         </div>
 

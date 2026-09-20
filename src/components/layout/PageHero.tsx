@@ -13,7 +13,7 @@ export function PageHero({
   breadcrumbs?: { name: string; path: string; current?: boolean }[];
 }) {
   return (
-    <header className="relative overflow-hidden border-b border-white/10 bg-ivory">
+    <header className="relative overflow-hidden border-b border-ink/10 bg-ivory">
       <div className="pointer-events-none absolute inset-0 bg-grid-lines [background-size:48px_48px] opacity-30" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="container-grid relative py-16 lg:py-24">
@@ -23,7 +23,7 @@ export function PageHero({
           </div>
         ) : null}
         <span className="eyebrow">{eyebrow}</span>
-        <h1 className="mt-4 max-w-3xl font-display text-h1 font-semibold text-white">
+        <h1 className="mt-4 max-w-3xl font-display text-h1 font-semibold text-ink">
           {title}
         </h1>
         {intro ? (

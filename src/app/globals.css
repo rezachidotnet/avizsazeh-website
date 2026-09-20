@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   * {
@@ -36,7 +36,7 @@
   }
 
   ::selection {
-    @apply bg-gold/30 text-white;
+    @apply bg-gold/25 text-ink-950;
   }
 
   :focus-visible {
@@ -84,13 +84,13 @@
     @apply mx-auto w-full max-w-grid px-5 md:px-10 lg:px-20;
   }
 
-  /* Form control — engineering input field (dark) */
+  /* Form control — engineering input field */
   .aecs-input {
-    @apply w-full rounded border border-white/10 bg-white/[0.03] px-4 py-3 text-body text-white transition-colors duration-fast placeholder:text-ink-400 hover:border-white/20 focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/30;
+    @apply w-full rounded border border-ink/10 bg-ink/[0.02] px-4 py-3 text-body text-ink transition-colors duration-fast placeholder:text-ink-400 hover:border-ink/20 focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/30;
   }
 
   .aecs-input option {
-    @apply bg-ink-900 text-white;
+    @apply bg-surface text-ink;
   }
 }
 

@@ -10,12 +10,12 @@ const base =
 
 const variants: Record<Variant, string> = {
   // Engineering layer — default system action (solid, high contrast)
-  primary: 'bg-white text-ink-950 hover:bg-ink-300',
+  primary: 'bg-ink text-white hover:bg-ink-800',
   // Authority accent — conversion / transformation actions
-  gold: 'bg-gold text-ink-950 hover:bg-gold-400 hover:shadow-gold',
+  gold: 'bg-gold text-white hover:bg-gold-600 hover:shadow-gold',
   // Gold hairline outline (header CTA, secondary conversions)
   outline: 'border border-gold/55 text-gold hover:border-gold hover:bg-gold/10',
-  ghost: 'text-white hover:bg-white/[0.08]',
+  ghost: 'text-ink hover:bg-ink/[0.06]',
 };
 
 const sizes: Record<Size, string> = {

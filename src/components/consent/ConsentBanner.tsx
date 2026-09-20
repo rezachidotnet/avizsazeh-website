@@ -31,7 +31,7 @@ export function ConsentBanner() {
   return (
     <section
       aria-label={t('bannerTitle')}
-      className="fixed inset-x-0 bottom-16 z-[70] border-t border-white/10 bg-ink-950/98 backdrop-blur-md lg:bottom-0"
+      className="fixed inset-x-0 bottom-16 z-[70] border-t border-ink/10 bg-surface/98 backdrop-blur-md lg:bottom-0"
     >
       <div className="container-grid py-4 sm:py-5">
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
@@ -64,7 +64,7 @@ export function ConsentBanner() {
               type="button"
               variant="ghost"
               size="sm"
-              className={cn('w-full whitespace-normal text-center leading-tight border border-white/10')}
+              className={cn('w-full whitespace-normal text-center leading-tight border border-ink/10')}
               onClick={openPreferences}
             >
               {t('managePreferences')}

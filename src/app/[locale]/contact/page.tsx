@@ -64,30 +64,30 @@ export default async function ContactPage({
       <Section>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
-            <ul className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
+            <ul className="grid gap-px overflow-hidden rounded-lg border border-ink/10 bg-ink/10 sm:grid-cols-2">
               {rows.map((row) => {
                 const content = (
                   <>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-white/10 bg-white/[0.04] text-gold">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-ink/10 bg-ink/[0.04] text-gold">
                       <SystemIcon name={row.icon} className="h-5 w-5" />
                     </span>
                     <span className="flex flex-col">
                       <span className="text-caption uppercase tracking-wide text-ink-500">
                         {row.label}
                       </span>
-                      <span className={row.mono ? 'nums mt-1 text-body font-medium text-white' : 'mt-1 text-body font-medium text-white'}>
+                      <span className={row.mono ? 'nums mt-1 text-body font-medium text-ink' : 'mt-1 text-body font-medium text-ink'}>
                         {row.value}
                       </span>
                     </span>
                   </>
                 );
                 return (
-                  <li key={row.label} className="bg-ink-900">
+                  <li key={row.label} className="bg-ivory">
                     {row.tel && row.track ? (
                       <TrackedTel
                         phone={row.tel}
                         location={row.track}
-                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-white/[0.03]"
+                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-ink/[0.03]"
                       >
                         {content}
                       </TrackedTel>
@@ -95,7 +95,7 @@ export default async function ContactPage({
                       <TrackedMailto
                         email={row.email}
                         location={row.track}
-                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-white/[0.03]"
+                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-ink/[0.03]"
                       >
                         {content}
                       </TrackedMailto>
@@ -104,7 +104,7 @@ export default async function ContactPage({
                         href={row.href}
                         target={row.href.startsWith('http') ? '_blank' : undefined}
                         rel={row.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-white/[0.03]"
+                        className="flex h-full items-start gap-4 px-5 py-6 transition-colors hover:bg-ink/[0.03]"
                       >
                         {content}
                       </a>
@@ -148,7 +148,7 @@ export default async function ContactPage({
       </Section>
 
       <Section ivory>
-        <h2 className="font-display text-h2 font-semibold text-white">{t('routingTitle')}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{t('routingTitle')}</h2>
         <div className="mt-10">
           <ContactRouting />
         </div>

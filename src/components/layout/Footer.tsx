@@ -38,7 +38,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
     <li>
       <Link
         href={href}
-        className="group flex items-center gap-2 text-body-s text-ink-400 transition-colors duration-fast hover:text-white"
+        className="group flex items-center gap-2 text-body-s text-ink-400 transition-colors duration-fast hover:text-ink"
       >
         <span>{children}</span>
         <Arrow />
@@ -99,7 +99,7 @@ export async function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-ink-950 text-ink-400">
+    <footer className="border-t border-ink/10 bg-ivory text-ink-500">
       {/* primary grid */}
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-grid-lines [background-size:48px_48px] opacity-[0.35]" />
@@ -164,7 +164,7 @@ export async function Footer() {
                   <TrackedTel
                     phone={company.mobile}
                     location="footer_contact"
-                    className="flex gap-3 transition-colors hover:text-white"
+                    className="flex gap-3 transition-colors hover:text-ink"
                   >
                     <svg {...iconProps}>
                       <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
@@ -176,7 +176,7 @@ export async function Footer() {
                   <TrackedMailto
                     email={company.email}
                     location="footer_contact"
-                    className="flex gap-3 transition-colors hover:text-white"
+                    className="flex gap-3 transition-colors hover:text-ink"
                   >
                     <svg {...iconProps}>
                       <path d="M3 6h18v12H3zM3 7l9 6 9-6" strokeLinejoin="round" />
@@ -189,7 +189,7 @@ export async function Footer() {
                     href={SITE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex gap-3 transition-colors hover:text-white"
+                    className="flex gap-3 transition-colors hover:text-ink"
                   >
                     <svg {...iconProps}>
                       <circle cx="12" cy="12" r="9" />
@@ -205,7 +205,7 @@ export async function Footer() {
       </div>
 
       {/* utility band */}
-      <div className="border-y border-white/10 bg-white/[0.015]">
+      <div className="border-y border-ink/10 bg-ink/[0.015]">
         <div className="container-grid flex flex-col items-center justify-between gap-5 py-5 text-center lg:flex-row lg:text-start">
           <div className="flex items-center gap-4">
             <span className="text-caption font-semibold uppercase tracking-[0.18em] text-ink-500">
@@ -269,10 +269,10 @@ export async function Footer() {
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
           <ConsentSettingsButton />
-          <Link href="/legal/privacy" className="transition-colors hover:text-white">
+          <Link href="/legal/privacy" className="transition-colors hover:text-ink">
             {t('privacy')}
           </Link>
-          <Link href="/legal/terms" className="transition-colors hover:text-white">
+          <Link href="/legal/terms" className="transition-colors hover:text-ink">
             {t('terms')}
           </Link>
         </div>

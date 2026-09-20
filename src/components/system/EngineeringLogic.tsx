@@ -20,7 +20,7 @@ export function EngineeringLogic({
   return (
     <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
       <div className="lg:col-span-7">
-        <h2 className="font-display text-h2 font-semibold text-white">{title}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{title}</h2>
         <ul className="mt-8 space-y-4">
           {bullets.map((item) => (
             <li key={item} className="flex gap-4">

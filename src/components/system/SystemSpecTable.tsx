@@ -19,12 +19,12 @@ export function SystemSpecTable({
   caption?: string;
 }) {
   return (
-    <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
-      <div className="border-b border-white/10 bg-white/[0.03] px-6 py-4">
+    <div className="overflow-hidden rounded-lg border border-ink/10 bg-ink/[0.03]">
+      <div className="border-b border-ink/10 bg-ink/[0.03] px-6 py-4">
         <span className="eyebrow">{title}</span>
         {caption ? <p className="mt-2 text-caption text-ink-500">{caption}</p> : null}
       </div>
-      <dl className="divide-y divide-white/10">
+      <dl className="divide-y divide-ink/10">
         {rows.map((row) => (
           <div
             key={row.label.en}

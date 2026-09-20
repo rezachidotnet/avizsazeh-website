@@ -66,7 +66,7 @@ export default async function MetalSuspendedCeilingHub({
 
       {/* hero visual */}
       <Section className="!pb-0">
-        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-white/10 bg-ink-100">
+        <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-ink/10 bg-ink-100">
           <Image
             src={hub.cover}
             alt={localized(hub.coverAlt, locale)}
@@ -82,17 +82,17 @@ export default async function MetalSuspendedCeilingHub({
       <Section>
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.whatIs.title, locale)}</h2>
+            <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.whatIs.title, locale)}</h2>
             <p className="mt-4 text-body-l leading-relaxed text-ink-300">{localized(hub.whatIs.body, locale)}</p>
           </div>
           <div>
-            <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.whyEngineering.title, locale)}</h2>
+            <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.whyEngineering.title, locale)}</h2>
             <p className="mt-4 text-body-l leading-relaxed text-ink-300">{localized(hub.whyEngineering.body, locale)}</p>
             <ul className="mt-6 space-y-3">
               {localizedList(hub.whyEngineering.bullets, locale).map((b) => (
                 <li key={b} className="flex items-start gap-3">
                   <SystemIcon name="engineering" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                  <span className="text-body-s text-ink-200">{b}</span>
+                  <span className="text-body-s text-ink-600">{b}</span>
                 </li>
               ))}
             </ul>
@@ -102,7 +102,7 @@ export default async function MetalSuspendedCeilingHub({
 
       {/* types — links to the four systems */}
       <Section ivory>
-        <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.typesTitle, locale)}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.typesTitle, locale)}</h2>
         <p className="mt-4 max-w-prose text-body-l text-ink-300">{localized(hub.typesIntro, locale)}</p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {systems.map((s, i) => (
@@ -120,7 +120,7 @@ export default async function MetalSuspendedCeilingHub({
 
       {/* comparison matrix */}
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.comparisonTitle, locale)}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.comparisonTitle, locale)}</h2>
         <div className="mt-8">
           <SystemComparisonMatrix locale={locale} criterionLabel={t('criterion')} />
         </div>
@@ -132,7 +132,7 @@ export default async function MetalSuspendedCeilingHub({
 
       {/* applications — links to the application landing pages */}
       <Section ivory>
-        <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.applicationsTitle, locale)}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.applicationsTitle, locale)}</h2>
         <p className="mt-4 max-w-prose text-body-l text-ink-300">{localized(hub.applicationsIntro, locale)}</p>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {hub.applications.map((a, i) => {
@@ -140,7 +140,7 @@ export default async function MetalSuspendedCeilingHub({
             const content = (
               <span className="flex items-center gap-3">
                 <SystemIcon name="architecture" className="h-5 w-5 shrink-0 text-gold" />
-                <span className="text-body-s font-medium text-ink-200">{label}</span>
+                <span className="text-body-s font-medium text-ink-600">{label}</span>
               </span>
             );
             return (
@@ -148,7 +148,7 @@ export default async function MetalSuspendedCeilingHub({
                 {a.href ? (
                   <Link
                     href={a.href}
-                    className="group flex items-center justify-between gap-3 rounded-sm border border-white/10 bg-white/[0.03] px-5 py-4 transition-colors hover:border-gold/40"
+                    className="group flex items-center justify-between gap-3 rounded-sm border border-ink/10 bg-ink/[0.03] px-5 py-4 transition-colors hover:border-gold/40"
                   >
                     {content}
                     <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-gold transition-transform duration-fast group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" fill="none" stroke="currentColor" strokeWidth={1.6} aria-hidden="true">
@@ -156,7 +156,7 @@ export default async function MetalSuspendedCeilingHub({
                     </svg>
                   </Link>
                 ) : (
-                  <div className="flex items-center gap-3 rounded-sm border border-white/10 bg-white/[0.03] px-5 py-4">
+                  <div className="flex items-center gap-3 rounded-sm border border-ink/10 bg-ink/[0.03] px-5 py-4">
                     {content}
                   </div>
                 )}
@@ -168,12 +168,12 @@ export default async function MetalSuspendedCeilingHub({
 
       {/* engineering & execution process */}
       <Section>
-        <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.processTitle, locale)}</h2>
+        <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.processTitle, locale)}</h2>
         <ol className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {hub.process.map((step, i) => (
-            <li key={step.title.en} className="rounded-lg border border-white/10 bg-white/[0.03] p-7">
+            <li key={step.title.en} className="rounded-lg border border-ink/10 bg-ink/[0.03] p-7">
               <span className="font-display text-h2 font-bold text-gold">0{i + 1}</span>
-              <h3 className="mt-4 text-h4 font-semibold text-white">{localized(step.title, locale)}</h3>
+              <h3 className="mt-4 text-h4 font-semibold text-ink">{localized(step.title, locale)}</h3>
               <p className="mt-3 text-body-s text-ink-500">{localized(step.body, locale)}</p>
             </li>
           ))}
@@ -182,14 +182,14 @@ export default async function MetalSuspendedCeilingHub({
 
       {/* common mistakes */}
       <Section ivory>
-        <h2 className="font-display text-h2 font-semibold text-white">{localized(hub.mistakesTitle, locale)}</h2>
-        <ul className="mt-8 grid gap-px overflow-hidden rounded-lg border border-white/10 md:grid-cols-2">
+        <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.mistakesTitle, locale)}</h2>
+        <ul className="mt-8 grid gap-px overflow-hidden rounded-lg border border-ink/10 md:grid-cols-2">
           {localizedList(hub.mistakes, locale).map((m, i) => (
-            <li key={i} className="flex items-start gap-4 bg-ink-900 p-6">
+            <li key={i} className="flex items-start gap-4 bg-white p-6">
               <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-ink-500" fill="none" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
                 <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span className="text-body text-ink-200">{m}</span>
+              <span className="text-body text-ink-600">{m}</span>
             </li>
           ))}
         </ul>

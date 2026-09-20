@@ -13,11 +13,11 @@ export function SystemsOverview() {
   const locale = useLocale() as Locale;
 
   return (
-    <section id="systems" className="bg-ink-950 py-section lg:py-section-lg">
+    <section id="systems" className="bg-surface py-section lg:py-section-lg">
       <div className="container-grid">
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow-center">{t('eyebrow')}</span>
-          <h2 className="mt-5 font-display text-h2 font-semibold text-white">
+          <h2 className="mt-5 font-display text-h2 font-semibold text-ink">
             {t('title')}
           </h2>
           <p className="mt-4 text-body-l text-ink-300">{t('description')}</p>

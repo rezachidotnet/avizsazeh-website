@@ -17,17 +17,17 @@ export function AudienceSection() {
       <div className="container-grid">
         <div className="max-w-2xl">
           <span className="eyebrow">{t('eyebrow')}</span>
-          <h2 className="mt-4 font-display text-h2 font-semibold text-white">{t('title')}</h2>
+          <h2 className="mt-4 font-display text-h2 font-semibold text-ink">{t('title')}</h2>
         </div>
 
-        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-3">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-ink/10 bg-ink/10 sm:grid-cols-3">
           {cards.map((card, i) => (
             <Reveal as="div" key={card.title} delay={i * 70}>
-              <div className="flex h-full flex-col bg-ink-950 p-8">
-                <span className="flex h-12 w-12 items-center justify-center rounded border border-white/10 bg-white/[0.04] text-gold">
+              <div className="flex h-full flex-col bg-white p-8">
+                <span className="flex h-12 w-12 items-center justify-center rounded border border-ink/10 bg-ink/[0.04] text-gold">
                   <SystemIcon name={ICONS[i % ICONS.length]} className="h-6 w-6" />
                 </span>
-                <h3 className="mt-6 text-h4 font-semibold text-white">{card.title}</h3>
+                <h3 className="mt-6 text-h4 font-semibold text-ink">{card.title}</h3>
                 <p className="mt-3 flex-1 text-body-s leading-relaxed text-ink-400">{card.text}</p>
                 <Link
                   href="/rfq"

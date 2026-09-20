@@ -1,17 +1,20 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * AECS Design System — Tailwind token mapping (DARK luxury industrial theme).
- * Ground truth: /design-system/*.png.
- *   Base #0B0F14 · Surface rgba(255,255,255,0.04) · Hairline rgba(255,255,255,0.08)
- *   Gold #C8A24A · Text #FFFFFF · Text-muted rgba(255,255,255,0.7)
+ * AECS Design System — Tailwind token mapping (LIGHT industrial theme,
+ * gold accent). Ground truth: /brand-guid/website-ux/10-Color_System_AECS.css.
+ *   Base #FBF8F3 (warm ivory) · Panel rgba(26,20,13,0.035) · Hairline rgba(26,20,13,0.10)
+ *   Gold #C8A24A · Text #1B160F · Text-muted rgba(27,22,15,0.6)
  *
- * The `ink` scale is a DARK-THEME remap, assigned by usage rather than a single
- * monotonic ramp:
- *   100/200 .............. dark surfaces, hairline borders & grid dividers
- *   300/400/500/600/700 .. foreground text (lighter = more prominent)
- *   800/900/950 .......... lifted panels → page base
- * Gold remains reserved for transformation / decision points.
+ * `ink` is a proper foreground/text scale — dark, regardless of theme,
+ * because ink is dark pigment. Page/panel backgrounds use the dedicated
+ * `surface` / `ivory` / `panel` tokens instead of the ink scale, so a single
+ * token never has to mean both "dark text" and "dark background".
+ *
+ * A handful of sections are a deliberate dark "engineering" contrast band
+ * (the `dark` prop on <Section>, the closing RFQ CTA, the full-bleed photo
+ * hero) — those keep the charcoal ink-950/900 as a literal background and
+ * are intentionally left untouched by the light theme.
  */
 const config: Config = {
   content: [
@@ -41,26 +44,27 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Neutral scale — assigned by usage (see header note)
+        // Foreground / text scale — always dark ("ink"), a few of these
+        // values also back the deliberate dark contrast bands (see header).
         ink: {
-          DEFAULT: '#FFFFFF', // primary text / solid marks
-          950: '#0B0F14', // page base
-          900: '#10151C', // lifted dark panel
-          800: '#222B34', // strong divider
-          700: '#C7CED8', // strong body text
-          600: '#AEB6C1', // body / secondary text
-          500: '#8A93A0', // labels · eyebrows · captions
-          400: '#79828F', // muted / auxiliary text
-          300: '#C7CED8', // bright secondary text (on imagery / dark)
-          200: '#1B232C', // hairline border · grid divider
-          100: '#12181F', // darkest surface (image placeholders)
+          DEFAULT: '#1B160F', // primary text / solid marks
+          950: '#1B160F', // darkest ink — also the dark-band page base
+          900: '#2B2318', // dark-band lifted panel
+          800: '#3C3121',
+          700: '#4C4230', // strong body text
+          600: '#5E5240',
+          500: '#7A6D59', // labels · eyebrows · captions
+          400: '#8A7E6E', // muted / auxiliary text
+          300: '#4C4230', // secondary body copy (kept as dark as 700 — heavy use, needs contrast)
+          200: '#E7E0D2', // hairline border · grid divider (light)
+          100: '#EDE6D8', // lightest placeholder surface
         },
         // Alt surfaces
-        ivory: '#0E141A', // subtle lifted surface (was light ivory)
-        surface: '#0B0F14', // page background
-        base: '#0B0F14', // explicit page base alias
-        panel: 'rgba(255,255,255,0.04)', // glass surface (spec)
-        hair: 'rgba(255,255,255,0.08)', // hairline (spec)
+        ivory: '#F1EAE0', // secondary light surface
+        surface: '#FBF8F3', // page background
+        base: '#FBF8F3', // explicit page base alias
+        panel: 'rgba(27,22,15,0.035)', // glass surface (dark tint on light)
+        hair: 'rgba(27,22,15,0.10)', // hairline (dark tint on light)
         // Authority accent — transformation point only
         gold: {
           DEFAULT: '#C8A24A',
@@ -119,10 +123,10 @@ const config: Config = {
         lg: '12px',
       },
       boxShadow: {
-        sm: '0 2px 6px rgba(0,0,0,0.4)',
-        md: '0 8px 24px rgba(0,0,0,0.45)',
-        lg: '0 18px 48px rgba(0,0,0,0.55)',
-        xl: '0 28px 80px rgba(0,0,0,0.6)',
+        sm: '0 2px 6px rgba(27,22,15,0.08)',
+        md: '0 8px 24px rgba(27,22,15,0.10)',
+        lg: '0 18px 48px rgba(27,22,15,0.14)',
+        xl: '0 28px 80px rgba(27,22,15,0.18)',
         gold: '0 10px 30px rgba(200,162,74,0.25)',
       },
       transitionDuration: {
@@ -135,7 +139,11 @@ const config: Config = {
         aecs: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
       },
       backgroundImage: {
+        // dark hairline grid — for light surfaces (the default)
         'grid-lines':
+          'linear-gradient(to right, rgba(27,22,15,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(27,22,15,0.06) 1px, transparent 1px)',
+        // light hairline grid — for the deliberate dark contrast bands
+        'grid-lines-dark':
           'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
       },
       keyframes: {

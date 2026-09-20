@@ -24,9 +24,9 @@ export function ApplicationFitGrid({
         {applications.map((a) => (
           <div
             key={a.type.en}
-            className="rounded-lg border border-white/10 bg-white/[0.03] p-6 transition-colors duration-fast hover:border-gold/30"
+            className="rounded-lg border border-ink/10 bg-ink/[0.03] p-6 transition-colors duration-fast hover:border-gold/30"
           >
-            <h3 className="flex items-center gap-3 text-body-l font-semibold text-white">
+            <h3 className="flex items-center gap-3 text-body-l font-semibold text-ink">
               <SystemIcon name="architecture" className="h-5 w-5 shrink-0 text-gold" />
               {localized(a.type, locale)}
             </h3>
@@ -37,7 +37,7 @@ export function ApplicationFitGrid({
         ))}
       </div>
 
-      <div className="mt-6 rounded-lg border border-white/10 bg-white/[0.02] p-6">
+      <div className="mt-6 rounded-lg border border-ink/10 bg-ink/[0.02] p-6">
         <h3 className="flex items-center gap-3 text-body-l font-semibold text-ink-300">
           <SystemIcon name="control" className="h-5 w-5 shrink-0 text-ink-500" />
           {notRecommendedTitle}
