@@ -7,7 +7,8 @@ import { Logo } from '@/components/brand/Logo';
 import { LocaleSwitcher } from './LocaleSwitcher';
 import { Button } from '@/components/ui/Button';
 import { systems } from '@/lib/content/systems';
-import { localized } from '@/lib/site';
+import { company, localized } from '@/lib/site';
+import { trackContactClick } from '@/lib/analytics';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 
@@ -23,6 +24,7 @@ const NAV = [
 export function Header() {
   const t = useTranslations('nav');
   const tc = useTranslations('cta');
+  const tCommon = useTranslations('common');
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -128,6 +130,17 @@ export function Header() {
               <span className={cn('absolute inset-x-0 top-3 h-0.5 bg-ink transition-transform duration-fast', open && 'top-1.5 -rotate-45')} />
             </span>
           </button>
+          {/* Always the last item in this group so it lands at the far edge of the header. */}
+          <a
+            href={`tel:${company.phoneConsult}`}
+            aria-label={`${tCommon('call')}: ${company.phoneConsultDisplay}`}
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-ink/15 text-ink transition-colors duration-fast hover:border-gold/40 hover:text-gold"
+            onClick={() => trackContactClick('phone', { cta_location: 'header' })}
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.6} aria-hidden="true">
+              <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
+            </svg>
+          </a>
         </div>
       </div>
 

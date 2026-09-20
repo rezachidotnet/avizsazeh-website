@@ -34,10 +34,16 @@ export const company = {
   mobileIntl: '989120656528',
   mobileIntlDisplay: '+98 912 065 6528',
   whatsappUrl: 'https://wa.me/989120656528',
-  email: 'info@avizsazeh.ir',
-  emailAlt: 'info@avizsazeh.com',
+  email: 'info@avizsazeh.com',
+  emailAlt: 'info@avizsazeh.ir',
   instagram: 'Avizsazeh',
   instagramUrl: 'https://instagram.com/avizsazeh',
+  /** Sister/group companies, cross-linked in the footer. */
+  sisterSites: [
+    { host: 'www.sipanelco.com', url: 'https://www.sipanelco.com' },
+    { host: 'www.ahanassa.com', url: 'https://www.ahanassa.com' },
+    { host: 'www.fazasazeh.ir', url: 'https://www.fazasazeh.ir' },
+  ],
   address: {
     fa: 'اصفهان، خیابان هزارجریب، ابتدای خیابان خسروپور، کوی آزادگان، پلاک ۶',
     en: 'Isfahan, Hezar Jarib St., beginning of Khosropour St., Kooy-e Azadegan, No. 6',

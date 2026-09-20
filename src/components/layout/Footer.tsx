@@ -157,9 +157,6 @@ export async function Footer() {
                     {localized(company.city, locale)} · {localized(company.address, locale)}
                   </span>
                 </li>
-                {/* Primary phone = complete mobile number. TODO(client): confirm the full
-                    landline (031-35134 appears to be a shortened/extension number) before
-                    promoting it as a primary contact. */}
                 <li>
                   <TrackedTel
                     phone={company.mobile}
@@ -170,6 +167,18 @@ export async function Footer() {
                       <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
                     </svg>
                     <span className="nums">{company.mobileDisplay}</span>
+                  </TrackedTel>
+                </li>
+                <li>
+                  <TrackedTel
+                    phone={company.phoneConsult}
+                    location="footer_contact"
+                    className="flex gap-3 transition-colors hover:text-ink"
+                  >
+                    <svg {...iconProps}>
+                      <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" strokeLinejoin="round" />
+                    </svg>
+                    <span className="nums">{company.phoneConsultDisplay}</span>
                   </TrackedTel>
                 </li>
                 <li>
@@ -198,6 +207,22 @@ export async function Footer() {
                     <span>{host}</span>
                   </a>
                 </li>
+                {company.sisterSites.map((site) => (
+                  <li key={site.host}>
+                    <a
+                      href={site.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex gap-3 transition-colors hover:text-ink"
+                    >
+                      <svg {...iconProps}>
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M3 12h18M12 3c2.5 2.4 3.8 5.6 3.8 9S14.5 18.6 12 21M12 3C9.5 5.4 8.2 8.6 8.2 12S9.5 18.6 12 21" />
+                      </svg>
+                      <span>{site.host}</span>
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

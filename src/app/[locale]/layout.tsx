@@ -12,6 +12,7 @@ import { routing, localeDirection, type Locale } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileActionBar } from '@/components/layout/MobileActionBar';
+import { WhatsAppFloatButton } from '@/components/layout/WhatsAppFloatButton';
 import { Analytics } from '@/components/analytics/Analytics';
 import { PageViewTracker } from '@/components/analytics/PageViewTracker';
 import { ConsentBootstrap } from '@/components/consent/ConsentBootstrap';
@@ -157,6 +158,7 @@ export default async function LocaleLayout({
             </main>
             <Footer />
             <MobileActionBar />
+            <WhatsAppFloatButton />
             <ConsentBanner />
             <ConsentPreferences />
           </NextIntlClientProvider>
