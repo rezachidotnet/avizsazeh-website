@@ -31,8 +31,8 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
       <JsonLd data={localBusinessJsonLd(params.locale)} />
       <Hero />
       <TrustMetrics />
-      <DifferentiationTable />
       <SystemsOverview />
+      <DifferentiationTable />
       <EngineeringFlow />
     </>
   );

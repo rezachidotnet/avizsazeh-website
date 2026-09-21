@@ -17,6 +17,7 @@ export function EngineeringFlow() {
     <Section dark>
       <SectionHeader
         dark
+        align="center"
         eyebrow={t('eyebrow')}
         title={t('title')}
         description={t('description')}
@@ -60,7 +61,7 @@ export function EngineeringFlow() {
         </ol>
       </div>
 
-      <div className="mt-14 flex flex-col gap-4 sm:flex-row sm:items-center">
+      <div className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <Button href="/rfq" variant="gold" size="lg">
           {tc('startProjectDefinition')}
         </Button>

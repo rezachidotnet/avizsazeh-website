@@ -44,12 +44,16 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Precision Engineered · Flawless Execution",
       "metaTitle": "Metal Suspended Ceiling Systems | Design, Engineering & Execution | AvizSazeh",
       "metaDescription": "AvizSazeh designs, engineers, manufactures and installs metal suspended ceiling systems, including linear metal ceilings, open cell ceilings, baffle ceilings and metal ceiling tiles for commercial and architectural projects.",
       "imageAlt": "Engineered metal suspended ceiling installed in a large-scale architectural space",
-      "headline": "Metal Suspended Ceiling Systems — Engineered from Design to Execution",
-      "subheadline": "AvizSazeh translates architectural ceiling concepts into structurally validated, manufacturable, and site-executable metal suspended ceiling systems — from design intent to installed reality.",
+      "headline": "Metal Suspended Ceiling",
+      "categories": [
+        "Linear Ceiling",
+        "Open Cell (Grilliom)",
+        "Metal Tile",
+        "Baffle"
+      ],
       "description": "We do not sell materials. We deliver executable ceiling systems.",
       "cardTitle": "A ceiling is an engineered system — not a product.",
       "cardText": "We integrate design, engineering, materials and installation into high-performance ceiling systems.",

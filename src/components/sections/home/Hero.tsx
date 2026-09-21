@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
+import { Link } from '@/i18n/routing';
+
+const CATEGORY_SLUGS = ['linear-ceiling', 'open-cell', 'metal-tile', 'baffle'] as const;
 
 /** Home hero — brand-positioning statement over full-bleed engineering imagery. */
 export function Hero() {
   const t = useTranslations('home.hero');
   const tc = useTranslations('cta');
+  const categories = t.raw('categories') as string[];
 
   return (
     <section className="relative isolate overflow-hidden bg-ink-950 text-white">
@@ -28,13 +32,23 @@ export function Hero() {
       <div className="container-grid relative grid min-h-[620px] items-center gap-12 py-24 lg:min-h-[760px] lg:grid-cols-12 lg:py-28">
         {/* left — system thesis */}
         <div className="lg:col-span-7 lg:self-end lg:pb-6">
-          <span className="eyebrow text-gold">{t('eyebrow')}</span>
-          <h1 className="mt-6 max-w-3xl font-display text-h1 font-semibold leading-[1.08] text-white">
+          <h1 className="max-w-3xl font-display text-h1 font-semibold leading-[1.08] text-white">
             {t('headline')}
           </h1>
-          <p className="mt-6 max-w-2xl text-body-l leading-relaxed text-ink-300">
-            {t('subheadline')}
-          </p>
+
+          <ul className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+            {categories.map((category, i) => (
+              <li key={category} className="flex items-center gap-5">
+                {i > 0 && <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold/70" />}
+                <Link
+                  href={`/systems/${CATEGORY_SLUGS[i]}`}
+                  className="text-body-l text-white/70 transition-colors hover:text-gold"
+                >
+                  {category}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="/rfq" variant="gold" size="lg">
@@ -56,7 +70,7 @@ export function Hero() {
             <h2 className="mt-6 font-display text-h3 font-medium leading-snug text-white">
               {t('cardTitle')}
             </h2>
-            <p className="mt-4 text-body-s leading-relaxed text-ink-400">
+            <p className="mt-4 text-body-s leading-relaxed text-white/60">
               {t('cardText')}
             </p>
           </div>

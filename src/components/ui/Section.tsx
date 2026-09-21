@@ -52,16 +52,25 @@ export function SectionHeader({
   dark,
   className,
 }: SectionHeaderProps) {
+  const centered = align === 'center';
+
   return (
     <div
       className={cn(
-        'max-w-prose',
-        align === 'center' && 'mx-auto text-center',
+        centered ? 'mx-auto max-w-2xl text-center' : 'max-w-prose',
         className,
       )}
     >
-      {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
-      <h2 className={cn('mt-4 font-display text-h2 font-semibold', dark ? 'text-white' : 'text-ink')}>
+      {eyebrow ? (
+        <span className={centered ? 'eyebrow-center' : 'eyebrow'}>{eyebrow}</span>
+      ) : null}
+      <h2
+        className={cn(
+          centered ? 'mt-5' : 'mt-4',
+          'font-display text-h2 font-semibold',
+          dark ? 'text-white' : 'text-ink',
+        )}
+      >
         {title}
       </h2>
       {description ? (
