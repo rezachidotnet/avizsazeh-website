@@ -44,6 +44,7 @@ export const company = {
     { host: 'www.sipanelco.com', url: 'https://www.sipanelco.com' },
     { host: 'www.ahanassa.com', url: 'https://www.ahanassa.com' },
     { host: 'www.fazasazeh.ir', url: 'https://www.fazasazeh.ir' },
+    { host: 'www.aisanaat.ir', url: 'https://www.aisanaat.ir' },
   ],
   address: {
     fa: 'اصفهان، خیابان هزارجریب، ابتدای خیابان خسروپور، کوی آزادگان، پلاک ۶',
