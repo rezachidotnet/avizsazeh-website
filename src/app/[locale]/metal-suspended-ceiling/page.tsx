@@ -104,7 +104,7 @@ export default async function MetalSuspendedCeilingHub({
       <Section ivory>
         <h2 className="font-display text-h2 font-semibold text-ink">{localized(hub.typesTitle, locale)}</h2>
         <p className="mt-4 max-w-prose text-body-l text-ink-300">{localized(hub.typesIntro, locale)}</p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {systems.map((s, i) => (
             <SystemCard
               key={s.slug}

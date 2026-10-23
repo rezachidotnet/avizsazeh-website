@@ -11,6 +11,7 @@
     "projects": "المشاريع",
     "about": "من نحن",
     "contact": "اتصل بنا",
+    "articles": "المقالات",
     "rfq": "طلب تحليل هندسي",
     "menu": "القائمة",
     "close": "إغلاق"
@@ -52,7 +53,8 @@
         "نظام السقف الخطي",
         "الجريليوم",
         "البلاطات المعدنية",
-        "البافل"
+        "البافل",
+        "المعدن الممدد"
       ],
       "description": "نحن لا نبيع مواد فقط؛ نحن نسلّم نظام سقف قابلًا للتنفيذ.",
       "cardTitle": "السقف نظام هندسي، وليس منتجًا منفردًا.",
@@ -704,7 +706,7 @@
   "systemCompare": {
     "eyebrow": "دليل اختيار النظام",
     "title": "أي نظام سقف معدني يناسب مشروعك؟",
-    "intro": "Ceiling selection depends on geometry, MEP coordination, acoustics, plenum access, hygiene, fire strategy, maintenance and architectural intent. The matrix below compares the four AvizSazeh systems across these criteria so you can shortlist before an engineering review.",
+    "intro": "Ceiling selection depends on geometry, MEP coordination, acoustics, plenum access, hygiene, fire strategy, maintenance and architectural intent. The matrix below compares the five AvizSazeh systems across these criteria so you can shortlist before an engineering review.",
     "matrixTitle": "مصفوفة القرار",
     "criterion": "Criterion",
     "note": "Fit levels are design-oriented guidance, not certified ratings. Certified engineering values are confirmed per project.",

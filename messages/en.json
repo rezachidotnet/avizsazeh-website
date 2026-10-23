@@ -11,6 +11,7 @@
     "projects": "Projects",
     "about": "About Us",
     "contact": "Contact Us",
+    "articles": "Articles",
     "rfq": "Request Analysis",
     "menu": "Menu",
     "close": "Close"
@@ -52,7 +53,8 @@
         "Linear Ceiling",
         "Open Cell (Grilliom)",
         "Metal Tile",
-        "Baffle"
+        "Baffle",
+        "Expanded Metal"
       ],
       "description": "We do not sell materials. We deliver executable ceiling systems.",
       "cardTitle": "A ceiling is an engineered system — not a product.",
@@ -692,7 +694,7 @@
   "systemCompare": {
     "eyebrow": "System selection guide",
     "title": "Which ceiling system is right for your project?",
-    "intro": "Ceiling selection depends on geometry, MEP coordination, acoustics, plenum access, hygiene, fire strategy, maintenance and architectural intent. The matrix below compares the four AvizSazeh systems across these criteria so you can shortlist before an engineering review.",
+    "intro": "Ceiling selection depends on geometry, MEP coordination, acoustics, plenum access, hygiene, fire strategy, maintenance and architectural intent. The matrix below compares the five AvizSazeh systems across these criteria so you can shortlist before an engineering review.",
     "matrixTitle": "Decision matrix",
     "criterion": "Criterion",
     "note": "Fit levels are design-oriented guidance, not certified ratings. Certified engineering values are confirmed per project.",

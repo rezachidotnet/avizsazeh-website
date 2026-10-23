@@ -11,6 +11,7 @@
     "projects": "Projects",
     "about": "About Us",
     "contact": "Contact Us",
+    "articles": "Статьи",
     "rfq": "Request Analysis",
     "menu": "Menu",
     "close": "Close"
@@ -52,7 +53,8 @@
         "Linear Ceiling",
         "Open Cell (Grilliom)",
         "Metal Tile",
-        "Baffle"
+        "Baffle",
+        "Expanded Metal"
       ],
       "description": "We do not sell materials. We deliver executable ceiling systems.",
       "cardTitle": "A ceiling is an engineered system — not a product.",

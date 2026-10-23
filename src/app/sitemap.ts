@@ -3,6 +3,7 @@ import { SEO_LOCALES, languageAlternates, localeUrl } from '@/lib/seo';
 import { systemSlugs } from '@/lib/content/systems';
 import { applicationSlugs } from '@/lib/content/applications';
 import { projects, hasCaseStudy, isIndexableProject } from '@/lib/content/projects';
+import { getArticles } from '@/lib/articles';
 
 const STATIC_PATHS = [
   '/',
@@ -41,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return 0.7;
   };
 
-  return SEO_LOCALES.flatMap((locale) =>
+  const shared = SEO_LOCALES.flatMap((locale) =>
     paths.map((path) => ({
       url: localeUrl(locale, path),
       changeFrequency: path === '/' ? 'weekly' : 'monthly',
@@ -50,5 +51,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: languageAlternates(path),
       },
     })),
-  );
+  ) as MetadataRoute.Sitemap;
+
+  // Articles are single-language: list the index only where the locale has
+  // its own articles, and each article only under its own locale.
+  const articleEntries: MetadataRoute.Sitemap = SEO_LOCALES.flatMap((locale) => {
+    const list = getArticles(locale);
+    if (!list.length) return [];
+    return [
+      {
+        url: localeUrl(locale, '/articles'),
+        lastModified: list[0].updatedAt,
+        changeFrequency: 'daily' as const,
+        priority: 0.7,
+      },
+      ...list.map((a) => ({
+        url: localeUrl(locale, `/articles/${a.slug}`),
+        lastModified: a.updatedAt,
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      })),
+    ];
+  });
+
+  return [...shared, ...articleEntries];
 }

@@ -1,0 +1,100 @@
+{
+  "_about": "Keyword bank for the automated article pipeline. Each run picks an unused keyword (see scripts/articles/next-topic.mjs), weighs it against current trends, and writes one article. priority: 1 = highest. intent: commercial | informational | comparison | local. Add real Google Search Console queries to the 'searchConsole' cluster whenever they are exported — those outrank everything else.",
+  "updated": "2026-10-23",
+  "clusters": [
+    {
+      "id": "search-console",
+      "system": null,
+      "note": "Paste real queries from Google Search Console (Performance → Queries, last 28 days, sorted by impressions). These are what people actually search before landing on avizsazeh.com.",
+      "keywords": []
+    },
+    {
+      "id": "hub",
+      "system": null,
+      "keywords": [
+        { "kw": "سقف کاذب فلزی", "intent": "commercial", "priority": 1 },
+        { "kw": "انواع سقف کاذب فلزی", "intent": "informational", "priority": 1 },
+        { "kw": "قیمت سقف کاذب فلزی", "intent": "commercial", "priority": 1, "note": "Only explain cost drivers; never publish prices that AvizSazeh has not confirmed." },
+        { "kw": "اجرای سقف کاذب فلزی", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف کاذب فلزی برای پروژه تجاری", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف کاذب فلزی اصفهان", "intent": "local", "priority": 2 },
+        { "kw": "سقف کاذب فلزی یا کناف", "intent": "comparison", "priority": 1 },
+        { "kw": "نقشه اجرایی سقف کاذب", "intent": "informational", "priority": 3 },
+        { "kw": "سقف کاذب و مبحث ۱۹", "intent": "informational", "priority": 2 },
+        { "kw": "سقف کاذب و اطفای حریق", "intent": "informational", "priority": 2 },
+        { "kw": "ارتفاع پلنوم سقف کاذب", "intent": "informational", "priority": 3 },
+        { "kw": "سقف کاذب فلزی برای بیمارستان", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف کاذب فرودگاه", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف کاذب آکوستیک", "intent": "informational", "priority": 1 }
+      ]
+    },
+    {
+      "id": "linear",
+      "system": "linear-ceiling",
+      "keywords": [
+        { "kw": "سقف خطی فلزی", "intent": "commercial", "priority": 1 },
+        { "kw": "سقف کاذب خطی", "intent": "commercial", "priority": 1 },
+        { "kw": "سقف لوور فلزی", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف خطی مورب و شعاعی", "intent": "informational", "priority": 3 },
+        { "kw": "سقف خطی و نور خطی", "intent": "informational", "priority": 3 }
+      ]
+    },
+    {
+      "id": "open-cell",
+      "system": "open-cell",
+      "keywords": [
+        { "kw": "سقف گریلیوم", "intent": "commercial", "priority": 1 },
+        { "kw": "سقف کاذب گریلیوم", "intent": "commercial", "priority": 1 },
+        { "kw": "قیمت سقف گریلیوم", "intent": "commercial", "priority": 1, "note": "Cost drivers only, no unconfirmed prices." },
+        { "kw": "اجرای سقف گریلیوم", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف گریلیوم یا سقف خطی", "intent": "comparison", "priority": 2 },
+        { "kw": "سقف سلول باز", "intent": "informational", "priority": 3 }
+      ]
+    },
+    {
+      "id": "metal-tile",
+      "system": "metal-tile",
+      "keywords": [
+        { "kw": "تایل سقفی فلزی", "intent": "commercial", "priority": 1 },
+        { "kw": "تایل سقفی آکوستیک", "intent": "commercial", "priority": 1 },
+        { "kw": "تایل سقفی کلیپ این", "intent": "commercial", "priority": 2 },
+        { "kw": "تایل فلزی ۶۰×۶۰", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف تایل برای بیمارستان", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف تابشی CBI", "intent": "informational", "priority": 3 }
+      ]
+    },
+    {
+      "id": "baffle",
+      "system": "baffle",
+      "keywords": [
+        { "kw": "سقف بافل", "intent": "commercial", "priority": 1 },
+        { "kw": "سقف بافل فلزی", "intent": "commercial", "priority": 1 },
+        { "kw": "بافل آکوستیک", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف بافل طرح چوب", "intent": "commercial", "priority": 2 },
+        { "kw": "آکوستیک کلاس درس", "intent": "informational", "priority": 2 },
+        { "kw": "سقف بافل موجی", "intent": "informational", "priority": 3 }
+      ]
+    },
+    {
+      "id": "expanded-metal",
+      "system": "expanded-metal",
+      "keywords": [
+        { "kw": "سقف اکسپندد متال", "intent": "commercial", "priority": 1 },
+        { "kw": "توری منبسط", "intent": "informational", "priority": 1 },
+        { "kw": "اکسپندد متال چیست", "intent": "informational", "priority": 1 },
+        { "kw": "سقف توری فلزی", "intent": "commercial", "priority": 1 },
+        { "kw": "اکسپندد متال یا ورق پانچ", "intent": "comparison", "priority": 2 },
+        { "kw": "نمای اکسپندد متال", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف پارکینگ", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف کاذب ایستگاه مترو", "intent": "commercial", "priority": 3 }
+      ]
+    }
+  ],
+  "trendSources": [
+    "Google Trends — Iran, category Home & Garden / Construction: https://trends.google.com/trends/explore?geo=IR&q=سقف کاذب",
+    "Iranian construction & engineering news: Tasnim, ISNA, IRNA, Tabnak, Donya-e-Eqtesad (search: ساختمان، مقررات ملی ساختمان، نظام مهندسی، مسکن، انرژی ساختمان)",
+    "Exhibitions & events: نمایشگاه بین‌المللی صنعت ساختمان (Tehran, Isfahan), Iran Build Expo",
+    "Seasonal hooks: Mehr (school acoustics), autumn/winter (energy & heating), Nowruz (retail fit-outs), summer (cooling, energy imbalance)",
+    "Global architecture press (ArchDaily, Dezeen) for design-trend angles — always localised to Iranian projects"
+  ]
+}

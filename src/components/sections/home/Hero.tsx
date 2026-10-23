@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
 import { Link } from '@/i18n/routing';
 
-const CATEGORY_SLUGS = ['linear-ceiling', 'open-cell', 'metal-tile', 'baffle'] as const;
+const CATEGORY_SLUGS = ['linear-ceiling', 'open-cell', 'metal-tile', 'baffle', 'expanded-metal'] as const;
 
 /** Home hero — brand-positioning statement over full-bleed engineering imagery. */
 export function Hero() {

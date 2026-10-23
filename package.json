@@ -10,11 +10,15 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs",
-    "test:routing": "node tests/seo-routing.integration.mjs"
+    "test:routing": "node tests/seo-routing.integration.mjs",
+    "articles:validate": "node scripts/articles/validate.mjs",
+    "articles:next": "node scripts/articles/next-topic.mjs"
   },
   "dependencies": {
     "clsx": "2.1.1",
     "entities": "^6.0.1",
+    "gray-matter": "4.0.3",
+    "marked": "14.1.4",
     "next": "14.2.15",
     "next-intl": "^3.26.5",
     "node-html-parser": "^9.0.2",

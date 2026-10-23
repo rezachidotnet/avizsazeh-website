@@ -5,6 +5,7 @@ export type IconKey =
   | 'grid'
   | 'tile'
   | 'baffle'
+  | 'mesh'
   | 'architecture'
   | 'engineering'
   | 'system'
@@ -38,6 +39,11 @@ const paths: Record<IconKey, React.ReactNode> = {
   baffle: (
     <>
       <path d="M5 3v18M9 3v18M13 3v18M17 3v18M19 3v18M3 3h18" />
+    </>
+  ),
+  mesh: (
+    <>
+      <path d="M3 9l4-4 4 4-4 4zM11 9l4-4 4 4-4 4zM7 13l4 4 4-4M3 17l4-4M15 13l4 4M3 21h18" />
     </>
   ),
   architecture: (

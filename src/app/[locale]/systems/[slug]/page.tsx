@@ -28,6 +28,8 @@ import { getArabicSystemDetail, type ArabicSystemDetail } from '@/lib/content/sy
 import { applications } from '@/lib/content/applications';
 import { projects, hasCaseStudy, projectName } from '@/lib/content/projects';
 import { localized, localizedList } from '@/lib/site';
+import { getArticlesForSystem } from '@/lib/articles';
+import { articlesCopy } from '@/lib/articles-ui';
 
 export const dynamicParams = false;
 
@@ -111,6 +113,7 @@ export default async function SystemDetailPage({
   const relatedCaseStudies = projects.filter(
     (p) => hasCaseStudy(p) && p.caseStudy?.relatedSystems.includes(system.slug),
   );
+  const systemArticles = getArticlesForSystem(locale, system.slug, 4);
 
   const crumbs = [
     { name: tNav('home'), path: '/' },
@@ -273,7 +276,7 @@ export default async function SystemDetailPage({
 
       {/* Topic-cluster links — category hub, applications, case studies */}
       <Section ivory>
-        <div className="grid gap-10 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 xl:grid-cols-4">
           <div>
             <h2 className="font-display text-h3 font-semibold text-ink">
               {locale === 'fa' ? 'مرجع سقف کاذب فلزی' : 'Metal suspended ceiling hub'}
@@ -302,6 +305,23 @@ export default async function SystemDetailPage({
                   <li key={a.slug}>
                     <Link href={`/applications/${a.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-ink">
                       {localized(a.keyword, locale)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {systemArticles.length > 0 ? (
+            <div>
+              <h2 className="font-display text-h3 font-semibold text-ink">
+                {articlesCopy(locale).latestOnSystem}
+              </h2>
+              <ul className="mt-5 space-y-3">
+                {systemArticles.map((a) => (
+                  <li key={a.slug}>
+                    <Link href={`/articles/${a.slug}`} className="text-body-s text-ink-300 transition-colors hover:text-ink">
+                      {a.title}
                     </Link>
                   </li>
                 ))}

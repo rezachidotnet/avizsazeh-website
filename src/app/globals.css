@@ -92,6 +92,58 @@
   .aecs-input option {
     @apply bg-surface text-ink;
   }
+
+  /* Long-form article typography (Markdown-rendered HTML) */
+  .article-body {
+    @apply text-body-l leading-[1.95] text-ink-700;
+  }
+  .article-body > * + * {
+    @apply mt-6;
+  }
+  .article-body h2 {
+    @apply mt-14 scroll-mt-32 font-display text-[1.625rem] font-semibold leading-snug text-ink lg:text-[1.875rem];
+  }
+  .article-body h3 {
+    @apply mt-10 font-display text-[1.25rem] font-semibold leading-snug text-ink;
+  }
+  .article-body h2 + *,
+  .article-body h3 + * {
+    @apply mt-4;
+  }
+  .article-body a {
+    @apply text-gold-700 underline decoration-gold/40 underline-offset-4 transition-colors hover:text-ink hover:decoration-ink;
+  }
+  .article-body strong {
+    @apply font-semibold text-ink;
+  }
+  .article-body ul,
+  .article-body ol {
+    @apply space-y-2 ps-6;
+  }
+  .article-body ul {
+    @apply list-disc marker:text-gold;
+  }
+  .article-body ol {
+    @apply list-decimal marker:text-ink-500;
+  }
+  .article-body blockquote {
+    @apply border-s-2 border-gold bg-ink/[0.03] px-6 py-4 text-ink-400;
+  }
+  .article-body hr {
+    @apply my-12 border-ink/10;
+  }
+  .article-body .article-table {
+    @apply overflow-x-auto rounded-lg border border-ink/10;
+  }
+  .article-body table {
+    @apply w-full min-w-[32rem] border-collapse text-body-s;
+  }
+  .article-body th {
+    @apply bg-ink/[0.04] px-4 py-3 text-start font-semibold text-ink;
+  }
+  .article-body td {
+    @apply border-t border-ink/10 px-4 py-3 align-top;
+  }
 }
 
 @layer utilities {
