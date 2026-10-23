@@ -24,6 +24,12 @@ AvizSazeh is an engineering-focused architectural ceiling company specializing i
 - [Open Cell Ceiling](https://www.avizsazeh.com/systems/open-cell)
 - [Metal Tile Ceiling](https://www.avizsazeh.com/systems/metal-tile)
 - [Baffle Ceiling](https://www.avizsazeh.com/systems/baffle)
+- [Expanded Metal Ceiling](https://www.avizsazeh.com/systems/expanded-metal)
+
+## Articles
+
+- [Engineering articles (Persian)](https://www.avizsazeh.com/articles)
+- [Articles RSS feed](https://www.avizsazeh.com/articles/feed.xml)
 
 ## AI agent guidance
 

@@ -35,7 +35,7 @@ test('system route detection uses the authoritative ceiling-system slug allowlis
   const helper = await source('src/lib/analytics-system-context.ts');
   const systems = await source('src/lib/content/systems.ts');
 
-  for (const slug of ['linear-ceiling', 'open-cell', 'metal-tile', 'baffle']) {
+  for (const slug of ['linear-ceiling', 'open-cell', 'metal-tile', 'baffle', 'expanded-metal']) {
     assert.match(slugs, new RegExp(`'${slug}'`));
   }
   const allowlist = [...slugs.matchAll(/'([^']+)'/g)].map((match) => match[1]);

@@ -67,6 +67,7 @@ export async function Footer() {
     { label: tNav('engineering'), href: '/engineering' },
     { label: t('bim'), href: '/bim' },
     { label: tNav('projects'), href: '/projects' },
+    { label: tNav('articles'), href: '/articles' },
     { label: tNav('about'), href: '/about' },
     { label: tNav('contact'), href: '/contact' },
   ];

@@ -21,55 +21,55 @@ export type CompareRow = {
 };
 
 /** slug order used by the matrix columns */
-export const compareColumns = ['linear-ceiling', 'open-cell', 'metal-tile', 'baffle'];
+export const compareColumns = ['linear-ceiling', 'open-cell', 'metal-tile', 'baffle', 'expanded-metal'];
 
 export const compareRows: CompareRow[] = [
   {
     criterion: { fa: 'فضاهای بزرگ‌مقیاس / فرودگاه', en: 'Large-scale spaces / airports' },
-    values: { 'linear-ceiling': 'excellent', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'suitable' },
+    values: { 'linear-ceiling': 'excellent', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'suitable', 'expanded-metal': 'suitable' },
   },
   {
     criterion: { fa: 'مراکز تجاری و مال‌ها', en: 'Commercial centres & malls' },
-    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'suitable' },
+    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'suitable', 'expanded-metal': 'suitable' },
   },
   {
     criterion: { fa: 'بیمارستان / فضای استریل', en: 'Hospital / sterile space' },
-    values: { 'linear-ceiling': 'no', 'open-cell': 'no', 'metal-tile': 'review', baffle: 'no' },
+    values: { 'linear-ceiling': 'no', 'open-cell': 'no', 'metal-tile': 'review', baffle: 'no', 'expanded-metal': 'no' },
   },
   {
     criterion: { fa: 'کنترل آکوستیک', en: 'Acoustic control' },
-    values: { 'linear-ceiling': 'review', 'open-cell': 'review', 'metal-tile': 'suitable', baffle: 'excellent' },
+    values: { 'linear-ceiling': 'review', 'open-cell': 'review', 'metal-tile': 'suitable', baffle: 'excellent', 'expanded-metal': 'review' },
   },
   {
     criterion: { fa: 'دسترسی سریع به پلنوم', en: 'Fast plenum access' },
-    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'excellent' },
+    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'excellent', 'expanded-metal': 'suitable' },
   },
   {
     criterion: { fa: 'یکپارچگی با MEP', en: 'MEP integration' },
-    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'suitable' },
+    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'suitable', baffle: 'suitable', 'expanded-metal': 'suitable' },
   },
   {
     criterion: { fa: 'امکان اجرای منحنی یا موج‌دار', en: 'Curved or wavy execution' },
-    values: { 'linear-ceiling': 'excellent', 'open-cell': 'review', 'metal-tile': 'no', baffle: 'excellent' },
+    values: { 'linear-ceiling': 'excellent', 'open-cell': 'review', 'metal-tile': 'no', baffle: 'excellent', 'expanded-metal': 'review' },
   },
   {
     criterion: { fa: 'عمق بصری و ریتم معماری', en: 'Visual depth & architectural rhythm' },
-    values: { 'linear-ceiling': 'excellent', 'open-cell': 'suitable', 'metal-tile': 'review', baffle: 'excellent' },
+    values: { 'linear-ceiling': 'excellent', 'open-cell': 'suitable', 'metal-tile': 'review', baffle: 'excellent', 'expanded-metal': 'excellent' },
   },
   {
     criterion: { fa: 'نگهداری و تعویض آسان', en: 'Easy maintenance & replacement' },
-    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'excellent', baffle: 'suitable' },
+    values: { 'linear-ceiling': 'suitable', 'open-cell': 'excellent', 'metal-tile': 'excellent', baffle: 'suitable', 'expanded-metal': 'suitable' },
   },
   {
     criterion: { fa: 'مناسب برای سیستم تابشی CBI Europe', en: 'Suited to CBI Europe radiant systems' },
-    values: { 'linear-ceiling': 'review', 'open-cell': 'no', 'metal-tile': 'excellent', baffle: 'no' },
+    values: { 'linear-ceiling': 'review', 'open-cell': 'no', 'metal-tile': 'excellent', baffle: 'no', 'expanded-metal': 'no' },
   },
   {
     criterion: { fa: 'مناسب‌ترین گزینه اقتصادی', en: 'Most economical option' },
-    values: { 'linear-ceiling': 'review', 'open-cell': 'suitable', 'metal-tile': 'suitable', baffle: 'review' },
+    values: { 'linear-ceiling': 'review', 'open-cell': 'suitable', 'metal-tile': 'suitable', baffle: 'review', 'expanded-metal': 'suitable' },
   },
   {
     criterion: { fa: 'نیاز به دیتاشیت مهندسی', en: 'Needs an engineering datasheet' },
-    values: { 'linear-ceiling': 'review', 'open-cell': 'review', 'metal-tile': 'review', baffle: 'review' },
+    values: { 'linear-ceiling': 'review', 'open-cell': 'review', 'metal-tile': 'review', baffle: 'review', 'expanded-metal': 'review' },
   },
 ];

@@ -66,6 +66,7 @@ const KEYWORD_MAP: { match: RegExp; slug: string }[] = [
   { match: /mall|retail|commercial|transport|مال|تجاری|فروشگاه/i, slug: 'open-cell' },
   { match: /hospital|clean|sterile|bank|office|بیمارستان|اداری|بانک|استریل/i, slug: 'metal-tile' },
   { match: /acoustic|school|library|آکوستیک|مدرسه|کتابخانه/i, slug: 'baffle' },
+  { match: /parking|car park|metro|station|mesh|expanded|پارکینگ|مترو|ایستگاه|توری|اکسپندد/i, slug: 'expanded-metal' },
 ];
 
 /** Deterministic system classification (no fabricated output). */

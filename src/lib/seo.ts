@@ -143,6 +143,7 @@ export function organizationJsonLd(locale: Locale) {
       'Open cell ceiling',
       'Metal tile ceiling',
       'Baffle ceiling',
+      'Expanded metal ceiling',
     ],
   };
 }
@@ -301,5 +302,41 @@ export function creativeWorkJsonLd(args: {
           })),
         }
       : {}),
+  };
+}
+
+/** BlogPosting — engineering articles. Publisher is the AvizSazeh organization. */
+export function articleJsonLd(args: {
+  locale: Locale;
+  slug: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  updatedAt: string;
+  image: string;
+  keywords: string[];
+  aboutSystems: { name: string; slug: string }[];
+}) {
+  const url = localeUrl(args.locale, `/articles/${args.slug}`);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${url}#article`,
+    mainEntityOfPage: url,
+    url,
+    headline: args.title,
+    description: args.description,
+    inLanguage: OPEN_GRAPH_LOCALE[args.locale].replace('_', '-'),
+    datePublished: args.publishedAt,
+    dateModified: args.updatedAt,
+    image: args.image.startsWith('http') ? args.image : `${SITE_URL}${args.image}`,
+    keywords: args.keywords.join(', '),
+    author: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    about: args.aboutSystems.map((s) => ({
+      '@type': 'Service',
+      name: s.name,
+      url: localeUrl(args.locale, `/systems/${s.slug}`),
+    })),
   };
 }

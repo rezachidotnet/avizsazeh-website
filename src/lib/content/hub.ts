@@ -60,8 +60,8 @@ export const hub = {
   },
   typesTitle: { fa: 'انواع سیستم‌های سقف فلزی آویزسازه', en: 'Types of AvizSazeh metal ceiling systems' },
   typesIntro: {
-    fa: 'چهار سیستم سقف کاذب فلزی آویزسازه؛ هر کدام برای هندسه، عملکرد و بیان معماری متفاوتی تخصیص می‌یابد.',
-    en: 'The four AvizSazeh metal suspended ceiling systems — each specified for a different geometry, function and architectural expression.',
+    fa: 'پنج سیستم سقف کاذب فلزی آویزسازه؛ هر کدام برای هندسه، عملکرد و بیان معماری متفاوتی تخصیص می‌یابد.',
+    en: 'The five AvizSazeh metal suspended ceiling systems — each specified for a different geometry, function and architectural expression.',
   },
   comparisonTitle: { fa: 'مقایسه سیستم‌ها: خطی، گریلیوم، تایل، بافل', en: 'Comparison: linear, grilliom, tile, baffle' },
   applicationsTitle: { fa: 'کاربردها', en: 'Applications' },

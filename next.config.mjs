@@ -7,6 +7,13 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  experimental: {
+    // Article Markdown is read with fs at request time on dynamic routes
+    // (e.g. /articles). Ship the content folder with every server function.
+    outputFileTracingIncludes: {
+      '/**': ['./content/articles/**/*.md'],
+    },
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     // One year — optimized images are content-hashed, so a long TTL is safe

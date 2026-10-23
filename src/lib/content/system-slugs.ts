@@ -3,6 +3,7 @@ const CEILING_SYSTEM_SLUGS = [
   'open-cell',
   'metal-tile',
   'baffle',
+  'expanded-metal',
 ] as const;
 
 export type CeilingSystemSlug = (typeof CEILING_SYSTEM_SLUGS)[number];

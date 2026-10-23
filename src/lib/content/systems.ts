@@ -19,7 +19,7 @@ export type Faq = { id: string; q: LocalizedString; a: LocalizedString };
 export type CeilingSystem = {
   slug: string;
   order: number;
-  iconKey: 'linear' | 'grid' | 'tile' | 'baffle';
+  iconKey: 'linear' | 'grid' | 'tile' | 'baffle' | 'mesh';
   name: LocalizedString;
   /** engineering category framing (micro-label) */
   category: LocalizedString;
@@ -85,7 +85,7 @@ const COLORS: LocalizedString = {
 };
 
 /**
- * The four executed ceiling systems of AvizSazeh, framed as engineering systems.
+ * The five executed ceiling systems of AvizSazeh, framed as engineering systems.
  * Real spec-sheet values (from avizsazeh.ir / source/CONTENT.md) are used where they
  * exist; unverified certified values use the explicit "TBD by engineering" placeholder.
  */
@@ -857,6 +857,212 @@ export const systems: CeilingSystem[] = [
       en: 'Vertical depth and acoustic control with curved/wavy form options; vs. linear, a more vertical expression.',
     },
     cover: '/design-system/baffle.png',
+  },
+
+  /* ───────────────────────── 5 · EXPANDED METAL (MESH) ───────────────────────── */
+  {
+    slug: 'expanded-metal',
+    order: 5,
+    iconKey: 'mesh',
+    name: {
+      fa: 'سیستم سقف اکسپندد متال (توری منبسط)',
+      en: 'Expanded Metal Ceiling System',
+      ar: 'نظام السقف من المعدن الممدد (إكسباندد ميتال)',
+    },
+    category: {
+      fa: 'سیستم پنلی مشبک / توری فلزی',
+      en: 'Mesh panel system',
+      ar: 'نظام ألواح شبكية معدنية',
+    },
+    context: {
+      fa: 'برای سطح نیمه‌شفاف، تهویه و نور از پشت سقف، با ظاهر صنعتی و معاصر.',
+      en: 'For a semi-transparent surface, ventilation and backlighting with a contemporary industrial look.',
+      ar: 'لسطح شبه شفاف، تهوية وإضاءة خلفية بمظهر صناعي معاصر.',
+    },
+    definition: {
+      fa: 'یک سیستم سقف پنلی از ورق فلزی که با برش و کشش هم‌زمان به توری لوزی‌شکل یکپارچه (بدون جوش) تبدیل شده و روی سازه تعلیق اجرا می‌شود.',
+      en: 'A panelised ceiling system made from sheet metal that is slit and stretched in one operation into a seamless, weld-free diamond mesh, installed on a suspension substructure.',
+    },
+    seo: {
+      title: {
+        fa: 'سقف اکسپندد متال | طراحی و اجرای سقف توری منبسط فلزی آویزسازه',
+        en: 'Expanded Metal Ceiling | Mesh Metal Ceiling System by AvizSazeh',
+      },
+      description: {
+        fa: 'سقف کاذب اکسپندد متال (توری منبسط) آویزسازه از آلومینیوم یا فولاد گالوانیزه؛ سطح نیمه‌شفاف، عبور هوا و نور، دسترسی به پلنوم و طراحی الگوی توری براساس پروژه برای پارکینگ، ایستگاه، فرودگاه و فضاهای تجاری.',
+        en: 'AvizSazeh expanded metal (mesh) ceiling in aluminium or galvanised steel — a semi-transparent surface with air and light passage, plenum access and project-specific mesh geometry for car parks, stations, airports and commercial spaces.',
+      },
+    },
+    h1: {
+      fa: 'سقف کاذب اکسپندد متال؛ توری فلزی منبسط برای فضاهای معماری و پرتردد',
+      en: 'Expanded Metal Ceiling System for Architectural and High-Traffic Spaces',
+    },
+    lead: {
+      fa: 'سقف اکسپندد متال از ورق فلزی‌ای ساخته می‌شود که با برش و کشش هم‌زمان به توری لوزی‌شکل یکپارچه تبدیل شده است؛ بدون جوش، بدون دورریز و با وزن کمتر در واحد سطح. نتیجه سطحی نیمه‌شفاف است که هوا و نور را عبور می‌دهد و تأسیسات پشت سقف را به‌صورت کنترل‌شده پنهان می‌کند. این سیستم زمانی تخصیص می‌یابد که تهویه، نور از پشت سقف، دوام در فضاهای پرتردد و بیان معماری صنعتی و معاصر هم‌زمان اهمیت داشته باشند.',
+      en: 'An expanded metal ceiling is made from sheet metal that is slit and stretched in a single operation into a seamless diamond mesh — no welds, no scrap and lower weight per square metre. The result is a semi-transparent surface that passes air and light while screening the services behind it in a controlled way. It is specified when ventilation, backlighting, durability in high-traffic spaces and a contemporary industrial expression matter together.',
+    },
+    logic: {
+      fa: [
+        'توری یکپارچه حاصل از برش و کشش ورق — بدون جوش و بدون نقطه ضعف اتصال',
+        'نسبت مقاومت به وزن بالا؛ سبک‌تر از ورق پانچ با سطح باز مشابه',
+        'سطح باز قابل تنظیم با هندسه لوزی (LWD / SWD) و عرض رشته برای عبور هوا و نور',
+        'پوشش بصری تأسیسات پشت سقف بدون حذف دسترسی و تهویه پلنوم',
+        'امکان نورپردازی از پشت سقف و ایجاد عمق بصری با زاویه دید',
+        'قابلیت اجرای پنلی (آویز، لِی‌این یا کلیپ‌این) براساس بررسی مهندسی پروژه',
+      ],
+      en: [
+        'Seamless mesh from slitting and stretching — no welds, no joint weak points',
+        'High strength-to-weight ratio; lighter than perforated sheet at a similar open area',
+        'Open area tuned by diamond geometry (LWD / SWD) and strand width for air and light passage',
+        'Visually screens services above the ceiling without removing access or plenum ventilation',
+        'Backlighting and depth effects that change with viewing angle',
+        'Panelised execution (hook-on, lay-in or clip-in) subject to project engineering review',
+      ],
+    },
+    anatomy: {
+      fa: ['پنل توری اکسپندد', 'قاب یا لبه‌گیر پنل', 'سازه تعلیق (کریر / گرید)', 'آویز', 'فضای پلنوم و تأسیسات'],
+      en: ['Expanded mesh panel', 'Panel frame / edge trim', 'Suspension (carrier / grid)', 'Hanger', 'Plenum & services'],
+    },
+    specs: [
+      { label: { fa: 'نوع سیستم', en: 'System type' }, value: { fa: 'سقف پنلی توری اکسپندد متال', en: 'Expanded metal mesh panel ceiling' } },
+      { label: { fa: 'متریال', en: 'Material' }, value: { fa: 'آلومینیوم یا فولاد گالوانیزه (فولاد ضدزنگ با تأیید پروژه)', en: 'Aluminium or galvanised steel (stainless on project approval)' } },
+      { label: { fa: 'فرم توری', en: 'Mesh form' }, value: { fa: 'لوزی استاندارد (برجسته) یا تخت‌شده', en: 'Standard (raised) or flattened diamond' } },
+      { label: { fa: 'قطر بلند لوزی (LWD)', en: 'Long way of diamond (LWD)' }, value: BY_ARCH },
+      { label: { fa: 'قطر کوتاه لوزی (SWD)', en: 'Short way of diamond (SWD)' }, value: BY_ARCH },
+      { label: { fa: 'عرض رشته', en: 'Strand width' }, value: TBD },
+      { label: { fa: 'ضخامت ورق', en: 'Sheet thickness' }, value: TBD },
+      { label: { fa: 'درصد سطح باز', en: 'Open area' }, value: { fa: 'وابسته به هندسه لوزی و عرض رشته', en: 'Depends on diamond geometry & strand width' } },
+      { label: { fa: 'ابعاد پنل', en: 'Panel dimensions' }, value: TBD },
+      { label: { fa: 'نوع نصب', en: 'Mounting type' }, value: { fa: 'آویز (هوک‌آن) / لِی‌این / کلیپ‌این — نیازمند تأیید پروژه', en: 'Hook-on / lay-in / clip-in — project to confirm' } },
+      { label: { fa: 'پوشش رنگ', en: 'Finish' }, value: COAT },
+      { label: { fa: 'رنگ‌بندی', en: 'Colour range' }, value: COLORS },
+      { label: { fa: 'دسترسی به پلنوم', en: 'Plenum access' }, value: { fa: 'از طریق پنل‌های بازشو یا قابل برداشت', en: 'Via hinged or removable panels' } },
+      { label: { fa: 'عبور هوا و نور', en: 'Air & light passage' }, value: { fa: 'بالا — وابسته به سطح باز', en: 'High — depends on open area' } },
+      { label: { fa: 'گزینه آکوستیک', en: 'Acoustic option' }, value: { fa: 'با لایه جاذب در پلنوم، نیازمند طراحی مهندسی', en: 'With an absorber layer in the plenum, requires engineering design' } },
+      { label: { fa: 'کلاس آتش', en: 'Fire class' }, value: TBD },
+      { label: { fa: 'وزن تقریبی', en: 'Approx. weight' }, value: TBD },
+      { label: { fa: 'کاربردها', en: 'Applications' }, value: { fa: 'پارکینگ، ایستگاه مترو، فرودگاه، مراکز تجاری، فضاهای صنعتی و نیمه‌باز', en: 'Car parks, metro stations, airports, retail, industrial & semi-open spaces' } },
+    ],
+    applications: [
+      {
+        type: { fa: 'پارکینگ‌ها و فضاهای نیمه‌باز', en: 'Car parks & semi-open spaces' },
+        why: { fa: 'برای تهویه طبیعی پلنوم، دوام و پنهان‌سازی کنترل‌شده تأسیسات.', en: 'For natural plenum ventilation, durability and controlled screening of services.' },
+      },
+      {
+        type: { fa: 'ایستگاه‌های مترو و پایانه‌ها', en: 'Metro stations & terminals' },
+        why: { fa: 'برای سطح مقاوم، عبور هوا و هماهنگی با سیستم‌های دود و اطفای حریق.', en: 'For a robust surface, air passage and coordination with smoke and fire systems.' },
+      },
+      {
+        type: { fa: 'مراکز تجاری و رستوران‌ها', en: 'Retail & restaurants' },
+        why: { fa: 'برای بیان معماری صنعتی و معاصر و امکان نورپردازی از پشت سقف.', en: 'For a contemporary industrial expression and backlighting options.' },
+      },
+      {
+        type: { fa: 'فضاهای صنعتی و نمایشگاهی', en: 'Industrial & exhibition spaces' },
+        why: { fa: 'برای سقف سبک با سطح باز بالا و دسترسی آسان به تأسیسات.', en: 'For a light ceiling with high open area and easy service access.' },
+      },
+    ],
+    notRecommended: {
+      fa: [
+        'فضاهای استریل و درمانی که سطح کاملاً بسته و قابل شست‌وشو می‌خواهند',
+        'پروژه‌هایی که پلنوم باید کاملاً از دید پنهان بماند',
+        'فضاهای پرگردوغبار بدون برنامه نظافت دوره‌ای پنل‌ها',
+      ],
+      en: [
+        'Sterile and healthcare spaces needing a fully closed, washable surface',
+        'Projects where the plenum must be completely hidden from view',
+        'Very dusty spaces without a periodic panel-cleaning plan',
+      ],
+    },
+    gallery: [
+      // Schematic renders — replace with real AvizSazeh project photos when available.
+      { src: '/systems/expanded-metal-1.webp', caption: { fa: 'تصویر شماتیک: میدان سقف اکسپندد متال با نور از پشت سقف', en: 'Schematic: expanded metal ceiling field with backlighting' } },
+      { src: '/systems/expanded-metal-2.webp', caption: { fa: 'دیاگرام هندسه لوزی: LWD، SWD و عرض رشته', en: 'Diamond geometry diagram: LWD, SWD and strand width' } },
+    ],
+    variants: [
+      { label: { fa: 'هندسه لوزی (LWD / SWD)', en: 'Diamond geometry (LWD / SWD)' }, value: BY_ARCH },
+      { label: { fa: 'فرم توری', en: 'Mesh form' }, value: { fa: 'برجسته (استاندارد) / تخت‌شده', en: 'Raised (standard) / flattened' } },
+      { label: { fa: 'متریال', en: 'Material' }, value: { fa: 'آلومینیوم / گالوانیزه', en: 'Aluminium / galvanised steel' } },
+      { label: { fa: 'رنگ‌بندی', en: 'Colours' }, value: COLORS },
+      { label: { fa: 'پوشش', en: 'Finish' }, value: COAT },
+      { label: { fa: 'نورپردازی', en: 'Lighting' }, value: { fa: 'نور از پشت سقف / نور خطی — نیازمند هماهنگی', en: 'Backlighting / linear light — requires coordination' } },
+    ],
+    selection: {
+      fa: [
+        'سطحی نیمه‌شفاف می‌خواهید که تأسیسات را پنهان کند اما تهویه پلنوم حفظ شود',
+        'فضای پرتردد یا نیمه‌باز با نیاز به دوام و نگهداری ساده دارید',
+        'بیان معماری صنعتی و معاصر یا نورپردازی از پشت سقف بخشی از طراحی است',
+        'سطح کاملاً بسته و قابل شست‌وشو ضروری نیست',
+      ],
+      en: [
+        'You want a semi-transparent surface that screens services while keeping plenum ventilation',
+        'You have a high-traffic or semi-open space needing durability and simple maintenance',
+        'A contemporary industrial expression or backlighting is part of the design',
+        'A fully closed, washable surface is not essential',
+      ],
+    },
+    subsections: [
+      {
+        title: { fa: 'هندسه توری و درصد سطح باز', en: 'Mesh geometry & open area' },
+        body: {
+          fa: 'رفتار بصری و عملکردی سقف اکسپندد متال با چهار پارامتر تعریف می‌شود: قطر بلند لوزی (LWD)، قطر کوتاه لوزی (SWD)، عرض رشته و ضخامت ورق. این پارامترها درصد سطح باز، میزان عبور هوا و نور، شفافیت در زوایای دید مختلف و سختی پنل را تعیین می‌کنند. انتخاب نهایی پس از بررسی مهندسی دهانه، روش نصب و الزامات تأسیساتی در نقشه اجرایی قطعی می‌شود.',
+          en: 'The visual and functional behaviour of an expanded metal ceiling is defined by four parameters: long way of diamond (LWD), short way of diamond (SWD), strand width and sheet thickness. Together they set the open area, air and light passage, transparency at different viewing angles and panel stiffness. The final selection is fixed in the shop drawings after an engineering review of span, mounting method and service requirements.',
+        },
+      },
+      {
+        title: { fa: 'توری برجسته یا تخت‌شده', en: 'Raised or flattened mesh' },
+        body: {
+          fa: 'توری استاندارد ساختاری سه‌بعدی و برجسته دارد که عمق و بافت بصری بیشتری می‌سازد؛ توری تخت‌شده پس از نورد، سطحی صاف‌تر و یکنواخت‌تر ارائه می‌دهد. انتخاب بین این دو به زاویه دید، نوع نورپردازی و دیتیل لبه پنل وابسته است.',
+          en: 'Standard mesh has a raised, three-dimensional structure with more depth and texture; flattened mesh is rolled after expansion for a smoother, more uniform surface. The choice depends on viewing angles, lighting strategy and panel edge detailing.',
+        },
+      },
+    ],
+    requiredVisuals: {
+      fa: [
+        'عکس اجرای واقعی سقف اکسپندد متال آویزسازه',
+        'نمای نزدیک توری و دیتیل لبه پنل',
+        'مقایسه توری برجسته و تخت‌شده',
+        'نمونه نورپردازی از پشت سقف',
+        'مقطع: پنل، قاب، کریر، آویز، پلنوم',
+      ],
+      en: [
+        'Photo of a real AvizSazeh expanded metal installation',
+        'Mesh close-up and panel edge detail',
+        'Raised vs. flattened mesh comparison',
+        'Backlighting example',
+        'Section: panel, frame, carrier, hanger, plenum',
+      ],
+    },
+    faq: [
+      {
+        id: 'expanded-metal-what-is',
+        q: { fa: 'سقف اکسپندد متال چیست؟', en: 'What is an expanded metal ceiling?' },
+        a: { fa: 'سقفی پنلی از توری فلزی منبسط است؛ ورق فلزی با برش و کشش هم‌زمان به توری لوزی‌شکل یکپارچه تبدیل می‌شود و پنل‌ها روی سازه تعلیق اجرا می‌شوند. نتیجه سطحی نیمه‌شفاف، سبک و مقاوم است که هوا و نور را عبور می‌دهد.', en: 'It is a panel ceiling made of expanded metal mesh: sheet metal is slit and stretched in one operation into a seamless diamond mesh and the panels are installed on a suspension system. The result is a light, robust, semi-transparent surface that passes air and light.' },
+      },
+      {
+        id: 'expanded-metal-vs-perforated',
+        q: { fa: 'تفاوت اکسپندد متال با ورق پانچ چیست؟', en: 'How does expanded metal differ from perforated sheet?' },
+        a: { fa: 'در ورق پانچ بخشی از ورق بریده و دور ریخته می‌شود؛ در اکسپندد متال ورق فقط برش و کشیده می‌شود و دورریزی ندارد. به همین دلیل اکسپندد متال معمولاً با سطح باز مشابه سبک‌تر است و بافت سه‌بعدی و شفافیت وابسته به زاویه دید دارد.', en: 'Perforated sheet has material punched out and discarded; expanded metal is only slit and stretched, with no scrap. As a result it is usually lighter at a similar open area and has a three-dimensional texture whose transparency changes with viewing angle.' },
+      },
+      {
+        id: 'expanded-metal-plenum-access',
+        q: { fa: 'آیا سقف اکسپندد متال دسترسی به تأسیسات را حفظ می‌کند؟', en: 'Does an expanded metal ceiling keep access to services?' },
+        a: { fa: 'بله. پنل‌ها براساس روش نصب به‌صورت بازشو یا قابل برداشت طراحی می‌شوند و سطح باز توری، تهویه پلنوم را حفظ می‌کند. جزئیات دسترسی در نقشه اجرایی تعیین می‌شود.', en: 'Yes. Panels are designed as hinged or removable depending on the mounting method, and the mesh open area keeps the plenum ventilated. Access detailing is set in the shop drawings.' },
+      },
+      {
+        id: 'expanded-metal-suitable-spaces',
+        q: { fa: 'سقف اکسپندد متال برای چه فضاهایی مناسب است؟', en: 'Which spaces suit an expanded metal ceiling?' },
+        a: { fa: 'پارکینگ‌ها، ایستگاه‌های مترو، پایانه‌ها، مراکز تجاری، رستوران‌ها و فضاهای صنعتی یا نیمه‌باز؛ هرجا که تهویه، دوام و بیان معماری معاصر هم‌زمان اهمیت داشته باشد. برای فضاهای استریل پیشنهاد نمی‌شود.', en: 'Car parks, metro stations, terminals, retail, restaurants and industrial or semi-open spaces — wherever ventilation, durability and a contemporary expression matter together. It is not recommended for sterile spaces.' },
+      },
+    ],
+    systemCta: {
+      fa: 'هندسه توری، ابعاد پنل و روش نصب پروژه خود را برای بررسی مهندسی ثبت کنید.',
+      en: 'Submit your project’s mesh geometry, panel size and mounting method for engineering review.',
+    },
+    comparisonHint: {
+      fa: 'سطح نیمه‌شفاف با عبور هوا و نور؛ در مقابل گریلیوم، پوشش بصری بیشتر بر تأسیسات.',
+      en: 'Semi-transparent surface with air and light passage; vs. open cell, more visual screening of services.',
+    },
+    cover: '/systems/expanded-metal-cover.webp',
   },
 ];
 
