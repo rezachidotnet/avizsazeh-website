@@ -36,7 +36,8 @@
         { "kw": "سقف کاذب خطی", "intent": "commercial", "priority": 1 },
         { "kw": "سقف لوور فلزی", "intent": "commercial", "priority": 2 },
         { "kw": "سقف خطی مورب و شعاعی", "intent": "informational", "priority": 3 },
-        { "kw": "سقف خطی و نور خطی", "intent": "informational", "priority": 3 }
+        { "kw": "سقف خطی و نور خطی", "intent": "informational", "priority": 3 },
+        { "kw": "سقف ایستگاه مترو", "intent": "informational", "priority": 2 }
       ]
     },
     {
