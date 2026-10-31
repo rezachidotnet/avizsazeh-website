@@ -87,6 +87,7 @@
         { "kw": "اکسپندد متال یا ورق پانچ", "intent": "comparison", "priority": 2 },
         { "kw": "نمای اکسپندد متال", "intent": "commercial", "priority": 2 },
         { "kw": "سقف پارکینگ", "intent": "commercial", "priority": 2 },
+        { "kw": "سقف پارکینگ طبقاتی", "intent": "commercial", "priority": 2, "note": "Added 2026-10-31 from news: Tehran plans multi-storey car parks at 664 locations." },
         { "kw": "سقف کاذب ایستگاه مترو", "intent": "commercial", "priority": 3 }
       ]
     }
