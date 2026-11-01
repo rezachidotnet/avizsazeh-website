@@ -49,7 +49,8 @@
         { "kw": "قیمت سقف گریلیوم", "intent": "commercial", "priority": 1, "note": "Cost drivers only, no unconfirmed prices." },
         { "kw": "اجرای سقف گریلیوم", "intent": "commercial", "priority": 2 },
         { "kw": "سقف گریلیوم یا سقف خطی", "intent": "comparison", "priority": 2 },
-        { "kw": "سقف سلول باز", "intent": "informational", "priority": 3 }
+        { "kw": "سقف سلول باز", "intent": "informational", "priority": 3 },
+        { "kw": "سقف گریلیوم و تأسیسات", "intent": "informational", "priority": 2, "note": "Trend 1405-08: heating season / gas imbalance — HVAC & sprinkler coordination for open plenums." }
       ]
     },
     {
