@@ -25,6 +25,7 @@
         { "kw": "ارتفاع پلنوم سقف کاذب", "intent": "informational", "priority": 3 },
         { "kw": "سقف کاذب فلزی برای بیمارستان", "intent": "commercial", "priority": 2 },
         { "kw": "سقف کاذب فرودگاه", "intent": "commercial", "priority": 2 },
+        { "kw": "نوسازی ترمینال فرودگاه", "intent": "informational", "priority": 2, "note": "Added 2026-11-10 from news: Mehrabad T2 transit hall renovation past 90%, T4 & T6 back in service (Mehr News)." },
         { "kw": "سقف کاذب آکوستیک", "intent": "informational", "priority": 1 }
       ]
     },
